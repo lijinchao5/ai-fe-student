@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!--<link rel="stylesheet" href="../../css/common.css" type="text/css"/>-->
+    <link rel="stylesheet" href="../../css/common/header.css" type="text/css"/>
+</head>
+
+<body>
+<div class="top">
+    <div class="header-container">
+        <div class="fl">
+            <h1 class="logo fl">
+                <img src="../../images/index/logo.png" alt=""/>
+            </h1>
+            <p class="title fl">英语机考智能训练与考评系统</p>
+            <!--老师催作业模态框  -->
+            <!-- <input type="submit" value="催作业" data-toggle="modal" data-target=".rush-homework"> -->
+            <div class="modal fade rush-homework" tabindex="-1">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p>老师催作业啦，赶紧做作业吧！</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">我知道了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fr">
+            <img src="../../images/personInfo/xs-meb-icon.png" alt="头像" class="user-icon-top" id="photo"/>
+            <span class="user-top" id="username"></span>
+            <a href="../personInfo/personInfo.html">个人中心</a>
+            <!--退出弹窗-->
+            <a data-toggle="modal" data-target=".exit" class="exit-button">退出</a>
+            <div class="modal fade exit" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal" onclick="logout()">确定 </button>
+                            <button type="button" class="btn" data-dismiss="modal">不了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="over" class="overLoading" style="display:none;">
+            <div id="layout" class="layoutLoading"><img src="../../images/common/loading.gif"/>
+                <p class="loading-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!--<script type="text/javascript" src="../../lib/jquery-3.3.1.min.js"></script>-->
+<script type="text/javascript" src="../../js/common/header.js"></script>
+
+
+</html>

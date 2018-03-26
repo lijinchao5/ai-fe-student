@@ -1,0 +1,30 @@
+#nav {
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    z-index: 1;
+}
+
+#job-list {
+    width: 970px;
+    min-height: 580px;
+    margin: 0 0 0 209px;
+    padding-top: 10px;
+    border-left: 18px solid #eee;
+}
+
+.out {
+    width: 100%;
+    background: #eee;
+}
+
+.out .mains {
+    width: 1200px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 11 12 10 round;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -600px;
+}

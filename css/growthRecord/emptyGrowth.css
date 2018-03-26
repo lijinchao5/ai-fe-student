@@ -1,0 +1,55 @@
+body {
+    color: #999;
+    font-size: 16px;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 1200px;
+    margin: 0 0 15px -600px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 13 13 10 round;
+}
+
+#nav {
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    z-index: 1;
+}
+
+#empty-growth {
+    width: 970px;
+    min-height: 580px;
+    margin: 0 0 0 209px;
+    padding-top: 10px;
+    border-left: 18px solid #eee;
+}
+
+.empty-all {
+    padding-top: 190px;
+    width: 180px;
+    height: 200px;
+    margin: auto;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

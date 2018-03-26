@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery实现上下轮播</title>
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border: 0;
+    }
+
+
+    .jsbyanimateul {
+      width: 500px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .jsbyanimateul .li {
+      width: 500px;
+      background-color: #fc6;
+      overflow: hidden;
+      word-wrap:break-word;
+    }
+
+    .jsbyanimateul .animateul {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 3000px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="all">
+  <!--相框-->
+  <div class="jsbyanimateul">
+    <div class="animateul">
+      <div class="li">111</div>
+      <div class="li">222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</div>
+      <div class="li">333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333</div>
+      <div class="li">444</div>
+      <div class="li">555</div>
+    </div>
+  </div>
+</div>
+<input type="button" class="next" value="下一张" style="padding-left: 200px;">
+<script src="../jquery-3.3.1.js"></script>
+<script type="text/javascript">
+  $(function(){
+   
+    $(".next").click(function(){
+    	animateul();
+    })
+  })
+  
+   var indexp= 0;
+   var sumtop=0;
+  function animateul(){
+	  var plength = $(".animateul .li").length;
+	  var pHeight=$(".li").eq(indexp).outerHeight(true);
+		if(indexp<plength){
+			indexp++;
+			console.log(pHeight);
+			sumtop+=pHeight;
+			$(".animateul").animate({top: -sumtop}, 800);
+		}else{
+			return;
+		}
+  }
+</script>
+
+</body>
+</html>

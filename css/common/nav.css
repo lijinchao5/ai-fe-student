@@ -1,0 +1,68 @@
+.nav-wrap {
+    width: 215px;
+    height: 515px;
+}
+
+.nav-wrap .user-icon-left {
+    width: 126px;
+    height: 126px;
+    margin: 0 0 18px 42px;
+    border-radius: 50%;
+    text-align: center;
+    background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;
+}
+
+.nav-wrap .user-icon-left img {
+    width: 108px;
+    height: 108px;
+    margin-top: 9px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.nav-wrap .user-name {
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.nav-wrap .hd {
+    width: 233px;
+    margin-top: 58px;
+}
+
+.nav-wrap .hd a {
+    display: block;
+    width: 210px;
+    height: 64px;
+    border-bottom: 2px solid #eee;
+    line-height: 64px;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-wrap .hd a:hover {
+    text-decoration: none;
+}
+
+.nav-wrap .hd .current span{
+    display: block;
+    width: 233px;
+    padding-right: 23px;
+    background: url("../../images/common/active.png") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.nav-wrap .hd a span img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    line-height: 64px;
+    vertical-align: middle;
+}

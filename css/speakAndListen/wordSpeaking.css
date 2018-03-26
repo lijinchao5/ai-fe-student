@@ -1,0 +1,890 @@
+@charset "utf-8";
+body {
+    width: 100%;
+    height: 750px;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    width: 1200px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -600px;
+    min-height: 637px;
+}
+
+.container {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#nav {
+    position: absolute;
+    top: 70px;
+    left: -6px;
+    z-index: 1;
+}
+
+#word-speaking {
+    width: 950px;
+    height: 580px;
+    margin-left: 209px;
+    padding: 13px 0 0 45px;
+    border-left: 18px solid #eee;
+}
+
+/* 添加返回按钮 */
+#word-speaking .back {
+    position: absolute;
+    top: 13px;
+    left: 250px;
+    width: 26px;
+    height: 21px;
+}
+
+/* 返回按钮的模态框/ */
+.word-speaking .modal-content {
+    width: 450px;
+    height: 320px;
+    margin-top: 40%;
+    background: url("../../images/common/cloud.png") no-repeat center center;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-dialog {
+    width: 450px;
+}
+
+.modal-content .modal-header {
+    padding-top: 30px;
+    border-bottom: none;
+    height: 120px;
+}
+
+.modal-content .modal-header .modal-title {
+    text-align: center;
+    font: 20px/80px MicrosoftYaHei;
+}
+
+.modal-content .modal-body {
+    height: 70px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.modal-content .modal-footer {
+    padding: 25px;
+    text-align: center;
+    border-top: none;
+}
+
+.modal-content .modal-footer button {
+    width: 110px;
+    height: 38px;
+    margin-top: 5px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.modal-content .modal-footer .btn-default {
+    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+}
+
+.modal-content .modal-footer .btn-primary {
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    margin-left: 10px;
+}
+
+/* 提交作业的提示 */
+.word-speaking .dictation-modal .modal-content .modal-body {
+    line-height: 40px;
+}
+
+.word-speaking .dictation-modal .modal-content {
+}
+
+.word-speaking .dictation-modal {
+    display: block;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* 提交作业成功的模态框 */
+.submit-success .modal-dialog {
+    width: 450px;
+}
+
+.submit-success .modal-content {
+    width: 450px;
+    height: 320px;
+    margin-top: 40%;
+    background: url("../../images/common/cloud.png") no-repeat center center;
+    border: none;
+    box-shadow: none;
+}
+
+/* 开始做作业 模态框 */
+.ready-go .modal-dialog {
+    width: 450px;
+}
+
+.ready-go .modal-content {
+    width: 450px;
+    height: 320px;
+    margin-top: 40%;
+    background: url("../../images/common/ready-go-clound.png") no-repeat center center;
+    border: none;
+    box-shadow: none;
+}
+
+/* 作业提交超时模态框 */
+.time-out {
+    width: 40px;
+    height: 21px;
+}
+
+/* 模态框样式结束 */
+.word-speaking .speak-listen-tab-hd {
+    width: 100%;
+    height: 104px;
+}
+
+.word-speaking .speak-listen-tab-hd li {
+    width: 157px;
+    height: 103px;
+    float: left;
+    margin-right: 19px;
+    text-align: center;
+    padding-top: 40px;
+    color: #11d8fc;
+    font: 700 18px/18px MicrosoftYaHei;
+    background: url('../../images/speakAndListen/cloud.png') no-repeat center bottom;
+    background-size: cover;
+    cursor: pointer;
+    user-select: none;
+}
+
+.word-speaking .speak-listen-tab-hd li.active {
+    color: #fff;
+    background: url('../../images/speakAndListen/cloud-sun.png') no-repeat center bottom;
+}
+
+.word-speaking .speak-listen-tab-hd li span {
+    font-size: 16px;
+}
+
+/* 添加每个听说作业的等级显示 */
+.word-speaking .speak-listen-tab-hd li .word-degree {
+    position: absolute;
+    top: 0;
+    right: 100px;
+    width: 0;
+}
+
+.word-speaking .speak-listen-tab-hd .word-degree p {
+    width: 100px;
+    text-align: right;
+    margin-left: 1%;
+}
+
+.word-speaking .speak-listen-tab-hd li .word-degree .degree-fail {
+    color: #ff6d80;
+}
+
+.word-speaking .speak-listen-tab-hd li .word-degree .degree-good {
+    color: #ffb846;
+}
+
+.word-speaking .speak-listen-tab-hd li .word-degree .degree-well {
+    color: #36dbbb;
+}
+
+/* 听说作业 单词跟读 tab body */
+
+.word-speaking .speak-listen-tab-bd li {
+    display: none;
+    position: relative;
+}
+
+.word-speaking .speak-listen-tab-bd li.first {
+    display: block;
+}
+
+/* 分数样式 */
+.word-speaking .speak-listen-tab-bd .score {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background: url("../../images/speakAndListen/score.png") no-repeat center left;
+    line-height: 68px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.word-speaking .speak-listen-tab-bd .gd {
+
+    height: 68px;
+    border-radius: 50%;
+    margin: 12px auto;
+    line-height: 68px;
+    text-align: center;
+    font-size: 24px;
+    color: #11d8fc;
+    font-weight: 700;
+}
+
+/* 旋转木马盒子公共样式 */
+.word-speaking .speak-listen-tab-bd .carousel {
+    height: 290px;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item {
+    padding: 0 10%;
+    font-weight: 700;
+    color: #004098;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
+    width: 100%;
+    height: 200px;
+    word-wrap: break-word;
+    /* 上下左右居中 */
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
+    word-wrap: break-word;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
+    color: #36dbbb;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
+    color: #ff6d80;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
+    color: #ffb846;
+}
+
+/* 左右箭头的设置 */
+.word-speaking .speak-listen-tab-bd .carousel-control {
+    position: absolute;
+    top: 65%;
+    /* 去掉阴影 */
+    height: 0;
+    width: 10%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    filter: alpha(opacity=50);
+}
+
+/* 上一页/下一页 禁用状态 */
+.word-speaking .speak-listen-tab-bd .carousel-control.out:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+/* 单词跟读的旋转木马 */
+.word-speaking-carousel .carousel .carousel-inner .item .text {
+    font-size: 44px;
+}
+
+/* 句子跟读的旋转木马 */
+.sentence-reading-carousel .carousel .carousel-inner .item .text {
+    font-size: 36px;
+}
+
+/* 课文跟读的旋转木马 */
+.article-reading-carousel .carousel .carousel-inner .item .text {
+    font-size: 36px;
+}
+
+/* 听说作业 分数 公共样式*/
+.word-speaking .speak-listen-tab-bd .speak-listen-btn {
+    width: 330px;
+    /*height: 140px;*/
+    height: 125px;
+    text-align: center;
+    margin: 14px auto 0;
+}
+
+/* 添加display none*/
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .play-icon {
+    width: 142px;
+    height: 42px;
+    margin-top: 49px;
+    /*margin-left: 40px;*/
+    display: none;
+}
+
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .speed {
+    display: none;
+    width: 330px;
+    height: 13px;
+    margin-left: 38px;
+    /*11*/
+    margin-top: 55px;
+    position: relative;
+}
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .speed .speed-balloon{
+    position: absolute;
+    top:-59px;
+    left: 0;
+    width: 50px;
+    height: 71px;
+    transform:rotate(7deg);
+}
+
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .speed-icon .layui-progress-bar {
+    width: 260px;
+    height: 13px;
+}
+
+/* 录音中 */
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .speed .speed-text {
+    /*display: block;*/
+    /*width: 260px;*/
+    height: 13px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .speed p {
+    width: 100%;
+    line-height: 13px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.word-speaking .speak-listen-tab-bd .speak-listen-btn .play {
+    display: inline-block;
+    margin: 34px 30px 0;
+}
+
+.word-speaking .speak-listen-tab-bd .speak-listen-btn p {
+    width: 100%;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*结束*/
+.word-speaking .speak-listen-tab-bd .play img {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.word-speaking .speak-listen-tab-bd .recording {
+    width: 67px;
+    height: 100px;
+    margin: 0 50px;
+}
+
+.word-speaking .speak-listen-tab-bd .recording span {
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: url("../../images/common/record.png") no-repeat center center;
+    background-size: 68px 68px;
+}
+
+.word-speaking .speak-listen-tab-bd .recording .recording-in {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    position: relative;
+    background: url("../../images/common/recording.png") no-repeat center center;
+    animation: recording 2s infinite;
+    -webkit-animation: recording 2s infinite; /*Safari and Chrome*/
+    -moz-animation: recording 5s infinite; /* Firefox */
+    -o-animation: recording 5s infinite; /* Opera */
+}
+
+/* 录音动画 */
+@keyframes recording {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes recording /*Safari and Chrome*/
+{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-moz-keyframes recording /* Firefox */
+{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-o-keyframes recording /* Opera */
+{
+    from {
+        -o-transform: scale(1.5) rotate(10deg);
+    }
+    to {
+        background: yellow;
+    }
+}
+
+/* 角色扮演 */
+.word-speaking .speak-listen-tab-bd .role {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #11d8fc;
+    border: 1px solid #11d8fc;
+    transform: rotate(9deg);
+    float: right;
+    position: relative;
+    margin-right: 24%;
+}
+
+.word-speaking .speak-listen-tab-bd .role::before {
+    content: "";
+    width: 0;
+    height: 32px;
+    border-left: 2px solid #11d8fc;
+    transform: rotate(-9deg);
+    position: absolute;
+    top: -82%;
+    left: 50%;
+}
+
+/* 角色内容样式 */
+.carousel .carousel-inner .item .text p {
+    width: 100%;
+    font-size: 24px;
+    line-height: 50px;
+    display: block;
+}
+
+.carousel .carousel-inner .item .text .role-in {
+    font-size: 26px;
+    font-weight: 700;
+    color: green;
+}
+
+.carousel .carousel-inner .item .text p span {
+    float: left;
+    min-width: 50px;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    border: 1px solid #11d8fc;
+    background-color: #fff;
+    color: #11d8fc;
+}
+
+.carousel .carousel-inner .item .text .role-in span {
+    background-color: #11d8fc;
+    color: #fff;
+}
+
+/* 当前角色在阅读左侧 */
+.carousel .carousel-inner .item .text .role-in .weight {
+    background-color: #ff8003;
+    border: 1px solid #ff8003;
+}
+
+/* 当前角色在阅读 右侧*/
+.carousel .carousel-inner .item .text .weight {
+    background-color: #ff8003;
+    border: 1px solid #ff8003;
+}
+
+.carousel .carousel-inner .item .text .role1 {
+    display: block;
+    text-align: left;
+    margin-left: 1px;
+    /* justify-content: flex-end; */
+}
+
+.carousel .carousel-inner .item .text .role2 {
+    display: block;
+    text-align: right;
+}
+
+.carousel .carousel-inner .item .text .role1 span {
+    float: left;
+    margin-right: 10px;
+}
+
+.carousel .carousel-inner .item .text .role2 span {
+    float: right;
+    margin-left: 10px;
+}
+
+/* 角色分数 只有句子读过后才显示 */
+.carousel .carousel-inner .item .text .role-in .role-score {
+    content: "79";
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #36dbbb;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    margin: 0 12px;
+}
+
+/* 智能听写 */
+
+.writing .right-and-wrong {
+    width: 48px;
+    height: 48px;
+    margin: 22px auto;
+}
+
+.word-speaking .speak-listen-tab-bd .writing .speak-listen-btn {
+    /* margin: 0 auto; */
+    width: 110px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.word-speaking .speak-listen-tab-bd .writing .speak-listen-btn input {
+    width: 110px;
+    height: 38px;
+    text-align: center;
+    font: 600 16px/38px MicrosoftYaHei;
+    color: #fff;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* 智能听写旋转木马 */
+.intelligent-dictation .carousel .carousel-inner .item .dictation {
+    width: 624px;
+    height: 64px;
+    margin: 68px auto;
+    padding: 0 104px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-right: none;
+    text-align: center;
+    color: #004098;
+    font-size: 24px;
+}
+
+.intelligent-dictation .carousel .carousel-inner .item .finish {
+    width: 104px;
+    height: 64px;
+    background-color: #11d8fc;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 120px;
+}
+
+.intelligent-dictation .carousel .carousel-inner .item .dictation::-webkit-input-placeholder { /* WebKit browsers*/
+    color: #ccc;
+    font-size: 24px;
+    line-height: 64px;
+}
+
+.intelligent-dictation .carousel .carousel-inner .item .dictation:-moz-placeholder { /* Mozilla Firefox 4 to 18*/
+    color: #ccc;
+    font-size: 24px;
+    line-height: 64px;
+}
+
+.intelligent-dictation .carousel .carousel-inner .item .dictation::-moz-placeholder { /* Mozilla Firefox 19+*/
+    color: #ccc;
+    font-size: 24px;
+    line-height: 64px;
+}
+
+.intelligent-dictation .carousel .carousel-inner .item .dictation:-ms-input-placeholder { /* Internet Explorer 10+*/
+    color: #999;
+    font-size: 14px;
+    line-height: 64px;
+}
+
+/* 提示信息模态框 */
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    z-index: 3;
+}
+
+#tooltip {
+    position: absolute;
+    width: 450px;
+    height: 320px;
+    background: url("../../images/common/cloud.png") no-repeat center center;
+    margin: 0 auto;
+    display: none;
+    z-index: 5;
+}
+
+.dictation-modal-header {
+    height: 130px;
+}
+
+.dictation-modal-header .title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 140px;
+    margin: 0;
+}
+
+.dictation-modal-body {
+    height: 70px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+.dictation-modal-body p {
+    margin: 0;
+}
+
+.dictation-modal-footer {
+    margin: 0;
+}
+
+.dictation-modal-footer button {
+    display: block;
+    cursor: pointer;
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    border-radius: 5px;
+    margin: 20px auto 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #11AfAF;
+}
+
+/* 角色扮演的人名 */
+.speak-listen-tab-hd .role {
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #11d8fc;
+    border: 1px solid #11d8fc;
+    transform: rotate(9deg);
+    float: right;
+    position: relative;
+    margin-right: 24%;
+    margin-top: 40px;
+}
+
+.speak-listen-tab-hd .role::before {
+    content: "";
+    width: 0;
+    height: 32px;
+    border-left: 2px solid #11d8fc;
+    transform: rotate(-9deg);
+    position: absolute;
+    top: -82%;
+    left: 50%;
+}
+
+.speak-listen-submit {
+    width: 65px;
+    height: 65px;
+    background-color: #ff8003;
+    box-shadow: 0 0 30px #ff8003;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 38px;
+    right: 70px;
+}
+
+.speak-listen-submit.out {
+    background-color: #999;
+    box-shadow: 0 0 30px #999;
+}
+
+/* html页面拷贝过来 */
+body {
+    color: #333;
+    font-size: 13px;
+}
+
+h3, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.scrollbox {
+    width: 400px;
+    padding: 10px;
+    border: #ccc 1px solid;
+}
+
+#scrollDiv {
+    width: 400px;
+    height: 70px;
+    overflow: hidden;
+}
+
+/*这里的高度和超出隐藏是必须的*/
+#scrollDiv li {
+    height: 55px;
+    line-height: 55px;
+    vertical-align: bottom;
+    zoom: 1;
+}
+
+/* 测试 */
+.word-speaking .lunbo-portrait {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    /* border:1px solid red;  */
+    overflow: hidden;
+}
+
+.word-speaking .lunbo-portrait .ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 210px;
+}
+
+.word-speaking .lunbo-portrait > .ul .item-in {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    display: block;
+}
+
+.text-btn {
+    /*margin-top: 300px;*/
+    position: absolute;
+    top: 70px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 210px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* html页面拷贝过来 */
+/*角色扮演*/
+.jsbyanimateul {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+}
+
+.jsbyanimateul .li {
+    width: 696px;
+    overflow: hidden;
+    word-wrap: break-word;
+    padding-bottom: 15px;
+}
+
+.jsbyanimateul .animateul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3000px;
+    padding-top: 70px;
+}
+
+/*角色扮演*/

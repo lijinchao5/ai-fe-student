@@ -1,0 +1,60 @@
+.exam-nav {
+    width: 237px;
+    height: 602px;
+    margin: 16px 0 15px 13px;
+    padding: 46px 0 37px 43px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.exam-nav .meb-icon img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+
+.exam-nav .meb-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;
+    background-size: cover;
+}
+
+.exam-nav .exam-info {
+    font-size: 18px;
+    margin-top: 57px;
+    color: #333;
+}
+
+.exam-nav .test-number {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.exam-nav .user-name {
+    color: #666;
+}
+
+.exam-nav .total {
+    margin-top: 155px;
+    margin-bottom: 10px;
+    color: #666;
+    letter-spacing: 7px;
+}
+
+.exam-nav .total-time {
+    letter-spacing: 0;
+}
+
+.exam-nav .remaining {
+    color: #666;
+}
+
+.exam-nav .remaining-time {
+    color: red;
+    margin-left: 8px;
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common/simulationExamModal.css" type="text/css"/>
+    <title>Document</title>
+
+</head>
+<body>
+<div class="sinulation-exam-modal">
+    <!-- 是否可以清晰听到播放的原音？  -->
+    <div style="visibility: hidden;">
+	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".fundamental-one" id="buttontip">是否可以清晰听到播放的原音</button>
+	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".record-fail" id="buttontsubtj" onclick="subtj();">提交试卷</button>
+    </div>
+    <div class="modal fade fundamental-one" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">竞业达英语听说机考客户端</h4>
+                </div>
+                <div class="modal-body">
+                    <p>请确定您的录音播放音量大小是否调至合适位置，点击确定完成测试语音，点击取消返回重新试音</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="nextwrap('exam-first');" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetplay();">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.js"></script>
+</html>

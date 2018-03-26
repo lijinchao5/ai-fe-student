@@ -1,0 +1,31 @@
+#nav {
+    position: absolute;
+    top: 80px;
+    left: -6px;
+    z-index: 1;
+}
+
+#report-banner {
+    width: 950px;
+    min-height: 580px;
+    margin-left: 209px;
+    padding: 0 0 50px 45px;
+    border-left: 18px solid #eee;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    width: 1200px;
+    min-height: 637px;
+    margin: 0 0 30px -600px;
+    border: 10px solid transparent;
+    border-top: 57px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 87 10 10 10 round;
+}

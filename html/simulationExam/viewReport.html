@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css"  type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/simulationExam/viewReport.css"  type="text/css"/>
+    <title>查看报告</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div class="outs">
+    <div class="mains">
+        <div id="nav"></div>
+        <div id="view-report">
+                <div class="report">
+                    <div class="report-title">
+                        <a href="./examReport.html"><img src="../../images/common/go-back.png" class="back"></a>
+                        <div class="place">
+                            <p id='rank'></p>
+                        </div>
+                        <div class="score">
+                            <p>
+                                <span class="score-num" id='score'></span>分
+                            </p>
+                        </div>
+                        <div class="report-comment">
+                            <p class="comment-text" id="remark"></p>
+                        </div>
+                    </div>
+                    <!-- 成绩统计 -->
+                    <p class="fr clearfix all-score">
+                        (&nbsp;总分：<span id="allScore"></span>&nbsp;)
+                    </p>
+                    <div class="score-statistic ">
+                        <ol class="report-tabs">
+                            <li>题型</li>
+                            <li>总分</li>
+                            <li>得分</li>
+                        </ol>
+                        <ul class="report-wrap" id="scoreTypeList">
+                        </ul>
+                    </div>
+                    <!-- 报告内容区域 -->
+                    <div class="report-content" id="report-content">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../lib/map.js"></script>
+<script src="../../js/simulationExam/viewReport.js"></script>
+
+</html>

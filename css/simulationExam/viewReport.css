@@ -1,0 +1,599 @@
+#nav {
+    position: absolute;
+    top: 80px;
+    left: -6px;
+    z-index: 3;
+}
+
+#view-report {
+    width: 950px;
+    margin-left: 209px;
+    padding-left: 40px;
+    border-left: 18px solid #eee;
+    padding-bottom: 20px;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    width: 1200px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin-left: -600px;
+    margin-bottom: 20px;
+}
+
+.report-title::after,
+.report-title .report-details::after,
+.report-title .report-comment::after,
+.report-top::after,
+.report-top .word-degree::after,
+.report-top .sentences-degree::after,
+.spell-list .prompt::after,
+.cosplay-list .cos-content .cos-score::after,
+.report-title::after,
+.score-statistic::after,
+.report-content .exam-key .exam-key-content .key-item p::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.back {
+    width: 26px;
+    height: 21px;
+    margin-left: -775px;
+}
+
+.report-title {
+    width: 100%;
+    margin: 40px 0 20px;
+    padding-left: 40px;
+}
+
+.report-title > div {
+    width: 110px;
+    height: 110px;
+    margin: 0 32px;
+    box-sizing: border-box;
+    float: left;
+    background-color: #fc6;
+}
+
+/* 椤堕儴鍏冪礌鑳屾櫙 */
+.report-title .place {
+    background: url("../../images/common/nb1.png") no-repeat center center;
+}
+
+.report-title .score {
+    line-height: 60px;
+    background: url("../../images/common/circle-blue.png") no-repeat center center;
+}
+
+.report-title .report-comment {
+    background: url("../../images/common/report-comment.png") no-repeat center center;
+}
+
+.report-title .place p {
+    font-size: 24px;
+    color: #1e9fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.report-title .score {
+    padding-top: 25px;
+}
+
+.report-title .score .score-num {
+    font-size: 36px;
+    color: #36dbbb;
+}
+
+.report-title .score p {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+.report-title .report-comment {
+    width: 330px;
+    position: relative;
+}
+
+.report-title .report-comment .comment-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 300;
+    color: #999;
+    /*多行文本溢出隐藏*/
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.all-score {
+    margin-top: -6px;
+    color: #666;
+}
+
+.score-statistic .report-tabs {
+    margin-top: 36px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #1e9fff;
+}
+
+.score-statistic .report-tabs > li {
+    user-select: none;
+    cursor: pointer;
+    width: 33.3333%;
+    height: 39px;
+    background-color: #11d8fc;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    float: left;
+}
+
+.score-statistic .report-wrap {
+    width: 100%;
+}
+
+.score-statistic .report-wrap > li {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #1e9fff;
+    margin-top: 2px;
+}
+
+.score-statistic .report-wrap li > div {
+    float: left;
+    width: 33.3333%;
+    height: 38px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.report-content {
+    width: 100%;
+    /* 鍏叡閮ㄥ垎 */
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.report-content .question-title {
+    margin-top: 50px;
+}
+
+.report-content .question-title .top-topic {
+    font-weight: 700;
+    color: #ff9966;
+}
+
+.report-content .question-title .top-topic span {
+    font-weight: 400;
+    color: #333;
+}
+
+/* 棰樼洰 */
+.report-content .question-content > li {
+    margin-top: 24px;
+}
+
+.report-content .question-content > li .exam-result {
+    color: #000;
+    font-weight: 700;
+}
+
+.report-content .question-content > li .exam-result img {
+    width: 22px;
+    height: 22px;
+    margin-left: 4px;
+}
+
+.report-content .question-content > li .recording-score {
+    height: 24px;
+    line-height: 24px;
+    color: #1e9fff;
+    margin-left: 10px;
+}
+
+/* 绛旀瑙ｆ瀽 */
+.report-content .exam-key {
+    margin-top: 50px;
+}
+
+.report-content .exam-key > span {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #004098;
+    background-color: #e8f5ff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.report-content .exam-key .exam-key-content {
+    -display: none;
+    border-bottom: 80px solid transparent;
+    border-image: url("../../images/common/refer-key-bg.png") 0 0 77 0 stretch;
+}
+
+.report-content .exam-key .exam-key-content .key-item {
+    padding: 20px 20px 1px;
+    background-color: #e8f5ff;
+}
+
+/* 鍙傝�冪瓟妗堝浘鏍� */
+.report-content .exam-key .exam-key-content .key-item p::before {
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 6px;
+    padding-top: 4px;
+}
+
+.report-content .exam-key .exam-key-content .refer-result p::before {
+    background: url("../../images/common/refer-result.png") no-repeat center left;
+}
+
+.report-content .exam-key .exam-key-content .crue-info p::before {
+    background: url("../../images/common/crue-info.png") no-repeat center left;
+}
+
+.report-content .exam-key .exam-key-content .listen-article p::before {
+    background: url("../../images/common/listen-article.png") no-repeat center left;
+}
+
+.report-content .exam-key .exam-key-content .key-item .key {
+    margin: 6px 0;
+}
+
+/* 绗簩棰� */
+/* 閫夐」 */
+.report-content .question-content > li .select span {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.report-content .question-content > li .right-wrong img {
+    width: 20px;
+    height: 20px;
+    margin-left: 14px;
+    cursor: pointer;
+}
+
+/* 绗笁棰� */
+/* 閫夐」 */
+.report-content .question-content > li .fill-vacancy span {
+    display: inline-block;
+    min-width: 100px;;
+    text-align: center;
+    padding: 10px 6px 0;
+    margin: 0 0 10px 10px;
+    border-bottom: 1px solid #333;
+}
+
+/* 琛ㄦ牸 */
+.report-content .question-content .fill-blanks .have-underline {
+    /*text-decoration: underline;*/
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    text-align: center;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.report-content .question-content .fill-blanks {
+    margin-top: 18px;
+    width: 765px;
+    color: #333;
+    font-size: 16px;
+    border-color: #1e9fff;
+}
+
+.report-content .question-content .fill-blanks th {
+    height: 52px;
+    text-align: center;
+}
+
+.report-content .question-content .fill-blanks tr td:nth-of-type(2) {
+    padding: 14px 0 10px 18px;
+}
+
+/* 绗洓棰� */
+/*.report-content .request-fourth .question-content .question{*/
+/*color: #333;*/
+/*}*/
+.report-content .question-content .word-degree {
+    width: 40%;
+    margin: 2.5% 0 4% 65%;
+    float: left;
+}
+
+.report-content .question-content .word-degree p {
+    width: 32%;
+    float: left;
+    margin-left: 1%;
+}
+
+.report-content .question-content .word-degree .degree-fail {
+    color: #ff6d80;
+}
+
+.report-content .question-content .word-degree .degree-good {
+    color: #ffb846;
+}
+
+.report-content .question-content .word-degree .degree-well {
+    color: #36dbbb;
+}
+
+.report-content .question-content .sentences-degree {
+    width: 61%;
+    margin: 3% 0 -5%;
+    float: left;
+}
+
+.report-content .question-content .sentences-degree p {
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+}
+
+.report-content .question-content .subject .green {
+    color: #36dbbb;
+}
+
+.report-content .question-content .subject .red {
+    color: #ff6d80;
+}
+
+.report-content .question-content .subject .orange {
+    color: #ffb846;
+}
+
+.report-top .word-degree p {
+    width: 32%;
+    float: left;
+    margin-left: 1%;
+}
+
+.report-top .word-degree .degree-fail {
+    color: #ff6d80;
+}
+
+.report-top .word-degree .degree-good {
+    color: #ffb846;
+}
+
+.report-top .word-degree .degree-well {
+    color: #36dbbb;
+}
+
+.report-top .sentences-degree {
+    width: 61%;
+    margin: 3% 0 -5%;
+    float: left;
+}
+
+.report-top .sentences-degree p {
+    float: left;
+    width: 30%;
+    margin-left: 1%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+}
+
+.report-top progress {
+    margin-left: 2px;
+    width: 87px;
+    height: 13px;
+    border-radius: 10px;
+}
+
+.report-top progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background: #eee;
+}
+
+.report-top progress::-webkit-progress-value {
+    border-radius: 10px;
+    background: #ff6d80;
+}
+
+.report-top .sentences-degree p progress.fluency::-webkit-progress-value {
+    background: #ffb846;
+}
+
+.report-top .sentences-degree p progress.integrity::-webkit-progress-value {
+    background: #36dbbb;
+
+}
+
+.report-content .report-wrap .word-list .content {
+    width: 33.33%;
+    list-style: none;
+    padding: 2% 0 1% 5%;
+    float: left;
+}
+
+.report-content .report-wrap .word-list .content img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.report-content .report-wrap .word-list .content .word-score {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: -7px 0 0 10px;
+    border-radius: 50%;
+    border: 1px solid #36dbbb;
+    color: #36dbbb;
+}
+
+.report-content .report-wrap .sentences-list .content {
+    padding: 2% 0 1% 5%;
+    border-bottom: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.report-content .report-wrap .sentences-list .content img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.report-content .report-wrap .sentences-list .content .sentences-score {
+    float: right;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: -13px 51px 0 0;
+    border-radius: 50%;
+    border: 1px solid #36dbbb;
+    color: #36dbbb;
+}
+
+.report-content .report-wrap .text-list .content {
+    width: 100%;
+    padding: 2% 0 1% 10%;
+    border-bottom: 1px solid #eee;
+    list-style: none;
+    position: relative;
+}
+
+.report-content .report-wrap .text-list .content img {
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    margin: -13px 5px 0 0;
+}
+
+.report-content .report-wrap .text-list .content .text {
+    width: 80%;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.report-content .report-wrap .text-list .content .text-score {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -13px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #36dbbb;
+    color: #36dbbb;
+}
+
+.report-content .report-wrap .cosplay-list .job-list {
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.report-content .report-wrap .cosplay-list .job-list .cos-title {
+    margin-top: 2%;
+    width: 100%;
+}
+
+.report-content .report-wrap .cosplay-list .job-list .cos-title .role-name {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #1e9fff;
+    font-weight: 900;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content {
+    width: 100%;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content p {
+    padding: 2% 0 1% 5%;
+    border-bottom: 1px solid #eee;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content .cos-score {
+    float: right;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    margin: -7px 51px 0 0;
+    border-radius: 50%;
+    border: 1px solid #36dbbb;
+    color: #36dbbb;
+}
+
+.report-content .report-wrap .spell-list .prompt {
+    float: right;
+    margin: 2%;
+}
+
+.report-content .report-wrap .spell-list .prompt .error {
+    float: left;
+    color: #ff6d80;
+    margin-right: 20px;
+}
+
+.report-content .report-wrap .spell-list .prompt .correct {
+    float: left;
+    color: #36dbbb;
+}
+
+.report-content .report-wrap .spell-list .spell-word {
+    padding-left: 40px;
+    width: 100%;
+}
+
+.report-content .report-wrap .spell-list .spell-word:first-of-type {
+    margin-top: 50px;
+}
+
+.report-content .report-wrap .spell-list .spell-word span {
+    display: inline-block;
+    width: 18%;
+    height: 34px;
+    margin: 2% 3% 0 0;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 1px solid #eee;
+    color: #36dbbb;
+}

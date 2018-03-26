@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/personInfo/personInfo.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
+    <!-- 编辑头像 -->
+    <link href="../../lib/avatar/cropper.min.css" rel="stylesheet">
+    <link href="../../lib/avatar/sitelogo.css" rel="stylesheet">
+    <link href="../../lib/avatar/qunit.css" rel="stylesheet">
+    <title>个人中心</title>
+</head>
+
+<body>
+<div id="header"></div>
+<div class="out">
+    <div class="mains">
+        <div id="personInfo">
+            <div class="left col-md-2">
+                <div class="user-icon-left">
+                    <img src="../../images/personInfo/xs-meb-icon.png" alt="头像" id="photo1">
+                </div>
+                <p class="user-name" id="username1"></p>
+                <div id="tabhd">
+                    <span class="home">
+                        <a href="../index.html"><img src="../../images/personInfo/tabs0.png">首&nbsp;&nbsp;页</a></span>
+                    <span class="current owner">
+                        <img src="../../images/personInfo/tabs1-in.png">个人资料</span>
+                    <span class="schoolmsg">
+                        <img src="../../images/personInfo/tabs2.png">学校信息</span>
+                    <span class="usermsg">
+                        <img src="../../images/personInfo/tabs3.png">账户信息</span>
+                </div>
+            </div>
+            <ul class="right bd col-md-9" id="tabbd">
+                <li></li>
+                <li class="owner-message" style="display:block">
+                    <!-- 个人资料 -->
+                    <div class="user-icon-right">
+                        <img src="../../images/personInfo/xs-meb-icon.png" alt="" id="photo2" class="big-meb-icon">
+                        <button type="button" class="btn btn-primary edit-head-icon" data-toggle="modal"
+                                data-target="#avatar-modal">编辑头像
+                        </button>
+                        <div class="user_pic" style="margin: 10px;">
+                            <img src=""/>
+                        </div>
+
+                        <div class="modal fade" id="avatar-modal" aria-hidden="true"
+                             aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <form class="avatar-form">
+                                        <div class="modal-header">
+                                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                            <h4 class="modal-title" id="avatar-modal-label">编辑头像</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="avatar-body">
+
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <div class="avatar-upload">
+                                                            <input class="avatar-src" name="avatar_src" type="hidden">
+                                                            <input class="avatar-data" name="avatar_data" type="hidden">
+                                                            <label for="avatarInput">上传本地图片</label>
+                                                            <button class="btn btn-danger" type="button"
+                                                                    style="display: none"
+                                                                    onClick="$('input[id=avatarInput]').click();"></button>
+                                                            <span id="avatar-name" style="display: none"></span>
+                                                            <input class="avatar-input hide" id="avatarInput"
+                                                                   name="avatar_file" type="file"></div>
+                                                        <div class="avatar-wrapper"></div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="pre-view">预览：</div>
+                                                        <div class="big">
+                                                            <div class="avatar-preview preview-lg imageHead"
+                                                                 id="resultImg"></div>
+                                                            <p>168*168</p>
+                                                        </div>
+                                                        <div class="mid">
+                                                            <div class="avatar-preview preview-lg imageHead"></div>
+                                                            <p>168*168</p>
+                                                        </div>
+                                                        <div class="sml">
+                                                            <div class="avatar-preview preview-lg imageHead"></div>
+                                                            <p>168*168</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row avatar-btns">
+                                                    <div style="display: none">
+                                                        <button class="btn btn-danger fa fa-arrows"
+                                                                data-method="setDragMode" data-option="move"
+                                                                type="button" title="移动">
+                                                        </button>
+                                                    </div>
+                                                    <input type="button"
+                                                           class="confirm btn btn-danger btn-block avatar-save fa fa-save"
+                                                           value="确认" onclick="uploadImg()" data-dismiss="modal"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+                    </div>
+                    <div class="set-info">
+                        <div>
+                            姓名：
+                            <input type="text" placeholder="请输入2到6个字符" name="name" id="user_name">
+                            <input type="hidden" name="sex" id="sex">
+                        </div>
+                        <div id="sexSelect">
+                            性别：
+                            <span class="sex">
+                                <img src="../../images/personInfo/sex0-in.png"/>我是男生</span>
+                            <span class="sex">
+                                <img src="../../images/personInfo/sex1.png"/>我是女生</span>
+                        </div>
+                        <div>
+                            生日：
+                            <input type="text" name="birthDate" id="birthDate" placeholder="年-月-日">
+                        </div>
+                        <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
+                    </div>
+                </li>
+                <li class="school-message">
+                    <!-- 学校信息 -->
+                    <div class="form-group">
+                        <span id="mark-label1" class="col-md-3">地区：</span>
+                        <div class="col-md-9">
+                            <input type="text" id="region1" class="col-md-4" disabled>
+                            <input type="text" id="region2" class="col-md-4" disabled>
+                            <input type="text" id="region3" class="col-md-4" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label2" class="col-md-3">学校：</span>
+                        <input type="text" id="school1" class="col-md-4" disabled>
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label3" class="col-md-3">年级：</span>
+                        <input type="text" id="school2" class="col-md-4" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label4" class="col-md-3">班级：</span>
+                        <input type="text" id="school3" class="col-md-4" disabled/>
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label6" class="col-md-3">手机号：</span>
+                        <input type="text" id="school5" class="col-md-4" disabled>
+                        <!--for="disabledTextInput"-->
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label5" class="col-md-3">班级编号：</span>
+                        <input type="text" id="school4" class="col-md-4" disabled/>
+                        <button id="change-classnum" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                            我要转班
+                        </button>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel">我要转班</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>班级编号：
+                                            <input type="text" class="user-msg" id="classId" placeholder="请输入您要转入的班级编号"
+                                                   title="请输入正确的账号"/>
+                                            <br/>
+                                        </p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <p class="change-tips">您输入的班级编号不正确，请重新输入</p>
+                                        <button type="button" id="sure-change" class="btn">确 &nbsp;&nbsp;认</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <span id="mark-label8" class="col-md-3" for="disabledTextInput">个人账号：</span>
+                        <input type="text" id="school7" class="col-md-4" disabled>
+                    </div>
+                    <div class="form-group">
+                        <span id="mark-label7" class="col-md-3" for="disabledTextInput">教材：</span>
+                        <input type="text" id="school6" class="col-md-4" disabled>
+                    </div>
+                </li>
+                <li class="user-message">
+                    <!-- 账户信息 -->
+                    <div class="blocks">
+                        <!-- 绑定手机号 -->
+                        <span class="indicator fl "></span>
+                        <span class="link-phone">绑定手机:</span>
+                        <span class="link-phone-info">绑定手机后，您即可享受手机登录、手机找回密码等服务</span>
+                        <span class="fr toggle-phone">绑定手机</span>
+                    </div>
+                    <div class="current login-form change-phone" style="display:none">
+                        <!-- 绑定手机号 表单 -->
+                        <p>更换后，原号码<span id="mobiles"></span>不能作为登录和找回</p>
+                        <div class="login-form-info">
+                            <span>密码：</span>
+                            <input type="password" placeholder="请输入您的密码" id="password1">
+                        </div>
+                        <div class="login-form-info">
+                            <span>新手机号：</span>
+                            <input type="text" placeholder="请输入您的手机号" id="newMobile">
+                        </div>
+                        <div class="login-form-info">
+                            <span>图片验证码：</span>
+                            <input type="text" class="verification-code" placeholder="图片验证码" id="randomValue">
+                            <img src="" id="randomPic" onclick="randomPic();">
+                            <span class="get-verification-code" onclick="sendMessage()">获取短信验证码</span>
+                        </div>
+                        <div class="login-form-info">
+                            <span>短信验证码：</span>
+                            <input type="text" class="verification-code" placeholder="请输入您的验证码" id="messageValue">
+                        </div>
+                        <div class="warms">提示信息</div>
+                        <input type="button" value="确认" class="confirm" onclick="updateMobile()">
+                    </div>
+                    <div class="blocks">
+                        <!-- 修改密码 -->
+                        <span class="indicator fl cyan"></span>
+                        <span class="login-psd">登录密码：</span>
+                        <span class="login-psd-info">安全性较高的密码,可以使账号更安全</span>
+                        <span class="fr toggle-pwd">修改密码</span>
+                    </div>
+                    <div class="current login-form change-pwd" style="display:none">
+                        <!-- 修改密码 表单 -->
+                        <div class="login-form-info">
+                            <span>原密码：</span>
+                            <input type="password" placeholder="请输入您正在使用的密码" id="password2">
+                        </div>
+                        <div class="login-form-info">
+                            <span>新密码：</span>
+                            <input type="password" placeholder="请输入新密码，密码长度为6-12个字符，区分大小写" id="password3">
+                        </div>
+                        <div class="login-form-info">
+                            <span>再次输入密码：</span>
+                            <input type="password" placeholder="请再次输入您的密码" id="password4">
+                        </div>
+                        <div class="warms">提示信息</div>
+                        <!-- 遮罩层 + 模态框 -->
+                        <input type="button" value="确认" class="btn btn-primary confirm" data-toggle="modal"
+                               data-target=".bs-example-modal-sm" onclick="updatePassword()">
+                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+                             aria-labelledby="mySmallModalLabel">
+                            <div class="modal-dialog modal-sm" role="document">
+                                <div class="modal-content">
+                                    <p>更改成功</p>
+                                    <span>下次登录可以使用新手机号登录</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!--<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>-->
+<script src="../../lib/avatar/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.js"></script>
+<script type="text/javascript" src="../../js/UUID.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/personInfo/personInfo.js"></script>
+
+<script src="../../lib/avatar/cropper.js"></script>
+<script src="../../lib/avatar/sitelogo.js"></script>
+<!--<script src="../../lib/avatar/qunit.js"></script>-->
+<script src="../../lib/avatar/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

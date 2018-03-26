@@ -1,0 +1,323 @@
+body {
+    color: #999;
+    font-size: 16px;
+}
+
+.record-title .level-scale li,
+.record-title .level-classify .classification li,
+.record-title .classify,
+.record-title .level-classify,
+.record-title .scale,
+.record-title .level-scale,
+.text-practice li,
+.record-title .down-top,
+.progress-text li {
+    float: left;
+}
+
+.record-title .text-level::after,
+.record-title .text-classify::after,
+.text-practice::after,
+.down-top::after,
+.level-classify .classification::after,
+.progress-text::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 1200px;
+    margin: 0 0 15px -600px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 13 13 10 round;
+}
+
+#nav {
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    z-index: 1;
+}
+
+#growth-record {
+    width: 970px;
+    min-height: 580px;
+    margin: 0 0 0 209px;
+    padding-top: 10px;
+    border-left: 18px solid #eee;
+}
+
+/* 成长记录 顶部按钮 */
+
+#growth-record .record-title {
+    width: 848px;
+    margin: auto;
+    border-bottom: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.record-title .text-level .scale,
+.record-title .text-classify .classify {
+    color: #333;
+}
+
+.record-title .text-level .level-scale li,
+.record-title .text-classify .level-classify .classification li {
+    cursor: pointer;
+}
+
+/* 鼠标移入变色 */
+.record-title .text-level .level-scale li:hover,
+.record-title .text-classify .level-classify .classification li:hover {
+    background-color: #11d8fc;
+    box-shadow: 0 0 4px 2px rgba(17, 216, 252, 0.54);
+    color: #fff;
+}
+
+.record-title .text-level .level-scale li {
+    margin-left: 10px;
+    padding: 0 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.record-title .current {
+    background-color: #11d8fc;
+    box-shadow: 0 0 4px 2px rgba(17, 216, 252, 0.54);
+    color: #fff;
+}
+
+.record-title .text-classify {
+    margin: 20px 0 30px;
+}
+
+.record-title .text-classify .level-classify {
+    padding: 0 5px;
+}
+
+.record-title .text-classify .level-classify ul:nth-of-type(1) {
+    display: block;
+}
+
+.record-title .text-classify .level-classify .classification {
+    display: none;
+    width: 700px;
+}
+
+.record-title .text-level .level-scale li:nth-of-type(1),
+.record-title .text-classify .level-classify .classification li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.record-title .text-classify .level-classify .classification li {
+    padding: 0 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.record-content {
+    width: 903px;
+    height: 448px;
+    margin: 0 auto;
+}
+
+.record-content .beat {
+    width: 100%;
+    height: 118px;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    color: #e20000;
+}
+
+.record-content .beat span {
+    display: inline-block;
+    width: 84px;
+    height: 58px;
+    background: url("../../images/growthRecord/growth-boom.png") no-repeat center center;
+    background-size: cover;
+    font-size: 24px;
+    color: #ffe400;
+    /* 旋转 */
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -moz-transform: rotate(7deg); /* Firefox */
+    -webkit-transform: rotate(7deg); /* Safari 和 Chrome */
+    -o-transform: rotate(7deg); /* Opera */
+
+}
+
+.record-content .record-info {
+    width: 100%;
+    height: 320px;
+}
+
+.record-content .record-info .record-chart {
+    width: 40%;
+    height: 320px;
+    float: left;
+    text-align: center;
+}
+
+.record-content .record-info .record-chart .chart {
+    width: 95%;
+    height: 310px;
+    margin-left: 5%;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+}
+
+/* 图表修改部分的样式 */
+.record-content .record-info .record-chart {
+    position: relative;
+}
+
+.record-content .record-info .record-chart .y-name {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.record-content .record-info .record-chart .x-name {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: 56px;
+    right: 20px;
+}
+
+.record-content .record-info .record-data {
+    width: 60%;
+    height: 320px;
+    float: right;
+}
+
+/* right top start  */
+.record-content .record-info .record-data .top-num {
+    height: 120px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.record-content .record-info .record-data .top-num > div {
+    display: inline-block;
+    width: 110px;
+    height: 60px;
+    /* 字体公共样式 */
+    font-size: 12px;
+    color: #333;
+}
+
+.record-content .record-info .record-data .top-num > div p span {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.record-content .record-info .record-data .top-num > div p:nth-child(2) {
+    color: #999;
+}
+
+.record-content .record-info .record-data .top-num > div p.read:before {
+    clear: both;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    background: url("../../images/growthRecord/reading.png") no-repeat center top;
+}
+
+.record-content .record-info .record-data .top-num > div p.word:before {
+    clear: both;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    background: url("../../images/growthRecord/words.png") no-repeat center top;
+}
+
+.record-content .record-info .record-data .top-num > div p.average:before {
+    clear: both;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    background: url("../../images/growthRecord/average.png") no-repeat center top;
+}
+
+.record-content .record-info .record-data .top-num > div p.pass:before {
+    clear: both;
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 4px;
+    background: url("../../images/growthRecord/passing.png") no-repeat center top;
+}
+
+/* right top end  */
+.record-content .record-info .record-data .data {
+    width: 95%;
+    height: 310px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.progress-text {
+    width: 540px;
+    height: 21px;
+}
+
+.progress-text li {
+    float: left;
+    width: 100px;
+    margin-left: 45px;
+    text-align: center;
+}
+
+.progress-text li:nth-of-type(1) {
+    margin-left: 69px;
+}
+
+.progress-text li:nth-of-type(2) {
+    margin-left: 40px;
+}
+
+.empty-all {
+    width: 180px;
+    padding-left: 18px;
+    margin: 50px 265px;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

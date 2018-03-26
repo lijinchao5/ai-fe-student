@@ -1,0 +1,221 @@
+.job-list {
+    width: 100%;
+}
+
+.screen {
+    width: 848px;
+    height: 30px;
+    margin: 5px auto 0;
+    font-weight: 300;
+}
+
+.screen span {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.screen .btn {
+    height: 27px;
+    padding: 0 6px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.screen .btn-primary {
+    background: #004098;
+    color: #fff;
+}
+
+.paging .toggles::after,
+.paging .toggles::before,
+.report-banner .main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.report-banner {
+    position: relative;
+    width: 848px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.report-banner .main li {
+    float: left;
+    width: 277px;
+    height: 228px;
+    margin: 15px 0 0 3px;
+    background: url('../../images/speakAndListen/backbox.png') no-repeat center center;
+    text-align: center;
+}
+
+.report-banner .main li p {
+    margin-top: 30px;
+    color: #999;
+    font-weight: 300;
+}
+
+.report-banner .main li p:first-of-type {
+    color: #ff8003;
+    font-size: 16px;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+    margin: 30px auto 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.report-banner .main li p:last-of-type {
+    margin-top: 0;
+}
+
+.report-banner .main li p.start-time,
+.report-banner .main li p.final-time {
+    margin-top: 0;
+    text-align: left;
+    padding-left: 22%;
+}
+
+.report-banner .main li p .color-blue,
+.report-banner .main li p .color-normal {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.report-banner .main li p .color-blue {
+    color: #1e9fff;
+    margin-right: -5px;
+}
+
+.report-banner .main li .do-homework,
+.report-banner .main li .check-report {
+    display: block;
+    width: 93px;
+    height: 24px;
+    margin-left: 33%;
+    border-radius: 5px;
+    background-color: #ff8003;
+    line-height: 24px;
+    color: #fff;
+}
+
+.report-banner .main li .do-homework {
+    margin-top: 24px;
+}
+
+.report-banner .main li a {
+    margin-bottom: 10px;
+}
+
+.report-banner .main li a:hover {
+    text-decoration: none;
+}
+
+.report-banner .main .score {
+    width: 75px;
+    height: 75px;
+    margin: 15px 0 10px 35%;
+    background: url("../../images/common/score-all.png") no-repeat center center;
+}
+
+.report-banner .main .score .blue-color {
+    color: #36dbbb;
+    font-size: 23px;
+    line-height: 75px;
+    font-weight: 600;
+}
+
+.report-banner .main .score .normal-color {
+    font-size: 13px;
+    color: #999;
+}
+
+.page-wrap {
+    position: relative;
+    width: 848px;
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+}
+
+.page-wrap:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    float: left;
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    float: left;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #11d8fc;
+    color: #fff;
+    border: none;
+}
+
+.empty-all {
+    width: 180px;
+    margin: 165px auto 0;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+

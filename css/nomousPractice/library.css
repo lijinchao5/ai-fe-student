@@ -1,0 +1,487 @@
+body {
+    font-size: 18px;
+}
+
+#nav {
+    padding-left: 15px;
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    z-index: 3;
+}
+
+#library {
+    width: 950px;
+    min-height: 575px;
+    margin: 0 0 0 209px;
+    border-left: 18px solid #eee;
+    padding-left: 20px;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 1200px;
+    margin-left: -600px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
+}
+
+.back {
+    width: 26px;
+    height: 21px;
+    margin: 20px 0 0 14px;
+}
+
+.ready-go .modal-body {
+    padding-top: 44px;
+}
+
+.ready-go .modal-header {
+    padding: 50px 11px 0 0;
+    border-bottom: none;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+}
+
+.ready-go .title {
+    height: 52px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #11d8fc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    padding: 0 60px 0 60px;
+}
+
+.ready-go .modal-body > div {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.ready-go .modal-body > div .mid {
+    display: inline-block;
+    margin: 0 24px;
+}
+
+.ready-go .modal-footer {
+    border-top: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.ready-go .modal-footer .start-read {
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+    outline: none;
+    border: none;
+    width: 148px;
+    height: 39px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.ready-go .modal-footer .start-read:hover {
+    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* 闃呰鍐呭 閮ㄥ垎 */
+.library-content {
+    padding-top: 35px;
+    position: relative;
+    /*display: none;*/
+}
+
+/* 褰撳墠杩涘害鏁� */
+.library-content .part-num {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.library-content .part-num .current {
+    color: #11d8fc;
+}
+
+.library-content .part-scores {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.library-content .part-scores p {
+    display: inline-block;
+    height: 34px;
+    border-radius: 17px;
+    background-color: #93eefe;
+    padding: 0 3px;
+}
+
+.library-content .part-scores .part-score {
+    display: inline-block;
+    margin: 3px 2px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    line-height: 28px;
+    text-align: center;
+    background-color: #fff;
+    color: #999;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+}
+
+/* 褰撳墠 鍦ㄨ 娈佃惤鏍峰紡 */
+.library-content .part-scores .part-score.current::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #11d8fc;
+    border-radius: 50%;
+    margin: -7px;
+}
+
+/* 鍑嗙‘搴︿竴琛� */
+.library-content .library-point {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.library .sentences-degree {
+    display: inline-block;
+}
+
+.library .sentences-degree p {
+    float: left;
+    /*width: 30%;*/
+    margin: 0 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+}
+
+.library progress {
+    margin-left: 10px;
+    width: 87px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.library progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background: #eee;
+}
+
+.library progress::-webkit-progress-value {
+    border-radius: 10px;
+    background: #ff6d80;
+}
+
+.library .sentences-degree p progress.fluency::-webkit-progress-value {
+    background: #ffb846;
+}
+
+.library .sentences-degree p progress.integrity::-webkit-progress-value {
+    background: #36dbbb;
+}
+
+/* 鏃嬭浆鏈ㄩ┈ */
+.library-content .carousel .carousel-inner {
+    margin-top: 20px;
+    /*height: 240px;*/
+    /*border: 1px solid #ccc;*/
+}
+
+.library-content .carousel .carousel-inner .item {
+    padding: 30px 100px 20px;
+    font: 14px MicrosoftYaHei;
+    font-weight: 700;
+    color: #333;
+}
+
+.library-content .carousel .carousel-inner .item .part {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 28px;
+    padding-right: 30px;
+    text-align: justify;
+}
+
+.library-content .carousel .carousel-inner .item .part .part-in {
+    width: 100%;
+}
+
+.library-content .carousel .carousel-inner .item .part::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+/*瀹氫箟婊氬姩鏉¤建閬� 鍐呴槾褰�+鍦嗚*/
+.library-content .carousel .carousel-inner .item .part::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+/*瀹氫箟婊戝潡 鍐呴槾褰�+鍦嗚*/
+.library-content .carousel .carousel-inner .item .part::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
+}
+
+/* 澶囩敤棰滆壊 */
+.library-content .carousel .carousel-inner .item .blue {
+    color: #11d8fc;
+}
+
+.library-content .carousel .carousel-inner .item .green {
+    color: #36dbbb;
+}
+
+.library-content .carousel .carousel-inner .item .orange {
+    color: #ffb846;
+}
+
+.library-content .carousel .carousel-inner .item .red {
+    color: #ff6d80;
+}
+
+.library-content .carousel .carousel-control {
+    height: 0;
+    top: 50%;
+}
+
+/* btn */
+.library-content .nomous-practice-btn {
+    width: 330px;
+    margin: 0 auto;
+    /*border: 1px solid #ccc;*/
+    position: relative;
+}
+
+.library-content .nomous-practice-btn .play-icon {
+    border-radius: 0%;
+    margin-left: 108px;
+    margin-top: 20px;
+}
+/* 录音中 */
+.library-content .nomous-practice-btn .speed-icon{
+    width: 260px;
+    margin-top: 4px;
+    display: inline-block;
+}
+.library-content .nomous-practice-btn .speed-text{
+    float: right;
+    font-size: 18px;
+    color: #333;
+}
+/* 重做按钮 */
+.q_restart {
+    padding: 0 67px;
+    display: none;
+}
+
+.library-content .nomous-practice-btn .play {
+    display: inline-block;
+    margin: 20px 24px;
+}
+
+.library-content .nomous-practice-btn img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.library-content .nomous-practice-btn p {
+    width: 100%;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.library-content .nomous-practice-btn .end {
+    position: absolute;
+    top: -28px;
+    right: -250px;
+    display: none;
+}
+
+.library-content .nomous-practice-btn .end img {
+    width: 130px;
+    height: 98px;
+    border-radius: 0%;
+}
+
+/* 鍚� wordspeaking .css line 135 */
+/* 寮�濮嬪仛浣滀笟 妯℃�佹 */
+.ready-go .modal-dialog {
+    width: 450px;
+}
+
+.ready-go .modal-content {
+    width: 450px;
+    height: 320px;
+    margin-top: 40%;
+    background: url("../../images/common/ready-go-clound.png") no-repeat center center;
+    border: none;
+    box-shadow: none;
+}
+
+/* 浣滀笟鎻愪氦瓒呮椂妯℃�佹 */
+.time-out {
+    width: 40px;
+    height: 21px;
+}
+
+.report .modal-content {
+    width: 625px;
+    height: 515px;
+    margin-top: 25%;
+}
+
+.report .modal-content .modal-header,
+.report .modal-content .modal-body,
+.report .modal-content .modal-body {
+    padding: 0;
+    border: none;
+}
+
+.report .modal-content .modal-header {
+    height: 57px;
+    position: relative;
+}
+
+.report .modal-content .modal-header .close {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    font-size: 46px;
+    color: rgba(0, 0, 0, .8);
+    font-weight: 300;
+    line-height: 46px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.report .modal-content .modal-body {
+    height: auto;
+}
+
+.report .modal-content .modal-body img {
+    width: 128px;
+    height: 128px;
+    padding: 10px;
+    background: url("../../images/personInfo/small-meb-icon.png") center center;
+    border-radius: 50%;
+    margin-left: 245px;
+}
+
+.report .modal-content .modal-body .user-name {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.report .modal-content .modal-body .time {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+.report .modal-content .modal-body .title {
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin: 48px 0 0 100px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #11d8fc;
+}
+
+.report .modal-body > div {
+    text-align: left;
+    margin-left: 100px;
+    font-size: 12px;
+    color: #999;
+}
+
+.report .modal-body .indicate .mid {
+    display: inline-block;
+    margin: 0 24px;
+}
+
+.report .modal-body .sentences-degree {
+    display: block;
+    width: 100%;
+    margin: 20px 0 22px 0;
+    padding-left: 100px;
+}
+
+.library .report .sentences-degree p {
+    float: left;
+    width: 30%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+    margin: 0;
+}
+
+.report .modal-content .modal-footer {
+    height: 117px;
+    width: 100%;
+    background: url("../../images/nomousPractice/score-bg.png") no-repeat bottom center;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 42px 0 0 0;
+    color: #fff;
+    border-top: none;
+}
+
+.report .modal-content .modal-footer .fr {
+    margin-right: 14px;
+}
+
+.report .modal-content .modal-footer .fl {
+    margin: 14px 0 0 40px;
+}
+
+.report .modal-content .modal-footer .up {
+    margin-top: 34px;
+    text-align: center;
+}
+
+.green {
+    color: #36dbbb;
+}
+
+.red {
+    color: #ff6d80;
+}
+
+.orange {
+    color: #ffb846;
+}

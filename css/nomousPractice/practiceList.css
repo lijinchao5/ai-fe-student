@@ -1,0 +1,312 @@
+body {
+    color: #999;
+    font-size: 16px;
+}
+
+.text-title .level-scale li,
+.text-title .level-classify .classification li,
+.text-title .classify,
+.text-title .level-classify,
+.text-title .scale,
+.text-title .level-scale,
+.text-practice li,
+.text-title .down-top,
+.paging .up,
+.paging .down,
+.paging .toggles,
+.paging .toggles li {
+    float: left;
+}
+
+.text-title .text-level::after,
+.text-title .text-classify::after,
+.text-practice::after,
+.down-top::after,
+.level-classify .classification::after,
+.paging .toggles::after,
+.paging .toggles::before {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.text-title .text-level .level-scale li,
+.text-title .text-classify .level-classify .classification li,
+.down-top .up-prev,
+.down-top .down-next,
+.text-practice li,
+.paging .toggles li,
+.paging .up,
+.paging .down {
+    cursor: pointer;
+}
+
+.my-bookshelf,
+.my-bookshelf:hover,
+.text-title .current,
+.text-practice li:hover p,
+.paging .toggles .col {
+    color: #fff;
+}
+
+.text-title .text-level .scale,
+.text-title .text-classify .classify,
+.paging .down {
+    color: #333;
+}
+
+.outs {
+    width: 100%;
+    background: #eee;
+}
+
+.outs .mains {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 1200px;
+    margin: 0 0 20px -600px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
+}
+
+#nav {
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    z-index: 3;
+}
+
+#practice-banner {
+    width: 970px;
+    min-height: 580px;
+    margin: 0 0 0 209px;
+    padding-top: 10px;
+    border-left: 18px solid #eee;
+    background: #fdfbfb;
+}
+
+.my-bookshelf {
+    display: block;
+    margin-left: 735px;
+    width: 148px;
+    height: 39px;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    line-height: 39px;
+    border-radius: 5px;
+}
+
+.my-bookshelf:hover {
+    text-decoration: none;
+    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+}
+
+#practice-banner .text-title {
+    width: 848px;
+    margin: auto;
+}
+
+.text-title .text-level .level-scale li {
+    text-align: center;
+    padding: 0 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.text-title .text-level .level-scale li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.text-title .current {
+    background-color: #11d8fc;
+    box-shadow: 0 0 4px 2px rgba(17, 216, 252, 0.54);
+}
+
+.text-title .text-classify,
+.text-title .text-level {
+    margin: 15px 0;
+}
+
+.text-title .text-classify .level-classify,
+.text-title .text-level .level-scale {
+    padding: 0 5px;
+}
+
+.text-title .text-classify .level-classify ul:nth-of-type(1) {
+    display: block;
+}
+
+.text-title .text-classify .level-classify .classification {
+    display: none;
+    width: 700px;
+}
+
+.text-title .text-classify .level-classify .classification li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.text-title .text-classify .level-classify .classification li {
+    padding: 0 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+.down-top {
+    display: none;
+}
+
+.down-top .up-prev,
+.down-top .down-next {
+    width: 20px;
+    height: 10px;
+}
+
+.practice-wrap {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    padding-top: 10px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.text-practice {
+    width: 796px;
+    height: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.text-practice li {
+    width: 258px;
+    height: 123px;
+    margin: -1px 11px 0 0;
+    background: url("../../images/nomousPractice/normal-bg.png") no-repeat center bottom;
+    background-size: cover;
+}
+
+.text-practice li:nth-of-type(3n) {
+    margin: -1px 0 0 0;
+}
+
+.text-practice li .practice-title {
+    width: 80%;
+    margin: 47px auto 0;
+    font-size: 18px;
+    color: #11d8fc;
+    text-align: center;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-practice li .practice-info {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
+.text-practice li .practice-info .pr-classify {
+    margin-left: 15px;
+    font-weight: 300;
+}
+
+.text-practice li:hover {
+    background: url("../../images/nomousPractice/current-bg.png") no-repeat center bottom;
+    background-size: cover;
+}
+
+.text-practice li:hover .practice-title {
+    margin-top: 60px;
+}
+
+.page-wrap {
+    font-size: 12px;
+    position: relative;
+    width: 848px;
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+}
+
+.page-wrap:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    float: left;
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    float: left;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #11d8fc;
+    color: #fff;
+    border: none;
+}
+
+.down-top {
+    margin: 0 10px;
+}
+
+.down-top img {
+    margin-left: 5px;
+}
+
+.empty-all {
+    width: 180px;
+    margin: 110px auto 0;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

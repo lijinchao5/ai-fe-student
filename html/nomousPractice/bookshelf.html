@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/nomousPractice/bookshelf.css" type="text/css"/>
+    <title>成长记录</title>
+</head>
+<body>
+<div id="header"></div>
+<div class="outs">
+    <div class="mains">
+        <div id="nav"></div>
+        <div class="growth-list">
+            <a href="./practiceList.html"><img src="../../images/common/go-back.png" class="back"></a>
+            <ul class="growth-title">
+                <li><p><span class="text-company">0</span>本</p>阅读量</li>
+                <li><p><span class="text-company">0</span>个</p>阅读词汇</li>
+                <li><p><span class="text-company">0</span>分</p>跟读均分</li>
+                <li><p><span class="text-company">0</span>%</p>平均通过率</li>
+            </ul>
+            <ul class="growth-content">
+            </ul>
+            <div class="paging">
+		        <span class="up">上一页</span>
+		        <ol class="toggles" id="toggleLi">
+		        </ol>
+		        <span class="down">下一页</span>
+		    </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/nomousPractice/bookshelf.js"></script>
+<script type="text/javascript" src="../../js/audioCommon.js"></script>
+<script>
+    $(function () {
+        $('#header').load('../common/header.html');
+        $('#nav').load('../common/nav.html');
+    });
+</script>
+<script id="sjscript" type="text/html">
+<li>
+	<span class="text-title">{NAME}</span>
+	<span class="record-lis" onclick="ly(this)"  data="{id}">我的录音</span>
+	<div class="details">
+		<span class="all-time"><p>{update_date}</p><p>分类:{typeName}</p></span>
+		<span class="all-level"><p><span class="story-score">{score}</span>分</p><p>级别:{levelName}</p></span>
+	</div>
+</li>
+</script>
+</html>

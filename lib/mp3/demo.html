@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Html5网页JavaScript录制MP3音频</title>
+<meta charset="utf-8" />
+</head>
+<body>
+	<h1>Html5网页JavaScript录制MP3音频</h1>
+	<button onclick="funStartMp3();" id="btnStart">录制</button>
+	<button onclick="funStopMp3(funmp3);" id="btnStop">停止</button>
+	<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+	<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.3.0.min.js"></script>
+	<h4>调试信息：</h4>
+	<div id="recordingslist"></div>
+	<script type="text/javascript">
+		var client;
+		$(function() {
+			client = new OSS.Wrapper({
+				region : 'oss-cn-huhehaote',
+				//云账号AccessKey有所有API访问权限，建议遵循阿里云安全最佳实践，创建并使用STS方式来进行API访问
+				accessKeyId : 'LTAIJT4qXgVGc0HK',
+				accessKeySecret : 'LnrafyEmv8P8beinxA8tv35aaj65af',
+				bucket : 'xl-audio-file-store'
+			});
+			//下载获取真实的地址
+			var url = client.signatureUrl('teacher_photo_fa6c26f9ccca4c87b0dab9292310280a.jpg');
+		})
+	</script>
+	<script src="../../js/common.js" charset="UTF-8"></script>
+	<script src="/lib/mp3/recordmp3.js" charset="UTF-8"></script>
+	<script>
+		function funmp3(json) {
+			var id = json.result;
+			console.log(id)
+			setword(id);
+		}
+
+		function setword(id) {
+			if ($("#player_audio").length == 0) {
+				$("body").prepend($("<div style='display: none;' > <audio id='player_audio' src='' /></div>"))
+			}
+			$("#player_audio").attr("src", "https://192.168.0.136:8443/oep-be-0.0.1/file/download.do?type=mp3&id=" + id);
+			document.getElementById("player_audio").play();
+		}
+		
+	</script>
+	<input type="file" id="mp3file" name="file">
+	<input type="button" value="上传文件" onclick="upload()">
+</body>
+</html>

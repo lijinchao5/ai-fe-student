@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/growthRecord/growthRecord.css" type="text/css"/>
+
+    <title>成长记录</title>
+
+</head>
+
+<body>
+<!-- top 部分 -->
+<div id="header"></div>
+<div class="outs">
+    <div class="mains">
+        <div id="nav"></div>
+        <div id="growth-record">
+            <div class="record-title">
+                <div class="text-level">
+                    <span class="scale">时间：</span>
+                    <ul class="level-scale">
+                        <li class="current">一周内</li>
+                        <li>一月内</li>
+                        <li>一年内</li>
+                        <li>其他</li>
+                    </ul>
+                </div>
+                <div class="text-classify">
+                    <span class="classify">分类：</span>
+                    <div class="level-classify">
+                        <ul class="classification">
+                            <li class="current">我的作业</li>
+                            <li>我的模考</li>
+                            <li>我的练习</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="record-content">
+                <div class="beat">
+                    <p>你击败了 <span>100%</span> 的同学！！</p>
+                </div>
+                <div class="record-info">
+                    <div class="record-chart">
+                        <div class="chart" id="chart"></div>
+                        <div class="y-name">（分数）</div>
+                        <div class="x-name">（日期）</div>
+                    </div>
+                    <div class="record-data">
+                        <div class="data">
+                            <div class="top-num">
+                                <div class="read">
+                                    <p><span>100</span>本</p>
+                                    <p class="read">&nbsp;阅读量</p>
+                                </div>
+                                <div class="word">
+                                    <p><span>5015</span>个</p>
+                                    <p class="word">&nbsp;词汇量</p>
+                                </div>
+                                <div class="average">
+                                    <p><span>80</span>分</p>
+                                    <p class="average">&nbsp;均&nbsp;&nbsp;分</p>
+                                </div>
+                                <div class="pass">
+                                    <p><span>0%</span></p>
+                                    <p class="pass">&nbsp;通过率</p>
+                                </div>
+                            </div>
+                            <div id="roll-progress" style="width: 540px;height:160px;"></div>
+                            <ul class="progress-text">
+                                <li>准确度</li>
+                                <li>完整度</li>
+                                <li>流利度</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/growthRecord/growthRecord.js"></script>
+<script type="text/javascript" src="../../lib/echarts.min.js"></script>
+
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chart'));
+    var myCharts = echarts.init(document.getElementById('roll-progress'));
+
+    // 指定图表的配置项和数据 折线图
+    var option = {
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        // 网格 调整图表大小 图表位置
+        grid: {
+            x: 40,
+            y: 70,
+            x2: 70,
+            y2: 70,
+            // width: {totalWidth} - x - x2,
+            // height: {totalHeight} - y - y2,
+            backgroundColor: 'rgba(0,0,0,0)',
+            borderWidth: 1,
+            borderColor: '#ccc'
+        },
+        series: [{
+            data: [10, 95, 70, 45, 88, 73, 88],
+            type: 'line',
+            symbol: 'triangle',
+            symbolSize: 12,
+            lineStyle: {
+                normal: {
+                    color: 'tomato',
+                    width: 2,
+                    type: 'dashed'
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: 2,
+                    borderColor: 'yellow',
+                    color: '#153d96'
+                }
+            }
+        }]
+    };
+
+    //颜色
+    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
+    //    数据
+    var data = [
+        {
+            "name": '准确度',
+            "value": 80
+        },
+        {
+            "name": '完整度',
+            "value": 84
+        },
+        {
+            "name": '流利度',
+            "value": 52
+        }
+    ];
+    //将数据放入圆环中
+    var create = function (data) {
+        var result = [];
+        for (var i = 0; i < data.length; i++) {
+            result.push({
+                name: '',
+                center: [(i * 26 + 22.5 + '%'), '50%'],
+                radius: ['50%', '60%'],
+                type: 'pie',
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                markPoint: {
+                    data: [{
+                        symbol: 'triangle',
+                        symbolSize: 15,
+                        symbolRotate: 0,
+                        itemStyle: {
+                            normal: {
+                                color: 'transparent'
+                            }
+                        },
+                        name: '',
+                        value: data[i].name,
+                        x: myChart.getWidth() * (i + .8) / 4,
+                        y: myChart.getHeight() * 0.45 + 120,
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'center',
+                                formatter: function (params) {
+                                    return params.value;
+                                },
+                                textStyle: {
+                                    color: colorData[i]
+                                }
+                            }
+                        }
+                    }]
+                },
+                data: [
+                    {
+                        value: data[i].value,
+                        name: data[i].name,
+                        itemStyle: {
+                            normal: {
+                                color: colorData[i]
+                            },
+                            emphasis: {
+                                color: colorData[i]
+                            }
+                        },
+                        label: {
+                            normal: {
+                                formatter: '{d} %',
+                                position: 'center',
+                                show: true,
+                                textStyle: {
+                                    fontSize: '16',
+                                    fontWeight: 'bold',
+                                    color: colorData[i]
+                                }
+                            }
+                        }
+                    },
+                    {
+                        value: (100 - data[i].value),
+                        name: '',
+                        tooltip: {
+                            show: false
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: '#aaa'
+                            },
+                            emphasis: {
+                                color: '#aaa'
+                            }
+                        },
+                        hoverAnimation: false
+                    }
+                ]
+            });
+        }
+        return result;
+    };
+    // 指定图表的配置项和数据 饼图
+    var options = {
+        tooltip: {
+            trigger: 'item',
+            formatter: function (params, ticket, callback) {
+                var res = params.name + ' : ' + params.percent + '%';
+                return res;
+            }
+        },
+        grid: {
+            bottom: 100,
+            top: 150
+        },
+        xAxis: [{show: false}],
+        yAxis: [{show: false}],
+        series: create(data)
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    myCharts.setOption(options);
+
+
+</script>
+
+
+</html>

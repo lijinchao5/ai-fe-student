@@ -1,0 +1,140 @@
+html {
+    width: 100%;
+    height: 100%;
+    min-width: 1366px;
+    min-height: 739px;
+    background: url("../images/index/index-bg.jpg") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.center {
+    width: 80%;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+.top {
+    height: 82px;
+    line-height: 82px;
+    color: #fff;
+}
+
+.top .fl img {
+    width: 142px;
+    height: 20px;
+    user-select: none;
+}
+
+.top .fl p {
+    display: inline-block;
+    height: 82px;
+    font-size: 20px;
+}
+
+.top .fr {
+    height: 82px;
+}
+
+.top .fr img {
+    width: 48px;
+    height: 48px;
+    margin: 17px 12px;
+    border-radius: 50%;
+}
+
+.top .fr p {
+    display: inline-block;
+    height: 82px;
+    opacity: 0.9;
+    font-size: 14px;
+    padding: 0 2px;
+
+}
+
+/* 内容区域 */
+
+.content {
+    min-width: 1024px;
+}
+
+.content-out {
+    position: relative;
+    width: 844px;
+    height: 311px;
+    margin: 220px auto 0;
+    background: url("../images/index/all-bg.png") no-repeat center center;
+    background-size: cover;
+}
+
+.content .bottom-bg {
+    width: 1055px;
+}
+
+.content .bottom-bg::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.content .bottom-bg li {
+    padding-top: 60px;
+    width: 211px;
+    height: 311px;
+    float: left;
+    text-align: center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.content .bottom-bg li img {
+    padding-top: 26px;
+    height: 77px;
+}
+
+.content .bottom-bg li p {
+    margin: 40px auto;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.content .lamp {
+    position: absolute;
+    top: -114px;
+    right: -178px;
+    width: 479px;
+    height: 551px;
+    background: url("../images/index/lamp.png") no-repeat right top;
+    background-size: cover;
+}
+
+.content .speaking-trumpet {
+    position: absolute;
+    bottom: -72px;
+    left: -176px;
+    width: 122px;
+    height: 122px;
+    background: url("../images/index/headset.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.add-top {
+    width: 1055px;
+    position: absolute;
+    top: 61px;
+    left: 0;
+}
+
+.add-top li {
+    width: 211px;
+    height: 188px;
+    float: left;
+    background: transparent;
+}
+
+.add-top li a {
+    display: inline-block;
+    width: 211px;
+    height: 190px;
+    z-index: 100;
+}

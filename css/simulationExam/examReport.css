@@ -1,0 +1,263 @@
+#nav {
+    position: absolute;
+    top: 50px;
+    left: -6px;
+    z-index: 3;
+}
+
+#exam-report {
+    width: 970px;
+    min-height: 580px;
+    margin: 0 0 0 209px;
+    padding-top: 10px;
+    border-left: 18px solid #eee;
+}
+
+.out {
+    width: 100%;
+    background: #eee;
+}
+
+.out .mains {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    margin: 0 0 20px -600px;
+    width: 1200px;
+    border: 10px solid transparent;
+    border-top: 80px solid transparent;
+    border-image: url("../../images/common/main-bg.png") 80 11 12 10 round;
+}
+
+#exam-report .report-banner .main .enter-exam,
+#exam-report .report-banner .main .enter-report,
+#exam-report .report-banner .main .exam-date,
+#exam-report .report-banner .main .all-time,
+#exam-report .report-banner .main li,
+.paging .up,
+.paging .down,
+.paging .toggles,
+.paging .toggles li {
+    float: left;
+}
+
+#exam-report .report-banner .main::after,
+.paging .toggles::after,
+.paging .toggles::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#exam-report .screen {
+    width: 848px;
+    height: 30px;
+    margin: 20px auto 0;
+    font-weight: 300;
+}
+
+#exam-report .screen span {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+#exam-report .screen .btn {
+    font-size: 16px;
+    padding: 0 6px;
+    height: 27px;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#exam-report .screen .btn-primary {
+    background: #004098;
+    color: #fff;
+}
+
+#exam-report .report-banner {
+    width: 848px;
+    height: 475px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#exam-report .report-banner .main li {
+    width: 415px;
+    height: 197px;
+    border: 1px solid #11d8fc;
+    padding: 0 21px 17px 14px;
+    margin: 18px 18px 0 0;
+    text-align: center;
+}
+
+#exam-report .report-banner .main li:nth-of-type(2n) {
+    margin: 18px 0 0 0;
+}
+
+#exam-report .report-banner .main li:hover {
+    box-shadow: 0 0 8px 2px rgba(17, 216, 252, 0.26);
+}
+
+#exam-report .report-banner .main .topic {
+    width: 100%;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #ff8003;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#exam-report .report-banner .main .examiner,
+#exam-report .report-banner .main .score-and-rank {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+#exam-report .report-banner .main .score-and-rank {
+    margin-top: 20px;
+    color: #999;
+}
+
+#exam-report .report-banner .main .exam-date,
+#exam-report .report-banner .main .all-time {
+    width: 75%;
+    font-size: 12px;
+    color: #999;
+    padding-left: 5px;
+    margin-top: 32px;
+    text-align: left;
+}
+
+#exam-report .report-banner .main .all-time {
+    line-height: 20px;
+}
+
+#exam-report .report-banner .main .enter-exam,
+#exam-report .report-banner .main .enter-report {
+    width: 93px;
+    height: 24px;
+    margin-top: 45px;
+    display: block;
+    background: #ff8003;
+    line-height: 24px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#exam-report .report-banner .main .enter-exam:hover,
+#exam-report .report-banner .main .enter-report:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#exam-report .report-banner .main .enter-report {
+    margin-top: 28px;
+}
+
+#exam-report .report-banner .main .complete-number {
+    color: #1e9fff;
+}
+
+#exam-report .report-banner .main .complete-score {
+    color: #36dbbb;
+    font-size: 30px;
+    margin-left: -13px;
+}
+
+#exam-report .report-banner .main .score-rank {
+    color: #ff6d80;
+    font-size: 30px;
+}
+
+#exam-report .report-banner .main .complete-rank {
+    margin-left: 50px;
+}
+
+.page-wrap {
+    position: relative;
+    width: 848px;
+    margin: 0 auto;
+    height: 30px;
+    text-align: center;
+}
+
+.page-wrap:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #11d8fc;
+    color: #fff;
+    border: none;
+}
+
+.empty-all {
+    width: 180px;
+    margin: 165px auto 0;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}

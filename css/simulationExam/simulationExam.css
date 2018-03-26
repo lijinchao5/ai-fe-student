@@ -1,0 +1,761 @@
+#notice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 768px;
+}
+
+#nav, #nav1 {
+    width: 237px;
+    height: 602px;
+}
+
+#notice > div {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap {
+    position: absolute;
+    left: 83px;
+    top: 98px;
+    width: 1250px;
+    height: 630px;
+    min-width: 1200px;
+    min-height: 600px;
+}
+
+.student-notice .title {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+    color: #004098;
+}
+
+.student-notice .content {
+    margin: 30px 70px;
+}
+
+.student-notice .content p {
+    color: #666;
+    line-height: 26px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.student-notice .next {
+    display: block;
+    border: none;
+    outline: none;
+    line-height: 37px;
+    text-align: center;
+    margin: 45px 70px 0 0;
+    width: 145px;
+    height: 37px;
+    color: #fff;
+    font-size: 16px;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    cursor: pointer;
+}
+
+.student-notice .next:hover {
+    text-decoration: none;
+}
+
+.student-notice::after,
+.student-notice .next::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.content-bg .content-in {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    box-sizing: border-box;
+    padding: 50px 100px;
+}
+
+.content-bg .content-in .title p {
+    width: 100%;
+    height: 110px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    color: #004098;
+}
+
+.content-bg .content-in .title .ip {
+    line-height: 90px;
+    color: #333;
+    font-size: 18px;
+}
+
+.content-bg .content-in .main {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.content-bg .content-in .main .description {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    color: #333;
+}
+
+.content-bg .content-in .main .eg {
+    padding-left: 50px;
+    height: 110px;
+    line-height: 80px;
+    font-size: 30px;
+    color: #11d8fc;
+    font-weight: 700;
+}
+
+.content-bg .content-in .main .btns {
+    width: 340px;
+    height: 90px;
+    padding: 0 0 0 50px;
+}
+
+.content-bg .content-in .main .btns div {
+    width: 60px;
+    height: 90px;
+    margin: 0 26px;
+    float: left;
+    cursor: pointer;
+}
+
+.content-bg .content-in .main .btns div img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin: 16px auto 0;
+    border-radius: 50%;
+}
+
+.content-bg .content-in .main .btns .record img {
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.content-bg .content-in .main .btns div span {
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.content-bg .content-in .main .clear-btn {
+    width: 350px;
+    height: 37px;
+    margin: 20px 3px 0;
+}
+
+.content-bg .content-in .main .clear-btn .buttons {
+    width: 111px;
+    height: 37px;
+    background: url("../../images/common/set-meb-icon.png") center center;
+    border: none;
+    border-radius: 4px;
+    line-height: 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.content-bg .content-in .main .clear-btn .buttons:hover {
+    background: url("../../images/common/hover-set-meb-icon.png") center center;
+    border: none;
+}
+
+.content-bg .content-in .main .clear-btn .readonly {
+    width: 111px;
+    height: 37px;
+    border: none;
+    border-radius: 4px;
+    line-height: 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.content-bg .content-in .main .fr img {
+    display: inline-block;
+    width: 187px;
+    height: 189px;
+    margin-top: 70px;
+}
+
+.content-bg .content-in .main .volume {
+    max-width: 80%;
+    height: 40px;
+    margin-top: 60px;
+}
+
+.content-bg .content-in .main .volume p {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+/* volume bar start */
+.rangeslider,
+.rangeslider__fill {
+    background: #e6e6e6;
+    display: block;
+    height: 6px;
+    width: 100%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.rangeslider {
+    position: relative;
+}
+
+.rangeslider--disabled {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+}
+
+.rangeslider__fill {
+    background: #ccc;
+    position: absolute;
+    top: 0;
+}
+
+.rangeslider__handle {
+    background: white;
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -18px;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.volume-bar {
+    width: 820px;
+    padding-left: 48px;
+    padding-top: 18px;
+    position: relative;
+}
+
+.volume-bar output {
+    position: absolute;
+    top: 6px;
+    right: -40px;
+}
+
+/* volume bar end */
+.content-bg .content-in .main .finish {
+    display: block;
+    width: 145px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.content-bg .content-in .main .finish:hover {
+    text-decoration: none;
+}
+
+.exam-first #simulation-exam {
+    background: #fff;
+}
+
+.exam-first #simulation-exam,
+.start-exam #question-content {
+    width: 900px;
+    height: 602px;
+    position: absolute;
+    top: 16px;
+    left: 264px;
+}
+
+.start-answer {
+    height: 595px;
+    background: #fff;
+}
+
+.prepare-exam-exam {
+    margin-left: 12px;
+    width: 900px;
+    height: 602px;
+}
+
+.prepare-exam .paper-name {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 198px;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.prepare-exam .start-answer {
+    display: block;
+    width: 148px;
+    height: 39px;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 39px;
+    margin: 116px auto;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.prepare-exam .start-answer:hover {
+    color: #fff;
+    text-decoration: none;
+    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+}
+
+#notice .wrap:first-of-type {
+    display: block;
+}
+
+#notice .wrap {
+    display: none;
+}
+
+.start-exam .exam-title::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.start-exam .question-answer {
+    min-width: 900px;
+    height: 602px;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+.start-exam .start-answer {
+    color: #333;
+    font-size: 14px;
+    padding-left: 24px;
+    min-width: 900px;
+    height: 602px;
+    float: left;
+    position: relative;
+    top: 0;
+}
+
+.start-exam .start-answer .exam-title {
+    height: 50px;
+}
+
+.start-exam .start-answer .exam-title .exam-subject {
+    font-size: 18px;
+    height: 49px;
+    margin: 19px 0 0 11px;
+    line-height: 49px;
+    float: left;
+}
+
+.start-exam .start-answer .count-wrap {
+    height: 49px;
+    font-size: 16px;
+    margin-right: 50px;
+    position: relative;
+    float: right;
+}
+
+.start-exam .start-answer .count-wrap .count-down {
+    width: 50px;
+    height: 49px;
+    vertical-align: middle;
+}
+
+.start-exam .start-answer .count-wrap .counts {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    color: #999;
+}
+
+.start-exam .start-answer .count-wrap .counts .count-time {
+    font-size: 15px;
+    margin-right: 3px;
+    color: #1e9fff;
+}
+
+.start-exam .start-answer .exam-topic {
+    width: 97%;
+    border: 1px solid #11d8fc;
+    background-color: #ecfcff;
+    margin-top: 27px;
+    padding: 18px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #666;
+}
+
+.start-exam .start-answer .exam-question {
+    margin: 40px 0 0 10px;
+    font-size: 16px;
+    color: #004098;
+}
+
+/* 填空题图片样式 */
+.start-exam .start-answer .fill-in {
+    color: green;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.start-exam .start-answer .fill-in-img {
+    width: 100%;
+}
+
+.start-exam .start-answer .exam-problems,
+.start-exam .start-answer .exam-test {
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.start-exam .start-answer .exam-test {
+    margin-top: 0;
+    padding: 0 15px;
+}
+
+.start-exam .start-answer .exam-recording {
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+
+.start-exam .start-answer .exam-recording img {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.start-exam .start-answer .on img {
+    animation: recording 2s infinite;
+    -webkit-animation: recording 2s infinite; /*Safari and Chrome*/
+    -moz-animation: recording 5s infinite; /* Firefox */
+    -o-animation: recording 5s infinite; /* Opera */
+}
+
+/* 褰曢煶鍔ㄧ敾 */
+@keyframes recording {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes recording /*Safari and Chrome*/
+{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-moz-keyframes recording /* Firefox */
+{
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@-o-keyframes recording /* Opera */
+{
+    from {
+        -o-transform: scale(1.5) rotate(10deg);
+    }
+    to {
+        background: yellow;
+    }
+}
+
+.start-exam .start-answer .exam-recording img {
+    width: 75px;
+    height: 75px;
+}
+
+.start-exam .start-answer .exam-recording .recording-text {
+    color: #999;
+    margin: 15px 0 0 0;
+}
+
+.start-exam .start-answer .choice-answer {
+    color: #333;
+    font-size: 16px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.start-exam .start-answer .choice-answer input {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.start-exam .start-answer .have-underline {
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100px;
+    border-bottom: 1px solid #333;
+}
+
+.start-exam .start-answer .fill-blanks {
+    margin-top: 18px;
+    width: 765px;
+    color: #333;
+    font-size: 16px;
+    border-color: #d2d2d2;
+}
+
+.start-exam .start-answer .fill-blanks .quest-num {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.start-exam .start-answer .fill-blanks th {
+    height: 52px;
+    text-align: center;
+}
+
+.start-exam .start-answer .fill-blanks tr td:nth-of-type(2) {
+    padding: 14px 0 10px 18px;
+}
+
+.start-exam .start-answer .submit-papers {
+    display: none;
+    width: 148px;
+    height: 39px;
+    margin: 26px auto 0;
+    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size: cover;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+}
+
+.start-exam .start-answer .submit-papers:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.start-exam .modal-content {
+    width: 530px;
+    height: 310px;
+    margin: 150px auto;
+    border: none;
+}
+
+.start-exam .modal-content .modal-header {
+    height: 55px;
+    text-align: center;
+    background-color: #355d94;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+}
+
+.start-exam .modal-content .modal-header .modal-title {
+    line-height: 1;
+}
+
+.start-exam .modal-content .modal-header .close span {
+    color: #fff;
+}
+
+.start-exam .modal-content .modal-body {
+    height: 180px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 24px;
+    color: #355d94;
+}
+
+.start-exam .modal-content .modal-body .more-line {
+    margin-top: 20px;
+    line-height: 30px;
+    padding: 30px;
+}
+
+.start-exam .modal-content .modal-footer {
+    width: 380px;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.start-exam .modal-content .modal-footer .btn {
+    width: 160px;
+    height: 40px;
+    margin-right: 7px;
+    background-color: #355d94;
+    font-size: 16px;
+    color: #fff;
+}
+
+.start-exam .modal-content .modal-footer .btn:hover {
+    background-color: #448aca;
+}
+
+.start-exam .start-answer .bar-size::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+.start-exam .start-answer .bar-size::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.start-exam .start-answer .bar-size::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
+}
+
+/*耳麦测试的录音进度条*/
+.content-bg .content-in .main .djs {
+    width: 330px;
+    top: 180px;
+    left: 40px;
+}
+
+.content-bg .content-in .main .djs .countdown {
+    font-size: 18px;
+    margin-top: -4px;
+    position: absolute;
+    right: 0;
+}
+
+.content-bg .content-in .main .djs .layui-progress {
+    width: 260px;
+}
+
+.content-bg .content-in .main .djs .layui-progress-bar {
+    position: relative;
+}
+
+
+/*做题页面的录音进度条*/
+.djs {
+    position: absolute;
+    right: 30px;
+    top: -15px;
+    width: 100px;
+    height: 90px;
+    border-radius: 13px;
+    z-index: 1000;
+    display: none;
+}
+
+.djs div {
+    float: left;
+    font-size: 12px;
+    border-radius: 18px;
+}
+
+#ytdt {
+    margin:58px 0 0 -62px;
+}
+
+.layui-progress-bar {
+    position: relative;
+}
+
+.speed-balloon {
+    position: absolute;
+    top: -34px;
+    right: -17px;
+    width: 30px;
+    height: 41px;
+    transform: rotate(7deg);
+}
+
+.djs .layui-progress {
+    width: 100px;
+    height: 13px;
+    position: absolute;
+    top: 59px;
+}
+
+.countdown {
+    position: absolute;
+    top: 56px;
+    right: 44px;
+}
+
+.writelistenAnswers {
+    color: #004098;
+}
+
+.record-fail .modal-body p {
+    margin-top: 50px;
+}
