@@ -6,6 +6,20 @@
     position: absolute;
     z-index: 10;
 }
+.top .fl .ai-logo {
+    width: 107px;
+    height: 47px;
+    margin-top: 13px;
+    user-select: none;
+}
+.top .fl .ai-title {
+    width: 113px;
+    height: 16px;
+    margin-top: 14px;
+    line-height: 63px;
+    margin-left: 20px;
+    user-select: none;
+}
 
 .header-container {
     padding: 0;
