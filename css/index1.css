@@ -68,19 +68,23 @@ html {
 .top .fr a {
     font-size: 14px;
     color: #00a0e9;
+    text-decoration: none;
 }
 
 .top .fr a:link {
     color: #00a0e9;
+    text-decoration: none;
     text-decoration: none;
 }
 
 .top .fr a:active {
     color: #0a0253;
     text-decoration: none;
+    text-decoration: none;
 }
 .top .fr a:visited {
     color: #00a0e9;
+    text-decoration: none;
     text-decoration: none;
 }
 /*退出模态框*/
@@ -342,4 +346,5 @@ html {
     width: 211px;
     height: 190px;
     z-index: 100;
+    text-decoration: none;
 }

@@ -23,20 +23,20 @@ body {
 }
 
 /*左侧logo*/
-.top .logo {
-    height: 80px;
-    line-height: 77px;
+.top .fl .ai-logo {
+    width: 107px;
+    height: 47px;
+    margin-top: 13px;
+    user-select: none;
 }
-
-.top .title {
-    height: 80px;
-    line-height: 80px;
-    float: left;
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
+.top .fl .ai-title {
+    width: 113px;
+    height: 16px;
+    margin-top: 14px;
+    line-height: 63px;
+    margin-left: 20px;
+    user-select: none;
 }
-
 /*右侧个人信息*/
 .top .header-container .fr {
     height: 80px;
