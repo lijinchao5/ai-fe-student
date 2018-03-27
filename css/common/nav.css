@@ -1,45 +1,51 @@
 .nav-wrap {
-    width: 215px;
-    height: 515px;
+    width: 264px;
+    height: 682px;
+    background-color: #4fc6fc;
+    padding-top: 42px;
+    border-radius: 5px;
 }
 
 .nav-wrap .user-icon-left {
-    width: 126px;
-    height: 126px;
-    margin: 0 0 18px 42px;
+    width: 166px;
+    height: 163px;
+    margin: 0 auto;
     border-radius: 50%;
     text-align: center;
-    background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;
+    border: solid 5px #00a0e9;
 }
 
 .nav-wrap .user-icon-left img {
-    width: 108px;
-    height: 108px;
-    margin-top: 9px;
+    width: 156px;
+    height: 152px;
     border-radius: 50%;
     text-align: center;
 }
 
-.nav-wrap .user-name {
+.nav-wrap .user-name,
+.nav-wrap .student-id {
     height: 16px;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 16px;
     text-align: center;
+    margin-top: 16px;
 }
-
+.nav-wrap .student-id{
+    font-size: 16px;
+    margin-top: 10px;
+}
 .nav-wrap .hd {
     width: 233px;
-    margin-top: 58px;
+    margin-top: 40px;
 }
 
 .nav-wrap .hd a {
     display: block;
-    width: 210px;
+    width: 263px;
     height: 64px;
-    border-bottom: 2px solid #eee;
     line-height: 64px;
     text-align: center;
-    color: #999;
+    color: #fff;
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
@@ -50,13 +56,11 @@
     text-decoration: none;
 }
 
-.nav-wrap .hd .current span{
+.nav-wrap .hd .current span {
     display: block;
-    width: 233px;
-    padding-right: 23px;
-    background: url("../../images/common/active.png") no-repeat center center;
-    background-size: cover;
-    color: #fff;
+    width: 264px;
+    background: #fff;
+    color: #00a0e9;
 }
 
 .nav-wrap .hd a span img {

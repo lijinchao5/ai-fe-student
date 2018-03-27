@@ -1,6 +1,36 @@
 body {
     color: #999;
     font-size: 16px;
+    min-height: 768px;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    /*min-height: 687px;*/
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#nav {
+    width: 264px;
+    height: 682px;
+    color: #333;
+}
+
+#practice-banner {
+    width: 932px;
+    min-height: 580px;
+    height: 682px;
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
 }
 
 .text-title .level-scale li,
@@ -14,7 +44,9 @@ body {
 .paging .up,
 .paging .down,
 .paging .toggles,
-.paging .toggles li {
+.paging .toggles li,
+#practice-banner,
+#nav {
     float: left;
 }
 
@@ -24,7 +56,8 @@ body {
 .down-top::after,
 .level-classify .classification::after,
 .paging .toggles::after,
-.paging .toggles::before {
+.paging .toggles::before,
+.outs .mains::after {
     clear: both;
     content: '';
     display: block;
@@ -53,38 +86,6 @@ body {
 .text-title .text-classify .classify,
 .paging .down {
     color: #333;
-}
-
-.outs {
-    width: 100%;
-    background: #eee;
-}
-
-.outs .mains {
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    width: 1200px;
-    margin: 0 0 20px -600px;
-    border: 10px solid transparent;
-    border-top: 80px solid transparent;
-    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
-}
-
-#nav {
-    position: absolute;
-    top: 50px;
-    left: -6px;
-    z-index: 3;
-}
-
-#practice-banner {
-    width: 970px;
-    min-height: 580px;
-    margin: 0 0 0 209px;
-    padding-top: 10px;
-    border-left: 18px solid #eee;
-    background: #fdfbfb;
 }
 
 .my-bookshelf {

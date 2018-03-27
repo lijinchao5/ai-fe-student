@@ -77,5 +77,5 @@ function initWebSocket(userId) {
 }
 //nav 添加类名
 $(".add-top li").click(function(){
-	sessionStorage.element=$(this).index();
+	sessionStorage.element=$(this).index()+1;
 });
