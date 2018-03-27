@@ -120,7 +120,78 @@ body {
     background: url("../../images/common/set-meb-icon.png") no-repeat center center;
 }
 
-!*退出模态框*!
+*/
+.top {
+    min-width: 1200px;
+    height: 76px;
+    line-height: 76px;
+    color: #fff;
+    background: #fff;
+}
+
+.top .center {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top .fl img {
+    width: 107px;
+    height: 47px;
+    user-select: none;
+}
+
+.top .fl img:nth-of-type(2) {
+    width: 113px;
+    height: 16px;
+    margin-left: 23px;
+}
+
+.top .fl p {
+    display: inline-block;
+    height: 76px;
+    font-size: 20px;
+
+}
+
+.top .fr {
+    height: 76px;
+}
+
+.top .fr img {
+    width: 48px;
+    height: 48px;
+    margin: 17px 12px;
+    border-radius: 50%;
+    border: 2px solid #00a0e9;
+}
+
+.top .fr p {
+    font-size: 14px;
+    display: inline-block;
+    height: 76px;
+    opacity: 0.9;
+    padding: 0 2px;
+    margin-right: 26px;
+    color: #00a0e9;
+}
+
+.top .fr a {
+    font-size: 14px;
+    color: #00a0e9;
+    cursor: pointer;
+}
+
+.top .fr a:link {
+    color: #00a0e9;
+    text-decoration: none;
+}
+
+.top .fr a:active {
+    color: #00a0e9;
+    text-decoration: none;
+}
+
+/*退出模态框*/
 .top .header-container .exit-button {
     cursor: pointer;
     padding-left: 7px;
@@ -208,66 +279,5 @@ body {
     margin-top: 12px;
     letter-spacing: 2px;
     text-align: center;
-}
-*/
-.top {
-    min-width: 1200px;
-    height: 76px;
-    line-height: 76px;
-    color: #fff;
-}
-.top .center{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.top .fl img {
-    width: 107px;
-    height: 47px;
-    user-select: none;
-}
-.top .fl img:nth-of-type(2){
-    width: 113px;
-    height: 16px;
-    margin-left: 23px;
-}
-
-.top .fl p {
-    display: inline-block;
-    height: 76px;
-    font-size: 20px;
-
-}
-/*#username{*/
-    /*color: #00a0e9;*/
-    /*font-size: 14px;*/
-/*}*/
-
-.top .fr {
-    height: 76px;
-}
-
-.top .fr img {
-    width: 48px;
-    height: 48px;
-    margin: 17px 12px;
-    border-radius: 50%;
-    border: 2px solid #00a0e9;
-}
-
-/*a,*/
-/*a:hover{*/
-    /*text-decoration: none;*/
-    /*color: #00a0e9;*/
-    /*font-size: 14px;*/
-/*}*/
-.top .fr p {
-    font-size: 14px;
-    display: inline-block;
-    height: 76px;
-    opacity: 0.9;
-    padding: 0 2px;
-    margin-right: 26px;
-    color: #00a0e9;
 }
 
