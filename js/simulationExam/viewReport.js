@@ -103,7 +103,7 @@ $(function () {
                         "    <p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
                         "    <p class='select'>" + switchABCD(obj.result) + "</p>                             " +
                         "    <div class='exam-result right-wrong'>                                         " +
-                        "        <span>答案：</span> <span class='recording-score'>" + obj.studentResult + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>" +
+                        "        <span>答案：</span> <span class='recording-score'>" + formateEmptyResult(obj.studentResult) + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>" +
                         "    </div>                                                                        " +
                         "    <div class='exam-key'>                                                        " +
                         "        <span class='key-check'>答案解析</span>                                   " +
@@ -350,10 +350,16 @@ function getStudentType3Answer(arr) {
     var html = "";
     for (var i = 0; i < arr.length; i++) {
         var obj = arr[i];
-        html += "<span class='recording-score'>" + (i + 1) + "." + obj.studentResult + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>";
+        html += "<span class='recording-score'>" + (i + 1) + "." + formateEmptyResult(obj.studentResult) + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>";
     }
     return html;
-
+}
+function formateEmptyResult(text){
+	if(text && null!=text && ""!=text){
+		return text;
+	}else{
+		return "未作答";
+	}
 }
 function getType3Answer(arr) {
     var html = "";

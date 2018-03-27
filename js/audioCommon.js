@@ -21,12 +21,11 @@ function readrecord(id,fun){
 			$("body").prepend($("<div style='display: none;' id='readdiv'> <audio id='player_audio' src='' preload='auto'/></div>"))
 		}
 		$("#player_audio").attr("src",function(){
-			//var iPDdZJ1 = new OSS["\x57\x72\x61\x70\x70\x65\x72"]({		region : '\x6f\x73\x73\x2d\x63\x6e\x2d\x68\x75\x68\x65\x68\x61\x6f\x74\x65',		accessKeyId : '\x4c\x54\x41\x49\x4a\x54\x34\x71\x58\x67\x56\x47\x63\x30\x48\x4b',		accessKeySecret : '\x4c\x6e\x72\x61\x66\x79\x45\x6d\x76\x38\x50\x38\x62\x65\x69\x6e\x78\x41\x38\x74\x76\x33\x35\x61\x61\x6a\x36\x35\x61\x66',		bucket : '\x78\x6c\x2d\x61\x75\x64\x69\x6f\x2d\x66\x69\x6c\x65\x2d\x73\x74\x6f\x72\x65'	});	return iPDdZJ1["\x73\x69\x67\x6e\x61\x74\x75\x72\x65\x55\x72\x6c"](id);
 			var client = new OSS.Wrapper({
-				region : 'oss-cn-huhehaote',
-				accessKeyId : 'LTAIJT4qXgVGc0HK',
-				accessKeySecret : 'LnrafyEmv8P8beinxA8tv35aaj65af',
-				bucket : 'xl-audio-file-store'
+				region : 'oss-cn-beijing',
+				accessKeyId : 'LTAIJuAAYm5fDqwm',
+				accessKeySecret : '4TbWkvkDyx7F4ivsSNtuVHGmnvoj8G',
+				bucket : 'xl-oss-pro1'
 			});
 			return client.signatureUrl(id);
 		});
