@@ -2,6 +2,7 @@ $(function () {
     //获取用户信息
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#username1").text(data.name);
+    $("#studentNum").text(data.nameNum);
     if (null == data.photo || "" == data.photo) {
 
     } else {
