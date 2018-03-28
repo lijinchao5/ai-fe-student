@@ -30,10 +30,12 @@
     text-align: center;
     margin-top: 16px;
 }
-.nav-wrap .student-id{
+
+.nav-wrap .student-id {
     font-size: 16px;
     margin-top: 10px;
 }
+
 .nav-wrap .hd {
     width: 233px;
     margin-top: 40px;

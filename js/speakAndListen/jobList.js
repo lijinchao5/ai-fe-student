@@ -53,7 +53,7 @@ function isflash(){
 			flag=i;
 			return false;
 		}
-	})
+	});
 	return flag;
 }
 
@@ -83,7 +83,7 @@ function initData() {
                     _job = $("<li><p>" + d.name + "</p>" +
                         "<p class='score'><span class='blue-color'>" + parseInt(d.score) + "</span><span class='normal-color'>分</span></p>" +
                         "<a onclick=goHomeworkReport('" + d.id + "','" + d.workComplate + "') href='javascript:void(0);' class='check-report'>查看报告</a>" +
-                        "<p><span class='final-time'>" + formateDate(d.endTime) + "</span></p></li>")
+                        "<p class='end-time'>" + formateDate(d.endTime) + "</p></li>")
                 } else {
                     _job = $("<li>" +
                         "<p>" + d.name + "</p>" +

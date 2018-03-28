@@ -3,9 +3,9 @@
 }
 
 .screen {
-    width: 848px;
-    height: 30px;
-    margin: 5px auto 0;
+    width: 856px;
+    height: 22px;
+    margin: 35px auto 0;
     font-weight: 300;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .screen .btn {
-    height: 27px;
+    height: 22px;
     padding: 0 6px;
     font-size: 16px;
     border: none;
@@ -35,7 +35,7 @@
 }
 
 .screen .btn-primary {
-    background: #004098;
+    background: #00a0e9;
     color: #fff;
 }
 
@@ -49,19 +49,25 @@
 
 .report-banner {
     position: relative;
-    width: 848px;
-    height: 500px;
+    width: 870px;
+    height: 495px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 27px auto 0;
 }
 
 .report-banner .main li {
     float: left;
-    width: 277px;
-    height: 228px;
-    margin: 15px 0 0 3px;
-    background: url('../../images/speakAndListen/backbox.png') no-repeat center center;
+    width: 280px;
+    height: 234px;
+    margin: 8px 0 0 8px;
     text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+.report-banner .main li:hover {
+    border-color: transparent;
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
 }
 
 .report-banner .main li p {
@@ -71,7 +77,7 @@
 }
 
 .report-banner .main li p:first-of-type {
-    color: #ff8003;
+    color: #00a0e9;
     font-size: 16px;
     font-weight: 600;
     width: 80%;
@@ -81,42 +87,57 @@
     white-space: nowrap;
 }
 
-.report-banner .main li p:last-of-type {
-    margin-top: 0;
-}
-
 .report-banner .main li p.start-time,
 .report-banner .main li p.final-time {
-    margin-top: 0;
+    margin-top: 15px;
     text-align: left;
     padding-left: 22%;
 }
 
+.report-banner .main li p.final-time {
+    margin-top: 5px;
+}
+
+.report-banner .main li p.end-time {
+    margin-top: 25px;
+}
+
 .report-banner .main li p .color-blue,
 .report-banner .main li p .color-normal {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
 
 .report-banner .main li p .color-blue {
-    color: #1e9fff;
+    color: #f08118;
     margin-right: -5px;
+}
+
+.report-banner .main li p .color-normal {
+    color: #333;
 }
 
 .report-banner .main li .do-homework,
 .report-banner .main li .check-report {
     display: block;
-    width: 93px;
-    height: 24px;
-    margin-left: 33%;
+    width: 106px;
+    height: 30px;
     border-radius: 5px;
-    background-color: #ff8003;
-    line-height: 24px;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
+    line-height: 30px;
     color: #fff;
+    margin: 30px auto 0;
 }
 
-.report-banner .main li .do-homework {
-    margin-top: 24px;
+.report-banner .main li .check-report {
+    margin: 18px auto 0;
+}
+
+.report-banner .main li .do-homework:hover,
+.report-banner .main li .check-report:hover {
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
 }
 
 .report-banner .main li a {
@@ -129,15 +150,14 @@
 
 .report-banner .main .score {
     width: 75px;
-    height: 75px;
-    margin: 15px 0 10px 35%;
-    background: url("../../images/common/score-all.png") no-repeat center center;
+    height: 35px;
+    margin: 30px auto 0;
 }
 
 .report-banner .main .score .blue-color {
-    color: #36dbbb;
-    font-size: 23px;
-    line-height: 75px;
+    color: #f08118;
+    font-size: 30px;
+    line-height: 35px;
     font-weight: 600;
 }
 
@@ -149,7 +169,7 @@
 .page-wrap {
     position: relative;
     width: 848px;
-    margin: 0 auto;
+    margin: 35px auto 0;
     height: 30px;
     text-align: center;
 }
@@ -196,7 +216,7 @@
 }
 
 .paging .toggles .col {
-    background-color: #11d8fc;
+    background-color: #4fc6fc;
     color: #fff;
     border: none;
 }
