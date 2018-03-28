@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ceac7cf-0327-4007-a501-5efec58904fd" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/common/ready-go-clound.png" afterPath="$PROJECT_DIR$/images/common/ready-go-clound.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/common/go-back.png" afterPath="$PROJECT_DIR$/images/common/go-back.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common/nav.css" afterPath="$PROJECT_DIR$/css/common/nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" afterPath="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nomousPractice/practiceList.css" afterPath="$PROJECT_DIR$/css/nomousPractice/practiceList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/simulationExam/examReport.css" afterPath="$PROJECT_DIR$/css/simulationExam/examReport.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" afterPath="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" afterPath="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" afterPath="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/growthRecord/emptyGrowth.html" afterPath="$PROJECT_DIR$/html/growthRecord/emptyGrowth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/nomousPractice/practiceList.html" afterPath="$PROJECT_DIR$/html/nomousPractice/practiceList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/simulationExam/examReport.html" afterPath="$PROJECT_DIR$/html/simulationExam/examReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/homeworkList.html" afterPath="$PROJECT_DIR$/html/speakAndListen/homeworkList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" afterPath="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js" afterPath="$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -80,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeworkReport.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkReport.css">
+      <file leaf-file-name="wordSpeaking.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.117647">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="-2.8064516">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -98,16 +86,6 @@
               <folding>
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wordSpeakingCommon.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6101694">
-              <caret line="413" column="59" selection-start-line="413" selection-start-column="59" selection-end-line="413" selection-end-column="59" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -179,8 +157,8 @@
         <option value="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" />
         <option value="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" />
         <option value="$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js" />
-        <option value="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
         <option value="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
         <option value="$PROJECT_DIR$/js/common.js" />
       </list>
     </option>
@@ -969,32 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6774194">
-          <caret line="354" column="32" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6101694">
-          <caret line="413" column="59" selection-start-line="413" selection-start-column="59" selection-end-line="413" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3762058">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="23" selection-end-line="90" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/speakAndListen/homeworkList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.7352943">
@@ -1021,9 +973,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41463414">
+          <caret line="413" column="59" selection-start-line="413" selection-start-column="59" selection-end-line="413" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6774194">
+          <caret line="354" column="32" selection-start-line="354" selection-start-column="25" selection-end-line="354" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkReport.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.117647">
+        <state vertical-scroll-proportion="0.40528634">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
@@ -1033,6 +1003,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.3823528">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8064516">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding />
         </state>
       </provider>
