@@ -1,7 +1,8 @@
 body {
     color: #999;
     font-size: 16px;
-    min-height: 768px;
+    min-height: 748px;
+    position: relative;
 }
 
 .outs .mains::after {
@@ -25,8 +26,6 @@ body {
 }
 
 #nav {
-    width: 264px;
-    height: 682px;
     float: left;
     color: #333;
 }
@@ -34,9 +33,25 @@ body {
 #job-list {
     width: 932px;
     min-height: 580px;
-    height: 682px;
+    height: 662px;
     float: left;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+}
+
+.copyright {
+    font-size: 12px;
+    width: 400px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.copyright p:last-of-type {
+    margin-top: 5px;
 }

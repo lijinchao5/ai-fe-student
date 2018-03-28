@@ -411,7 +411,7 @@ function submithomeworkok(){
 }
 
 function submit_tip(msg){
-	$("#submit_tip").html("您的<span>"+msg+"</span>还未完成，请继续做作业吧");
+	$("#submit_tip").html("您的<span>"+msg+"</span>还未完成，<br/>请继续做作业吧");
 	 var y = 0; 
      var x = 0; 
      var px = document.body.clientWidth;
@@ -429,8 +429,7 @@ function submit_tip(msg){
      });
      $("#tooltip").css({
          "display": "block",
-         "top": '50%',
-         "margin-top": '-16%'
+         "top": '50%'
      });
 }
 
