@@ -1,4 +1,4 @@
-html {
+html,body{
     width: 100%;
     height: 100%;
     min-width: 1366px;
@@ -6,7 +6,7 @@ html {
     background-color: #4fc6fc;
     /*background: url("../images/index/index-bg.jpg") no-repeat center center;*/
     background-size: 100% 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .center {
@@ -15,18 +15,24 @@ html {
 }
 
 .top {
+    width: 100%;
+    min-width: 1366px;
     height: 73px;
-    line-height: 80px;
+    line-height: 70px;
     background-color: #fff;
     border-bottom: 27px solid transparent;
     border-image: url("../images/index/top-bottom.png") 0 0 27 0 stretch;
     color: #00a0e9;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -50%;
 }
 
 .top .fl .ai-logo {
     width: 107px;
     height: 47px;
-    margin-top: 13px;
+    margin-top: -13px;
     user-select: none;
 }
 .top .fl .ai-title {
@@ -51,7 +57,7 @@ html {
 .top .fr img {
     width: 48px;
     height: 48px;
-    margin: 17px 12px;
+    margin: 10px 12px;
     border-radius: 50%;
     border: 1px solid #00a0e9;
 }
@@ -158,12 +164,20 @@ html {
 /*overflow: hidden;*/
 /*}*/
 
+.content-out {
+    width:100%;
+    height: 100%;
+    min-height: 640px;
+    /*margin-top: 100px;*/
+    position: relative;
+    overflow: hidden;
+}
 .content .bottom-bg {
     width: 1200px;
     margin: 0 auto;
     position: absolute;
     top: -270px;
-    left: -86px;
+    left: -72px;
 }
 
 .content .bottom-bg::after {
@@ -189,15 +203,19 @@ html {
 }
 .content .bottom-bg li.first{
     background: url("../images/index/11.png") no-repeat center center;
+    box-shadow: 0px 0px 30px rgb(239, 129, 24);
 }
 .content .bottom-bg li.second{
     background: url("../images/index/22.png") no-repeat center center;
+    box-shadow: 0px 0px 30px rgb(231, 51, 170);
 }
 .content .bottom-bg li.third{
     background: url("../images/index/33.png") no-repeat center center;
+    box-shadow: 0px 0px 30px rgb(127, 231, 43);
 }
 .content .bottom-bg li.last{
     background: url("../images/index/44.png") no-repeat center center;
+    box-shadow: 0px 0px 30px rgb(238, 235, 8);
 }
 
 .content .bottom-bg li img {
@@ -228,13 +246,13 @@ html {
 .content .thin .nomal{
     width: 1218px;
     height: 1218px;
-    border-radius: 1200px;
+    border-radius: 1218px;
     background-color: #4fc6fc;
     border: 20px solid #41bff9;
     position: absolute;
-    bottom: 40px;
+    bottom: 64px;
     left: 50%;
-    margin-left: -629px;
+    margin-left: -609px;
 }
 /*.content .thin .nomal .blod{*/
     /*width: 1000px;*/
@@ -248,47 +266,75 @@ html {
     /*margin-left: -520px;*/
 /*}*/
 .content .thin .nomal .blod{
-    width: 900px;
-    height: 900px;
-    border-radius: 900px;
+    width: 1116px;
+    height: 1116px;
+    border-radius: 1116px;
     border: 100px solid #2bb5f3;
     background-color: #4fc6fc;
     position: absolute;
-    bottom: 50px;
+    bottom: 32px;
     left: 50%;
-    margin-left: -550px;
+    margin-left: -560px;
     /*background-color: deepskyblue;*/
 }
 .content .thin .nomal .blod .blod-image{
-    width: 900px;
-    height: 900px;
-    border-radius: 900px;
+    width: 916px;
+    height: 916px;
+    border-radius: 916px;
     background: url("../images/index/qiuqiu.png") no-repeat center top;
     /*border: 100px solid lightblue;*/
     position: absolute;
     bottom: 0px;
     left: 50%;
-    margin-left: -450px;
+    margin-left: -458px;
 }
 .content .lamp {
     position: absolute;
-    bottom: 500px;
-    right: 390px;
+    top: -130px;
+    right: 190px;
     width: 148px;
     height: 107px;
     background: url("../images/index/huojian.png") no-repeat center center;
     background-size: 100% 100%;
+    /* css3 动画 */
+    animation: rocket 3s infinite linear;
+    -moz-animation: rocket 3s infinite linear; /* Firefox */
+    -webkit-animation: rocket 3s infinite linear; /* Safari and Chrome */
+    -o-animation: rocket 3s infinite linear; /* Opera */
 }
+@keyframes rocket
+ {
+     0%   {transform: scale(0.9) translate(50px,-50px);opacity: 0;}
+     25%  {transform: scale(1.1) translate(0px,0px);opacity: 1;}
+     50%  {transform: scale(1.0) translate(-50px,50px);opacity: 1;}
+     75%  {transform: scale(1.0) translate(-70px,70px);opacity: 0;}
+     76%  {transform: scale(1.0) translate(-70px,70px);opacity: 0;}
+     100% {transform: scale(0.9) translate(100px,-100px);opacity: 0;}
+ }
 
 .content .speaking-trumpet {
     position: absolute;
-    bottom: 380px;
-    left: 360px;
+    top: -60px;
+    left: 0px;
     width: 122px;
     height: 122px;
     background: url("../images/index/yuhangyuan.png") no-repeat center center;
     background-size: 100% 100%;
+    /* css3 动画 */
+    animation: astronaut 5s infinite linear;
+    -moz-animation: astronaut 5s infinite linear; /* Firefox */
+    -webkit-animation: astronaut 5s infinite linear; /* Safari and Chrome */
+    -o-animation: astronaut 5s infinite linear; /* Opera */
 }
+@keyframes astronaut
+{
+    0%   {transform: rotate(0deg) scale(0.9);}
+    25%  {transform: rotate(-20deg);}
+    50%  {transform: rotate(0deg) scale(1.1);}
+    75% {transform: rotate(20deg);}
+    100% {transform: rotate(0deg) scale(0.9);}
+}
+
 /*.content .star1 {*/
     /*position: absolute;*/
     /*bottom: 380px;*/
@@ -309,17 +355,36 @@ html {
 /*}*/
 .content .ball1 {
     position: absolute;
-    top: 150px;
-    left: 560px;
+    top: 120px;
+    left: 330px;
     width: 102px;
     height: 66px;
     background: url("../images/index/1.png") no-repeat center center;
     background-size: 100% 100%;
+    /* css3 动画 */
+    animation: ball 5s infinite linear;
+    -moz-animation: ball 5s infinite linear; /* Firefox */
+    -webkit-animation: ball 5s infinite linear; /* Safari and Chrome */
+    -o-animation: ball 5s infinite linear; /* Opera */
+}
+@keyframes ball
+{
+    0%   {transform: scale(0.9);}
+    /*10%  {transform: rotate(36deg);}*/
+    /*20%  {transform: rotate(72deg);}*/
+    /*30%  {transform: rotate(108deg);}*/
+    /*40%  {transform: rotate(144deg);}*/
+    50%  {transform: scale(1.1);}
+    /*60%  {transform: rotate(216deg);}*/
+    /*70%  {transform: rotate(252deg);}*/
+    /*80%  {transform: rotate(288deg);}*/
+    /*90%  {transform: rotate(324deg);}*/
+    100% {transform: scale(0.9);}
 }
 .content .ball2{
     position: absolute;
-    top: 180px;
-    right: 760px;
+    top: 130px;
+    right: 560px;
     width: 61px;
     height: 41px;
     background: url("../images/index/2.png") no-repeat center center;
@@ -342,8 +407,8 @@ html {
 
 .add-top li a {
     display: inline-block;
-    width: 211px;
-    height: 190px;
+    width: 186px;
+    height: 186px;
     z-index: 100;
     text-decoration: none;
 }
