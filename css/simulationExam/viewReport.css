@@ -1,33 +1,50 @@
-#nav {
-    position: absolute;
-    top: 80px;
-    left: -6px;
-    z-index: 3;
-}
-
-#view-report {
-    width: 950px;
-    margin-left: 209px;
-    padding-left: 40px;
-    border-left: 18px solid #eee;
-    padding-bottom: 20px;
+body {
+    color: #999;
+    font-size: 16px;
+    min-height: 748px;
 }
 
 .outs {
     width: 100%;
-    background: #eee;
+    height: 100%;
+    /*min-height: 687px;*/
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
 }
 
 .outs .mains {
     width: 1200px;
-    border: 10px solid transparent;
-    border-top: 80px solid transparent;
-    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    margin-left: -600px;
-    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav {
+    color: #333;
+}
+
+#view-report {
+    width: 932px;
+    /*min-height: 580px;*/
+    /*height: 662px;*/
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#footer {
+    margin: 1% 0 0 33%;
+}
+
+#nav,
+#view-report,
+#footer {
+    float: left;
 }
 
 .report-title::after,

@@ -2,7 +2,7 @@ var map;
 $(function() {
 	$('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
-    $('#back').load('../common/back.html');
+    $('#footer').load('../common/footer.html');
 
     $(".start-practice").click(function(){
         $(".library-title").css("display","none");

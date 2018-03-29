@@ -2,7 +2,6 @@ body {
     color: #999;
     font-size: 16px;
     min-height: 748px;
-    position: relative;
 }
 
 .outs .mains::after {
@@ -25,17 +24,25 @@ body {
     margin: 0 auto;
 }
 
-#nav {
+#nav,
+#report-banner,
+#footer {
     float: left;
+}
+
+#nav {
     color: #333;
 }
 
 #report-banner {
     width: 932px;
-    min-height: 580px;
     height: 662px;
-    float: left;
+    min-height: 580px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+}
+
+#footer {
+    margin: 1% 0 0 33%;
 }

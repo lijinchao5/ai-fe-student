@@ -6,9 +6,20 @@ $(function () {
     } else {
         $("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }
+
+    //百度统计
+    var _hmt = _hmt || [];
+
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?97575344e8fa059fb7b15ccda6cfcab9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+
 });
-function logout(){
+function logout() {
     localStorage.removeItem("userInfo");
     localStorage.removeItem("X-AUTH-TOKEN");
     window.location.href = getLoginPath();
 }
+
+

@@ -1,0 +1,11 @@
+.copyright {
+    font-size: 12px;
+    width: 400px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.copyright p:last-of-type {
+    margin-top: 5px;
+}

@@ -2,13 +2,6 @@ body {
     color: #999;
     font-size: 16px;
     min-height: 748px;
-    position: relative;
-}
-
-.outs .mains::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 .outs {
@@ -23,11 +16,19 @@ body {
 .outs .mains {
     width: 1200px;
     margin: 0 auto;
+}
 
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav, #empty-growth, #footer {
+    float: left;
 }
 
 #nav {
-    float: left;
     color: #333;
 }
 
@@ -35,26 +36,14 @@ body {
     width: 932px;
     min-height: 580px;
     height: 662px;
-    float: left;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
-.copyright {
-    font-size: 12px;
-    width: 400px;
-    height: 60px;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    margin-left: -200px;
-}
-
-.copyright p:last-of-type {
-    margin-top: 5px;
+#footer {
+    margin: 1% 0 0 33%;
 }
 
 .empty-all {

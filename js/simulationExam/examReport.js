@@ -68,6 +68,7 @@ function isflash(){
 function addList() {
     $('#header').load('../../html/common/header.html');
     $('#nav').load('../../html/common/nav.html');
+    $('#footer').load('../../html/common/footer.html');
     // 获取学生考试列表
     var param = {};
     param.rows = 4;

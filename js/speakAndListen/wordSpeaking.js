@@ -38,10 +38,10 @@ var onkeydownflag=true;
 	        	onkeydownflag=false;
 	        	$("#startworkhome").click();
 	         }
-	  }
+	  };
 	 $('#header').load('../common/header.html');
-     $('#background').load('../common/background.html');
      $('#nav').load('../common/nav.html');
+     $('#footer').load('../common/footer.html');
 	 $("#kszzy").click();
 	map=new Map();
     $("#close").click(function () {

@@ -1,8 +1,12 @@
 $(function () {
+    $('#header').load('../common/header.html');
+    $('#nav').load('../common/nav.html');
+    $('#footer').load('../common/footer.html');
 	initAllData();
     initData();
     addListeners();
 });
+
 var currentPage = 0;
 var totalPage = 0;
 var cliindex = 0;
@@ -180,7 +184,7 @@ function check(str){
 
 function ly(obj){
 	$(obj).html("停止");
-	$(obj).attr("onclick","stoplymp3(this);")
+	$(obj).attr("onclick","stoplymp3(this);");
 	playflag=true;
 	var param = {};
 	param.articleId=$(obj).attr("data");

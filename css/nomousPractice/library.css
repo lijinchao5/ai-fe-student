@@ -1,37 +1,48 @@
 body {
-    font-size: 18px;
-}
-
-#nav {
-    padding-left: 15px;
-    position: absolute;
-    top: 50px;
-    left: -20px;
-    z-index: 3;
-}
-
-#library {
-    width: 950px;
-    min-height: 575px;
-    margin: 0 0 0 209px;
-    border-left: 18px solid #eee;
-    padding-left: 20px;
+    color: #999;
+    font-size: 16px;
+    min-height: 748px;
 }
 
 .outs {
     width: 100%;
-    background: #eee;
+    height: 100%;
+    /*min-height: 687px;*/
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
 }
 
 .outs .mains {
-    position: absolute;
-    top: 65px;
-    left: 50%;
     width: 1200px;
-    margin-left: -600px;
-    border: 10px solid transparent;
-    border-top: 80px solid transparent;
-    border-image: url("../../images/common/main-bg.png") 80 10 10 10 round;
+    margin: 0 auto;
+}
+
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#nav, #library, #footer {
+    float: left;
+}
+
+#nav {
+    color: #333;
+}
+
+#library {
+    width: 932px;
+    min-height: 580px;
+    height: 662px;
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#footer {
+    margin: 1% 0 0 33%;
 }
 
 .back {
@@ -285,17 +296,20 @@ body {
     margin-left: 108px;
     margin-top: 20px;
 }
+
 /* 录音中 */
-.library-content .nomous-practice-btn .speed-icon{
+.library-content .nomous-practice-btn .speed-icon {
     width: 260px;
     margin-top: 4px;
     display: inline-block;
 }
-.library-content .nomous-practice-btn .speed-text{
+
+.library-content .nomous-practice-btn .speed-text {
     float: right;
     font-size: 18px;
     color: #333;
 }
+
 /* 重做按钮 */
 .q_restart {
     padding: 0 67px;

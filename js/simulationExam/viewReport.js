@@ -1,6 +1,7 @@
 $(function () {
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
+    $('#footer').load('../common/footer.html');
 });
 var bigdataTextArr = new Array('一、', '二、', '三、', '四、', '五、', '六、', '七、', '八、', '九、', '十、', '十一、', '十二、', '十三、', '十四、', '十五、', '十六、', '十七、', '十八、', '十九、', '二十、');
 $(function () {

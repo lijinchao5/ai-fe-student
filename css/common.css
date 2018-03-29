@@ -13,44 +13,9 @@ html {
 }
 
 /* 内外边距通常让各个浏览器样式的表现位置不同 */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-textarea,
-p,
-blockquote,
-th,
-td,
-hr,
-button,
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form,
+fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside,
+details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
     font-family: Microsoft YaHei, Arial;
@@ -63,7 +28,7 @@ input,
 select,
 textarea {
     /* font:12px \5b8b\4f53,arial,sans-serif; */
-    font: 12px Microsoft YaHei, Arial;
+    font-family: Microsoft YaHei, Arial;
 }
 
 input,
@@ -106,14 +71,7 @@ del {
     text-decoration: line-through;
 }
 
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-th,
-var {
+address, caption, cite, code, dfn, em, th, var {
     font-style: normal;
     font-weight: 500;
 }
