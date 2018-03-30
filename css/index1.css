@@ -339,7 +339,65 @@ html, body {
         opacity: 0;
     }
 }
+.content .starb {
+    position: absolute;
+    bottom: 71%;
+    left: 36.6%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/starb.png") no-repeat center center;
+    background-size: 100% 100%;
+    /* css3 动画 */
+    animation: starb 3s infinite linear;
+    -moz-animation: starb 3s infinite linear; /* Firefox */
+    -webkit-animation: starb 3s infinite linear; /* Safari and Chrome */
+    -o-animation: starb 3s infinite linear; /* Opera */
+}
 
+@keyframes starb {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+.content .stars {
+    position: absolute;
+    bottom: 62.6%;
+    right: 43%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/stars.png") no-repeat center center;
+    background-size: 100% 100%;
+    /* css3 动画 */
+    animation: stars 3s infinite linear;
+    -moz-animation: stars 3s infinite linear; /* Firefox */
+    -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
+    -o-animation: stars 3s infinite linear; /* Opera */
+}
+
+@keyframes stars {
+    0% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
 .content .speaking-trumpet {
     position: absolute;
     top: -60px;
