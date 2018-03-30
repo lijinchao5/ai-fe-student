@@ -54,7 +54,16 @@ function initWebSocket(userId) {
         };
         // 获得消息事件
         socket.onmessage = function (msg) {
-            alert(msg.data);
+        	var ats = $("#dialogButton").attr("data-toggle1")
+        	if(ats == "1"){
+        		$("#dialog_content").text(msg.data);
+        		$("#dialogButton").attr("data-toggle1","0");
+        		$("#dialogButton").click()
+        	}else{
+        		var text=$("#dialog_content").text();
+        		$("#dialog_content").text(text+msg.data);
+        	}
+            
         };
         // 关闭事件
         socket.onclose = function () {
