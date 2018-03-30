@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ceac7cf-0327-4007-a501-5efec58904fd" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/common/footer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/common/footer.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/common/clock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/speakAndListen/backbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/speakAndListen/cloud-sun.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/speakAndListen/cloud.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/speakAndListen/comment.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/common/1.png" afterPath="$PROJECT_DIR$/images/common/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/common/2.png" afterPath="$PROJECT_DIR$/images/common/2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.css" afterPath="$PROJECT_DIR$/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common/nav.css" afterPath="$PROJECT_DIR$/css/common/nav.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" afterPath="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/growthRecord/growthRecord.css" afterPath="$PROJECT_DIR$/css/growthRecord/growthRecord.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nomousPractice/bookshelf.css" afterPath="$PROJECT_DIR$/css/nomousPractice/bookshelf.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nomousPractice/library.css" afterPath="$PROJECT_DIR$/css/nomousPractice/library.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/nomousPractice/practiceList.css" afterPath="$PROJECT_DIR$/css/nomousPractice/practiceList.css" />
@@ -14,27 +20,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/simulationExam/viewReport.css" afterPath="$PROJECT_DIR$/css/simulationExam/viewReport.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" afterPath="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" afterPath="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/jobList.css" afterPath="$PROJECT_DIR$/css/speakAndListen/jobList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/report.css" afterPath="$PROJECT_DIR$/css/speakAndListen/report.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" afterPath="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/growthRecord/emptyGrowth.html" afterPath="$PROJECT_DIR$/html/growthRecord/emptyGrowth.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/nomousPractice/bookshelf.html" afterPath="$PROJECT_DIR$/html/nomousPractice/bookshelf.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/nomousPractice/library.html" afterPath="$PROJECT_DIR$/html/nomousPractice/library.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/nomousPractice/practiceList.html" afterPath="$PROJECT_DIR$/html/nomousPractice/practiceList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/simulationExam/examReport.html" afterPath="$PROJECT_DIR$/html/simulationExam/examReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/simulationExam/viewReport.html" afterPath="$PROJECT_DIR$/html/simulationExam/viewReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/homeworkList.html" afterPath="$PROJECT_DIR$/html/speakAndListen/homeworkList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/homeworkReport.html" afterPath="$PROJECT_DIR$/html/speakAndListen/homeworkReport.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" afterPath="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common/header.js" afterPath="$PROJECT_DIR$/js/common/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/growthRecord/emptyGrowth.js" afterPath="$PROJECT_DIR$/js/growthRecord/emptyGrowth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/nomousPractice/bookshelf.js" afterPath="$PROJECT_DIR$/js/nomousPractice/bookshelf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/nomousPractice/library.js" afterPath="$PROJECT_DIR$/js/nomousPractice/library.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/nomousPractice/practiceList.js" afterPath="$PROJECT_DIR$/js/nomousPractice/practiceList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/common/nav.html" afterPath="$PROJECT_DIR$/html/common/nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/speakAndListen/report.html" afterPath="$PROJECT_DIR$/html/speakAndListen/report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/simulationExam/examReport.js" afterPath="$PROJECT_DIR$/js/simulationExam/examReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/simulationExam/viewReport.js" afterPath="$PROJECT_DIR$/js/simulationExam/viewReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/speakAndListen/homeworkList.js" afterPath="$PROJECT_DIR$/js/speakAndListen/homeworkList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/speakAndListen/homeworkReport.js" afterPath="$PROJECT_DIR$/js/speakAndListen/homeworkReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/speakAndListen/wordSpeaking.js" afterPath="$PROJECT_DIR$/js/speakAndListen/wordSpeaking.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/speakAndListen/report.js" afterPath="$PROJECT_DIR$/js/speakAndListen/report.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,18 +47,116 @@
     <favorites_list name="ai-fe-student" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45314685">
-              <caret line="147" column="33" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.8683746">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="examReport.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/simulationExam/examReport.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-6.529412">
+                  <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jobList.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/speakAndListen/jobList.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-8.588235">
+                  <caret line="229" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="examReport.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/simulationExam/examReport.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="148" column="89" selection-start-line="148" selection-start-column="89" selection-end-line="148" selection-end-column="89" />
+                  <folding>
+                    <marker date="1522397063516" expanded="true" signature="3265:3818" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="3265:3852" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="3976:4531" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="4652:5210" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="5545:6076" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="5854:6039" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="5854:6042" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="6200:6853" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="6974:7531" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="7792:8301" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="8541:9174" placeholder="..." />
+                    <marker date="1522397063516" expanded="true" signature="9323:9829" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeworkList.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkList.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-29.382353">
+                  <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="examReport.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/html/simulationExam/examReport.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.9705882">
+                  <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+                  <folding>
+                    <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="report.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/speakAndListen/report.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-99.94118">
+                  <caret line="149" column="21" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/common.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.20699301">
+                  <caret line="143" column="38" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="examReport.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/html/simulationExam/examReport.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.53450805">
+                  <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+                  <folding>
+                    <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,56 +181,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/index1.html" />
-        <option value="$PROJECT_DIR$/html/personInfo/personInfo.html" />
-        <option value="$PROJECT_DIR$/css/index.css" />
-        <option value="$PROJECT_DIR$/html/simulationExam/simulationExam.html" />
-        <option value="$PROJECT_DIR$/html/common/simulationExamModal.html" />
         <option value="$PROJECT_DIR$/html/common/simulationExambg.html" />
         <option value="$PROJECT_DIR$/css/common/simulationExambg.css" />
         <option value="$PROJECT_DIR$/html/common/header2.html" />
         <option value="$PROJECT_DIR$/html/common/header.html" />
         <option value="$PROJECT_DIR$/js/speakAndListen/jobList.js" />
-        <option value="$PROJECT_DIR$/html/common/nav.html" />
-        <option value="$PROJECT_DIR$/css/speakAndListen/jobList.css" />
-        <option value="$PROJECT_DIR$/css/common/nav.css" />
         <option value="$PROJECT_DIR$/js/speakAndListen/wordSpeakingCommon.js" />
         <option value="$PROJECT_DIR$/css/common/header.css" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/css/index1.css" />
         <option value="$PROJECT_DIR$/js/nomousPractice/practiceList.js" />
-        <option value="$PROJECT_DIR$/css/nomousPractice/practiceList.css" />
         <option value="$PROJECT_DIR$/css/common/footer.css" />
         <option value="$PROJECT_DIR$/html/nomousPractice/practiceList.html" />
         <option value="$PROJECT_DIR$/html/speakAndListen/wordSpeaking.html" />
         <option value="$PROJECT_DIR$/js/speakAndListen/wordSpeaking.js" />
         <option value="$PROJECT_DIR$/html/speakAndListen/homeworkList.html" />
         <option value="$PROJECT_DIR$/js/speakAndListen/homeworkList.js" />
-        <option value="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" />
-        <option value="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" />
         <option value="$PROJECT_DIR$/html/speakAndListen/homeworkReport.html" />
         <option value="$PROJECT_DIR$/js/speakAndListen/homeworkReport.js" />
-        <option value="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
         <option value="$PROJECT_DIR$/html/simulationExam/examReport.html" />
-        <option value="$PROJECT_DIR$/js/simulationExam/examReport.js" />
-        <option value="$PROJECT_DIR$/css/simulationExam/examReport.css" />
-        <option value="$PROJECT_DIR$/css/simulationExam/viewReport.css" />
         <option value="$PROJECT_DIR$/html/simulationExam/viewReport.html" />
         <option value="$PROJECT_DIR$/js/simulationExam/viewReport.js" />
-        <option value="$PROJECT_DIR$/css/nomousPractice/library.css" />
         <option value="$PROJECT_DIR$/js/nomousPractice/library.js" />
         <option value="$PROJECT_DIR$/html/nomousPractice/library.html" />
         <option value="$PROJECT_DIR$/js/nomousPractice/bookshelf.js" />
         <option value="$PROJECT_DIR$/html/nomousPractice/bookshelf.html" />
-        <option value="$PROJECT_DIR$/css/nomousPractice/bookshelf.css" />
         <option value="$PROJECT_DIR$/html/growthRecord/emptyGrowth.html" />
-        <option value="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" />
         <option value="$PROJECT_DIR$/js/growthRecord/emptyGrowth.js" />
         <option value="$PROJECT_DIR$/html/common/footer.html" />
         <option value="$PROJECT_DIR$/css/common.css" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/common/header.js" />
         <option value="$PROJECT_DIR$/lib/bootstrap-3.3.7/bootstrap.css" />
+        <option value="$PROJECT_DIR$/js/simulationExam/simulationExamCommon.js" />
+        <option value="$PROJECT_DIR$/html/common/nav.html" />
+        <option value="$PROJECT_DIR$/css/common/nav.css" />
+        <option value="$PROJECT_DIR$/html/speakAndListen/report.html" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/homeworkReport.css" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css" />
+        <option value="$PROJECT_DIR$/css/simulationExam/viewReport.css" />
+        <option value="$PROJECT_DIR$/css/nomousPractice/practiceList.css" />
+        <option value="$PROJECT_DIR$/css/nomousPractice/library.css" />
+        <option value="$PROJECT_DIR$/css/nomousPractice/bookshelf.css" />
+        <option value="$PROJECT_DIR$/css/growthRecord/growthRecord.css" />
+        <option value="$PROJECT_DIR$/css/growthRecord/emptyGrowth.css" />
+        <option value="$PROJECT_DIR$/js/speakAndListen/report.js" />
+        <option value="$PROJECT_DIR$/js/simulationExam/examReport.js" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/homeworkList.css" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/jobList.css" />
+        <option value="$PROJECT_DIR$/css/simulationExam/examReport.css" />
+        <option value="$PROJECT_DIR$/css/speakAndListen/report.css" />
         <option value="$PROJECT_DIR$/js/common.js" />
       </list>
     </option>
@@ -151,8 +241,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-38" />
-    <option name="y" value="3" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
@@ -225,24 +315,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-3.3.7" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-fe-student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-fe-student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -261,7 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="simulationExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,21 +347,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-fe-student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-fe-student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -307,11 +365,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="growthRecord" />
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="speakAndListen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simulationExam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -329,7 +433,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="speakAndListen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-fe-student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simulationExam" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,7 +570,7 @@
     <option name="totallyTimeSpent" value="19579000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-38" y="3" width="1456" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20098731" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -491,111 +613,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/index12.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039589442">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index11.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1585903">
-          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9705882">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/common/background.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/simulationExam/simulationExam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32011747">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/common/simulationExambg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37591776">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/speakAndListen/jobList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47577092">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/speakAndListen/jobList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60419583">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/common/nav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5882353">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/speakAndListen/jobList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5770924">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/speakAndListen/report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36563876">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-46.058823">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-159.61765">
-          <caret line="201" column="29" selection-start-line="201" selection-start-column="29" selection-end-line="201" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/common/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2258065">
@@ -626,14 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22657342">
           <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/nomousPractice/practiceList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35682818">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -708,58 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/speakAndListen/homeworkReport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4845815">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/simulationExam/examReport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/simulationExam/examReport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36563876">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07929515">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07929515">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkReport.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039647575">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/simulationExam/viewReport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37762237">
@@ -780,22 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/simulationExam/viewReport.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71365637">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/nomousPractice/library.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.147059">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/nomousPractice/library.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -812,14 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/simulationExam/examReport.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/nomousPractice/bookshelf.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.147059">
@@ -828,34 +761,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/growthRecord/emptyGrowth.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.352941">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/growthRecord/emptyGrowth.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11328671">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/nomousPractice/bookshelf.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07929515">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/nomousPractice/bookshelf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -875,14 +784,6 @@
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/common/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.294118">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,10 +827,257 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/common.js">
+    <entry file="file://$PROJECT_DIR$/html/speakAndListen/homeworkReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.411765">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/simulationExam/simulationExamCommon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="12.763637">
+          <caret line="347" column="0" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/common/nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8102894">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/common/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39647576">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6651982">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20704846">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/speakAndListen/report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.264706">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <marker date="1522373244916" expanded="true" signature="592:674" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkReport.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.911765">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/wordSpeaking.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="216" column="17" selection-start-line="216" selection-start-column="17" selection-end-line="216" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/simulationExam/viewReport.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9354838">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/nomousPractice/practiceList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9354838">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/nomousPractice/library.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.5">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/nomousPractice/bookshelf.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.529411">
+          <caret line="39" column="23" selection-start-line="35" selection-start-column="4" selection-end-line="39" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/speakAndListen/report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23636363">
+          <caret line="199" column="35" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="35" />
+          <folding>
+            <marker date="1522392231735" expanded="true" signature="5723:6001" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="5747:5995" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="5928:5986" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="6616:6874" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="7729:7952" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="8788:9006" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="9399:9421" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="9453:9469" placeholder="..." />
+            <marker date="1522392231735" expanded="true" signature="10511:10525" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/growthRecord/growthRecord.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6343612">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/growthRecord/emptyGrowth.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47577092">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/homeworkList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-29.382353">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/jobList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.588235">
+          <caret line="229" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/simulationExam/examReport.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.529412">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/nomousPractice/bookshelf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62237763">
+          <caret line="223" column="19" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/simulationExam/simulationExamFirst.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47132868">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/audioCommon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45314685">
-          <caret line="147" column="33" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <marker date="1522135167088" expanded="true" signature="516:530" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/simulationExam/simulationExam.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="677" column="1" selection-start-line="677" selection-start-column="1" selection-end-line="677" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/simulationExam/simulationExam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/simulationExam/examReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="89" selection-start-line="148" selection-start-column="89" selection-end-line="148" selection-end-column="89" />
+          <folding>
+            <marker date="1522397063516" expanded="true" signature="3265:3818" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="3265:3852" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="3976:4531" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="4652:5210" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="5545:6076" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="5854:6039" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="5854:6042" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="6200:6853" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="6974:7531" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="7792:8301" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="8541:9174" placeholder="..." />
+            <marker date="1522397063516" expanded="true" signature="9323:9829" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/simulationExam/examReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9705882">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/speakAndListen/report.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-99.94118">
+          <caret line="149" column="21" selection-start-line="149" selection-start-column="21" selection-end-line="149" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20699301">
+          <caret line="143" column="38" selection-start-line="143" selection-start-column="38" selection-end-line="143" selection-end-column="38" />
           <folding />
         </state>
       </provider>

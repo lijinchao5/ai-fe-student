@@ -40,8 +40,7 @@ body {
 
 #word-speaking {
     width: 932px;
-    height: 662px;
-    min-height: 580px;
+    min-height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
@@ -211,10 +210,13 @@ body {
 }
 
 .word-speaking .speak-listen-tab-hd li.active {
+    width: 166px;
+    height: 69px;
     color: #fff;
     border: none;
     border-radius: 5px;
     background: url('../../images/speakAndListen/speakbg.png') no-repeat center bottom;
+    background-size: cover;
 }
 
 .word-speaking .speak-listen-tab-hd li span {

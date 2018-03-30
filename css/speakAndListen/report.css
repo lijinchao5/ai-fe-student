@@ -8,7 +8,9 @@
 .cosplay-list .cos-content .cos-score::after,
 .report-title::after,
 .report-content::after,
-.spell-list #homework_type_5::after {
+.spell-list #homework_type_5::after,
+.report-title .report-details .detail-bottom::after,
+.report-title .report-details .detail-top::after {
     content: "";
     display: block;
     clear: both;
@@ -31,106 +33,79 @@
     float: left;
 }
 
+.report {
+    width: 830px;
+    margin: 0 auto;
+}
+
 .report-title {
-    width: 100%;
-    margin-bottom: 20px
+    width: 830px;
+    margin-bottom: 20px;
+    padding-top: 15px;
 }
 
 .report-title .back {
     width: 26px;
     height: 21px;
     cursor: pointer;
+    margin-left: -28px;
 }
 
 .report-title .report-details {
-    width: 60%;
-    height: 100px;
+    width: 512px;
+    height: 133px;
+    padding-top: 33px;
 }
 
 .report-title .report-details li {
     position: relative;
-    width: 30%;
-    height: 100%;
-}
-
-.report-title .report-details li p {
-    position: absolute;
-    width: 100%;
+    width: 100px;
+    margin-left: 65px;
     text-align: center;
-}
-
-.report-title .report-details li:first-of-type p {
-    top: 13px;
-}
-
-.report-title .report-details li:first-of-type p.place-text {
-    top: 73px;
-}
-
-.report-title .report-details li:nth-of-type(2) p {
-    top: 34px;
-}
-
-.report-title .report-details li:last-of-type p {
-    top: 41px;
 }
 
 .report-title .report-details li:first-of-type {
-    font-weight: 800;
-}
-
-.report-title .report-details li:first-of-type .num {
-    font-size: 24px;
-}
-
-.report-title .report-details li:first-of-type .place {
-    font-size: 52px;
-    color: #ff6d80;
-}
-
-.report-title .report-details li:first-of-type .place-text {
-    font-size: 12px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.report-title .report-details li:nth-of-type(2) {
-    border-radius: 50%;
-    background: url('../../images/common/score-all.png') no-repeat center center;
-}
-
-.report-title .report-details li:nth-of-type(2) .score-num {
-    color: #36dbbb;
-    font-size: 25px;
-}
-
-.report-title .report-details li:last-of-type {
-    text-align: center;
-    background: url('../../images/common/clock.png') no-repeat center center;
-}
-
-.report-title .report-details li:last-of-type .use-time {
-    color: #1e9fff;
-    font-size: 16px;
+    margin-left: 30px;
 }
 
 .report-title .report-details li:last-of-type img {
     height: 8px;
-    margin-top: -16px;
+    margin-top: -40px;
+}
+
+.report-title .report-details .colorfulo {
+    color: #f08118;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.report-title .report-details .colorfulob {
+    color: #00a0e9;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.report-title .report-details .detail-bottom li {
+    font-size: 14px;
+    font-weight: 300;
+    color: #999;
 }
 
 .report-title .report-comment {
-    width: 32%;
-    height: 139px;
-    background: url('../../images/speakAndListen/comment.png') no-repeat center center;
-    vertical-align: middle;
+    width: 318px;
+    height: 133px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 1px rgba(0, 160, 233, 0.06);
+    background-color: #ffffff;
+    border: solid 1px #e5e5e5;
     text-align: center;
 }
 
 .report-title .report-comment .comment-text {
     width: 70%;
     height: 95%;
-    font-size: 16px;
+    font-size: 14px;
+    color: #999;
     margin: 40px auto;
     border: 1px solid transparent;
     word-break: break-all;
@@ -140,77 +115,81 @@
     text-align: center;
 }
 
+.report-content {
+    width: 830px;
+}
+
 .report-content .report-tabs {
-    width: 90%;
+    width: 830px;
     margin: 0 auto;
 }
 
 .report-content .report-tabs > li {
+    width: 165px;
+    height: 64px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    line-height: 64px;
+    font-size: 18px;
+    color: #999;
+    text-align: center;
     user-select: none;
     cursor: pointer;
-    width: 20%;
-    height: 40px;
-    background-color: #cff7fe;
-    text-align: center;
-    line-height: 40px;
-    font-size: 18px;
-    color: #333;
 }
 
 .report-content .report-tabs .tabs-col {
     color: #fff;
-    background: #11d8fc;
+    border-bottom-color: #333;
+    background: url("../../images/speakAndListen/speakbg.png") no-repeat center center;
+    background-size: cover;
 }
 
 .report-content .report-wrap {
-    width: 90%;
+    width: 830px;
+    padding-top: 7px;
 }
 
 .report-content .report-wrap li {
-    width: 100%;
+    width: 830px;
     height: 100%;
     display: none;
 }
 
 .report-content .report-wrap .word-list {
-    width: 100%;
+    width: 830px;
     margin-bottom: 20px;
 }
 
+.report-top {
+    width: 830px;
+    height: 40px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.report-top .sentences-degree {
+    width: 530px;
+}
+
+.report-top .sentences-degree p {
+    width: 150px;
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    float: left;
+}
+
 .report-top .word-degree {
-    width: 252px;
-    margin-top: 20px;
+    width: 255px;
     float: right;
 }
 
 .report-top .word-degree p {
-    width: 33%;
+    width: 85px;
+
     font-size: 12px;
-}
-
-.report-top .word-degree .degree-fail {
-    color: #ff6d80;
-}
-
-.report-top .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.report-top .word-degree .degree-well {
-    color: #36dbbb;
-}
-
-.report-top .sentences-degree {
-    width: 61%;
-    margin: 3% 0 -5%;
-}
-
-.report-top .sentences-degree p {
-    width: 30%;
-    margin-left: 1%;
-    font-size: 14px;
-    font-weight: 300;
-    color: #333;
 }
 
 .report-top progress {
@@ -238,6 +217,18 @@
     background: #36dbbb;
 }
 
+.report-top .word-degree .degree-fail {
+    color: #ff6d80;
+}
+
+.report-top .word-degree .degree-good {
+    color: #ffb846;
+}
+
+.report-top .word-degree .degree-well {
+    color: #36dbbb;
+}
+
 .report-content b {
     font-weight: 300;
 }
@@ -248,7 +239,7 @@
 
 .report-content .report-wrap .word-list .content {
     width: 33.33%;
-    padding: 2% 0 1% 5%;
+    padding: 0 0 1% 5%;
 }
 
 .report-content .report-wrap .word-list .content img {
@@ -260,10 +251,12 @@
 .border-color-yellow,
 .border-color-green,
 .border-color-red {
+    font-weight: 300;
+    font-size: 16px;
     display: inline-block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
+    width: 25px;
+    height: 25px;
+    line-height: 24px;
     text-align: center;
     border-radius: 50%;
     margin-left: 10px;
@@ -284,18 +277,6 @@
     border: 1px solid #36dbbb;
 }
 
-.report-content .report-wrap .text-list .content .text-score {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    margin-top: -13px;
-}
-
-.report-content .report-wrap .sentences-list .content .sentences-score {
-    float: right;
-    margin: -13px 51px 0 0;
-}
-
 .report-content .report-wrap .word-list .content .word-score {
     display: inline-block;
     margin: -7px 0 0 10px;
@@ -303,40 +284,45 @@
 
 .report-content .report-wrap .cosplay-list .cos-content .cos-score {
     float: right;
-    margin: -7px 51px 0 0;
 }
 
 .report-content .report-wrap .sentences-list .content {
-    padding: 2% 0 1% 5%;
     border-bottom: 1px solid #eee;
-    margin: 10px 0;
+    margin: 0 15px 0;
+    padding: 10px 0;
 }
 
 .report-content .report-wrap .sentences-list .content img {
     vertical-align: middle;
-    margin: -5px 5px 0 0;
+    margin: -3px 5px 0 0;
     cursor: pointer;
+}
+
+.report-content .report-wrap .sentences-list .content .sentences-score {
+    float: right;
 }
 
 .report-content .report-wrap .text-list .content {
-    width: 100%;
-    padding: 3% 0 1% 10%;
     border-bottom: 1px solid #eee;
-    position: relative;
+    margin: 0 15px 0;
+    padding: 10px 0;
 }
 
 .report-content .report-wrap .text-list .content img {
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    margin: -2px 5px 0 0;
+    margin: -3px 5px 0 0;
     cursor: pointer;
+    vertical-align: middle;
 }
 
-.report-content .report-wrap .text-list .content .text {
-    width: 80%;
-    font-size: 18px;
-    font-weight: 300;
+.report-content .report-wrap .text-list .content .text-score {
+
+    float: right;
+    margin: 0 30px 0 0;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content {
+    width: 100%;
+    font-weight: 600;
 }
 
 .report-content .report-wrap .cosplay-list .job-list {
@@ -345,9 +331,9 @@
 }
 
 .report-content .report-wrap .cosplay-list .job-list .cos-title {
-    margin-top: 3%;
     width: 100%;
     font-size: 14px;
+    margin: 0 0 10px 16px;
 }
 
 .report-content .report-wrap .cosplay-list .job-list .cos-title .role-name {
@@ -357,9 +343,16 @@
     font-size: 16px;
 }
 
-.report-content .report-wrap .cosplay-list .cos-content {
-    width: 100%;
-    font-weight: 600;
+.report-content .report-wrap .cosplay-list .cos-content .content {
+    border-bottom: 1px solid #eee;
+    margin: 0 15px 0;
+    padding: 10px 0;
+}
+
+.report-content .report-wrap .cosplay-list .cos-content img {
+    vertical-align: middle;
+    margin: -8px 5px 0 0;
+    cursor: pointer;
 }
 
 .report-content .green {
@@ -375,21 +368,6 @@
 .report-content .red {
     color: #ff6d80;
     font-weight: 600;
-}
-
-.report-content .report-wrap .cosplay-list .cos-content p {
-    padding: 2% 0 1% 5%;
-    border-bottom: 1px solid #eee;
-}
-
-.report-content .report-wrap .cosplay-list .cos-content p span {
-    font-size: 18px;
-}
-
-.report-content .report-wrap .cosplay-list .cos-content img {
-    vertical-align: middle;
-    margin: -8px 5px 0 0;
-    cursor: pointer;
 }
 
 .report-content .report-wrap .spell-list .prompt {

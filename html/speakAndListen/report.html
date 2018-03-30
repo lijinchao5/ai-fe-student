@@ -15,162 +15,167 @@
 
 <body>
 
-<div class="row">
-    <div class="report">
-        <div class="report-title">
-            <div class="back"><a href="homeworkList.html"><img src="../../images/common/go-back.png" alt=""></a>
-            </div>
-            <ul class="report-details">
-                <li>
-                    <p>
-                        <span class="num">NO.</span>
-                        <span class="place" id="rank"></span>
-                    </p>
-                    <p class="place-text">名次</p>
-                </li>
-                <li>
-                    <p><span class="score-num" id="score"></span>分</p>
-                </li>
-                <li>
-                    <p><span class="use-time" id="hour"></span><img src="../../images/common/1.png">
-                        <span class="use-time" id="mi"></span><img src="../../images/common/2.png"></p>
-                </li>
-            </ul>
-            <div class="report-comment">
-                <span class="comment-text" id="remark"></span>
-            </div>
+
+<div class="report">
+    <div class="report-title">
+        <div class="back">
+            <a href="homeworkList.html"><img src="../../images/common/go-back.png" alt=""></a>
         </div>
-        <div class="report-content ">
-            <ol class="report-tabs">
-                <li id="homework_type_t_1" style="display:none">单词跟读</li>
-                <li id="homework_type_t_2" style="display:none">句子跟读</li>
-                <li id="homework_type_t_3" style="display:none">课文跟读</li>
-                <li id="homework_type_t_4" style="display:none">角色扮演</li>
-                <li id="homework_type_t_5" style="display:none">智能听写</li>
-            </ol>
-            <ul class="report-wrap">
-                <li class="word-list" style="display:none" id="homework_type_1">
-                    <div class="report-top">
-                        <div class="word-degree">
-                            <p class="degree-fail">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                    </div>
+        <div class="report-details">
+            <ul class="detail-top">
+                <li>
+                    <span class="colorfulob">NO.</span>
+                    <span class="colorfulo" id="rank"></span>
                 </li>
-                <li class="sentences-list" id="homework_type_2">
-                    <div class="report-top">
-                        <div class="sentences-degree">
-                            <p>
-                                <span>准确度</span>
-                                <progress class="accuracy" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>流利度</span>
-                                <progress class="fluency" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>完整度</span>
-                                <progress class="integrity" value="" max="100"></progress>
-                            </p>
-                        </div>
-                        <div class="word-degree">
-                            <p class="degree-fail">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                    </div>
-
+                <li class="colorfulob">
+                    <span class="colorfulo" id="score"></span>分
                 </li>
-                <li class="text-list" id="homework_type_3">
-                    <div class="report-top">
-                        <div class="sentences-degree">
-                            <p>
-                                <span>准确度</span>
-                                <progress class="accuracy" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>流利度</span>
-                                <progress class="fluency" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>完整度</span>
-                                <progress class="integrity" value="" max="100"></progress>
-                            </p>
-                        </div>
-                        <div class="word-degree">
-                            <p class="degree-fail">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="cosplay-list" id="homework_type_4">
-                    <div class="report-top">
-                        <div class="sentences-degree">
-                            <p>
-                                <span>准确度</span>
-                                <progress class="accuracy" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>流利度</span>
-                                <progress class="fluency" value="" max="100"></progress>
-                            </p>
-                            <p>
-                                <span>完整度</span>
-                                <progress class="integrity" value="" max="100"></progress>
-                            </p>
-                        </div>
-                        <div class="word-degree">
-                            <p class="degree-fail">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                    </div>
-                    <div class="job-list" id="homework_type_4_1">
-
-                    </div>
-                </li>
-                <li class="spell-list" id="homework_type_5">
-                    <div class="prompt">
-                        <div class="error">
-                            <img src="../../images/common/red.png" alt="错误"> 错误
-                        </div>
-                        <div class="correct">
-                            <img src="../../images/common/blue.png" alt="正确"> 正确
-                        </div>
-                    </div>
-                    <p id="homework_type_5_1"></p>
+                <li>
+                    <span class="colorfulo" id="hour"></span><img src="../../images/common/1.png">
+                    <span class="colorfulo" id="mi"></span><img src="../../images/common/2.png">
                 </li>
             </ul>
+            <ul class="detail-bottom">
+                <li>排名</li>
+                <li>分数</li>
+                <li>用时</li>
+            </ul>
+        </div>
+        <div class="report-comment">
+            <span class="comment-text" id="remark"></span>
         </div>
     </div>
+    <div class="report-content ">
+        <ol class="report-tabs">
+            <li id="homework_type_t_1" style="display:none">单词跟读</li>
+            <li id="homework_type_t_2" style="display:none">句子跟读</li>
+            <li id="homework_type_t_3" style="display:none">课文跟读</li>
+            <li id="homework_type_t_4" style="display:none">角色扮演</li>
+            <li id="homework_type_t_5" style="display:none">智能听写</li>
+        </ol>
+        <ul class="report-wrap">
+            <li class="word-list" style="display:none" id="homework_type_1">
+                <div class="report-top">
+                    <div class="word-degree">
+                        <p class="degree-fail">
+                            <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                        </p>
+                        <p class="degree-good">
+                            <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                        </p>
+                        <p class="degree-well">
+                            <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="sentences-list" id="homework_type_2">
+                <div class="report-top">
+                    <div class="sentences-degree">
+                        <p>
+                            <span>准确度</span>
+                            <progress class="accuracy" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>流利度</span>
+                            <progress class="fluency" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>完整度</span>
+                            <progress class="integrity" value="" max="100"></progress>
+                        </p>
+                    </div>
+                    <div class="word-degree">
+                        <p class="degree-fail">
+                            <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                        </p>
+                        <p class="degree-good">
+                            <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                        </p>
+                        <p class="degree-well">
+                            <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                        </p>
+                    </div>
+                </div>
+
+            </li>
+            <li class="text-list" id="homework_type_3">
+                <div class="report-top">
+                    <div class="sentences-degree">
+                        <p>
+                            <span>准确度</span>
+                            <progress class="accuracy" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>流利度</span>
+                            <progress class="fluency" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>完整度</span>
+                            <progress class="integrity" value="" max="100"></progress>
+                        </p>
+                    </div>
+                    <div class="word-degree">
+                        <p class="degree-fail">
+                            <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                        </p>
+                        <p class="degree-good">
+                            <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                        </p>
+                        <p class="degree-well">
+                            <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                        </p>
+                    </div>
+                </div>
+
+            </li>
+            <li class="cosplay-list" id="homework_type_4">
+                <div class="report-top">
+                    <div class="sentences-degree">
+                        <p>
+                            <span>准确度</span>
+                            <progress class="accuracy" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>流利度</span>
+                            <progress class="fluency" value="" max="100"></progress>
+                        </p>
+                        <p>
+                            <span>完整度</span>
+                            <progress class="integrity" value="" max="100"></progress>
+                        </p>
+                    </div>
+                    <div class="word-degree">
+                        <p class="degree-fail">
+                            <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                        </p>
+                        <p class="degree-good">
+                            <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                        </p>
+                        <p class="degree-well">
+                            <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                        </p>
+                    </div>
+                </div>
+                <div class="job-list" id="homework_type_4_1">
+
+                </div>
+            </li>
+            <li class="spell-list" id="homework_type_5">
+                <div class="prompt">
+                    <div class="error">
+                        <img src="../../images/common/red.png" alt="错误"> 错误
+                    </div>
+                    <div class="correct">
+                        <img src="../../images/common/blue.png" alt="正确"> 正确
+                    </div>
+                </div>
+                <p id="homework_type_5_1"></p>
+            </li>
+        </ul>
+    </div>
 </div>
+
 
 </body>
 <script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>

@@ -134,7 +134,7 @@ $(function () {
                                 }
                             }
                         }
-                        var _h4 = $("<div class='cos-content'>" + "<p>"
+                        var _h4 = $("<div class='cos-content'>" + "<p class='content'>"
                             + "<img src='../../images/speakAndListen/" + png + "' onclick=playAudio('" + obj.audioPath + "')>" + "<span>" + text + "</span><span class='cos-score'>" + addColor(score)
                             + "</span>" + "</p></div>");
                         _h_t_4.append(_h4);
@@ -158,7 +158,7 @@ $(function () {
             // 单词跟读
             if (obj.homeworkType == 1) {
                 var _h1 = $("<p class='content'>" + "<img src='../../images/speakAndListen/" + png + "' onclick=playAudio('" + obj.audioPath + "')>" + "<span>" + CalculationScoreword(obj.standerText, score) + "</span>"
-                    +"<span class='word-score'>" + addColor(score) + "</span>" + "</p>");
+                    + "<span class='word-score'>" + addColor(score) + "</span>" + "</p>");
                 //
                 _h_t_1.append(_h1);
             }
@@ -194,8 +194,8 @@ $(function () {
                         }
                     }
                 }
-                var _h3 = $("<div class='content'>" + "<img src='../../images/speakAndListen/" + png + "' onclick=playAudio('" + obj.audioPath + "')>" + "<p class='text'>" + text + "</p>"
-                    +"<span class='text-score'>" + addColor(score) + "</span>" + "</div>");
+                var _h3 = $("<p class='content'>" + "<img src='../../images/speakAndListen/" + png + "' onclick=playAudio('" + obj.audioPath + "')>" + "<span>" + text + "</span>"
+                    + "<span class='text-score'>" + addColor(score) + "</span>" + "</p>");
                 //
                 _h_t_3.append(_h3);
             }

@@ -30,21 +30,20 @@ body {
 
 #exam-report {
     width: 932px;
-    min-height: 580px;
-    height: 662px;
+    min-height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+
 }
 
 #footer {
     margin: 1% 0 0 33%;
 }
 
-#exam-report .report-banner .main .enter-exam,
-#exam-report .report-banner .main .enter-report,
 #exam-report .report-banner .main .exam-date,
-#exam-report .report-banner .main .all-time,
+#exam-report .report-banner .main .final-time,
+#exam-report .report-banner .main .start-time,
 #exam-report .report-banner .main li,
 .paging .up,
 .paging .down,
@@ -66,9 +65,9 @@ body {
 }
 
 #exam-report .screen {
-    width: 848px;
-    height: 30px;
-    margin: 20px auto 0;
+    width: 856px;
+    height: 22px;
+    margin: 35px auto 0;
     font-weight: 300;
 }
 
@@ -80,10 +79,15 @@ body {
 #exam-report .screen .btn {
     font-size: 16px;
     padding: 0 6px;
-    height: 27px;
+    height: 22px;
     border: none;
     outline: none;
     background: #fff;
+}
+
+#exam-report .screen .btn-primary {
+    background: #00a0e9;
+    color: #fff;
 }
 
 .btn:focus,
@@ -97,41 +101,33 @@ body {
     box-shadow: none;
 }
 
-#exam-report .screen .btn-primary {
-    background: #004098;
-    color: #fff;
-}
-
 #exam-report .report-banner {
-    width: 848px;
-    height: 475px;
-    margin: 0 auto;
+    /*position: relative;*/
+    width: 870px;
+    height: 495px;
     overflow: hidden;
-    position: relative;
+    margin: 27px auto 0;
 }
 
 #exam-report .report-banner .main li {
-    width: 415px;
-    height: 197px;
-    border: 1px solid #11d8fc;
-    padding: 0 21px 17px 14px;
-    margin: 18px 18px 0 0;
+    width: 422px;
+    height: 233px;
+    border:1px solid  #e5e5e5;
+    background-color: #ffffff;
+    margin: 8px 0 0 8px;
     text-align: center;
 }
 
-#exam-report .report-banner .main li:nth-of-type(2n) {
-    margin: 18px 0 0 0;
-}
-
 #exam-report .report-banner .main li:hover {
-    box-shadow: 0 0 8px 2px rgba(17, 216, 252, 0.26);
+    /*box-shadow: 0 0 8px 2px rgba(17, 216, 252, 0.26);*/
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
 }
 
 #exam-report .report-banner .main .topic {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 18px;
-    color: #ff8003;
+    color: #00a0e9;
     font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -141,39 +137,50 @@ body {
 #exam-report .report-banner .main .examiner,
 #exam-report .report-banner .main .score-and-rank {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 16px;
     color: #333;
-    font-weight: 600;
+    font-weight: 300;
+    height: 40px;
 }
 
-#exam-report .report-banner .main .score-and-rank {
-    margin-top: 20px;
-    color: #999;
+#exam-report .report-banner .main .examiner{
+    line-height: 40px;
 }
-
-#exam-report .report-banner .main .exam-date,
-#exam-report .report-banner .main .all-time {
-    width: 75%;
+#exam-report .report-banner .main .exam-date {
+    width: 100%;
     font-size: 12px;
     color: #999;
-    padding-left: 5px;
-    margin-top: 32px;
-    text-align: left;
+    margin-top: 30px;
 }
 
-#exam-report .report-banner .main .all-time {
-    line-height: 20px;
+#exam-report .report-banner .main .start-time {
+    width: 50%;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 40px;
+    margin-top: 30px;
+}
+
+#exam-report .report-banner .main .final-time {
+    font-size: 12px;
+    text-align: right;
+    width: 50%;
+    padding-right: 40px;
+    margin-top: 30px;
+
 }
 
 #exam-report .report-banner .main .enter-exam,
 #exam-report .report-banner .main .enter-report {
-    width: 93px;
-    height: 24px;
-    margin-top: 45px;
     display: block;
-    background: #ff8003;
-    line-height: 24px;
+    width: 106px;
+    height: 30px;
+    margin: 15px auto 0;
+    background: url(../../images/common/hover-button.png) no-repeat center center;
+    background-size: cover;
+    font-size: 14px;
+    line-height: 30px;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -181,26 +188,28 @@ body {
 
 #exam-report .report-banner .main .enter-exam:hover,
 #exam-report .report-banner .main .enter-report:hover {
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
     color: #fff;
     text-decoration: none;
 }
 
 #exam-report .report-banner .main .enter-report {
-    margin-top: 28px;
+    margin-top: 15px;
 }
 
 #exam-report .report-banner .main .complete-number {
-    color: #1e9fff;
+    color: #f08118;
 }
 
 #exam-report .report-banner .main .complete-score {
-    color: #36dbbb;
+    color: #f08118;
     font-size: 30px;
     margin-left: -13px;
 }
 
 #exam-report .report-banner .main .score-rank {
-    color: #ff6d80;
+    color: #f08118;
     font-size: 30px;
 }
 
@@ -211,8 +220,9 @@ body {
 .page-wrap {
     position: relative;
     width: 848px;
-    margin: 0 auto;
+    margin: 35px auto 0;
     height: 30px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -230,6 +240,7 @@ body {
 
 .paging .up,
 .paging .down {
+    float: left;
     width: 50px;
     height: 30px;
     line-height: 30px;
@@ -240,6 +251,7 @@ body {
 }
 
 .paging .toggles {
+    float: left;
     margin: 0 10px;
 }
 
@@ -251,14 +263,16 @@ body {
     line-height: 30px;
     text-align: center;
     color: #999;
+    float: left;
     cursor: pointer;
 }
 
 .paging .toggles .col {
-    background-color: #11d8fc;
+    background-color: #4fc6fc;
     color: #fff;
     border: none;
 }
+
 
 .empty-all {
     width: 180px;

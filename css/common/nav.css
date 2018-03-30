@@ -25,7 +25,7 @@
 .nav-wrap .user-name,
 .nav-wrap .student-id {
     height: 16px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 16px;
     text-align: center;
     margin-top: 16px;
@@ -33,7 +33,7 @@
 
 .nav-wrap .student-id {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .nav-wrap .hd {

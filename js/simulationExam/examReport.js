@@ -53,16 +53,16 @@ function addListeners() {
     });
 }
 
-function isflash(){
-	var flag=0;
-	$(".btn-md").each(function(i,v){
-		var classname=$(this).attr("class");
-		if("btn btn-md btn-primary"==classname){
-			flag=i;
-			return false;
-		}
-	})
-	return flag;
+function isflash() {
+    var flag = 0;
+    $(".btn-md").each(function (i, v) {
+        var classname = $(this).attr("class");
+        if ("btn btn-md btn-primary" == classname) {
+            flag = i;
+            return false;
+        }
+    })
+    return flag;
 }
 
 function addList() {
@@ -72,13 +72,13 @@ function addList() {
     // 获取学生考试列表
     var param = {};
     param.rows = 4;
-    var isflashflag=isflash();
-    if(isflashflag==1){
-    	param.state='0';
-    }else if(isflashflag==2){
-    	param.state='1';
-    }else if(isflashflag==3){
-    	param.state='2';
+    var isflashflag = isflash();
+    if (isflashflag == 1) {
+        param.state = '0';
+    } else if (isflashflag == 2) {
+        param.state = '1';
+    } else if (isflashflag == 3) {
+        param.state = '2';
     }
     param.page = cliindex + 1;
     var url = "exam/findStudentExamByPage.do";
@@ -95,8 +95,8 @@ function addList() {
             $(".paging .down").css('visibility', 'hidden');
             $("#toggleLi").css('visibility', 'hidden');
         } else {
-        	$("#toggleLi").css('visibility', 'visible');
-        	$(".empty-all").hide();
+            $("#toggleLi").css('visibility', 'visible');
+            $(".empty-all").hide();
             for (var i = 0; i < datas.length; i++) {
                 var d = datas[i];
                 if (d.complate == 'F') {
@@ -104,35 +104,36 @@ function addList() {
                     if (d.state == 1) {
                         // 可以做题
                         startExam = $("<li>" +
-                            "    <p class='topic'>" + d.examName + "</p>" +
-                            "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                            "    <p class='all-time'>" +
-                            "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                            "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                            "    </p>" +
-                            "    <a href='javascript:void(0)' class='enter-exam' onclick=goTo('simulationExam.html','" + d.examId + "')>进入考试</a>" +
+                            "<p class='topic'>" + d.examName + "</p>" +
+                            "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                            "<a href='javascript:void(0)' class='enter-exam' onclick=goTo('simulationExam.html','" + d.examId + "')>进入考试</a>" +
+
+                            "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                            "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+
                             "</li>");
                     } else {
                         if (d.state == 0) {
                             startExam = $("<li>" +
-                                "    <p class='topic'>" + d.examName + "</p>" +
-                                "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "    <p class='all-time'>" +
-                                "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                                "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                                "    </p>" +
-                                "    <a href='javascript:void(0)' class='enter-exam'>未开始</a>" +
+                                "<p class='topic'>" + d.examName + "</p>" +
+                                "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>未开始</a>" +
+
+                                "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                                "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+
                                 "</li>");
                         }
                         if (d.state == 2) {
                             startExam = $("<li>" +
-                                "    <p class='topic'>" + d.examName + "</p>" +
-                                "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "    <p class='all-time'>" +
-                                "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                                "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                                "    </p>" +
-                                "    <a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                                "<p class='topic'>" + d.examName + "</p>" +
+                                "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+
+                                "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                                "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+
+
                                 "</li>");
                         }
                     }
@@ -143,35 +144,33 @@ function addList() {
                     if (d.state == 1) {
                         // 可以做题
                         startExam = $("<li>" +
-                            "    <p class='topic'>" + d.examName + "</p>" +
-                            "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                            "    <p class='all-time'>" +
-                            "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                            "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                            "    </p>" +
-                            "    <a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                            "<p class='topic'>" + d.examName + "</p>" +
+                            "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                            "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                            "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                            "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
                             "</li>");
                     } else {
                         if (d.state == 0) {
                             startExam = $("<li>" +
-                                "    <p class='topic'>" + d.examName + "</p>" +
-                                "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "    <p class='all-time'>" +
-                                "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                                "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                                "    </p>" +
-                                "    <a href='javascript:void(0)' class='enter-exam'>考试未开始</a>" +
+                                "<p class='topic'>" + d.examName + "</p>" +
+                                "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>考试未开始</a>" +
+                                "<p class='all-time'>" +
+                                "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                                "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+                                "</p>" +
                                 "</li>");
                         }
                         if (d.state == 2) {
                             startExam = $("<li>" +
-                                "    <p class='topic'>" + d.examName + "</p>" +
-                                "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "    <p class='all-time'>" +
-                                "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                                "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                                "    </p>" +
-                                "    <a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                                "<p class='topic'>" + d.examName + "</p>" +
+                                "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+
+                                "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                                "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+
                                 "</li>");
                         }
                     }
@@ -180,13 +179,13 @@ function addList() {
                 } else if (d.complate == 'T') {
                     // 已经提交 ---->分数计算中
                     var startExam = $("<li>" +
-                        "    <p class='topic'>" + d.examName + "</p>" +
-                        "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                        "    <p class='all-time'>" +
-                        "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                        "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                        "    </p>" +
-                        "    <a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                        "<p class='topic'>" + d.examName + "</p>" +
+                        "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                        "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+
+                        "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                        "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
+
                         "</li>");
                     _examList.append(startExam);
                     continue;
@@ -194,25 +193,23 @@ function addList() {
                     //分数计算完毕
                     var num = d.score;
                     var endExam = $("<li>" +
-                        "    <p class='topic'>" + d.examName + "</p>" +
-                        "    <p class='score-and-rank'>" +
+                        "<p class='topic'>" + d.examName + "</p>" +
+                        "<p class='score-and-rank'>" +
                         "<span class='complete-score'>" + num.toFixed(1) + "</span><span>分</span>" +
                         "<span class='complete-rank'>NO.</span>" +
                         "<span class='score-rank'>" + d.studentRank + "</span></p>" +
-                        "    <p class='exam-date'>" + formateDate(d.endTime) + "</p>" +
-                        "    <a href='javascript:void(0)' class='enter-report' onclick=goTo('viewReport.html','" + d.examId + "')>查看报告</a>" +
+                        "<a href='javascript:void(0)' class='enter-report' onclick=goTo('viewReport.html','" + d.examId + "')>查看报告</a>" +
+                        "<p class='exam-date'>" + formateDate(d.endTime) + "</p>" +
                         "</li>");
                     _examList.append(endExam);
                     continue;
                 } else {
                     var startExam = $("<li>" +
-                        "    <p class='topic'>" + d.examName + "</p>" +
-                        "    <p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                        "    <p class='all-time'>" +
-                        "        <span class='start-time'>From：" + formateDate(d.startTime) + "</span><br/>" +
-                        "        <span class='final-time'>To：" + formateDate(d.endTime) + "</span>" +
-                        "    </p>" +
-                        "    <a href='javascript:void(0)' class='enter-exam'>状态未知</a>" +
+                        "<p class='topic'>" + d.examName + "</p>" +
+                        "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
+                        "<a href='javascript:void(0)' class='enter-exam'>状态未知</a>" +
+                        "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
+                        "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
                         "</li>");
                     _examList.append(endExam);
                     continue;
@@ -224,7 +221,7 @@ function addList() {
             if (totalPage == 1) {
                 _toggles = $("<li class='col'>" + "1" + "</li>");
                 _toggleLi.append(_toggles);
-                $(".paging .up").css('visibility', 'hidden')
+                $(".paging .up").css('visibility', 'hidden');
                 $(".paging .down").css('visibility', 'hidden')
             } else {
                 for (var num = 1; num <= totalPage; num++) {
