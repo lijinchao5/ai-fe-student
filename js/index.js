@@ -32,7 +32,9 @@ $(function () {
         initWebSocket(user.id);
     });
 });
-
+function dialogClose(){
+	$("#dialogButton").attr("data-toggle1","1");
+}
 // 写一点儿websocket代码
 
 function initWebSocket(userId) {

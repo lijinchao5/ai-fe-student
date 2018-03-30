@@ -16,6 +16,9 @@ $(function () {
     s.parentNode.insertBefore(hm, s);
 
 });
+function dialogClose(){
+	$("#dialogButton").attr("data-toggle1","1");
+}
 function initWebSocket(userId) {
     var socket;
     if (typeof(WebSocket) == "undefined") {
