@@ -321,7 +321,7 @@ body {
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex {
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 10px;
     width: 100px;
     height: 30px;
     color: #333;
