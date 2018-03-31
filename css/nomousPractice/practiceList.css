@@ -34,6 +34,7 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
 #footer {
@@ -97,7 +98,7 @@ body {
 }
 
 .my-bookshelf {
-    display: block;
+    display: inline-block;
     margin-left: 735px;
     width: 148px;
     height: 39px;
@@ -106,6 +107,9 @@ body {
     text-align: center;
     line-height: 39px;
     border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .my-bookshelf:hover {
@@ -152,7 +156,8 @@ body {
 
 .text-title .text-classify .level-classify .classification {
     display: none;
-    width: 700px;
+    /*width: 700px;*/
+    width: 660px;
 }
 
 .text-title .text-classify .level-classify .classification li:nth-of-type(1) {
