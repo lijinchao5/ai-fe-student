@@ -1,0 +1,91 @@
+body {
+    color: #999;
+    font-size: 16px;
+    user-select: none;
+    max-height: 768px;
+}
+
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#service-banner {
+    width: 1204px;
+    height: 642px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.service-back {
+    margin: 20px 0 0 20px;
+}
+
+.service-wrap {
+    width: 1110px;
+    height: 400px;
+    color: #333;
+    font-size: 14px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    line-height: 29px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.services {
+    width: 1044px;
+    margin: 0 auto;
+}
+
+.service-wrap::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.service-wrap::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.service-wrap::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
+}
+
+.service-topic {
+    width: 100%;
+    font-size: 30px;
+    color: #00a0e9;
+    text-align: center;
+    margin: 45px 0 45px;
+}
+
+.service-title {
+    margin-top: 35px;
+    color: #00a0e9;
+}
+
+.service-title:first-of-type {
+    margin-top: 0;
+}
+
+.service-text:last-of-type {
+    margin-bottom: 45px;
+}

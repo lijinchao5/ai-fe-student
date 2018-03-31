@@ -123,11 +123,11 @@
 
 .report-content .report-tabs > li {
     width: 165px;
-    height: 64px;
+    height: 52px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
-    line-height: 64px;
+    line-height: 52px;
     font-size: 18px;
     color: #999;
     text-align: center;
@@ -135,10 +135,14 @@
     cursor: pointer;
 }
 
+/*.report-content .report-tabs > li:hover {*/
+    /*background: #11c8eb;*/
+    /*color: #fff;*/
+/*}*/
+
 .report-content .report-tabs .tabs-col {
     color: #fff;
-    border-bottom-color: #333;
-    background: url("../../images/speakAndListen/speakbg.png") no-repeat center center;
+    background-color: #4fc6fc;
     background-size: cover;
 }
 

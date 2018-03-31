@@ -215,7 +215,7 @@ body {
     color: #fff;
     border: none;
     border-radius: 5px;
-    background: url('../../images/speakAndListen/speakbg.png') no-repeat center bottom;
+    background: #4fc6fc;
     background-size: cover;
 }
 
