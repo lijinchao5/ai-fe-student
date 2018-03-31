@@ -38,7 +38,7 @@ function initWebSocket(userId) {
         };
         // 获得消息事件
         socket.onmessage = function (msg) {
-        	var ats = $("#dialogButton").attr("data-toggle1")
+        	var ats = $("#dialogButton").attr("data-toggle1");
         	if(ats == "1"){
         		$("#dialog_content").text(msg.data);
         		$("#dialogButton").attr("data-toggle1","0");

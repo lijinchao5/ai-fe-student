@@ -30,7 +30,7 @@ body {
 
 #exam-report {
     width: 932px;
-    min-height: 662px;
+    height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
@@ -112,7 +112,7 @@ body {
 #exam-report .report-banner .main li {
     width: 422px;
     height: 233px;
-    border:1px solid  #e5e5e5;
+    border: 1px solid #e5e5e5;
     background-color: #ffffff;
     margin: 8px 0 0 8px;
     text-align: center;
@@ -124,8 +124,8 @@ body {
 }
 
 #exam-report .report-banner .main .topic {
-    width: 100%;
-    margin-top: 30px;
+    width: 90%;
+    margin: 30px auto 0;
     font-size: 18px;
     color: #00a0e9;
     font-weight: 600;
@@ -144,9 +144,10 @@ body {
     height: 40px;
 }
 
-#exam-report .report-banner .main .examiner{
+#exam-report .report-banner .main .examiner {
     line-height: 40px;
 }
+
 #exam-report .report-banner .main .exam-date {
     width: 100%;
     font-size: 12px;
@@ -272,7 +273,6 @@ body {
     color: #fff;
     border: none;
 }
-
 
 .empty-all {
     width: 180px;

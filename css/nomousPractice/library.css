@@ -34,7 +34,7 @@ body {
 
 #library {
     width: 932px;
-    min-height: 662px;
+    height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;

@@ -9,3 +9,13 @@
 .copyright p:last-of-type {
     margin-top: 5px;
 }
+
+.service{
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 15px;
+}
+
+.service:hover{
+    color:#f08118;
+}
