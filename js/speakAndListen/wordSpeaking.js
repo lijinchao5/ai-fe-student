@@ -46,7 +46,7 @@ var onkeydownflag=true;
 	map=new Map();
     $("#close").click(function () {
         $("html").css({
-            "overflow": "auto" 
+            "overflow": "auto"
         });
         $("#overlay").css({
             "display": "none"

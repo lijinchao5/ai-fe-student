@@ -264,9 +264,10 @@ body {
 .word-speaking .speak-listen-tab-bd .score {
     width: 68px;
     height: 68px;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     margin: 20px auto;
-    background: url("../../images/speakAndListen/score.png") no-repeat center left;
+    /*background: url("../../images/speakAndListen/score.png") no-repeat center left;*/
+    background: #d43f3a;
     line-height: 68px;
     text-align: center;
     font-size: 30px;
@@ -276,13 +277,13 @@ body {
 
 .word-speaking .speak-listen-tab-bd .gd {
     height: 68px;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     margin: 12px auto;
     line-height: 68px;
     text-align: center;
     font-size: 24px;
-    color: #11d8fc;
-    font-weight: 700;
+    color: #f08118;
+    font-weight: 600;
 }
 
 /* 旋转木马盒子公共样式 */
@@ -344,6 +345,9 @@ body {
 }
 
 /* 单词跟读的旋转木马 */
+.word-speaking-carousel{
+    border:  1px solid transparent;
+}
 .word-speaking-carousel .carousel .carousel-inner .item .text {
     font-size: 44px;
 }
@@ -361,8 +365,8 @@ body {
 /* 听说作业 分数 公共样式*/
 .word-speaking .speak-listen-tab-bd .speak-listen-btn {
     width: 330px;
-    /*height: 140px;*/
-    height: 125px;
+    /*height: 125px;*/
+    height: 100px;
     text-align: center;
     margin: 14px auto 0;
 }
@@ -371,7 +375,7 @@ body {
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .play-icon {
     width: 142px;
     height: 42px;
-    margin-top: 49px;
+    margin-top: 30px;
     /*margin-left: 40px;*/
     display: none;
 }
@@ -419,25 +423,38 @@ body {
     font-size: 14px;
     text-align: center;
 }
-
-.word-speaking .speak-listen-tab-bd .speak-listen-btn .play {
-    display: inline-block;
-    margin: 34px 30px 0;
-}
-
-.word-speaking .speak-listen-tab-bd .speak-listen-btn p {
-    width: 100%;
-    line-height: 32px;
-    font-size: 14px;
-    text-align: center;
-}
-
 /*结束*/
-.word-speaking .speak-listen-tab-bd .play img {
+
+/*重做和我的录音按钮*/
+.q_restart {
+    width: 400px;
+    height: 40px;
+    margin: 30px auto 0;
+    /*background: #e4b9b9;*/
+}
+
+.word-speaking .speak-listen-tab-bd .play {
+    width: 110px;
+    height: 36px;
     cursor: pointer;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    margin: 0 30px 0;
+
+}
+.word-speaking .speak-listen-tab-bd .headset{
+    margin-left: -30px;
+}
+.word-speaking .speak-listen-tab-bd .play p {
+    color: #fff;
+    line-height: 36px;
+    font-size: 14px;
+}
+
+.word-speaking .speak-listen-tab-bd .play:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
 }
 
 .word-speaking .speak-listen-tab-bd .recording {
@@ -810,9 +827,9 @@ button {
     text-align: center;
     line-height: 69px;
     border-radius: 50%;
-    position: absolute;
-    bottom: -55px;
-    right: 55px;
+    position: relative;
+    bottom: -15px;
+    right: -827px;
 }
 
 .speak-listen-submit.out {

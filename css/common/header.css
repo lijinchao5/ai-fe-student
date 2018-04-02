@@ -134,6 +134,12 @@ body {
     margin: 0 auto;
 }
 
+.top .center::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 /*.top .fl img {
     width: 107px;
     height: 47px;
@@ -145,28 +151,34 @@ body {
     height: 22px;
     margin-left: 20px;
 }*/
-.top .left:before {
+
+.top a .logo {
+    margin-top: 5px;
+}
+
+.top a .logo::before {
     float: left;
     content: "";
+    display: block;
     width: 107px;
     height: 47px;
     margin-top: 10px;
     user-select: none;
-    background: url("../../images/index/index.png") no-repeat 0px 0px;
+    background: url("../../images/index/index.png") no-repeat 0 0;
 }
 
-.top .left:after {
+.top .logo::after {
     float: left;
     content: "";
     width: 113px;
     height: 16px;
+    display: block;
     margin-top: 27px;
     line-height: 63px;
     margin-left: 20px;
     user-select: none;
-    background: url("../../images/index/index.png") no-repeat 0px -50px;
+    background: url("../../images/index/index.png") no-repeat 0 -50px;
 }
-
 
 .top .fl p {
     display: inline-block;
@@ -224,7 +236,6 @@ body {
 
 .top .header-container .exit {
     background-color: rgba(0, 0, 0, .1);
-
 }
 
 .header-container .exit .modal-dialog .modal-content {
