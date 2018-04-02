@@ -7,6 +7,19 @@ $(function () {
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
 
+    // webp 格式判断
+    // See http://www.guanggua.com/question/5573096-detecting-webp-support.html
+    function canUseWebP() {
+        var elem = document.createElement('canvas')
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            // was able or not to get WebP representation
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0
+        }
+        // very old browser like IE 8, canvas not supported
+        return false
+    }
+    $('.blod-image').addClass(canUseWebP() ? 'webp' : 'no-webp')
+
     // 开始获取用户信息
     var tokenId = getParam("tokenId");
     if (tokenId && null != tokenId && "" != tokenId) {

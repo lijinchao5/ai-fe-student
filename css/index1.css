@@ -290,12 +290,15 @@ html, body {
     width: 916px;
     height: 916px;
     border-radius: 916px;
-    background: url("../images/index/qiuqiu.png") no-repeat center top;
+    background: url("../images/index/qiuqiu.jpg") no-repeat center top;
     /*border: 100px solid lightblue;*/
     position: absolute;
     bottom: 0;
     left: 50%;
     margin-left: -458px;
+}
+.content .thin .nomal .blod .blod-image.webp {
+    background: url("../images/index/qiuqiu.webp") no-repeat center top;
 }
 
 .content .lamp {
