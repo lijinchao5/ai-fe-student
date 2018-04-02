@@ -134,7 +134,7 @@ body {
     margin: 0 auto;
 }
 
-.top .fl img {
+/*.top .fl img {
     width: 107px;
     height: 47px;
     user-select: none;
@@ -144,7 +144,29 @@ body {
     width: 136px;
     height: 22px;
     margin-left: 20px;
+}*/
+.top .left:before {
+    float: left;
+    content: "";
+    width: 107px;
+    height: 47px;
+    margin-top: 10px;
+    user-select: none;
+    background: url("../../images/index/index.png") no-repeat 0px 0px;
 }
+
+.top .left:after {
+    float: left;
+    content: "";
+    width: 113px;
+    height: 16px;
+    margin-top: 27px;
+    line-height: 63px;
+    margin-left: 20px;
+    user-select: none;
+    background: url("../../images/index/index.png") no-repeat 0px -50px;
+}
+
 
 .top .fl p {
     display: inline-block;
