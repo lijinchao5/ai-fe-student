@@ -18,7 +18,11 @@ $(function () {
         // very old browser like IE 8, canvas not supported
         return false
     }
-    $('.blod-image').addClass(canUseWebP() ? 'webp' : 'no-webp')
+    $('.blod-image').addClass(canUseWebP() ? 'webp' : 'no-webp');
+    $('.bottom-bg li.first').addClass(canUseWebP() ? 'webp' : 'no-webp');
+    $('.bottom-bg li.second').addClass(canUseWebP() ? 'webp' : 'no-webp');
+    $('.bottom-bg li.third').addClass(canUseWebP() ? 'webp' : 'no-webp');
+    $('.bottom-bg li.last').addClass(canUseWebP() ? 'webp' : 'no-webp');
 
     // 开始获取用户信息
     var tokenId = getParam("tokenId");

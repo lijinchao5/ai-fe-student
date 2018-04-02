@@ -20,28 +20,35 @@ html, body {
     margin-left: -50%;
     width: 100%;
     min-width: 1366px;
-    height: 73px;
+    height: 90px;
     line-height: 70px;
+    background-color: #fff;
     background-color: #fff;
     border-bottom: 27px solid transparent;
     border-image: url("../images/index/top-bottom.png") 0 0 27 0 stretch;
     color: #00a0e9;
 }
 
-.top .fl .ai-logo {
+.top .left:before {
+    float: left;
+    content: "";
     width: 107px;
     height: 47px;
-    margin-top: -13px;
+    margin-top: 10px;
     user-select: none;
+    background: url("../images/index/index.png") no-repeat 0px 0px;
 }
 
-.top .fl .ai-title {
+.top .left:after {
+    float: left;
+    content: "";
     width: 113px;
     height: 16px;
-    margin-bottom: 14px;
+    margin-top: 27px;
     line-height: 63px;
     margin-left: 20px;
     user-select: none;
+    background: url("../images/index/index.png") no-repeat 0px -50px;
 }
 
 .top .fl p {
@@ -188,10 +195,10 @@ html, body {
 
 .content .bottom-bg li {
     /*padding-top: 60px;*/
-    width: 186px;
-    height: 186px;
+    width: 180px;
+    height: 180px;
     float: left;
-    margin: 0 40px;
+    margin: 0 42px;
     text-align: center;
     border-radius: 50%;
     background-size: 100%;
@@ -204,23 +211,35 @@ html, body {
 }
 
 .content .bottom-bg li.first {
-    background: url("../images/index/11.png") no-repeat center center;
+    background: url("../images/index/11.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(239, 129, 24);
+}
+.content .bottom-bg li.first.webp {
+    background: url("../images/index/11.webp") no-repeat center center;
 }
 
 .content .bottom-bg li.second {
-    background: url("../images/index/22.png") no-repeat center center;
+    background: url("../images/index/22.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(231, 51, 170);
+}
+.content .bottom-bg li.second.webp {
+    background: url("../images/index/22.webp") no-repeat center center;
 }
 
 .content .bottom-bg li.third {
-    background: url("../images/index/33.png") no-repeat center center;
+    background: url("../images/index/33.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(127, 231, 43);
+}
+.content .bottom-bg li.third.webp {
+    background: url("../images/index/33.webp") no-repeat center center;
 }
 
 .content .bottom-bg li.last {
-    background: url("../images/index/44.png") no-repeat center center;
+    background: url("../images/index/44.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(238, 235, 8);
+}
+.content .bottom-bg li.last.webp {
+    background: url("../images/index/44.webp") no-repeat center center;
 }
 
 .content .bottom-bg li img {
@@ -307,8 +326,8 @@ html, body {
     right: 190px;
     width: 148px;
     height: 107px;
-    background: url("../images/index/huojian.png") no-repeat center center;
-    background-size: 100% 100%;
+    background: url("../images/index/index.png") no-repeat 0px -280px;
+    background-size: cover;
     /* css3 动画 */
     animation: rocket 3s infinite linear;
     -moz-animation: rocket 3s infinite linear; /* Firefox */
@@ -346,10 +365,9 @@ html, body {
     position: absolute;
     bottom: 71%;
     left: 36.6%;
-    width: 26px;
-    height: 28px;
-    background: url("../images/index/starb.png") no-repeat center center;
-    background-size: 100% 100%;
+    width: 33px;
+    height: 34px;
+    background: url("../images/index/index.png") no-repeat 0px -180px;
     /* css3 动画 */
     animation: starb 3s infinite linear;
     -moz-animation: starb 3s infinite linear; /* Firefox */
@@ -378,8 +396,7 @@ html, body {
     right: 43%;
     width: 26px;
     height: 28px;
-    background: url("../images/index/stars.png") no-repeat center center;
-    background-size: 100% 100%;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
     /* css3 动画 */
     animation: stars 3s infinite linear;
     -moz-animation: stars 3s infinite linear; /* Firefox */
@@ -405,10 +422,9 @@ html, body {
     position: absolute;
     top: -60px;
     left: 0;
-    width: 122px;
-    height: 122px;
-    background: url("../images/index/yuhangyuan.png") no-repeat center center;
-    background-size: 100% 100%;
+    width: 97px;
+    height: 100px;
+    background: url("../images/index/index.png") no-repeat -50px -180px;
     /* css3 动画 */
     animation: astronaut 5s infinite linear;
     -moz-animation: astronaut 5s infinite linear; /* Firefox */
@@ -433,33 +449,13 @@ html, body {
         transform: rotate(0deg) scale(0.9);
     }
 }
-
-/*.content .star1 {*/
-/*position: absolute;*/
-/*bottom: 380px;*/
-/*left: 360px;*/
-/*width: 122px;*/
-/*height: 122px;*/
-/*background: url("../images/index/yuhangyuan.png") no-repeat center center;*/
-/*background-size: 100% 100%;*/
-/*}*/
-/*.content .star2 {*/
-/*position: absolute;*/
-/*bottom: 380px;*/
-/*left: 360px;*/
-/*width: 122px;*/
-/*height: 122px;*/
-/*background: url("../images/index/yuhangyuan.png") no-repeat center center;*/
-/*background-size: 100% 100%;*/
-/*}*/
 .content .ball1 {
     position: absolute;
     top: 120px;
     left: 330px;
     width: 102px;
     height: 66px;
-    background: url("../images/index/1.png") no-repeat center center;
-    background-size: 100% 100%;
+    background: url("../images/index/index.png") no-repeat 0px -70px;
     /* css3 动画 */
     animation: ball 5s infinite linear;
     -moz-animation: ball 5s infinite linear; /* Firefox */
@@ -493,8 +489,7 @@ html, body {
     right: 560px;
     width: 61px;
     height: 41px;
-    background: url("../images/index/2.png") no-repeat center center;
-    background-size: 100% 100%;
+    background: url("../images/index/index.png") no-repeat 0px -136px;
 }
 
 .add-top {
