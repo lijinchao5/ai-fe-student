@@ -64,6 +64,10 @@
     text-align: center;
 }
 
+.report-title .report-details .detail-top li {
+    height: 51px;
+}
+
 .report-title .report-details li:first-of-type {
     margin-left: 30px;
 }
@@ -136,8 +140,8 @@
 }
 
 /*.report-content .report-tabs > li:hover {*/
-    /*background: #11c8eb;*/
-    /*color: #fff;*/
+/*background: #11c8eb;*/
+/*color: #fff;*/
 /*}*/
 
 .report-content .report-tabs .tabs-col {

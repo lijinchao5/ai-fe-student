@@ -24,21 +24,21 @@
 
 .nav-wrap .user-name,
 .nav-wrap .student-id {
-    height: 16px;
-    font-size: 22px;
-    line-height: 16px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 30px;
 }
 
 .nav-wrap .student-id {
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .nav-wrap .hd {
     width: 233px;
-    margin-top: 40px;
+    margin-top: 61px;
 }
 
 .nav-wrap .hd a {
@@ -55,11 +55,16 @@
     user-select: none;
 }
 
+.nav-wrap .hd a:last-of-type {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
 .nav-wrap .hd a:hover {
     text-decoration: none;
 }
 
-.nav-wrap .hd .current span {
+.nav-wrap .hd .current {
     display: block;
     width: 264px;
     background: #fff;

@@ -142,7 +142,7 @@ function getLoginPath() {
 function getRootPath() {
     return window.location.protocol + '//' + window.location.host + '/oep-be/';
     //return "http://localhost:8092/";
-    //return "https://39.104.76.67/oep-be/"
+    //return "https://www.aienglish.vip/oep-be/"
 }
 function getWebSocketRootPath() {
     //	return "localhost:8092/";

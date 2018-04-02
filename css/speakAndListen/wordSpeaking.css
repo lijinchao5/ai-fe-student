@@ -40,7 +40,7 @@ body {
 
 #word-speaking {
     width: 932px;
-    min-height: 662px;
+    height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
@@ -116,7 +116,7 @@ body {
 .modal-content .modal-footer .btn-primary {
     outline: none;
     box-shadow: none;
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
 }
 
 .modal-content .modal-footer .btn-primary {
@@ -125,7 +125,7 @@ body {
 
 .modal-content .modal-footer .btn-default:hover,
 .modal-content .modal-footer .btn-primary:hover {
-    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 /* 提交作业的提示 */
@@ -644,7 +644,7 @@ body {
     text-align: center;
     font: 600 16px/38px MicrosoftYaHei;
     color: #fff;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
     border: none;
     outline: none;
@@ -758,13 +758,13 @@ body {
     line-height: 40px;
     text-align: center;
     color: #fff;
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     border-radius: 5px;
     margin: 20px auto 0;
 }
 
 .dictation-modal-footer button:hover {
-    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 button {

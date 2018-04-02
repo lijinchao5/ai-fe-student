@@ -102,7 +102,7 @@ body {
 }
 
 .report-banner .main li p.final-time {
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 .report-banner .main li p.end-time {
@@ -130,11 +130,11 @@ body {
     width: 106px;
     height: 30px;
     border-radius: 5px;
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
     line-height: 30px;
     color: #fff;
-    margin: 30px auto 0;
+    margin: 28px auto 0;
 }
 
 .report-banner .main li .check-report {
@@ -143,7 +143,7 @@ body {
 
 .report-banner .main li .do-homework:hover,
 .report-banner .main li .check-report:hover {
-    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: cover;
 }
 
@@ -165,6 +165,7 @@ body {
     color: #f08118;
     font-size: 30px;
     line-height: 35px;
+    font-weight: 600;
 }
 
 .report-banner .main .score .normal-color {
