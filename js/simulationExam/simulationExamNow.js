@@ -1,5 +1,6 @@
 $(function(){
-	$('#background').load('../common/simulationExambg.html');
+	$('#header').load('../common/header.html');
+	// $('#background').load('../common/simulationExambg.html');
     $('#simulation-exam-modal').load('../common/simulationExamModal.html');
     $('#nav').load('../../html/common/simulationExamNav.html',function(){
         $('#nav1').load('../../html/common/simulationExamNav.html',function(){
