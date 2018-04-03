@@ -127,7 +127,17 @@
                         </div>
                         <div>
                             生日：
-                            <input type="text" name="birthDate" id="birthDate" placeholder="年-月-日">
+                            <input type="text" name="birthDate" id="birthDate"  placeholder="年-月-日"  >
+                            <!--data-provide="datepicker"-->
+                            <!--class="form-control"-->
+                            <!--<div class="input-daterange input-group form-control" id="datepicker">-->
+                            <!--<input type="text" class="input-sm form-control" name="start" />-->
+                            <!--<span class="input-group-addon">to</span>-->
+                            <!--<input type="text" class="input-sm form-control" name="end" />-->
+                            <!--</div>-->
+                            <!--<input size="16" type="text" value="2012-06-15" readonly class="form_datetime">-->
+
+
                         </div>
                         <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
                     </div>
@@ -287,5 +297,14 @@
 <script src="../../lib/avatar/sitelogo.js"></script>
 <!--<script src="../../lib/avatar/qunit.js"></script>-->
 <script src="../../lib/avatar/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+//    $('.datepicker').datepicker({
+//        startDate: '-3d'
+//    });
+    //    $('#sandbox-container .input-daterange').datepicker({
+    //    });
 
+    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+
+</script>
 </html>

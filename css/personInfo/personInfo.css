@@ -171,8 +171,9 @@ body {
 #personInfo #tabbd .owner-message .user-icon-right .modal-header {
     padding: 0;
 }
+
 #personInfo #tabbd .owner-message .user-icon-right .modal-header button,
-#personInfo #tabbd .owner-message .user-icon-right .modal-header h4{
+#personInfo #tabbd .owner-message .user-icon-right .modal-header h4 {
     height: 55px;
     line-height: 55px;
     font-size: 18px;
@@ -195,6 +196,7 @@ body {
     padding: 0;
     /*margin: 0 309px 44px 42px;*/
 }
+
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-9 .avatar-upload {
     width: 529px;
     height: 29px;
@@ -230,9 +232,11 @@ body {
     width: 266px;
     padding: 0 10px;
 }
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .pre-view{
+
+#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .pre-view {
     margin-top: 24px;
 }
+
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big .imageHead {
     display: block;
     width: 168px;
@@ -240,28 +244,30 @@ body {
     /*margin: 7px auto 36px;*/
     border-radius: 50%;
     background: url("../../images/personInfo/xs-meb-icon.png") no-repeat center;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big,
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .mid,
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .sml{
+#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .sml {
     display: inline-block;
     text-align: center;
     line-height: 24px;
     font-size: 14px;
     margin-left: 34px;
 }
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big{
+
+#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big {
     margin: 0 60px;
 }
+
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .mid .imageHead {
     width: 97px;
     height: 97px;
     /*margin: 0 44px 0 18px;*/
     border-radius: 50%;
     background: url("../../images/personInfo/xs-meb-icon.png") no-repeat center;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .sml .imageHead {
@@ -271,7 +277,7 @@ body {
     margin-top: 22px;
     border-radius: 50%;
     background: url("../../images/personInfo/xs-meb-icon.png") no-repeat center;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .user-icon-right .modal-body .confirm {
@@ -472,11 +478,13 @@ body {
     height: 168px;
     border-radius: 50%;
 }
+
 .modal-dialog .modal-body .preImg-mid img {
     width: 98px;
     height: 98px;
     border-radius: 50%;
 }
+
 .modal-dialog .modal-body .preImg-sml img {
     width: 68px;
     height: 68px;

@@ -24,7 +24,16 @@ body {
     clear: both;
 }
 
+#header {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+}
+
 #nav {
+    width: 264px;
+    height: 662px;
+    background-color: #4fc6fc;
     color: #333;
 }
 
@@ -51,7 +60,6 @@ body {
 
 #view-report::-webkit-scrollbar-thumb {
     background-color: #11d8fc;
-
 }
 
 #footer {
