@@ -470,6 +470,11 @@ body {
     background-size: cover;
 }
 
+.word-speaking .speak-listen-btn .znbutton {
+    margin-top: 50px;
+    margin-left: 0;
+}
+
 .word-speaking .speak-listen-tab-bd .recording {
     width: 67px;
     height: 100px;
