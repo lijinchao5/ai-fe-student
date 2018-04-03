@@ -418,6 +418,191 @@ html, body {
         opacity: 1;
     }
 }
+.content .star-one {
+    position: absolute;
+    top: 16%;
+    left: 3%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: sider 3s infinite linear;
+    -moz-animation: sider 3s infinite linear; /* Firefox */
+    -webkit-animation: sider 3s infinite linear; /* Safari and Chrome */
+    -o-animation: sider 3s infinite linear; /* Opera */
+}
+.content .star-two {
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: starsml 4s infinite linear;
+    -moz-animation: starsml 4s infinite linear; /* Firefox */
+    -webkit-animation: starsml 4s infinite linear; /* Safari and Chrome */
+    -o-animation: starsml 4s infinite linear; /* Opera */
+}
+.content .star-three {
+    position: absolute;
+    top: 90%;
+    left: 6%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: stars 3s infinite linear;
+    -moz-animation: stars 3s infinite linear; /* Firefox */
+    -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
+    -o-animation: stars 3s infinite linear; /* Opera */
+}
+.content .star-four {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: starsml 2s infinite linear;
+    -moz-animation: starsml 2s infinite linear; /* Firefox */
+    -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
+    -o-animation: starsml 2s infinite linear; /* Opera */
+}
+.content .star-five {
+    position: absolute;
+    bottom: 80%;
+    left: 48%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: starsml 2s infinite linear;
+    -moz-animation: starsml 2s infinite linear; /* Firefox */
+    -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
+    -o-animation: starsml 2s infinite linear; /* Opera */
+}
+.content .star-six {
+    position: absolute;
+    bottom: 37%;
+    left: 60%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: stars 3s infinite linear;
+    -moz-animation: stars 3s infinite linear; /* Firefox */
+    -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
+    -o-animation: stars 3s infinite linear; /* Opera */
+}
+.content .star-seven {
+    position: absolute;
+    bottom: 17%;
+    right: 25%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: starsml 2s infinite linear;
+    -moz-animation: starsml 2s infinite linear; /* Firefox */
+    -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
+    -o-animation: starsml 2s infinite linear; /* Opera */
+}
+.content .star-eight {
+    position: absolute;
+    bottom: 1%;
+    right: 4%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: sider 3s infinite linear;
+    -moz-animation: sider 3s infinite linear; /* Firefox */
+    -webkit-animation: sider 3s infinite linear; /* Safari and Chrome */
+    -o-animation: sider 3s infinite linear; /* Opera */
+}
+.content .star-nine {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: starsml 4s infinite linear;
+    -moz-animation: starsml 4s infinite linear; /* Firefox */
+    -webkit-animation: starsml 4s infinite linear; /* Safari and Chrome */
+    -o-animation: starsml 4s infinite linear; /* Opera */
+}
+.content .star-ten {
+    position: absolute;
+    top: 11%;
+    right: 27%;
+    width: 26px;
+    height: 28px;
+    background: url("../images/index/index.png") no-repeat 0px -215px;
+    /* css3 动画 */
+    animation: stars 3s infinite linear;
+    -moz-animation: stars 3s infinite linear; /* Firefox */
+    -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
+    -o-animation: stars 3s infinite linear; /* Opera */
+}
+@keyframes sidel {
+    0% {
+        transform: scale(0.6) translate(50px, -50px);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(0.8) translate(0px, 0px);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(0.6) translate(0px, 0px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.6) translate(50px, -50px);
+        opacity: 0;
+    }
+}
+@keyframes sider {
+    0% {
+        transform: scale(0.6) translate(50px, -50px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.6) translate(50px, -50px);
+        opacity: 0;
+    }
+    75% {
+        transform: scale(0.8) translate(0px, 0px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.8) translate(-50px, 50px);
+        opacity: 0.8;
+    }
+}
+@keyframes starsml {  /* 2 */
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(0.7);
+        opacity: 0.8;
+    }
+    75% {
+        transform: scale(0.7);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
 .content .speaking-trumpet {
     position: absolute;
     top: -60px;
