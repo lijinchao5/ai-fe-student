@@ -30,9 +30,18 @@ $(function () {
         var s = data.studentAvgScore;
         $("#rank").text(h.rank);
         $("#score").text(parseInt(h.score));
-        var hour = parseInt(h.workTime / 60);
-        $("#hour").text(hour);
-        $("#mi").text(h.workTime % 60);
+        var hour = parseInt(h.workTime / 3600);
+        var min = parseInt(h.workTime % 3600 / 60);
+        var sec = parseInt(h.workTime % 60);
+        $("#hour").text(hour + ":");
+        $("#mi").text(min);
+        $("#sec").text(sec);
+        //暂放
+        //if(h.workTime>=3600){
+        //    $("#hour").css("font-size","36px");
+        //    $("#mi").css("font-size","36px");
+        //    $("#sec").css("font-size","36px")
+        //}
         if (h.remark === null) {
             $("#remark").text("还没有评语哦");
         } else {

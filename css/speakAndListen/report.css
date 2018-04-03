@@ -60,12 +60,18 @@
 .report-title .report-details li {
     position: relative;
     width: 100px;
-    margin-left: 65px;
+    margin-left: 25px;
     text-align: center;
 }
 
 .report-title .report-details .detail-top li {
     height: 51px;
+}
+
+.report-title .report-details li:last-of-type {
+    margin-left: 0;
+    width: 200px;
+    /*background: #e20000;*/
 }
 
 .report-title .report-details li:first-of-type {
@@ -187,7 +193,7 @@
 .report-top {
     width: 830px;
     height: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .report-top .sentences-degree {
@@ -261,7 +267,7 @@
 
 .report-content .report-wrap .word-list .content {
     width: 33.33%;
-    padding: 0 0 1% 5%;
+    padding: 1% 0 1% 5%;
 }
 
 .report-content .report-wrap .word-list .content img {
@@ -354,7 +360,7 @@
 .report-content .report-wrap .cosplay-list .job-list .cos-title {
     width: 100%;
     font-size: 14px;
-    margin: 0 0 10px 16px;
+    margin: 10px 0 5px 16px;
 }
 
 .report-content .report-wrap .cosplay-list .job-list .cos-title .role-name {
