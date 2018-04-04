@@ -8,7 +8,7 @@
 }
 
 #nav, #nav1 {
-    width: 237px;
+    width: 275px;
     height: 602px;
 }
 
@@ -25,7 +25,7 @@
     height: 630px;
     min-width: 1200px;
     min-height: 600px;
-    margin: 20px auto;
+    margin: 26px auto;
     background: #fff;
     border-radius: 8px;
 }
@@ -308,11 +308,11 @@
 
 .exam-first #simulation-exam,
 .start-exam #question-content {
-    width: 900px;
-    height: 602px;
+    width: 914px;
+    height: 630px;
     position: absolute;
-    top: 16px;
-    left: 264px;
+    top:0;
+    left: 285px;
 }
 
 .start-answer {
@@ -375,8 +375,13 @@
 
 #notice .wrap {
     display: none;
+    background-color: transparent;
+    position: relative;
 }
-
+#notice .student-notice,
+#notice .content-bg {
+    background: #fff;
+}
 .start-exam .exam-title::after {
     content: "";
     display: block;

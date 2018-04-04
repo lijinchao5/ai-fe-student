@@ -1,10 +1,12 @@
 .exam-nav {
-    width: 237px;
-    height: 602px;
-    margin: 16px 0 15px 13px;
+    width: 275px;
+    height: 630px;
+    /*margin: 16px 0 15px 13px;*/
     padding: 46px 0 37px 43px;
     font-size: 16px;
     background: #fff;
+    border-radius: 4px;
+    background-color: #00a0e9;
 }
 
 .exam-nav .meb-icon img {
