@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div id="header"></div>
 <div id="background"></div>
 <div id="notice">
     <div class="student-notice wrap" style="display: none;">
@@ -20,7 +21,7 @@
         <div class="content">
             <p id="ksxzcontent"></p>
         </div>
-        <a class="next fr slide" onclick="nextwrap('content-bg')">下一步</a>
+        <a class="next fr slide" onclick="nextwrap('content-bg')"  data-toggle="modal" data-target=".next-modal">下一步</a>
     </div>
     <div class="content-bg wrap">
         <div class="content-in">
@@ -29,20 +30,19 @@
             </div>
             <div class="main">
                 <div class="fr">
-                    <img src="../../images/simulationExam/left.png" alt="左侧">
-                    <img src="../../images/simulationExam/font.png" alt="正面">
+
                 </div>
-                <div style="height: 280px;">
+                <div style="height: 280px;text-align: center;">
                     <p class="description">请朗读以下句子，测试录音效果</p>
                     <p class="eg">How are you?</p>
                     <div class="btns">
-                        <div onclick="palyaudio();" id="palymid">
-                            <img src="../../images/speakAndListen/play.png" alt="播放">
-                            <span>播放</span>
-                        </div>
                         <div class="record" onclick="statrRecord();" id="statrRecord">
                             <img src="../../images/common/recording.png" alt="录音">
                             <span>录音</span>
+                        </div>
+                        <div onclick="palyaudio();" id="palymid">
+                            <img src="../../images/speakAndListen/play.png" alt="播放">
+                            <span>播放</span>
                         </div>
                     </div>
                     <div class="djs" id="testly">
@@ -74,6 +74,29 @@
                 </div>
                 <!-- 模态框 -->
                 <div id="simulation-exam-modal"></div>
+
+                <!-- 带耳麦 模态框 -->
+                <div class="modal fade bs-example-modal-lg next-modal" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <!-- model content 开始 -->
+                            <div class="modal-header">
+                                <p>请正确佩戴好耳机</p>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../../images/simulationExam/left.png" alt="左侧">
+                                <img src="../../images/simulationExam/font.png" alt="正面">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="readword();"
+                                        id="startworkhome">好了
+                                </button>
+                            </div>
+                            <!-- model content 结束 -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

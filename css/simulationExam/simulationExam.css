@@ -1,28 +1,33 @@
 #notice {
     position: absolute;
     width: 100%;
-    height: 100%;
-    min-height: 768px;
+    /*height: 100%;*/
+    /*min-height: 768px;*/
+    background: url("../../images/common/background.jpg") no-repeat center;
+    background-size: cover;
 }
 
 #nav, #nav1 {
-    width: 237px;
+    width: 275px;
     height: 602px;
 }
 
 #notice > div {
     width: 1200px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .wrap {
-    position: absolute;
-    left: 83px;
-    top: 98px;
+    /*position: absolute;*/
+    /*left: 83px;*/
+    /*top: 98px;*/
     width: 1250px;
     height: 630px;
     min-width: 1200px;
     min-height: 600px;
+    margin: 26px auto;
+    background: #fff;
+    border-radius: 8px;
 }
 
 .student-notice .title {
@@ -34,7 +39,7 @@
 }
 
 .student-notice .content {
-    margin: 30px 70px;
+    margin: 0px 200px;
 }
 
 .student-notice .content p {
@@ -48,15 +53,22 @@
     display: block;
     border: none;
     outline: none;
-    line-height: 37px;
+    line-height: 36px;
     text-align: center;
-    margin: 45px 70px 0 0;
-    width: 145px;
-    height: 37px;
+    width: 110px;
+    height: 36px;
+    border-radius: 36px;
     color: #fff;
     font-size: 16px;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -55px;
+}
+.student-notice .next:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 .student-notice .next:hover {
@@ -80,12 +92,11 @@
 
 .content-bg .content-in .title p {
     width: 100%;
-    height: 110px;
-    line-height: 90px;
+    height: 150px;
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 400;
-    color: #004098;
+    color: #00a0e9;
 }
 
 .content-bg .content-in .title .ip {
@@ -101,52 +112,53 @@
 }
 
 .content-bg .content-in .main .description {
-    height: 80px;
-    line-height: 80px;
+    height:60px;
+    line-height: 70px;
     font-size: 24px;
     color: #333;
 }
 
 .content-bg .content-in .main .eg {
-    padding-left: 50px;
-    height: 110px;
-    line-height: 80px;
+    /*padding-left: 50px;*/
+    /*height: 110px;*/
+    /*line-height: 80px;*/
     font-size: 30px;
     color: #11d8fc;
     font-weight: 700;
 }
 
 .content-bg .content-in .main .btns {
-    width: 340px;
-    height: 90px;
-    padding: 0 0 0 50px;
+    width: 160px;
+    height: 70px;
+    margin: 50px auto;
+    /*padding: 0 0 0 50px;*/
 }
 
 .content-bg .content-in .main .btns div {
-    width: 60px;
-    height: 90px;
-    margin: 0 26px;
+    width: 40px;
+    /*height: 90px;*/
+    margin: 0 20px;
     float: left;
     cursor: pointer;
 }
 
 .content-bg .content-in .main .btns div img {
     display: block;
-    width: 44px;
-    height: 44px;
-    margin: 16px auto 0;
+    width: 40px;
+    height: 40px;
+    /*margin: 16px auto 0;*/
     border-radius: 50%;
 }
 
 .content-bg .content-in .main .btns .record img {
-    width: 60px;
-    height: 60px;
-    margin: 0;
+    width: 40px;
+    height: 40px;
+    /*margin: 0;*/
 }
 
 .content-bg .content-in .main .btns div span {
     display: block;
-    width: 60px;
+    width: 40px;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -157,55 +169,57 @@
 .content-bg .content-in .main .clear-btn {
     width: 350px;
     height: 37px;
-    margin: 20px 3px 0;
+    margin: 60px auto 0;
 }
 
 .content-bg .content-in .main .clear-btn .buttons {
-    width: 111px;
-    height: 37px;
-    background: url("../../images/common/set-meb-icon.png") center center;
+    width: 110px;
+    height: 36px;
+    background: url("../../images/common/normal-button.png") center center;
     border: none;
-    border-radius: 4px;
-    line-height: 37px;
+    border-radius: 36px;
+    line-height: 36px;
     text-align: center;
     color: #fff;
     font-size: 16px;
 }
 
 .content-bg .content-in .main .clear-btn .buttons:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") center center;
+    background: url("../../images/common/hover-button.png") center center;
     border: none;
 }
 
 .content-bg .content-in .main .clear-btn .readonly {
-    width: 111px;
-    height: 37px;
+    width: 110px;
+    height: 36px;
     border: none;
-    border-radius: 4px;
-    line-height: 37px;
+    border-radius: 36px;
+    line-height: 36px;
     text-align: center;
     color: #fff;
     font-size: 16px;
 }
 
-.content-bg .content-in .main .fr img {
-    display: inline-block;
-    width: 187px;
-    height: 189px;
-    margin-top: 70px;
-}
+/*.content-bg .content-in .main .fr img {*/
+    /*display: inline-block;*/
+    /*width: 187px;*/
+    /*height: 189px;*/
+    /*margin-top: 70px;*/
+/*}*/
 
 .content-bg .content-in .main .volume {
-    max-width: 80%;
-    height: 40px;
-    margin-top: 60px;
+    /*max-width: 80%;*/
+    height: 60px;
+    margin-top: 50px;
+    padding-left: 60px;
 }
 
 .content-bg .content-in .main .volume p {
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 40px;
+    color: #ccc;
 }
 
 /* volume bar start */
@@ -239,10 +253,10 @@
     background: white;
     cursor: pointer;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     position: absolute;
-    top: -18px;
+    top: -15px;
     background-size: 100%;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
     background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
@@ -264,6 +278,7 @@
 }
 
 .volume-bar output {
+    color: #ccc;
     position: absolute;
     top: 6px;
     right: -40px;
@@ -293,11 +308,11 @@
 
 .exam-first #simulation-exam,
 .start-exam #question-content {
-    width: 900px;
-    height: 602px;
+    width: 914px;
+    height: 630px;
     position: absolute;
-    top: 16px;
-    left: 264px;
+    top:0;
+    left: 285px;
 }
 
 .start-answer {
@@ -351,13 +366,22 @@
 }
 
 #notice .wrap:first-of-type {
-    display: block;
+    /*display: block;*/
+    position: relative;
+    padding-bottom: 70px;
+    height: 100%;
+    min-height: 620px;
 }
 
 #notice .wrap {
     display: none;
+    background-color: transparent;
+    position: relative;
 }
-
+#notice .student-notice,
+#notice .content-bg {
+    background: #fff;
+}
 .start-exam .exam-title::after {
     content: "";
     display: block;
@@ -684,8 +708,9 @@
 /*耳麦测试的录音进度条*/
 .content-bg .content-in .main .djs {
     width: 330px;
-    top: 180px;
+    top: 140px;
     left: 40px;
+    margin:0 auto;
 }
 
 .content-bg .content-in .main .djs .countdown {
@@ -759,3 +784,80 @@
 .record-fail .modal-body p {
     margin-top: 50px;
 }
+
+/* 下一步按钮的模态框/ */
+.next-modal .modal-content {
+    width: 490px;
+    margin: 15% auto;
+    background: url("../../images/common/ready-go-clound.png") no-repeat center top;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-dialog {
+    width: 450px;
+}
+
+.modal-content .modal-header {
+    padding-top: 30px;
+    border-bottom: none;
+    height: 120px;
+    text-align: center;
+    font-size: 16px;
+}
+.modal-content .modal-header p{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 76px;
+}
+
+.modal-content .modal-header .modal-title {
+    text-align: center;
+    font: 20px/80px MicrosoftYaHei;
+}
+
+.modal-content .modal-body {
+    height: 200px;
+    margin-top: 50px;
+    text-align: center;
+}
+.modal-content .modal-body img {
+    display: inline-block;
+    width: 187px;
+    height: 189px;
+}
+/*.modal-content .modal-body p {
+}*/
+
+.modal-content .modal-footer {
+    padding: 50px 0 0 0;
+    text-align: center;
+    border-top: none;
+}
+
+.modal-content .modal-footer button {
+    width: 110px;
+    height: 38px;
+    margin-top: 5px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.modal-content .modal-footer .btn-default,
+.modal-content .modal-footer .btn-primary {
+    outline: none;
+    box-shadow: none;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+}
+
+.modal-content .modal-footer .btn-primary {
+    margin-left: 10px;
+}
+
+.modal-content .modal-footer .btn-default:hover,
+.modal-content .modal-footer .btn-primary:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+}
+
