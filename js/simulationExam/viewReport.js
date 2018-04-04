@@ -58,70 +58,70 @@ $(function () {
             var key = map.arr[i].key;
             var firstQ = map.arr[i].value[0];
             var title = thisQn + firstQ.subjectNum;
-            var _qtitle = $("<div class='question-title'>" +
-                "<div class='top-topic'>" + title + "<span>（共<span class='score'>" + (map.arr[i].value.length * firstQ.score) + "</span>分，每小题 <span class='each-score'>" + firstQ.score + "</span>分）" +
-                "</span></div><div class='topic'>" + firstQ.subject +
-                "</div>" +
-                "</div>");
+            var _qtitle = $("<div class='question-title'>" + "<a class='top-topic'>" + title +
+                "<span>（共<span class='score'>" + (map.arr[i].value.length * firstQ.score) + "</span>分，每小题 <span class='each-score'>" + firstQ.score + "</span>分）" + "</span>" +
+                "</a></div>" +
+                "<div class='topic'>" + firstQ.subject + "</div>");
+
             var _qcontent = $("<ul class='question-content'><ul>");
             _allDiv.append(_qtitle);
             _allDiv.append(_qcontent);
             if (firstQ.type == 1) {
                 for (var j = 0; j < map.arr[i].value.length; j++) {
                     var obj = map.arr[i].value[j];
-                    var _li = $("<li>                                                                              " +
-                        "    <p class='question'>" + formateGuid(obj.guide) + "</p>" +
-                        "    <p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
-                        "    <p class='select'>" + switchABCD(obj.result) + "</p>                             " +
-                        "    <div class='exam-result right-wrong'>                                         " +
-                        "        <span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>      " +
-                        "            <span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>" +
-                        "    </div>                                                                        " +
-                        "    <div class='exam-key'>                                                        " +
-                        "        <span class='key-check'>答案解析</span>                                   " +
-                        "        <div class='exam-key-content'>                                            " +
-                        "            <div class='key-item refer-result'>                                   " +
-                        "                <p>参考答案</p>                                                   " +
-                        "                <ul class='key'>                                                  " +
-                        "                    <li>" + switchOrigText(obj.correntResult) + "</li>                                " +
-                        "                </ul>                                                             " +
-                        "            </div>                                                                " +
-                        "            <div class='key-item listen-article'>                                 " +
-                        "                <p>听力原文</p>                                                   " +
-                        "                <ul class='key'>" + switchOrigText(obj.originalText) + "</ul>                                            " +
-                        "            </div>                                                                " +
-                        "        </div>                                                                    " +
-                        "    </div>                                                                        " +
-                        "</li>                                                                             ");
+                    var _li = $("<li>" +
+                        "<p class='question'>" + formateGuid(obj.guide) + "</p>" +
+                        "<p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
+                        "<p class='select'>" + switchABCD(obj.result) + "</p>" +
+                        "<div class='exam-result right-wrong'>" +
+                        "<span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>      " +
+                        "<span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>" +
+                        "</div>" +
+                        "<div class='exam-key'>" +
+                        "<span class='key-check'>答案解析</span>" +
+                        "<div class='exam-key-content'>" +
+                        "<div class='key-item refer-result'>" +
+                        "<p>参考答案</p>" +
+                        "<ul class='key'>" +
+                        "<li>" + switchOrigText(obj.correntResult) + "</li>" +
+                        "</ul>" +
+                        "</div>" +
+                        "<div class='key-item listen-article'>" +
+                        "<p>听力原文</p>" +
+                        "<ul class='key'>" + switchOrigText(obj.originalText) + "</ul>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</li>");
                     _qcontent.append(_li);
                 }
             } else if (firstQ.type == 2) {
                 for (var j = 0; j < map.arr[i].value.length; j++) {
                     var obj = map.arr[i].value[j];
                     var _eachscore = obj.studentScore;
-                    var _li = $("<li>                                                                              " +
-                        "    <p class='question'>" + formateGuid(obj.guide) + "</p>" +
-                        "    <p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
-                        "    <p class='select'>" + switchABCD(obj.result) + "</p>                             " +
-                        "    <div class='exam-result right-wrong'>                                         " +
-                        "        <span>答案：</span> <span class='recording-score'>" + formateEmptyResult(obj.studentResult) + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>" +
-                        "    </div>                                                                        " +
-                        "    <div class='exam-key'>                                                        " +
-                        "        <span class='key-check'>答案解析</span>                                   " +
-                        "        <div class='exam-key-content'>                                            " +
-                        "            <div class='key-item refer-result'>                                   " +
-                        "                <p>参考答案</p>                                                   " +
-                        "                <ul class='key'>                                                  " +
-                        "                    <li>" + obj.correntResult + "</li>                                " +
-                        "                </ul>                                                             " +
-                        "            </div>                                                                " +
-                        "            <div class='key-item listen-article'>                                 " +
-                        "                <p>听力原文</p>                                                   " +
-                        "                <ul class='key'>" + switchOrigText(obj.originalText) + "</ul>                                            " +
-                        "            </div>                                                                " +
-                        "        </div>                                                                    " +
-                        "    </div>                                                                        " +
-                        "</li>                                                                             ");
+                    var _li = $("<li>" +
+                        "<p class='question'>" + formateGuid(obj.guide) + "</p>" +
+                        "<p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
+                        "<p class='select'>" + switchABCD(obj.result) + "</p>" +
+                        "<div class='exam-result right-wrong'>" +
+                        "<span>答案：</span><span class='recording-score'>" + formateEmptyResult(obj.studentResult) + "</span><img src='../../images/common/" + (obj.studentScore > 0 ? "true" : "error") + ".png'>" +
+                        "</div>" +
+                        "<div class='exam-key'>" +
+                        "<span class='key-check'>答案解析</span>" +
+                        " <div class='exam-key-content'>" +
+                        "<div class='key-item refer-result'>" +
+                        "<p>参考答案</p>" +
+                        "<ul class='key'>" +
+                        "<li>" + obj.correntResult + "</li>" +
+                        "</ul>" +
+                        "</div>" +
+                        "<div class='key-item listen-article'>" +
+                        "<p>听力原文</p>" +
+                        "<ul class='key'>" + switchOrigText(obj.originalText) + "</ul> " +
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</li>");
                     _qcontent.append(_li);
                 }
             } else if (firstQ.type == 3) {
@@ -144,27 +144,27 @@ $(function () {
                     var t33as = t3taMap.get(3);
                     if (null != t33as && t33as.length > 0) {
                         var obj = t33as[0];
-                        var _li = $("<li>                                                                              " +
-                            "    <p class='question'>" + formateGuid(obj.guide) + "</p>" +
-                            "    <p class='subject'><img src='" + getRootPath() + "file/download.do?type=jpg&id=" + obj.question + "'></p>" +
-                            "    <p class='select'>" + switchABCD(obj.result) + "</p>                             " +
-                            "    <div class='exam-result right-wrong'>                                         " +
-                            "        <span>答案：</span> " + getStudentType3Answer(t33as) +
-                            "    </div>                                                                        " +
-                            "    <div class='exam-key'>                                                        " +
-                            "        <span class='key-check'>答案解析</span>                                   " +
-                            "        <div class='exam-key-content'>                                            " +
-                            "            <div class='key-item refer-result'>                                   " +
-                            "                <p>参考答案</p>                                                   " +
-                            "                <ul class='key'>" + getType3Answer(t33as) + "</ul>                                                             " +
-                            "            </div>                                                                " +
-                            "            <div class='key-item listen-article'>                                 " +
-                            "                <p>听力原文</p>                                                   " +
-                            "                <ul class='key'>" + switchOrigText(obj.originalText) + "</ul>                                           " +
-                            "            </div>                                                                " +
-                            "        </div>                                                                    " +
-                            "    </div>                                                                        " +
-                            "</li>                                                                             ");
+                        var _li = $("<li>" +
+                            "<p class='question'>" + formateGuid(obj.guide) + "</p>" +
+                            "<p class='subject'><img src='" + getRootPath() + "file/download.do?type=jpg&id=" + obj.question + "'></p>" +
+                            "<p class='select'>" + switchABCD(obj.result) + "</p>" +
+                            "<div class='exam-result right-wrong'>" +
+                            "<span>答案：</span> " + getStudentType3Answer(t33as) +
+                            "</div>" +
+                            "<div class='exam-key'>" +
+                            "<span class='key-check'>答案解析</span>" +
+                            "<div class='exam-key-content'>" +
+                            "<div class='key-item refer-result'>" +
+                            "<p>参考答案</p>" +
+                            "<ul class='key'>" + getType3Answer(t33as) + "</ul>" +
+                            "</div>" +
+                            "<div class='key-item listen-article'>" +
+                            "<p>听力原文</p>" +
+                            "<ul class='key'>" + switchOrigText(obj.originalText) + "</ul>" +
+                            "</div>" +
+                            "</div>" +
+                            "</div>" +
+                            "</li>");
                         _qcontent.append(_li);
                     }
                     var t34as = t3taMap.get(4);
@@ -175,14 +175,14 @@ $(function () {
                                 "<p class='question'>" + formateGuid(obj.guide) + "</p>" +
                                 "<p class='subject'></p><br/>" +
                                 "<p class='select'>" + switchABCD(obj.result) + "</p>" +
-                                "<div class='exam-result right-wrong'> " +
-                                "<span>答案：</span> " +
+                                "<div class='exam-result right-wrong'>" +
+                                "<span>答案：</span>" +
                                 "<img src='../../images/speakAndListen/play.png' onclick=playAudio('" + obj.studentAudio + "')> <span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span> " +
                                 "</div>" +
                                 "<div class='exam-key'>" +
                                 "<span class='key-check'>答案解析</span>" +
                                 "<div class='exam-key-content'>" +
-                                "<div class='key-item refer-result'> " +
+                                "<div class='key-item refer-result'>" +
                                 "<p>参考答案</p>" +
                                 "<ul class='key'>" + obj.correntResult + "</ul></div></div></div></li>");
                             _qcontent.append(_li);
@@ -194,98 +194,98 @@ $(function () {
             } else if (firstQ.type == 4) {
                 for (var j = 0; j < map.arr[i].value.length; j++) {
                     var obj = map.arr[i].value[j];
-                    var _li = $("<li>                                                                                " +
-                        "    <p class='question'>" + obj.question + "</p>                                                   " +
-                        "    <div class='report-top'>                                                          " +
-                        "        <div class='sentences-degree'>                                                " +
-                        "            <p>                                                                       " +
-                        "                <span>准确度</span>                                                   " +
-                        "                <progress class='accuracy' value='" + obj.pronunciation + "' max='100'></progress>           " +
-                        "            </p>                                                                      " +
-                        "            <p>                                                                       " +
-                        "                <span>流利度</span>                                                   " +
-                        "                <progress class='fluency' value='" + obj.fluency + "' max='100'></progress>            " +
-                        "            </p>                                                                      " +
-                        "            <p>                                                                       " +
-                        "                <span>完整度</span>                                                   " +
-                        "                <progress class='integrity' value='" + obj.integrity + "' max='100'></progress>          " +
-                        "            </p>                                                                      " +
-                        "        </div>                                                                        " +
-                        "        <div class='word-degree'>                                                     " +
-                        "            <p class='degree-fail'>                                                   " +
-                        "                <img src='../../images/common/red.png'>60分以下               " +
-                        "            </p>                                                                      " +
-                        "            <p class='degree-good'>                                                   " +
-                        "                <img src='../../images/common/yellow.png'>60分~85分           " +
-                        "            </p>                                                                      " +
-                        "            <p class='degree-well'>                                                   " +
-                        "                <img src='../../images/common/blue.png'>85分以上              " +
-                        "            </p>                                                                      " +
-                        "        </div>                                                                        " +
+                    var _li = $("<li>" +
+                        "<p class='question'>" + obj.question + "</p>" +
+                        "<div class='report-top'>" +
+                        "<div class='sentences-degree'>" +
+                        "<p>" +
+                        "<span>准确度</span>" +
+                        "<progress class='accuracy' value='" + obj.pronunciation + "' max='100'></progress>" +
+                        "</p>" +
+                        "<p>" +
+                        "<span>流利度</span>" +
+                        "<progress class='fluency' value='" + obj.fluency + "' max='100'></progress>" +
+                        "</p>" +
+                        "<p>" +
+                        "<span>完整度</span>" +
+                        "<progress class='integrity' value='" + obj.integrity + "' max='100'></progress>" +
+                        "</p>" +
+                        "</div>" +
+                        "<div class='word-degree'>" +
+                        "<p class='degree-fail'>" +
+                        "<img src='../../images/common/red.png'>60分以下" +
+                        "</p>" +
+                        "<p class='degree-good'>" +
+                        "<img src='../../images/common/yellow.png'>60分~85分" +
+                        "</p>" +
+                        "<p class='degree-well'>" +
+                        "<img src='../../images/common/blue.png'>85分以上" +
+                        "</p>" +
+                        "</div>" +
                         "</div>" +
                         "<div class='result'>" +
                         "<p class='subject'>" + formateTextColor(obj.words) + "</p>" +
                         "<div class='exam-result'>" +
-                        "<span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>      " +
-                        "<span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>                                 " +
+                        "<span>答案：</span><img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>" +
+                        "<span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>" +
                         "</div>" +
                         "</div>");
                     _qcontent.append(_li);
                 }
             } else if (firstQ.type == 5) {
-            	if(map.arr[i].value.length<=0){
-            		continue;
-            	}
-            	var firstType5 = map.arr[i].value[1]
-            	var _li = $("<li><p>"+firstType5.guide+"</p></li>")
+                if (map.arr[i].value.length <= 0) {
+                    continue;
+                }
+                var firstType5 = map.arr[i].value[1];
+                var _li = $("<li><p>" + firstType5.guide + "</p></li>");
                 for (var j = 0; j < map.arr[i].value.length; j++) {
                     var obj = map.arr[i].value[j];
-                    var _p =  $("<p class='subject'>"+(j+1)+"."+obj.question+"</p>                                      "+
-                                "    <div class='exam-result'>                                                          "+
-                                "        <span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>" +
-                                "<span class='recording-score'>"+ formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>                                         "+
-                                "    </div>");
+                    var _p = $("<p class='subject'>" + (j + 1) + "." + obj.question + "</p>" +
+                        "<div class='exam-result'>" +
+                        "<span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>" +
+                        "<span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>                                         " +
+                        "</div>");
                     _li.append(_p)
                 }
                 _qcontent.append(_li);
-                var _answer=$("<div class='exam-key'>                                               "+
-	            "    <span class='key-check'>答案解析</span>                                         "+
-	            "    <div class='exam-key-content'>                                                  "+
-	            "        <div class='key-item refer-result'>                                         "+
-	            "            <p>参考答案</p>                                                         "+
-	            "            <ul class='key'>"+getType5Answer(obj.correntResult)+"</ul>                          "+
-	            "        </div>                                                                      "+
-	            "        <div class='key-item crue-info'>                                            "+
-	            "            <p>关键信息点</p>                                                       "+
-	            "            <ul class='key'>"+getType5Point(obj.pointResult)+"</ul>                                               "+
-	            "        </div>                                                                      "+
-	            "        <div class='key-item listen-article'>                                       "+
-	            "            <p>听力原文</p>                                                         "+
-	            "            <ul class='key'>"+switchOrigText(obj.originalText)+"</ul>              "+
-	            "        </div>                                                                      "+
-	            "    </div>                                                                          "+
-	            "</div>");                                                                             
-            _qcontent.append(_answer);
+                var _answer = $("<div class='exam-key'>" +
+                    "<span class='key-check'>答案解析</span>" +
+                    "<div class='exam-key-content'>" +
+                    "<div class='key-item refer-result'>" +
+                    "<p>参考答案</p>" +
+                    "<ul class='key'>" + getType5Answer(obj.correntResult) + "</ul>" +
+                    "</div>" +
+                    "<div class='key-item crue-info'>" +
+                    "<p>关键信息点</p>" +
+                    "<ul class='key'>" + getType5Point(obj.pointResult) + "</ul>" +
+                    "</div>" +
+                    "        <div class='key-item listen-article'>" +
+                    "            <p>听力原文</p>" +
+                    "            <ul class='key'>" + switchOrigText(obj.originalText) + "</ul>" +
+                    "        </div>" +
+                    "    </div>" +
+                    "</div>");
+                _qcontent.append(_answer);
             } else if (firstQ.type == 6) {
                 for (var j = 0; j < map.arr[i].value.length; j++) {
                     var obj = map.arr[i].value[j];
-                    var _li = $("<li>                                                                                 "+
-                                "    <p class='question'>要点：</p>                                                   "+
-                                "    <p class='subject'>"+obj.question+"</p>                       "+
-                                "    <div class='exam-result'>                                                        "+
-                                "        <span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>" +
-                                "	<span class='recording-score'>"+ formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>                  "+
-                                "    </div>                                                                           "+
-                                "    <div class='exam-key'>                                                           "+
-                                "        <span class='key-check'>答案解析</span>                                      "+
-                                "        <div class='exam-key-content'>                                               "+
-                                "            <div class='key-item listen-article'>                                    "+
-                                "                <p>听力原文</p>                                                      "+
-                                "                <ul class='key'>"+obj.correntResult+"</ul>                                                                "+
-                                "            </div>                                                                   "+
-                                "        </div>                                                                       "+
-                                "    </div>                                                                           "+
-                                "</li>");                                                                             
+                    var _li = $("<li>" +
+                        "    <p class='question'>要点：</p>" +
+                        "    <p class='subject'>" + obj.question + "</p>" +
+                        "    <div class='exam-result'>" +
+                        " <span>答案：</span> <img src='../../images/speakAndListen/play.png'  onclick=playAudio('" + obj.studentAudio + "')>" +
+                        "	<span class='recording-score'>" + formateScore(obj.studentScore) + "分,满分:" + obj.score + "分</span>                  " +
+                        "    </div>" +
+                        "    <div class='exam-key'>" +
+                        " <span class='key-check'>答案解析</span>" +
+                        " <div class='exam-key-content'>" +
+                        " <div class='key-item listen-article'>" +
+                        "<p>听力原文</p>" +
+                        "<ul class='key'>" + obj.correntResult + "</ul>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "</li>");
                     _qcontent.append(_li);
                 }
             }
@@ -293,29 +293,29 @@ $(function () {
         }
     });
 })
-function getType5Answer(text){
-	 if (text == null) {
-	        return "";
-	    }
-	    var html = "";
-	    var arr = text.split("||");
-	    for (var i = 0; i < arr.length; i++) {
-	        html += '<li>' + arr[i] + '</li>';
-	    }
-	    return html;
+function getType5Answer(text) {
+    if (text == null) {
+        return "";
+    }
+    var html = "";
+    var arr = text.split("||");
+    for (var i = 0; i < arr.length; i++) {
+        html += '<li>' + arr[i] + '</li>';
+    }
+    return html;
 }
-function getType5Point(text){
-	//text = text.replace("||","或者")
-	text = text.replace(/\|\|/g,"或者")
-	 if (text == null) {
-	        return "";
-	    }
-	    var html = "";
-	    var arr = text.split("@@");
-	    for (var i = 0; i < arr.length; i++) {
-	        html += '<li>' + arr[i] + '</li>';
-	    }
-	    return html;
+function getType5Point(text) {
+    //text = text.replace("||","或者")
+    text = text.replace(/\|\|/g, "或者");
+    if (text == null) {
+        return "";
+    }
+    var html = "";
+    var arr = text.split("@@");
+    for (var i = 0; i < arr.length; i++) {
+        html += '<li>' + arr[i] + '</li>';
+    }
+    return html;
 }
 function formateTextColor(words) {
     var text = "";
@@ -355,12 +355,12 @@ function getStudentType3Answer(arr) {
     }
     return html;
 }
-function formateEmptyResult(text){
-	if(text && null!=text && ""!=text){
-		return text;
-	}else{
-		return "未作答";
-	}
+function formateEmptyResult(text) {
+    if (text && null != text && "" != text) {
+        return text;
+    } else {
+        return "未作答";
+    }
 }
 function getType3Answer(arr) {
     var html = "";
@@ -388,12 +388,12 @@ function playAudio(id) {
     $("#player_audio").attr("src", getRootPath() + "file/download.do?type=mp3&id=" + id);
     document.getElementById("player_audio").play();
 }
-function formateGuid(text){
-	 if (text == null || text == "") {
-	        return "";
-	 }else{
-		 return text
-	 }
+function formateGuid(text) {
+    if (text == null || text == "") {
+        return "";
+    } else {
+        return text
+    }
 }
 function switchABCD(text) {
     if (text == null) {
@@ -435,3 +435,7 @@ function unique2(array) {
     }
     return r;
 }
+
+$(".go-top").click(function(){
+    $("#view-report").animate({scrollTop: 0}, 2000)
+});

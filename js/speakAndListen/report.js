@@ -37,11 +37,9 @@ $(function () {
         $("#mi").text(min);
         $("#sec").text(sec);
         //暂放
-        //if(h.workTime>=3600){
-        //    $("#hour").css("font-size","36px");
-        //    $("#mi").css("font-size","36px");
-        //    $("#sec").css("font-size","36px")
-        //}
+        if(h.workTime<3600){
+            $("#hour").css("display","none");
+        }
         if (h.remark === null) {
             $("#remark").text("还没有评语哦");
         } else {

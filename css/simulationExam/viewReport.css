@@ -7,7 +7,6 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
     background: url("../../images/common/background.jpg") no-repeat center center;
     background-size: cover;
     padding-top: 10px;
@@ -16,6 +15,7 @@ body {
 .outs .mains {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .outs .mains::after {
@@ -62,13 +62,34 @@ body {
     background-color: #11d8fc;
 }
 
+.go-top {
+    position: absolute;
+    bottom: 85px;
+    right: 20px;
+    cursor: pointer;
+}
+
 #footer {
     margin: 1% 0 0 33%;
 }
 
 #nav,
 #view-report,
-#footer {
+#footer,
+.report-title .report-details,
+.report-title .report-details li,
+.score-statistic .report-tabs > li,
+.score-statistic .report-wrap li > div,
+.report-content .question-content .word-degree,
+.report-content .question-content .word-degree p,
+.report-content .question-content .sentences-degree,
+.report-content .question-content .sentences-degree p,
+.report-top .word-degree p,
+.report-top .sentences-degree,
+.report-top .sentences-degree p,
+.report-content .report-wrap .word-list .content,
+.report-content .report-wrap .spell-list .prompt .error,
+.report-content .report-wrap .spell-list .prompt .correct {
     float: left;
 }
 
@@ -82,116 +103,103 @@ body {
 .cosplay-list .cos-content .cos-score::after,
 .report-title::after,
 .score-statistic::after,
-.report-content .exam-key .exam-key-content .key-item p::before {
+.report-content .exam-key .exam-key-content .key-item p::before,
+.report-title .report-details .title-top::after,
+.report-title .report-details .title-bottom::after {
     content: "";
     display: block;
     clear: both;
 }
 
+/*返回按钮*/
 .back {
     width: 26px;
-    height: 21px;
-    margin-left: -775px;
+    height: 24px;
+    cursor: pointer;
+    margin: 20px 0 0 20px;
 }
 
+/*报告头*/
 .report-title {
-    width: 100%;
-    margin: 40px 0 20px;
-    padding-left: 40px;
+    width: 660px;
+    margin: 20px auto 20px;
 }
 
-.report-title > div {
-    width: 110px;
-    height: 110px;
-    margin: 0 32px;
-    box-sizing: border-box;
-    float: left;
-    background-color: #fc6;
+.report-title .report-details {
+    width: 300px;
+    height: 139px;
+    padding-top: 33px;
 }
 
-/* 椤堕儴鍏冪礌鑳屾櫙 */
-.report-title .place {
-    background: url("../../images/common/nb1.png") no-repeat center center;
-}
-
-.report-title .score {
-    line-height: 60px;
-    background: url("../../images/common/circle-blue.png") no-repeat center center;
-}
-
-.report-title .report-comment {
-    background: url("../../images/common/report-comment.png") no-repeat center center;
-}
-
-.report-title .place p {
-    font-size: 24px;
-    color: #1e9fff;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.report-title .score {
-    padding-top: 25px;
-}
-
-.report-title .score .score-num {
-    font-size: 36px;
-    color: #36dbbb;
-}
-
-.report-title .score p {
-    font-size: 14px;
-    color: #999;
+.report-title .report-details li {
+    width: 120px;
+    margin-left: 60px;
     text-align: center;
 }
 
-.report-title .report-comment {
-    width: 330px;
-    position: relative;
+.report-title .report-details li:first-of-type {
+    margin-left: 0;
 }
 
-.report-title .report-comment .comment-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 80%;
-    height: 50%;
-    margin: auto;
+.report-title .report-details .title-top li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.report-title .report-details .title-bottom li {
     font-size: 14px;
     font-weight: 300;
     color: #999;
-    /*多行文本溢出隐藏*/
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
 }
 
-.all-score {
-    margin-top: -6px;
-    color: #666;
+.report-title .report-details .colorfulo {
+    color: #f08118;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.report-title .report-comment {
+    width: 320px;
+    height: 139px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 1px rgba(0, 160, 233, 0.06);
+    background-color: #ffffff;
+    border: solid 1px #e5e5e5;
+    text-align: center;
+    float: right;
+}
+
+.report-title .report-comment .comment-text {
+    width: 280px;
+    height: 133px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/*题型列表*/
+.score-statistic {
+    width: 660px;
+    margin: 36px auto 0;
 }
 
 .score-statistic .report-tabs {
-    margin-top: 36px;
     width: 100%;
     height: 40px;
-    border: 1px solid #1e9fff;
+    background-color: #4fc6fc;
 }
 
 .score-statistic .report-tabs > li {
     user-select: none;
-    cursor: pointer;
     width: 33.3333%;
     height: 39px;
-    background-color: #11d8fc;
     text-align: center;
     line-height: 40px;
     font-size: 16px;
     color: #fff;
-    float: left;
 }
 
 .score-statistic .report-wrap {
@@ -201,12 +209,10 @@ body {
 .score-statistic .report-wrap > li {
     width: 100%;
     height: 40px;
-    border: 1px solid #1e9fff;
-    margin-top: 2px;
+    border-bottom: 1px solid #4fc6fc;
 }
 
 .score-statistic .report-wrap li > div {
-    float: left;
     width: 33.3333%;
     height: 38px;
     line-height: 40px;
@@ -215,26 +221,37 @@ body {
 
 .report-content {
     width: 100%;
-    /* 鍏叡閮ㄥ垎 */
-    font-size: 14px;
-    line-height: 22px;
+    background-image: linear-gradient(to top, #fff, #fbfbfb);
+    margin: 50px  0;
 }
 
+.report-content #report-content {
+    width: 832px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/*各题解析头*/
 .report-content .question-title {
-    margin-top: 50px;
+    border-bottom: 3px solid #00a0e9;
+    margin-top: 80px;
 }
 
 .report-content .question-title .top-topic {
-    font-weight: 700;
-    color: #ff9966;
+    background-color: #00a0e9;
+    padding: 12px 16px 9px 17px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    user-select: none;
 }
 
 .report-content .question-title .top-topic span {
     font-weight: 400;
-    color: #333;
+    font-size: 14px;
 }
 
-/* 棰樼洰 */
 .report-content .question-content > li {
     margin-top: 24px;
 }
@@ -257,9 +274,13 @@ body {
     margin-left: 10px;
 }
 
-/* 绛旀瑙ｆ瀽 */
+.report-content .question-content .subject,
+.report-content .question-content .select span{
+    color: #333;
+}
+
 .report-content .exam-key {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .report-content .exam-key > span {
@@ -268,53 +289,53 @@ body {
     height: 30px;
     text-align: center;
     line-height: 30px;
-    color: #004098;
-    background-color: #e8f5ff;
+    color: #fff;
+    background-color: #4fc6fc;
     cursor: pointer;
     user-select: none;
 }
 
 .report-content .exam-key .exam-key-content {
-    -display: none;
-    border-bottom: 80px solid transparent;
-    border-image: url("../../images/common/refer-key-bg.png") 0 0 77 0 stretch;
-}
-
-.report-content .exam-key .exam-key-content .key-item {
-    padding: 20px 20px 1px;
     background-color: #e8f5ff;
 }
 
-/* 鍙傝�冪瓟妗堝浘鏍� */
+.report-content .exam-key .exam-key-content .key-item {
+    padding: 16px 20px 1px;
+}
+
+.report-content .exam-key .exam-key-content .key-item p {
+    color: #333;
+}
+
 .report-content .exam-key .exam-key-content .key-item p::before {
-    width: 15px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     display: inline-block;
     margin-right: 6px;
-    padding-top: 4px;
+    /*padding-top: 4px;*/
+    vertical-align: text-bottom;
+    /*border-radius: 50%;*/
 }
 
 .report-content .exam-key .exam-key-content .refer-result p::before {
-    background: url("../../images/common/refer-result.png") no-repeat center left;
+    background: url("../../images/simulationExam/refer-result.png") no-repeat center left;
 }
 
 .report-content .exam-key .exam-key-content .crue-info p::before {
-    background: url("../../images/common/crue-info.png") no-repeat center left;
+    background: url("../../images/simulationExam/crue-info.png") no-repeat center left;
 }
 
 .report-content .exam-key .exam-key-content .listen-article p::before {
-    background: url("../../images/common/listen-article.png") no-repeat center left;
+    background: url("../../images/simulationExam/listen-article.png") no-repeat center left;
 }
 
 .report-content .exam-key .exam-key-content .key-item .key {
-    margin: 6px 0;
+    margin: 6px 0 16px;
 }
 
-/* 绗簩棰� */
-/* 閫夐」 */
 .report-content .question-content > li .select span {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 8px;
 }
 
 .report-content .question-content > li .right-wrong img {
@@ -324,8 +345,6 @@ body {
     cursor: pointer;
 }
 
-/* 绗笁棰� */
-/* 閫夐」 */
 .report-content .question-content > li .fill-vacancy span {
     display: inline-block;
     min-width: 100px;;
@@ -335,9 +354,7 @@ body {
     border-bottom: 1px solid #333;
 }
 
-/* 琛ㄦ牸 */
 .report-content .question-content .fill-blanks .have-underline {
-    /*text-decoration: underline;*/
     border: none;
     border-bottom: 1px solid #333;
     outline: none;
@@ -363,42 +380,22 @@ body {
     padding: 14px 0 10px 18px;
 }
 
-/* 绗洓棰� */
-/*.report-content .request-fourth .question-content .question{*/
-/*color: #333;*/
-/*}*/
 .report-content .question-content .word-degree {
     width: 40%;
     margin: 2.5% 0 4% 65%;
-    float: left;
 }
 
 .report-content .question-content .word-degree p {
     width: 32%;
-    float: left;
     margin-left: 1%;
-}
-
-.report-content .question-content .word-degree .degree-fail {
-    color: #ff6d80;
-}
-
-.report-content .question-content .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.report-content .question-content .word-degree .degree-well {
-    color: #36dbbb;
 }
 
 .report-content .question-content .sentences-degree {
     width: 61%;
     margin: 3% 0 -5%;
-    float: left;
 }
 
 .report-content .question-content .sentences-degree p {
-    float: left;
     width: 30%;
     margin-left: 1%;
     font-size: 14px;
@@ -406,44 +403,32 @@ body {
     color: #333;
 }
 
-.report-content .question-content .subject .green {
-    color: #36dbbb;
+.report-top .word-degree p {
+    width: 32%;
+    margin-left: 1%;
 }
 
+.word-degree .degree-fail,
 .report-content .question-content .subject .red {
     color: #ff6d80;
 }
 
+.word-degree .degree-good,
 .report-content .question-content .subject .orange {
     color: #ffb846;
 }
 
-.report-top .word-degree p {
-    width: 32%;
-    float: left;
-    margin-left: 1%;
-}
-
-.report-top .word-degree .degree-fail {
-    color: #ff6d80;
-}
-
-.report-top .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.report-top .word-degree .degree-well {
+.word-degree .degree-well,
+.report-content .question-content .subject .green {
     color: #36dbbb;
 }
 
 .report-top .sentences-degree {
     width: 61%;
     margin: 3% 0 -5%;
-    float: left;
 }
 
 .report-top .sentences-degree p {
-    float: left;
     width: 30%;
     margin-left: 1%;
     font-size: 14px;
@@ -481,7 +466,6 @@ body {
     width: 33.33%;
     list-style: none;
     padding: 2% 0 1% 5%;
-    float: left;
 }
 
 .report-content .report-wrap .word-list .content img {
@@ -608,13 +592,11 @@ body {
 }
 
 .report-content .report-wrap .spell-list .prompt .error {
-    float: left;
     color: #ff6d80;
     margin-right: 20px;
 }
 
 .report-content .report-wrap .spell-list .prompt .correct {
-    float: left;
     color: #36dbbb;
 }
 

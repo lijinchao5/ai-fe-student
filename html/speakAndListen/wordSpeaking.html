@@ -48,31 +48,31 @@
                         </div>
                     </div>
                 </div>
-
-                <ul class="speak-listen-tab-hd" id="speak-listen-tab">
-                    <li class="dcclass" style="display: none;">
-                        <p>单词跟读</p>
-                        (<span id="dcnowcs">1</span>/<span id="dccount">0</span>)
-                    </li>
-                    <li class="jzclass" style="display: none;">
-                        <p>句子跟读</p>
-                        (<span id="jznowcs">1</span>/<span id="jzcount">0</span>)
-                    </li>
-                    <li class="kwclass" style="display: none;">
-                        <p>课文跟读</p>
-                        (<span id="kwnowcs">1</span>/<span id="kwcount">0</span>)
-                    </li>
-                    <li class="jsbyclass" style="display: none;">
-                        <p>角色扮演</p>
-                        (<span id="jsbynowcs">1</span>/<span id="jsbycount">0</span>)
-                        <!-- <div class="role">跟读Helen</div> -->
-                    </li>
-                    <li class="znclass" style="display: none;">
-                        <p>智能听写</p>
-                        (<span id="znnowcs">1</span>/<span id="zncount">2</span>)
-                    </li>
-                </ul>
-
+                <div class="speak-listen-tabs">
+                    <ul class="speak-listen-tab-hd" id="speak-listen-tab">
+                        <li class="dcclass" style="display: none;">
+                            <p>单词跟读</p>
+                            (<span id="dcnowcs">1</span>/<span id="dccount">0</span>)
+                        </li>
+                        <li class="jzclass" style="display: none;">
+                            <p>句子跟读</p>
+                            (<span id="jznowcs">1</span>/<span id="jzcount">0</span>)
+                        </li>
+                        <li class="kwclass" style="display: none;">
+                            <p>课文跟读</p>
+                            (<span id="kwnowcs">1</span>/<span id="kwcount">0</span>)
+                        </li>
+                        <li class="jsbyclass" style="display: none;">
+                            <p>角色扮演</p>
+                            (<span id="jsbynowcs">1</span>/<span id="jsbycount">0</span>)
+                            <!-- <div class="role">跟读Helen</div> -->
+                        </li>
+                        <li class="znclass" style="display: none;">
+                            <p>智能听写</p>
+                            (<span id="znnowcs">1</span>/<span id="zncount">2</span>)
+                        </li>
+                    </ul>
+                </div>
                 <ul class="speak-listen-tab-bd " id="speak-listen-tab-content">
                     <li class="word-speak first dcclass">
                         <!-- 单词跟读 -->
@@ -91,7 +91,7 @@
                         <!--<div class="score">76</div>-->
                         <!-- 旋转木马 -->
                         <div class="word-speaking-carousel">
-                            <div id="word-speaking-carousel" class="carousel slide" data-ride="carousel"
+                            <div id="word-speaking-carousel" class="carousel" data-ride="carousel"
                                  data-interval="false" data-wrap="false">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox" id="dc">
@@ -150,7 +150,7 @@
                         </div>
                         <!-- 旋转木马 -->
                         <div class="sentence-reading-carousel">
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"
+                            <div id="carousel-example-generic" class="carousel" data-ride="carousel"
                                  data-interval="false" data-wrap="false">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox" id="jz">
@@ -208,7 +208,7 @@
                         </div>
                         <!-- 旋转木马 -->
                         <div class="article-reading-carousel">
-                            <div id="article-reading-carousel" class="carousel slide" data-ride="carousel"
+                            <div id="article-reading-carousel" class="carousel" data-ride="carousel"
                                  data-interval="false" data-wrap="false" data-wrap="false">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox" id="kw">
@@ -266,7 +266,7 @@
                         </div>
                         <!-- 旋转木马 -->
                         <div class="cosplay-carousel">
-                            <div id="cosplay-carousel" class="carousel slide" data-ride="carousel" data-interval="false"
+                            <div id="cosplay-carousel" class="carousel" data-ride="carousel" data-interval="false"
                                  data-wrap="false" data-wrap="false">
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox" id="jsby">
@@ -325,7 +325,7 @@
                         <!-- 旋转木马 -->
                         <div class="intelligent-dictation-carousel writing-carousel">
                             <div class="intelligent-dictation-carousel">
-                                <div id="intelligent-dictation-carousel" class="carousel slide" data-ride="carousel"
+                                <div id="intelligent-dictation-carousel" class="carousel" data-ride="carousel"
                                      data-interval="false" data-wrap="false">
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox" id="zn">
@@ -476,7 +476,7 @@
 </script>
 <script id="jsbyscript" type="text/html">
     <div class="item {active}" dialogNum="{dialogNum}">
-        <div class="gd">跟读：</div>
+        <div class="gd"><span>跟读：</span></div>
         <div class="lunbo-portrait text green dialogNum{dialogNum}">
             <div class="ul">
                 <div class="jsbyanimateul">
