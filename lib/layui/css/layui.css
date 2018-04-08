@@ -1542,7 +1542,10 @@ a cite {
     position: relative;
     height: 6px;
     border-radius: 10px;
-    background-color: #e2e2e2;
+    /*border: 1px solid #ccc;*/
+    background: url("../../../images/common/ruler-bg.png") no-repeat center center;
+    background-size: cover;
+    /*background-color: #e2e2e2;*/
 }
 
 .layui-progress-bar {
@@ -1554,7 +1557,7 @@ a cite {
     height: 6px;
     border-radius: 10px;
     text-align: right;
-    background-color: #11D8FC;
+    background-color: #4fc6fc;
     transition: all .3s;
     -webkit-transition: all .3s;
 }

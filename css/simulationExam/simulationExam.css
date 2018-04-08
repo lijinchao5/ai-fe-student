@@ -9,7 +9,7 @@
 
 #nav, #nav1 {
     width: 275px;
-    height: 602px;
+    /*height: 602px;*/
 }
 
 #notice > div {
@@ -22,7 +22,7 @@
     /*left: 83px;*/
     /*top: 98px;*/
     width: 1250px;
-    height: 630px;
+    height: 602px;
     min-width: 1200px;
     min-height: 600px;
     margin: 26px auto;
@@ -309,7 +309,7 @@
 .exam-first #simulation-exam,
 .start-exam #question-content {
     width: 914px;
-    height: 630px;
+    height: 602px;
     position: absolute;
     top:0;
     left: 285px;
@@ -330,10 +330,10 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 198px;
-    font-size: 36px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #333;
+    color: #00a0e9;
     text-align: center;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -343,11 +343,11 @@
 
 .prepare-exam .start-answer {
     display: block;
-    width: 148px;
-    height: 39px;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    width: 134px;
+    height: 38px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 38px;
     outline: none;
     border: none;
     color: #fff;
@@ -361,8 +361,9 @@
 .prepare-exam .start-answer:hover {
     color: #fff;
     text-decoration: none;
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: cover;
+    border-radius: 38px;
 }
 
 #notice .wrap:first-of-type {
