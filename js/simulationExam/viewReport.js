@@ -436,6 +436,6 @@ function unique2(array) {
     return r;
 }
 
-$(".go-top").click(function(){
+$(".go-top").click(function () {
     $("#view-report").animate({scrollTop: 0}, 2000)
 });
