@@ -61,7 +61,7 @@ function isflash() {
             flag = i;
             return false;
         }
-    })
+    });
     return flag;
 }
 
@@ -107,7 +107,6 @@ function addList() {
                             "<p class='topic'>" + d.examName + "</p>" +
                             "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
                             "<a href='javascript:void(0)' class='enter-exam' onclick=goTo('simulationExam.html','" + d.examId + "')>进入考试</a>" +
-
                             "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                             "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
 
@@ -118,10 +117,8 @@ function addList() {
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
                                 "<a href='javascript:void(0)' class='enter-exam'>考试未开始</a>" +
-
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
-
                                 "</li>");
                         }
                         if (d.state == 2) {
@@ -182,10 +179,8 @@ function addList() {
                         "<p class='topic'>" + d.examName + "</p>" +
                         "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
                         "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
-
                         "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                         "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
-
                         "</li>");
                     _examList.append(startExam);
                     continue;

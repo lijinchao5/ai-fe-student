@@ -35,6 +35,7 @@ body {
     height: 662px;
     background-color: #4fc6fc;
     color: #333;
+    border-radius: 5px;
 }
 
 #view-report {
