@@ -1,59 +1,69 @@
 .exam-nav {
     width: 275px;
-    height: 630px;
+    height: 602px;
     /*margin: 16px 0 15px 13px;*/
-    padding: 46px 0 37px 43px;
+    padding-top: 56px;
     font-size: 16px;
-    background: #fff;
+    text-align: center;
     border-radius: 4px;
-    background-color: #00a0e9;
+    background: url("../../images/simulationExam/nav-bg.jpg") no-repeat center center;
+    background-size: cover;
+    /*background-color: #00a0e9;*/
 }
 
 .exam-nav .meb-icon img {
-    width: 125px;
-    height: 125px;
+    width: 156px;
+    height: 156px;
     border-radius: 50%;
-    margin-top: 12px;
+    /*margin-top: 12px;*/
 }
 
 .exam-nav .meb-icon {
-    width: 150px;
-    height: 150px;
+    width: 166px;
+    height: 166px;
+    border: 5px solid #4fc6fc;
     border-radius: 50%;
-    text-align: center;
-    background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;
-    background-size: cover;
+    margin: 0 auto;
+    /*text-align: center;*/
+    /*background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;*/
+    /*background-size: cover;*/
 }
 
-.exam-nav .exam-info {
+.exam-nav .exam_userName {
     font-size: 18px;
-    margin-top: 57px;
-    color: #333;
+    margin-top: 30px;
+    color: #eaeaea;
 }
 
 .exam-nav .test-number {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    color: #666;
+    width: 130px;
+    color: #eaeaea;
+    margin: 30px auto 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
 }
 
-.exam-nav .user-name {
-    color: #666;
+.exam-nav .user-class {
+    color: #eaeaea;
 }
 
 .exam-nav .total {
-    margin-top: 155px;
-    margin-bottom: 10px;
-    color: #666;
-    letter-spacing: 7px;
+    margin: 192px 24px 10px;
+    font-size: 14px;
+    color: #333;
+    float: left;
+    /*letter-spacing: 7px;*/
 }
 
-.exam-nav .total-time {
-    letter-spacing: 0;
-}
+/*.exam-nav .total-time {*/
+    /*letter-spacing: 0;*/
+/*}*/
 
 .exam-nav .remaining {
-    color: #666;
+    float: left;
+    margin-top: 192px;
+    font-size: 14px;
+    color: #333;
 }
 
 .exam-nav .remaining-time {

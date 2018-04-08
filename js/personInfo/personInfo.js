@@ -115,6 +115,7 @@ function getStudentInfo() {
         $("#school2").val(user.grade);
         $("#school3").val(user.className);
         $("#school4").val(user.clas_id);
+        console.log(user.clas_id);
 
         if (user.mobile == null) {
             $("#school5").val("您还没有绑定手机号");
