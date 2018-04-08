@@ -5,7 +5,7 @@ html {
 
 body {
     color: #999;
-    font-size: 16px;
+    font-size: 14px;
     min-height: 748px;
     position: relative;
 }
@@ -35,6 +35,7 @@ body {
     height: 662px;
     background-color: #4fc6fc;
     color: #333;
+    border-radius: 5px;
 }
 
 #practice-banner {
@@ -94,42 +95,17 @@ body {
 .my-bookshelf,
 .my-bookshelf:hover,
 .text-title .current,
-.text-practice li:hover p,
 .paging .toggles .col {
     color: #fff;
 }
 
-.text-title .text-level .scale,
-.text-title .text-classify .classify,
-.paging .down {
-    color: #333;
-}
-
-.my-bookshelf {
-    margin-left: 735px;
-    width: 148px;
-    height: 39px;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    line-height: 39px;
-    border-radius: 5px;
-}
-
-.my-bookshelf:hover {
-    text-decoration: none;
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
-    background-size: cover;
-}
-
 #practice-banner .text-title {
-    width: 848px;
-    margin: auto;
+    width: 856px;
+    margin: 38px auto 5px;
 }
 
 .text-title .text-level .level-scale li {
     text-align: center;
-    padding: 0 5px;
     border-radius: 5px;
     margin-left: 10px;
     user-select: none;
@@ -140,18 +116,19 @@ body {
 }
 
 .text-title .current {
-    background-color: #11d8fc;
-    box-shadow: 0 0 4px 2px rgba(17, 216, 252, 0.54);
+    background-color: #00a0e9;
 }
 
 .text-title .text-classify,
 .text-title .text-level {
-    margin: 15px 0;
+    margin: 6px 0 0;
 }
 
-.text-title .text-classify .level-classify,
-.text-title .text-level .level-scale {
-    padding: 0 5px;
+.text-title .text-classify .level-classify li,
+.text-title .text-level .level-scale li,
+.text-title .text-classify .classify,
+.text-title .text-level .scale {
+    padding: 2px 5px;
 }
 
 .text-title .text-classify .level-classify ul:nth-of-type(1) {
@@ -168,7 +145,6 @@ body {
 }
 
 .text-title .text-classify .level-classify .classification li {
-    padding: 0 5px;
     border-radius: 5px;
     margin-left: 10px;
     user-select: none;
@@ -184,41 +160,73 @@ body {
     height: 10px;
 }
 
+.my-bookshelf {
+    display: block;
+    width: 107px;
+    height: 32px;
+    margin-left: 787px;
+    border-radius: 5px;
+    background-color: #4fc6fc;
+    line-height: 32px;
+    text-align: center;
+}
+
 .practice-wrap {
-    width: 100%;
-    height: 400px;
-    margin: 0 auto;
-    padding-top: 10px;
+    width: 856px;
+    height: 465px;
+    margin: -3px auto 0;
     background: #fff;
     overflow: hidden;
     position: relative;
-    border-top: 1px solid #eee;
+    border-top: 5px solid #4fc6fc;
 }
 
 .text-practice {
-    width: 796px;
-    height: 370px;
+    width: 800px;
+    height: 465px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .text-practice li {
-    width: 258px;
-    height: 123px;
-    margin: -1px 11px 0 0;
-    background: url("../../images/nomousPractice/normal-bg.png") no-repeat center bottom;
-    background-size: cover;
+    width: 252px;
+    height: 126px;
+    margin: 13px 13px 0 0;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+/*.text-practice li:after {*/
+/*content: '';*/
+/*display: block;*/
+/*margin: 24.5px -15px 0 0;*/
+/*border-bottom: 2px solid #4fc6fc;*/
+/*box-shadow: 2px 2px 2px 0.1px rgba(0, 0, 0, 0.09);*/
+/*}*/
+
+/*.text-practice li:nth-of-type(3n):after {*/
+/*margin-right: 0;*/
+/*}*/
+
+.text-practice li:hover {
+    width: 252px;
+    height: 126px;
+    box-shadow: 0 0 8px 1px rgba(0, 160, 233, 0.16);
 }
 
 .text-practice li:nth-of-type(3n) {
-    margin: -1px 0 0 0;
+    margin-right: 0;
+}
+
+.text-practice li:nth-of-type(3n-2) {
+    margin-left: 4px;
 }
 
 .text-practice li .practice-title {
     width: 80%;
-    margin: 47px auto 0;
+    margin: 28px auto 0;
     font-size: 18px;
-    color: #11d8fc;
+    color: #00a0e9;
     text-align: center;
     font-weight: 600;
     overflow: hidden;
@@ -237,20 +245,28 @@ body {
     font-weight: 300;
 }
 
-.text-practice li:hover {
-    background: url("../../images/nomousPractice/current-bg.png") no-repeat center bottom;
+.text-practice li .start-read {
+    width: 104px;
+    height: 30px;
+    margin: 10px 0 0 72px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+
 }
 
-.text-practice li:hover .practice-title {
-    margin-top: 60px;
+.text-practice .start-read:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
 }
 
 .page-wrap {
     font-size: 12px;
     position: relative;
     width: 848px;
-    margin: 0 auto;
+    margin: 25px auto 0;
     height: 30px;
     text-align: center;
 }
@@ -297,7 +313,7 @@ body {
 }
 
 .paging .toggles .col {
-    background-color: #11d8fc;
+    background-color: #4fc6fc;
     color: #fff;
     border: none;
 }
@@ -324,6 +340,5 @@ body {
     width: 180px;
     margin: 20px auto;
     text-align: center;
-    font-size: 14px;
     color: #999;
 }
