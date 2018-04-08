@@ -303,7 +303,7 @@
 }
 
 .exam-first #simulation-exam {
-    background: #fff;
+    background-color: #fff;
 }
 
 .exam-first #simulation-exam,
@@ -313,11 +313,14 @@
     position: absolute;
     top:0;
     left: 285px;
+    background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
+    background-size: 100% 100%;
+    border-radius: 4px;
 }
 
 .start-answer {
     height: 595px;
-    background: #fff;
+    /*background-color: #fff;*/
 }
 
 .prepare-exam-exam {
@@ -372,6 +375,9 @@
     padding-bottom: 70px;
     height: 100%;
     min-height: 620px;
+    background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 #notice .wrap {
@@ -381,7 +387,10 @@
 }
 #notice .student-notice,
 #notice .content-bg {
-    background: #fff;
+    background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
+    background-color: #fff;
+    background-size: 100% 100%;
+    border-radius: 4px;
 }
 .start-exam .exam-title::after {
     content: "";
@@ -393,7 +402,10 @@
     min-width: 900px;
     height: 602px;
     overflow: hidden;
-    background: #fff;
+    background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
+    background-color: #fff;
+    background-size: 100% 100%;
+    border-radius: 4px;
 
 }
 
