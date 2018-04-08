@@ -6,434 +6,414 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../lib/layui/css/layui.css" media="all">
-    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/speakAndListen/wordSpeaking.css" type="text/css"/>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/speakAndListen/wordSpeaking.css" type="text/css" />
     <title>听说作业-写作业</title>
 </head>
 
 <body>
-<!-- top 部分 -->
-<div id="header"></div>
+    <!-- top 部分 -->
+    <div id="header"></div>
 
-<div class="outs">
-    <div class="mains">
-        <!--导航部分-->
-        <div id="nav"></div>
-        <!-- content 部分-->
-        <div id="word-speaking">
-            <div class="word-speaking">
-                <!-- 听说作业 -->
-                <!-- 返回按钮 -->
-                <a href="" class="back" data-toggle="modal" data-target=".back-modal">
-                    <img src="../../images/common/go-back.png" alt="返回">
-                </a>
-                <div class="modal fade bs-example-modal-sm back-modal" tabindex="-1">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <!-- model content 开始 -->
-                            <div class="modal-header"></div>
-                            <div class="modal-body">
-                                <p>系统将自动为您保存进度，
-                                    <br/>确定要返回吗？
-                                </p>
+    <div class="outs">
+        <div class="mains">
+            <!--导航部分-->
+            <div id="nav"></div>
+            <!-- content 部分-->
+            <div id="word-speaking">
+                <div class="word-speaking">
+                    <!-- 听说作业 -->
+                    <!-- 返回按钮 -->
+                    <a href="" class="back" data-toggle="modal" data-target=".back-modal">
+                        <img src="../../images/common/go-back.png" alt="返回">
+                    </a>
+                    <div class="modal fade bs-example-modal-sm back-modal" tabindex="-1">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <!-- model content 开始 -->
+                                <div class="modal-header"></div>
+                                <div class="modal-body">
+                                    <p>系统将自动为您保存进度，
+                                        <br/>确定要返回吗？
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <a href="../speakAndListen/homeworkList.html">
+                                        <button type="button" class="btn btn-primary">确定</button>
+                                    </a>
+                                </div>
+                                <!-- model content 结束 -->
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <a href="../speakAndListen/homeworkList.html">
-                                    <button type="button" class="btn btn-primary">确定</button>
-                                </a>
-                            </div>
-                            <!-- model content 结束 -->
                         </div>
                     </div>
-                </div>
-                <div class="speak-listen-tabs">
-                    <ul class="speak-listen-tab-hd" id="speak-listen-tab">
-                        <li class="dcclass" style="display: none;">
-                            <p>单词跟读</p>
-                            (<span id="dcnowcs">1</span>/<span id="dccount">0</span>)
-                        </li>
-                        <li class="jzclass" style="display: none;">
-                            <p>句子跟读</p>
-                            (<span id="jznowcs">1</span>/<span id="jzcount">0</span>)
-                        </li>
-                        <li class="kwclass" style="display: none;">
-                            <p>课文跟读</p>
-                            (<span id="kwnowcs">1</span>/<span id="kwcount">0</span>)
-                        </li>
-                        <li class="jsbyclass" style="display: none;">
-                            <p>角色扮演</p>
-                            (<span id="jsbynowcs">1</span>/<span id="jsbycount">0</span>)
-                            <!-- <div class="role">跟读Helen</div> -->
-                        </li>
-                        <li class="znclass" style="display: none;">
-                            <p>智能听写</p>
-                            (<span id="znnowcs">1</span>/<span id="zncount">2</span>)
-                        </li>
-                    </ul>
-                </div>
-                <ul class="speak-listen-tab-bd " id="speak-listen-tab-content">
-                    <li class="word-speak first dcclass">
-                        <!-- 单词跟读 -->
-                        <!-- 添加等级示图 -->
-                        <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                            <p class="degree-fail" style="width:100px">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good" style="width:100px">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well" style="width:100px">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                        <!--<div class="score">76</div>-->
-                        <!-- 旋转木马 -->
-                        <div class="word-speaking-carousel">
-                            <div id="word-speaking-carousel" class="carousel" data-ride="carousel"
-                                 data-interval="false" data-wrap="false">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" id="dc">
-                                </div>
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#word-speaking-carousel" data-slide="prev">
-                                    <img src="../../images/common/prev.png" alt="上一张">
-                                    <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
-                                </a>
-                                <a class="right carousel-control" href="#word-speaking-carousel" data-slide="next">
-                                    <img src="../../images/common/next.png" alt="下一张">
-                                    <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
-                                </a>
+                    <div class="speak-listen-tabs">
+                        <ul class="speak-listen-tab-hd" id="speak-listen-tab">
+                            <li class="dcclass" style="display: none;">
+                                <p>单词跟读</p>
+                                (<span id="dcnowcs">1</span>/<span id="dccount">0</span>)
+                            </li>
+                            <li class="jzclass" style="display: none;">
+                                <p>句子跟读</p>
+                                (<span id="jznowcs">1</span>/<span id="jzcount">0</span>)
+                            </li>
+                            <li class="kwclass" style="display: none;">
+                                <p>课文跟读</p>
+                                (<span id="kwnowcs">1</span>/<span id="kwcount">0</span>)
+                            </li>
+                            <li class="jsbyclass" style="display: none;">
+                                <p>角色扮演</p>
+                                (<span id="jsbynowcs">1</span>/<span id="jsbycount">0</span>)
+                                <!-- <div class="role">跟读Helen</div> -->
+                            </li>
+                            <li class="znclass" style="display: none;">
+                                <p>智能听写</p>
+                                (<span id="znnowcs">1</span>/<span id="zncount">2</span>)
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="speak-listen-tab-bd " id="speak-listen-tab-content">
+                        <li class="word-speak first dcclass">
+                            <!-- 单词跟读 -->
+                            <!-- 添加等级示图 -->
+                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
+                                <p class="degree-fail" style="width:100px">
+                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                                </p>
+                                <p class="degree-good" style="width:100px">
+                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                                </p>
+                                <p class="degree-well" style="width:100px">
+                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                                </p>
                             </div>
-                        </div>
-                        <!-- 旋转木马 结束 -->
-                        <div class="speak-listen-btn">
-                            <!-- 播放图标 -->
-                            <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标"/>
-                            <!-- 录音进度条 -->
-                            <div class="speed q_sounding">
-                                <div class="speed-icon" id="divjdt">
-                                    <div class="layui-progress layui-progress-big" lay-filter="ly"
-                                         style="width: 260px;height:13px;">
-                                        <div class="layui-progress-bar" lay-percent="0%" style="height:13px;">
-                                            <img class="" src="../../images/common/progress.png" alt="进度条"
-                                                 style="margin:-67px -25px 0 -25px;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="speed-text">录音中</div>
-                            </div>
-                            <div class="q_restart" style="display: none;">
-                                <div class="headset play" onclick="readword(true);">
-                                    <p>重做</p>
-                                </div>
-                                <div class="play palybutton" onclick="readwordl()">
-                                    <p>我的录音</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="sentence-speaking jzclass">
-                        <!-- 句子跟读 -->
-                        <!-- 添加等级示图 -->
-                        <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                            <p class="degree-fail" style="width:100px">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good" style="width:100px">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well" style="width:100px">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                        <!-- 旋转木马 -->
-                        <div class="sentence-reading-carousel">
-                            <div id="carousel-example-generic" class="carousel" data-ride="carousel"
-                                 data-interval="false" data-wrap="false">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" id="jz">
-                                </div>
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                    <img src="../../images/common/prev.png" alt="上一张">
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                    <img src="../../images/common/next.png" alt="下一张">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="speak-listen-btn">
-                            <!-- 播放图标 -->
-                            <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标"/>
-                            <!-- 录音进度条 -->
-                            <div class="speed q_sounding">
-                                <div class="speed-icon" id="divjdt">
-                                    <div class="layui-progress layui-progress-big" lay-filter="ly"
-                                         style="width: 260px;height:13px;">
-                                        <div class="layui-progress-bar" lay-percent="0%" style="height:13px;">
-                                            <img class="" src="../../images/common/progress.png" alt="进度条"
-                                                 style="margin:-74px -25px 0 -25px;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="speed-text">录音中</div>
-                            </div>
-                            <div class="q_restart" style="display: none;">
-                                <div class="headset play" onclick="readword(true);">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>重做</p>
-                                </div>
-                                <div class="play palybutton" onclick="readwordl()">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>我的录音</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="kwclass">
-                        <!-- 课文跟读 -->
-                        <!-- 添加等级示图 -->
-                        <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                            <p class="degree-fail" style="width:100px">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good" style="width:100px">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well" style="width:100px">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                        <!-- 旋转木马 -->
-                        <div class="article-reading-carousel">
-                            <div id="article-reading-carousel" class="carousel" data-ride="carousel"
-                                 data-interval="false" data-wrap="false" data-wrap="false">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" id="kw">
-                                </div>
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#article-reading-carousel" data-slide="prev">
-                                    <img src="../../images/common/prev.png" alt="上一张">
-                                </a>
-                                <a class="right carousel-control" href="#article-reading-carousel" data-slide="next">
-                                    <img src="../../images/common/next.png" alt="下一张">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="speak-listen-btn">
-                            <!-- 播放图标 -->
-                            <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标"/>
-                            <!-- 录音进度条 -->
-                            <div class="speed q_sounding">
-                                <div class="speed-icon" id="divjdt">
-                                    <div class="layui-progress layui-progress-big" lay-filter="ly"
-                                         style="width: 260px;height:13px;">
-                                        <div class="layui-progress-bar" lay-percent="0%" style="height:13px;">
-                                            <img class="" src="../../images/common/progress.png" alt="进度条"
-                                                 style="margin:-74px -25px 0 -25px;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="speed-text">录音中</div>
-                            </div>
-                            <div class="q_restart" style="display: none;">
-                                <div class="headset play" onclick="readword(true);">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>重做</p>
-                                </div>
-                                <div class="play palybutton" onclick="readwordl()">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>我的录音</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="jsbyclass">
-                        <!-- 角色扮演 -->
-                        <!-- 添加等级示图 -->
-                        <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                            <p class="degree-fail" style="width:100px">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good" style="width:100px">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well" style="width:100px">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                        <!-- 旋转木马 -->
-                        <div class="cosplay-carousel">
-                            <div id="cosplay-carousel" class="carousel" data-ride="carousel" data-interval="false"
-                                 data-wrap="false" data-wrap="false">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox" id="jsby">
-                                </div>
-                                <!-- Controls -->
-                                <a class="left carousel-control" href="#cosplay-carousel" data-slide="prev">
-                                    <img src="../../images/common/prev.png" alt="上一张">
-                                </a>
-                                <a class="right carousel-control" href="#cosplay-carousel" data-slide="next">
-                                    <img src="../../images/common/next.png" alt="下一张">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="speak-listen-btn">
-                            <!-- 播放图标 -->
-                            <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标"/>
-                            <!-- 录音进度条 -->
-                            <div class="speed q_sounding">
-                                <div class="speed-icon" id="divjdt">
-                                    <div class="layui-progress layui-progress-big" lay-filter="ly"
-                                         style="width: 260px;height:13px;">
-                                        <div class="layui-progress-bar" lay-percent="0%" style="height:13px;">
-                                            <img class="" src="../../images/common/progress.png" alt="进度条"
-                                                 style="margin:-74px -25px 0 -25px;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="speed-text">录音中</div>
-                            </div>
-                            <div class="q_restart" style="display: none;">
-                                <div class="headset play" onclick="readword(true);">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>重做</p>
-                                </div>
-                                <div class="play palybutton" onclick="readwordl()">
-                                    <!--<img src="../../images/common/normal-button.png"/>-->
-                                    <p>我的录音</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="intelligent-dictation writing znclass">
-                        <!-- 智能听写 -->
-                        <!-- 添加等级示图 -->
-                        <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                            <p class="degree-fail" style="width:100px">
-                                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                            </p>
-                            <p class="degree-good" style="width:100px">
-                                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                            </p>
-                            <p class="degree-well" style="width:100px">
-                                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                            </p>
-                        </div>
-                        <!-- 旋转木马 -->
-                        <div class="intelligent-dictation-carousel writing-carousel">
-                            <div class="intelligent-dictation-carousel">
-                                <div id="intelligent-dictation-carousel" class="carousel" data-ride="carousel"
-                                     data-interval="false" data-wrap="false">
+                            <!--<div class="score">76</div>-->
+                            <!-- 旋转木马 -->
+                            <div class="word-speaking-carousel">
+                                <div id="word-speaking-carousel" class="carousel" data-ride="carousel" data-interval="false" data-wrap="false">
                                     <!-- Wrapper for slides -->
-                                    <div class="carousel-inner" role="listbox" id="zn">
+                                    <div class="carousel-inner" role="listbox" id="dc">
                                     </div>
                                     <!-- Controls -->
-                                    <a class="left carousel-control" href="#intelligent-dictation-carousel"
-                                       data-slide="prev">
+                                    <a class="left carousel-control" href="#word-speaking-carousel" data-slide="prev">
+                                        <img src="../../images/common/prev.png" alt="上一张">
+                                        <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+                                    </a>
+                                    <a class="right carousel-control" href="#word-speaking-carousel" data-slide="next">
+                                        <img src="../../images/common/next.png" alt="下一张">
+                                        <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 旋转木马 结束 -->
+                            <div class="speak-listen-btn">
+                                <!-- 播放图标 -->
+                                <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" />
+                                <!-- 录音进度条 -->
+                                <div class="speed q_sounding">
+                                    <div class="speed-icon" id="divjdt">
+                                        <div class="layui-progress layui-progress-big" lay-filter="ly" style="width: 260px;height:18px;">
+                                            <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                                <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="speed-text">录音中</div>
+                                </div>
+                                <div class="q_restart" style="display: none;">
+                                    <div class="headset play" onclick="readword(true);">
+                                        <p>重做</p>
+                                    </div>
+                                    <div class="play palybutton" onclick="readwordl()">
+                                        <p>我的录音</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sentence-speaking jzclass">
+                            <!-- 句子跟读 -->
+                            <!-- 添加等级示图 -->
+                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
+                                <p class="degree-fail" style="width:100px">
+                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                                </p>
+                                <p class="degree-good" style="width:100px">
+                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                                </p>
+                                <p class="degree-well" style="width:100px">
+                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                                </p>
+                            </div>
+                            <!-- 旋转木马 -->
+                            <div class="sentence-reading-carousel">
+                                <div id="carousel-example-generic" class="carousel" data-ride="carousel" data-interval="false" data-wrap="false">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox" id="jz">
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                         <img src="../../images/common/prev.png" alt="上一张">
                                     </a>
-                                    <a class="right carousel-control" href="#intelligent-dictation-carousel"
-                                       data-slide="next">
+                                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                                         <img src="../../images/common/next.png" alt="下一张">
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="speak-listen-btn">
-                            <div class="play znbutton" onclick="readword();">
-                                <!--<img src="../../images/common/headset.png"/>-->
-                                <p>再听一次</p>
+                            <div class="speak-listen-btn">
+                                <!-- 播放图标 -->
+                                <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" />
+                                <!-- 录音进度条 -->
+                                <div class="speed q_sounding">
+                                    <div class="speed-icon" id="divjdt">
+                                        <div class="layui-progress layui-progress-big" lay-filter="ly" style="width: 260px;height:18px;">
+                                            <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                                <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-74px -25px 0 -25px;"> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="speed-text">录音中</div>
+                                </div>
+                                <div class="q_restart" style="display: none;">
+                                    <div class="headset play" onclick="readword(true);">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>重做</p>
+                                    </div>
+                                    <div class="play palybutton" onclick="readwordl()">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>我的录音</p>
+                                    </div>
+                                </div>
                             </div>
+                        </li>
+                        <li class="kwclass">
+                            <!-- 课文跟读 -->
+                            <!-- 添加等级示图 -->
+                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
+                                <p class="degree-fail" style="width:100px">
+                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                                </p>
+                                <p class="degree-good" style="width:100px">
+                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                                </p>
+                                <p class="degree-well" style="width:100px">
+                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                                </p>
+                            </div>
+                            <!-- 旋转木马 -->
+                            <div class="article-reading-carousel">
+                                <div id="article-reading-carousel" class="carousel" data-ride="carousel" data-interval="false" data-wrap="false" data-wrap="false">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox" id="kw">
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#article-reading-carousel" data-slide="prev">
+                                        <img src="../../images/common/prev.png" alt="上一张">
+                                    </a>
+                                    <a class="right carousel-control" href="#article-reading-carousel" data-slide="next">
+                                        <img src="../../images/common/next.png" alt="下一张">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="speak-listen-btn">
+                                <!-- 播放图标 -->
+                                <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" />
+                                <!-- 录音进度条 -->
+                                <div class="speed q_sounding">
+                                    <div class="speed-icon" id="divjdt">
+                                        <div class="layui-progress layui-progress-big" lay-filter="ly" style="width: 260px;height:18px;">
+                                            <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                                <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-74px -25px 0 -25px;"> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="speed-text">录音中</div>
+                                </div>
+                                <div class="q_restart" style="display: none;">
+                                    <div class="headset play" onclick="readword(true);">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>重做</p>
+                                    </div>
+                                    <div class="play palybutton" onclick="readwordl()">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>我的录音</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="jsbyclass">
+                            <!-- 角色扮演 -->
+                            <!-- 添加等级示图 -->
+                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
+                                <p class="degree-fail" style="width:100px">
+                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                                </p>
+                                <p class="degree-good" style="width:100px">
+                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                                </p>
+                                <p class="degree-well" style="width:100px">
+                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                                </p>
+                            </div>
+                            <!-- 旋转木马 -->
+                            <div class="cosplay-carousel">
+                                <div id="cosplay-carousel" class="carousel" data-ride="carousel" data-interval="false" data-wrap="false" data-wrap="false">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox" id="jsby">
+                                    </div>
+                                    <!-- Controls -->
+                                    <a class="left carousel-control" href="#cosplay-carousel" data-slide="prev">
+                                        <img src="../../images/common/prev.png" alt="上一张">
+                                    </a>
+                                    <a class="right carousel-control" href="#cosplay-carousel" data-slide="next">
+                                        <img src="../../images/common/next.png" alt="下一张">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="speak-listen-btn">
+                                <!-- 播放图标 -->
+                                <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" />
+                                <!-- 录音进度条 -->
+                                <div class="speed q_sounding">
+                                    <div class="speed-icon" id="divjdt">
+                                        <div class="layui-progress layui-progress-big" lay-filter="ly" style="width: 260px;height:18px;">
+                                            <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                                <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-74px -25px 0 -25px;"> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="speed-text">录音中</div>
+                                </div>
+                                <div class="q_restart" style="display: none;">
+                                    <div class="headset play" onclick="readword(true);">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>重做</p>
+                                    </div>
+                                    <div class="play palybutton" onclick="readwordl()">
+                                        <!--<img src="../../images/common/normal-button.png"/>-->
+                                        <p>我的录音</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="intelligent-dictation writing znclass">
+                            <!-- 智能听写 -->
+                            <!-- 添加等级示图 -->
+                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
+                                <p class="degree-fail" style="width:100px">
+                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+                                </p>
+                                <p class="degree-good" style="width:100px">
+                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+                                </p>
+                                <p class="degree-well" style="width:100px">
+                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+                                </p>
+                            </div>
+                            <!-- 旋转木马 -->
+                            <div class="intelligent-dictation-carousel writing-carousel">
+                                <div class="intelligent-dictation-carousel">
+                                    <div id="intelligent-dictation-carousel" class="carousel" data-ride="carousel" data-interval="false" data-wrap="false">
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox" id="zn">
+                                        </div>
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#intelligent-dictation-carousel" data-slide="prev">
+                                            <img src="../../images/common/prev.png" alt="上一张">
+                                        </a>
+                                        <a class="right carousel-control" href="#intelligent-dictation-carousel" data-slide="next">
+                                            <img src="../../images/common/next.png" alt="下一张">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="speak-listen-btn">
+                                <div class="play znbutton" onclick="readword();">
+                                    <!--<img src="../../images/common/headset.png"/>-->
+                                    <p>再听一次</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button onclick="submithomework();" class="speak-listen-submit">提交</button>
+                    <div id="overlay"></div>
+                    <div id="tooltip">
+                        <div class="dictation-modal-header"></div>
+                        <div class="dictation-modal-body">
+                            <p id="submit_tip"></p>
+                            <!--您还有<span>7</span>道题没有提交，请继续做作业吧-->
                         </div>
-                    </li>
-                </ul>
-                <button onclick="submithomework();" class="speak-listen-submit">提交</button>
-                <div id="overlay"></div>
-                <div id="tooltip">
-                    <div class="dictation-modal-header"></div>
-                    <div class="dictation-modal-body">
-                        <p id="submit_tip"></p>
-                        <!--您还有<span>7</span>道题没有提交，请继续做作业吧-->
+                        <div class="dictation-modal-footer">
+                            <button id="close">关闭</button>
+                        </div>
                     </div>
-                    <div class="dictation-modal-footer">
-                        <button id="close">关闭</button>
-                    </div>
-                </div>
-                <!-- 提交成功的模态框 -->
+                    <!-- 提交成功的模态框 -->
 
-                <div class="modal fade bs-example-modal-lg submit-success" tabindex="-1" role="dialog"
-                     aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <!-- model content 开始 -->
-                            <div class="modal-header"></div>
-                            <div class="modal-body">
-                                <p>提交后不能修改，
-                                    <br/>确定要提交吗？</p>
+                    <div class="modal fade bs-example-modal-lg submit-success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <!-- model content 开始 -->
+                                <div class="modal-header"></div>
+                                <div class="modal-body">
+                                    <p>提交后不能修改，
+                                        <br/>确定要提交吗？</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="button" class="btn btn-primary" onclick="submithomeworkok();">确定</button>
+                                </div>
+                                <!-- model content 结束 -->
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                <button type="button" class="btn btn-primary" onclick="submithomeworkok();">确定</button>
-                            </div>
-                            <!-- model content 结束 -->
                         </div>
                     </div>
-                </div>
-                <div style="visibility: hidden;">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".submit-success"
-                            id="tjcg">提交成功
+                    <div style="visibility: hidden;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".submit-success" id="tjcg">提交成功
                     </button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ready-go"
-                            id="kszzy">开启作业
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ready-go" id="kszzy">开启作业
                     </button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".delay" id="timeout">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".delay" id="timeout">
                         timeout
                     </button>
-                </div>
+                    </div>
 
-                <div class="modal fade bs-example-modal-lg ready-go" tabindex="-1" role="dialog"
-                     aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <!-- model content 开始 -->
-                            <div class="modal-header"></div>
-                            <div class="modal-body">
-                                <p>准备好了吗？</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="readword();"
-                                        id="startworkhome">开启作业
+                    <div class="modal fade bs-example-modal-lg ready-go" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <!-- model content 开始 -->
+                                <div class="modal-header"></div>
+                                <div class="modal-body">
+                                    <p>准备好了吗？</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="readword();" id="startworkhome">开启作业
                                 </button>
+                                </div>
+                                <!-- model content 结束 -->
                             </div>
-                            <!-- model content 结束 -->
                         </div>
                     </div>
-                </div>
-                <!--提交超时 模态框-->
-                <div class="modal fade bs-example-modal-sm delay" tabindex="-1">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <!-- model content 开始 -->
-                            <div class="modal-header"></div>
-                            <div class="modal-body">
-                                <p>作业提交已超时，
-                                    <br/>无法提交作业</p>
+                    <!--提交超时 模态框-->
+                    <div class="modal fade bs-example-modal-sm delay" tabindex="-1">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <!-- model content 开始 -->
+                                <div class="modal-header"></div>
+                                <div class="modal-body">
+                                    <p>作业提交已超时，
+                                        <br/>无法提交作业</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" onclick="gotoWorkHome();">确定</button>
+                                </div>
+                                <!-- model content 结束 -->
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" onclick="gotoWorkHome();">确定</button>
-                            </div>
-                            <!-- model content 结束 -->
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="footer"></div>
         </div>
-        <div id="footer"></div>
     </div>
-</div>
 
 </body>
 
@@ -487,4 +467,5 @@
         </div>
     </div>
 </script>
+
 </html>

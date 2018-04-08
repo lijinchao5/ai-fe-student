@@ -5,301 +5,281 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/simulationExam/simulationExam.css" type="text/css"/>
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/simulationExam/simulationExam.css" type="text/css" />
     <link rel="stylesheet" href="../../lib/layui/css/layui.css" media="all">
     <title>模拟考场</title>
 </head>
 
 <body>
-<div id="header"></div>
-<div id="background"></div>
-<div id="notice">
-    <div class="student-notice wrap" style="display: none;">
-        <div class="title">考生须知</div>
-        <div class="content">
-            <p id="ksxzcontent"></p>
-        </div>
-        <a class="next fr slide" onclick="nextwrap('content-bg')"  data-toggle="modal" data-target=".next-modal">下一步</a>
-    </div>
-    <div class="content-bg wrap">
-        <div class="content-in">
-            <div class="title">
-                <p>耳麦测试</p>
+    <div id="header"></div>
+    <div id="background"></div>
+    <div id="notice">
+        <div class="student-notice wrap" style="display: none;">
+            <div class="title">考生须知</div>
+            <div class="content">
+                <p id="ksxzcontent"></p>
             </div>
-            <div class="main">
-                <div class="fr">
-
+            <a class="next fr slide" onclick="nextwrap('content-bg')" data-toggle="modal" data-target=".next-modal">下一步</a>
+        </div>
+        <div class="content-bg wrap">
+            <div class="content-in">
+                <div class="title">
+                    <p>耳麦测试</p>
                 </div>
-                <div style="height: 280px;text-align: center;">
-                    <p class="description">请朗读以下句子，测试录音效果</p>
-                    <p class="eg">How are you?</p>
-                    <div class="btns">
-                        <div class="record" onclick="statrRecord();" id="statrRecord">
-                            <img src="../../images/common/recording.png" alt="录音">
-                            <span>录音</span>
-                        </div>
-                        <div onclick="palyaudio();" id="palymid">
-                            <img src="../../images/speakAndListen/play.png" alt="播放">
-                            <span>播放</span>
-                        </div>
+                <div class="main">
+                    <div class="fr">
+
                     </div>
-                    <div class="djs" id="testly">
-                        <div class="layui-progress layui-progress-big" lay-filter="testly">
-                            <div class="layui-progress-bar" lay-percent="0%" style="height:13px;">
-                                <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;">
+                    <div style="height: 280px;text-align: center;">
+                        <p class="description">请朗读以下句子，测试录音效果</p>
+                        <p class="eg">How are you?</p>
+                        <div class="btns">
+                            <div class="record" onclick="statrRecord();" id="statrRecord">
+                                <img src="../../images/common/recording.png" alt="录音">
+                                <span>录音</span>
+                            </div>
+                            <div onclick="palyaudio();" id="palymid">
+                                <img src="../../images/speakAndListen/play.png" alt="播放">
+                                <span>播放</span>
                             </div>
                         </div>
-                        <div class="countdown" id="countdowns">录音中</div>
+                        <div class="djs" id="testly">
+                            <div class="layui-progress layui-progress-big" lay-filter="testly" style="width: 260px;height:18px;">
+                                <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                    <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> -->
+                                </div>
+                            </div>
+                            <div class="countdown" id="countdowns">录音中</div>
 
-                    </div>
-                    <div class="clear-btn" style="display: none;">
-                        <button onclick="ok();" class="buttons">清晰</button>
-                        <button onclick="resetplay()" class="buttons">不清晰</button>
-                        <button onclick="palyaudiolid();" class="buttons" id="lyhf">录音回放</button>
-                    </div>
-                </div>
-                <div class="volume">
-                    <p class="fl">音量</p>
-                    <!--<input class="fl" type="range" value="100" id="voice" onchange="getrange();">-->
-                    <section id="examples">
-                        <div class="volume-bar">
-                            <input type="range" min="0" max="100" step="1" value="50" id="voice" onchange="getrange();"
-                                   data-rangeslider>
-                            <!-- <output style="display: none"></output>-->
-                            <output></output>
                         </div>
-                    </section>
-                </div>
-                <!-- 模态框 -->
-                <div id="simulation-exam-modal"></div>
+                        <div class="clear-btn" style="display: none;">
+                            <button onclick="ok();" class="buttons">清晰</button>
+                            <button onclick="resetplay()" class="buttons">不清晰</button>
+                            <button onclick="palyaudiolid();" class="buttons" id="lyhf">录音回放</button>
+                        </div>
+                    </div>
+                    <div class="volume">
+                        <p class="fl">音量</p>
+                        <!--<input class="fl" type="range" value="100" id="voice" onchange="getrange();">-->
+                        <section id="examples">
+                            <div class="volume-bar">
+                                <input type="range" min="0" max="100" step="1" value="50" id="voice" onchange="getrange();" data-rangeslider>
+                                <!-- <output style="display: none"></output>-->
+                                <output></output>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- 模态框 -->
+                    <div id="simulation-exam-modal"></div>
 
-                <!-- 带耳麦 模态框 -->
-                <div class="modal fade bs-example-modal-lg next-modal" tabindex="-1" role="dialog"
-                     aria-labelledby="myLargeModalLabel">
-                    <div class="modal-dialog modal-lg" role="document">
+                    <!-- 带耳麦 模态框 -->
+                    <div class="modal fade bs-example-modal-lg next-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <!-- model content 开始 -->
+                                <div class="modal-header">
+                                    <p>请正确佩戴好耳机</p>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../../images/simulationExam/left.png" alt="左侧">
+                                    <img src="../../images/simulationExam/font.png" alt="正面">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="readword();" id="startworkhome">好了
+                                </button>
+                                </div>
+                                <!-- model content 结束 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exam-first wrap">
+            <div id="nav1"></div>
+            <div id="simulation-exam">
+                <div class="prepare-exam">
+                    <div class="paper-name" id="ksname">听力---2014年山东省德州市中考英语真题</div>
+                    <a class="start-answer slide" onclick="nextwrap('start-exam')">开始答题</a>
+                </div>
+            </div>
+        </div>
+        <div class="start-exam wrap">
+            <div id="nav"></div>
+            <!-- 记得删除 -->
+            <div onclick="testDemo();" style="width: 20px;height: 20px;margin-left: -50px;"></div>
+            <!-- 记得删除 -->
+            <div id="question-content">
+                <div class="djs">
+                    <div id="ytdt">开始阅题:</div>
+                    <div class="layui-progress layui-progress-big" lay-filter="ly" style="width: 260px;height:18px;">
+                        <div class="layui-progress-bar" lay-percent="100%" style="height:13px;">
+                            <!-- <img class="speed-balloon" src="../../images/common/progress.png" alt="进度条"> -->
+                        </div>
+                    </div>
+                    <div class="countdown" id="countdown">10s</div>
+                </div>
+                <div class="question-answer" id="question-answer">
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">一、听后回答（3分，每小题1分）</div>
+                            <div class="count-wrap">
+                                倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun"></span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">请听三段对话，每段对话播放两遍。每段对话跟一个问题。听完录音后，请在10秒内口头回答问题并完成录音。</p>
+                        <p class="exam-question">请听第一段对话，回答第一个问题，现在你有10秒钟的阅题时间</p>
+                        <p class="exam-problems">1.Whose bag is this ？</p>
+                        <div class="exam-recording">
+                            <img src="../../images/common/recording.png" alt="">
+                            <p class="recording-text">录音</p>
+                        </div>
+                    </div>
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">二、听后选择（4分，每小题1分）</div>
+                            <div class="count-wrap">
+                                倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun1">10</span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">
+                            根据所听内容从每题所给的A、B、C三个选项中选出最佳选项，并用鼠标点击该选项。听每段对话或独白，你有5秒钟的时间阅读每小题，听完后，你有5秒钟的时间作答。每段对话或独白你将听两遍。
+                        </p>
+                        <p class="exam-question">
+                            请听第一段对话，回答下面1~2题，现在你有10秒钟的时间阅题这两道小题
+                        </p>
+                        <p class="exam-problems">1.How does the boy feel when he watches a football game?</p>
+                        <p class="choice-answer">
+                            <input type="radio" name="question" />&nbsp;A. Sad
+                            <input type="radio" name="question" />&nbsp;B. Angry
+                            <input type="radio" name="question" />&nbsp;C. Excited
+                        </p>
+                        <p class="exam-problems">2. What does your mother ask you to do every day?</p>
+                        <p class="choice-answer">
+                            <input type="radio" name="question1" />&nbsp;A. Excited
+                            <input type="radio" name="question1" />&nbsp;B. Happy
+                            <input type="radio" name="question1" />&nbsp;C. Sad and Angry
+                        </p>
+                    </div>
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">三、听后记录及转述（共5分，每小题1分）</div>
+                            <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun2"></span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">
+                            本大题共两节。第一节，听两遍短文，根据所听内容和提示，将所缺的关键信息填写在相应位置上。第二节，听第三遍短文，根据所听内容和提示进行转述。
+                        </p>
+                        <p class="exam-question">
+                            第一节：听后记录信息现在你有1分钟的时间浏览提示信息。请在1分钟内将所缺信息输入到指定的答题区域
+                        </p>
+                        <table border="1" class="fill-blanks">
+                            <tr>
+                                <th colspan="2" align="center">A party</th>
+                            </tr>
+                            <tr>
+                                <td align="center">Host（主办方）</td>
+                                <td>The Students’ Club</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Time</td>
+                                <td>At <span class="quest-num">1</span> p.m. August 15th</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Place</td>
+                                <td>In the <span class="quest-num">2</span> center</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Purpose（目的）</td>
+                                <td>To welcome our friends from the United States</td>
+                            </tr>
+                            <tr>
+                                <td align="center">Activity（活动）</td>
+                                <td>Programmes about <span class="quest-num">3</span> , dancing,singing, games and present-giving
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="my-quest">1、<input class="have-underline" type="text " value="2"></div>
+                    </div>
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">四、短文朗读（共5分）</div>
+                            <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun3"></span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">
+                            你将看到一篇短文，你有1分钟的时间准备，然后请在2分钟内完成短文朗读并录音。当听到“开始录音”的提示音后，请开始朗读，当听到 要求“停止录音”的提示音时，应立即中止朗读
+                        </p>
+
+                        <p class="exam-problems">We went to the Science Museum last Friday. It was great fun. All the students in Grade Seven went there. Four big buses were waiting for us in front of our school gate. First of all, our teachers told us a lot about safety. After
+                            that, we got on the buses. Everyone felt so excited that we talked and laughed all the way. Two hours later, we arrived. It was ten o’clock. We felt a little tired, but we were very happy.
+                        </p>
+                        <div class="exam-recording">
+                            <img src="../../images/common/recording.png" alt="">
+                            <p class="recording-text">录音</p>
+                        </div>
+                    </div>
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">五、情景问答（共10分）</div>
+                            <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun4">60</span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">
+                            你有10秒钟的时间阅读屏幕上的情景提示。之后，你将听到两个问题，请根据情景提示的内容用英语进行回答。注意，每个问题问两遍，每题的答题时间为15秒钟。
+                        </p>
+                        <p class="exam-question">请看下面的情景提示：</p>
+                        <p class="exam-problems">你妈妈叫你每天喝牛奶，说是对健康有好处。</p>
+                        <p class="exam-test">1. What does your mother ask you to do every day?</p>
+                        <div class="exam-recording">
+                            <img src="../../images/common/recording.png" alt="">
+                            <p class="recording-text">录音</p>
+                        </div>
+                    </div>
+                    <div class="start-answer">
+                        <div class="exam-title">
+                            <div class="exam-subject">六、话题简述（共10分）</div>
+                            <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
+                                <p class="counts"><span class="count-time" id="coun5"></span>s</p>
+                            </div>
+                        </div>
+                        <p class="exam-topic">
+                            你有2分钟的时间阅读屏幕上的要点提示，并作答题准备。在听到开始录音的提示后，请用英语进行话题表述，你的表述应不少于7句话，时间为1分半钟
+                        </p>
+                        <p class="exam-problems">要点</p>
+                        <p class="exam-test">1.我叫Sally，早上和爸爸一起做运动，如跑步、打篮球等。</p>
+                        <p class="exam-test">2.平时多吃水果和蔬菜，几乎不吃垃圾食品，明天早晨喝牛奶。</p>
+                        <p class="exam-test">3. 我从不玩电脑游戏，每天早起早睡。</p>
+                        <div class="exam-recording">
+                            <img src="../../images/common/recording.png" alt="">
+                            <p class="recording-text">录音</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <!-- model content 开始 -->
                             <div class="modal-header">
-                                <p>请正确佩戴好耳机</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">AI英语听说机考客户端</h4>
                             </div>
                             <div class="modal-body">
-                                <img src="../../images/simulationExam/left.png" alt="左侧">
-                                <img src="../../images/simulationExam/font.png" alt="正面">
+                                <p>考试成绩已经提交，<span id="subtj">3</span>秒钟后返回考试列表</p>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="readword();"
-                                        id="startworkhome">好了
-                                </button>
-                            </div>
-                            <!-- model content 结束 -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="exam-first wrap">
-        <div id="nav1"></div>
-        <div id="simulation-exam">
-            <div class="prepare-exam">
-                <div class="paper-name" id="ksname">听力---2014年山东省德州市中考英语真题</div>
-                <a class="start-answer slide" onclick="nextwrap('start-exam')">开始答题</a>
-            </div>
-        </div>
-    </div>
-    <div class="start-exam wrap">
-        <div id="nav"></div>
-        <!-- 记得删除 -->
-        <div onclick="testDemo();" style="width: 20px;height: 20px;margin-left: -50px;"></div>
-        <!-- 记得删除 -->
-        <div id="question-content">
-            <div class="djs">
-                <div id="ytdt">开始阅题:</div>
-                <div class="layui-progress layui-progress-big" lay-filter="ly">
-                    <div class="layui-progress-bar" lay-percent="100%" style="height:13px;">
-                        <img class="speed-balloon" src="../../images/common/progress.png" alt="进度条">
-                    </div>
-                </div>
-                <div class="countdown" id="countdown">10s</div>
-            </div>
-            <div class="question-answer" id="question-answer">
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">一、听后回答（3分，每小题1分）</div>
-                        <div class="count-wrap">
-                            倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
-                            <p class="counts"><span class="count-time" id="coun"></span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">请听三段对话，每段对话播放两遍。每段对话跟一个问题。听完录音后，请在10秒内口头回答问题并完成录音。</p>
-                    <p class="exam-question">请听第一段对话，回答第一个问题，现在你有10秒钟的阅题时间</p>
-                    <p class="exam-problems">1.Whose bag is this ？</p>
-                    <div class="exam-recording">
-                        <img src="../../images/common/recording.png" alt="">
-                        <p class="recording-text">录音</p>
-                    </div>
-                </div>
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">二、听后选择（4分，每小题1分）</div>
-                        <div class="count-wrap">
-                            倒计时：<img src="../../images/common/clock.png" alt="倒计时" class="count-down">
-                            <p class="counts"><span class="count-time" id="coun1">10</span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">
-                        根据所听内容从每题所给的A、B、C三个选项中选出最佳选项，并用鼠标点击该选项。听每段对话或独白，你有5秒钟的时间阅读每小题，听完后，你有5秒钟的时间作答。每段对话或独白你将听两遍。
-                    </p>
-                    <p class="exam-question">
-                        请听第一段对话，回答下面1~2题，现在你有10秒钟的时间阅题这两道小题
-                    </p>
-                    <p class="exam-problems">1.How does the boy feel when he watches a football game?</p>
-                    <p class="choice-answer">
-                        <input type="radio" name="question"/>&nbsp;A. Sad
-                        <input type="radio" name="question"/>&nbsp;B. Angry
-                        <input type="radio" name="question"/>&nbsp;C. Excited
-                    </p>
-                    <p class="exam-problems">2. What does your mother ask you to do every day?</p>
-                    <p class="choice-answer">
-                        <input type="radio" name="question1"/>&nbsp;A. Excited
-                        <input type="radio" name="question1"/>&nbsp;B. Happy
-                        <input type="radio" name="question1"/>&nbsp;C. Sad and Angry
-                    </p>
-                </div>
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">三、听后记录及转述（共5分，每小题1分）</div>
-                        <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时"
-                                                         class="count-down">
-                            <p class="counts"><span class="count-time" id="coun2"></span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">
-                        本大题共两节。第一节，听两遍短文，根据所听内容和提示，将所缺的关键信息填写在相应位置上。第二节，听第三遍短文，根据所听内容和提示进行转述。
-                    </p>
-                    <p class="exam-question">
-                        第一节：听后记录信息现在你有1分钟的时间浏览提示信息。请在1分钟内将所缺信息输入到指定的答题区域
-                    </p>
-                    <table border="1" class="fill-blanks">
-                        <tr>
-                            <th colspan="2" align="center">A party</th>
-                        </tr>
-                        <tr>
-                            <td align="center">Host（主办方）</td>
-                            <td>The Students’ Club</td>
-                        </tr>
-                        <tr>
-                            <td align="center">Time</td>
-                            <td>At <span class="quest-num">1</span> p.m. August 15th</td>
-                        </tr>
-                        <tr>
-                            <td align="center">Place</td>
-                            <td>In the <span class="quest-num">2</span> center</td>
-                        </tr>
-                        <tr>
-                            <td align="center">Purpose（目的）</td>
-                            <td>To welcome our friends from the United States</td>
-                        </tr>
-                        <tr>
-                            <td align="center">Activity（活动）</td>
-                            <td>Programmes about <span class="quest-num">3</span> , dancing,singing, games
-                                and
-                                present-giving
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="my-quest">1、<input class="have-underline" type="text " value="2"></div>
-                </div>
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">四、短文朗读（共5分）</div>
-                        <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时"
-                                                         class="count-down">
-                            <p class="counts"><span class="count-time" id="coun3"></span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">
-                        你将看到一篇短文，你有1分钟的时间准备，然后请在2分钟内完成短文朗读并录音。当听到“开始录音”的提示音后，请开始朗读，当听到
-                        要求“停止录音”的提示音时，应立即中止朗读
-                    </p>
-
-                    <p class="exam-problems">We went to the Science Museum last Friday. It was great fun. All the
-                        students in
-                        Grade Seven went there. Four big buses were waiting for us in front of our school gate. First of
-                        all,
-                        our
-                        teachers told us a lot about safety. After that, we got on the buses. Everyone felt so excited
-                        that we
-                        talked and laughed all the way. Two hours later, we arrived. It was ten o’clock. We felt a
-                        little tired,
-                        but
-                        we were very happy.
-                    </p>
-                    <div class="exam-recording">
-                        <img src="../../images/common/recording.png" alt="">
-                        <p class="recording-text">录音</p>
-                    </div>
-                </div>
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">五、情景问答（共10分）</div>
-                        <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时"
-                                                         class="count-down">
-                            <p class="counts"><span class="count-time" id="coun4">60</span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">
-                        你有10秒钟的时间阅读屏幕上的情景提示。之后，你将听到两个问题，请根据情景提示的内容用英语进行回答。注意，每个问题问两遍，每题的答题时间为15秒钟。
-                    </p>
-                    <p class="exam-question">请看下面的情景提示：</p>
-                    <p class="exam-problems">你妈妈叫你每天喝牛奶，说是对健康有好处。</p>
-                    <p class="exam-test">1. What does your mother ask you to do every day?</p>
-                    <div class="exam-recording">
-                        <img src="../../images/common/recording.png" alt="">
-                        <p class="recording-text">录音</p>
-                    </div>
-                </div>
-                <div class="start-answer">
-                    <div class="exam-title">
-                        <div class="exam-subject">六、话题简述（共10分）</div>
-                        <div class="count-wrap">倒计时：<img src="../../images/common/clock.png" alt="倒计时"
-                                                         class="count-down">
-                            <p class="counts"><span class="count-time" id="coun5"></span>s</p>
-                        </div>
-                    </div>
-                    <p class="exam-topic">
-                        你有2分钟的时间阅读屏幕上的要点提示，并作答题准备。在听到开始录音的提示后，请用英语进行话题表述，你的表述应不少于7句话，时间为1分半钟
-                    </p>
-                    <p class="exam-problems">要点</p>
-                    <p class="exam-test">1.我叫Sally，早上和爸爸一起做运动，如跑步、打篮球等。</p>
-                    <p class="exam-test">2.平时多吃水果和蔬菜，几乎不吃垃圾食品，明天早晨喝牛奶。</p>
-                    <p class="exam-test">3. 我从不玩电脑游戏，每天早起早睡。</p>
-                    <div class="exam-recording">
-                        <img src="../../images/common/recording.png" alt="">
-                        <p class="recording-text">录音</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title">AI英语听说机考客户端</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>考试成绩已经提交，<span id="subtj">3</span>秒钟后返回考试列表</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 
 <script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
@@ -424,7 +404,7 @@
 
 <!-- 实现 声音的 rang  -->
 <script>
-    $(function () {
+    $(function() {
         var $document = $(document);
         var selector = '[data-rangeslider]';
         var $inputRange = $(selector);
@@ -441,11 +421,10 @@
         // Initial value output
         for (var i = $inputRange.length - 1; i >= 0; i--) {
             valueOutput($inputRange[i]);
-        }
-        ;
+        };
 
         // Update value output
-        $document.on('input', selector, function (e) {
+        $document.on('input', selector, function(e) {
             valueOutput(e.target);
         });
 
@@ -455,7 +434,6 @@
         });
 
     });
-
 </script>
 
 </html>
