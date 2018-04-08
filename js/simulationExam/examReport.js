@@ -117,7 +117,7 @@ function addList() {
                             startExam = $("<li>" +
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "<a href='javascript:void(0)' class='enter-exam'>未开始</a>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>考试未开始</a>" +
 
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
@@ -128,7 +128,7 @@ function addList() {
                             startExam = $("<li>" +
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
 
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
@@ -146,7 +146,7 @@ function addList() {
                         startExam = $("<li>" +
                             "<p class='topic'>" + d.examName + "</p>" +
                             "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                            "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                            "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
                             "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                             "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
                             "</li>");
@@ -166,7 +166,7 @@ function addList() {
                             startExam = $("<li>" +
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
 
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
@@ -181,7 +181,7 @@ function addList() {
                     var startExam = $("<li>" +
                         "<p class='topic'>" + d.examName + "</p>" +
                         "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                        "<a href='javascript:void(0)' class='enter-exam'>成绩分析中</a>" +
+                        "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
 
                         "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                         "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
