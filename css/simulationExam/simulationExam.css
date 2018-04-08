@@ -767,7 +767,9 @@
 
 .djs .layui-progress {
     width: 100px;
-    height: 13px;
+    height: 18px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
     position: absolute;
     top: 59px;
 }
