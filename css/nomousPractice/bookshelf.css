@@ -1,6 +1,6 @@
 body {
     color: #999;
-    font-size: 18px;
+    font-size: 14px;
     min-height: 748px;
 }
 
@@ -44,7 +44,7 @@ body {
 
 #growth-list {
     width: 932px;
-    min-height: 662px;
+    height: 662px;
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
@@ -65,41 +65,29 @@ body {
 .back {
     width: 26px;
     height: 21px;
-    margin-left: 20px;
-    margin-top: -5px;
+    margin: 20px 0 0 20px;
 }
 
 .growth-title {
-    width: 640px;
-    height: 110px;
+    width: 646px;
+    height: 120px;
     margin: 0 auto;
+    background: url("../../images/nomousPractice/bgbook.jpg") no-repeat center center;
 }
 
 .growth-title li {
-    width: 126px;
-    height: 110px;
     float: left;
-    margin-left: 20px;
-    font-size: 14px;
+    width: 114px;
+    height: 98px;
+    padding: 25px 10px;
+    margin: 12px 0 0 17px;
     text-align: center;
-    color: #fff;
-    padding: 16px 10px;
+    background: #fff;
+    color: #999;
 }
 
 .growth-title li:nth-of-type(1) {
-    background: #11d8fc;
-}
-
-.growth-title li:nth-of-type(2) {
-    background: #fd6191;
-}
-
-.growth-title li:nth-of-type(3) {
-    background: #63d744;
-}
-
-.growth-title li:nth-of-type(4) {
-    background: #ff8003;
+    margin-left: 65px;
 }
 
 .growth-title li p:nth-of-type(2) {
@@ -107,27 +95,43 @@ body {
 }
 
 .growth-title li .text-company {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 600;
+    color: #f08118;
+}
+
+.quantifier {
+    color: #4fc6fc;
 }
 
 .growth-content {
-    width: 940px;
-    padding: 40px 0 0 90px;
+    width: 932px;
     height: 340px;
+    margin-top: 74px;
 }
 
 .growth-content li {
-    height: 65px;
-    width: 820px;
+    width: 844px;
+    height: 72px;
+    margin: 0 auto;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.growth-content li:hover {
+    background: #effaff;
 }
 
 .growth-content li .text-title {
     float: left;
-    line-height: 65px;
-    color: #11d8fc;
+    line-height: 72px;
+    color: #00a0e9;
     font-weight: 600;
+    margin-left: 23px;
+    font-size: 18px;
+    width: 430px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .record-lis {
@@ -135,14 +139,20 @@ body {
     display: inline-block;
     width: 124px;
     height: 37px;
+    font-size: 14px;
+    margin: 19px 7px 0 0;
     text-align: center;
     line-height: 37px;
     border-radius: 18px;
-    background-color: #11d8fc;
-    box-shadow: 0 0 9px 1px rgba(17, 216, 252, 0.46);
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
     color: #fff;
-    margin-top: 14px;
     cursor: pointer;
+}
+
+.record-lis:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
 }
 
 .text-score {
@@ -152,7 +162,7 @@ body {
 
 .details {
     float: right;
-    margin-right: 45px;
+    margin-right: 30px;
     height: 65px;
 }
 
@@ -160,7 +170,7 @@ body {
 .all-time {
     text-align: right;
     float: left;
-    margin-right: 30px;
+    margin-right: 25px;
     font-size: 12px;
     padding: 14px 0;
 }
@@ -175,60 +185,58 @@ body {
     font-size: 18px;
 }
 
-.paging {
-    position: absolute;
-    bottom: 5px;
-    right: 50%;
-    margin-right: -238px;
+.page-wrap {
     font-size: 12px;
-    cursor: pointer;
+    position: relative;
+    width: 848px;
+    margin: 25px auto 0;
+    height: 30px;
+    text-align: center;
+}
+
+.page-wrap:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
 }
 
 .paging .up,
 .paging .down {
     float: left;
-    display: block;
-    text-align: center;
     width: 50px;
     height: 30px;
     line-height: 30px;
-    user-select: none;
-}
-
-.paging .up {
-    color: #999;
-}
-
-.paging .down {
     color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
 }
 
 .paging .toggles {
-    margin: 0 10px;
     float: left;
+    margin: 0 10px;
 }
 
 .paging .toggles li {
     width: 30px;
     height: 30px;
-    text-align: center;
+    margin-left: 4px;
+    border: 1px solid #eee;
     line-height: 30px;
+    text-align: center;
     color: #999;
-    border: 1px solid #999;
     float: left;
     cursor: pointer;
-    margin-left: 4px;
-}
-
-.paging .toggles::after,
-.paging .toggles::before {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 .paging .toggles .col {
-    background-color: #11d8fc;
+    background-color: #4fc6fc;
     color: #fff;
     border: none;
 }

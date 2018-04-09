@@ -18,7 +18,7 @@ function readrecord(id,fun){
 			return;
 		}
 		if($("#player_audio").length == 0){
-			$("body").prepend($("<div style='display: none;' id='readdiv'> <audio id='player_audio' src='' preload='auto'/></div>"))
+			$("body").prepend($("<div style='display:none' id='readdiv'> <audio id='player_audio' src='' preload='auto'/></div>"))
 		}
 		$("#player_audio").attr("src",function(){
 			var client = new OSS.Wrapper({
