@@ -461,13 +461,13 @@
 
 .start-exam .start-answer .exam-topic {
     width: 97%;
-    border: 1px solid #11d8fc;
-    background-color: #ecfcff;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
     margin-top: 27px;
     padding: 18px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 28px;
-    color: #666;
+    color: #00a0e9;
 }
 
 .start-exam .start-answer .exam-question {
@@ -501,7 +501,7 @@
 }
 
 .start-exam .start-answer .exam-recording {
-    margin: 100px 0 0 0;
+    margin: 116px 0 0 0;
     text-align: center;
 }
 
@@ -567,8 +567,9 @@
 }
 
 .start-exam .start-answer .exam-recording img {
-    width: 75px;
-    height: 75px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
 }
 
 .start-exam .start-answer .exam-recording .recording-text {
@@ -745,7 +746,7 @@
 /*做题页面的录音进度条*/
 .djs {
     position: absolute;
-    right: 30px;
+    right: 50px;
     top: -15px;
     width: 100px;
     height: 90px;
@@ -761,7 +762,8 @@
 }
 
 #ytdt {
-    margin:58px 0 0 -62px;
+    margin:60px 0 0 -45px;
+    color: #00a0e9;
 }
 
 .layui-progress-bar {
@@ -788,8 +790,8 @@
 
 .countdown {
     position: absolute;
-    top: 56px;
-    right: 44px;
+    top: 59px;
+    right: -32px;
 }
 
 .writelistenAnswers {

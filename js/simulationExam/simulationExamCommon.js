@@ -155,9 +155,9 @@ function readbigdata(){
 //进度条
 function countdown(flag,second,fun){
 	if(flag){
-		$("#ytdt").html("开始阅题：");
+		$("#ytdt").html("倒计时");
 	}else{
-		$("#ytdt").html("开始答题：");
+		$("#ytdt").html("倒计时");
 	}
 	$("#countdown").html(second+"s");
 	$(".djs").show();
