@@ -4,7 +4,9 @@ $(function(){
 function initUserInfo(){
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#exam_userName").text(data.name);
-    $("#exam_userClass").text(data.classId);
+    var className = localStorage.getItem("className");
+    className = className.replace(/\"/g,"");
+    $("#exam_userClass").text(className);
     $(".number").text(data.nameNum);
     console.log(data);
     if (null == data.photo || "" == data.photo) {

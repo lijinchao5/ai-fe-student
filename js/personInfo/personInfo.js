@@ -128,6 +128,7 @@ function getStudentInfo() {
         } else {
             $("#school7").val(user.name_num)
         }
+        localStorage.setItem("className", user.grade + user.className);
     });
 }
 // 图片验证码
