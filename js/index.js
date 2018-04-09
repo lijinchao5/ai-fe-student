@@ -98,3 +98,9 @@ function initWebSocket(userId) {
 $(".add-top li").click(function () {
     sessionStorage.element = $(this).index() + 1;
 });
+
+function logout() {
+    localStorage.removeItem("userInfo");
+    localStorage.removeItem("X-AUTH-TOKEN");
+    window.location.href = getLoginPath();
+}
