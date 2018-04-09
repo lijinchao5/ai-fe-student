@@ -228,7 +228,7 @@ function initdata(){
  				zncount++;
  				homeworkDetail.count=zncount;
  				var mid=homeworkDetail.standerWAudioPath;
- 				if(mid==""){
+				if(mid == null || mid==""){
  					mid=homeworkDetail.standerMAudioPath;
  				}
  				homeworkDetail.mid=mid;
