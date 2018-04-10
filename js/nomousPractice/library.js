@@ -83,6 +83,8 @@ function initDataAll(id){
 			}
 			var html = formatTemplate(library, $("#libraryscript").html());
 			$("#carousel-inner").append(html);
+			// 处理 雷达图
+            radarMap(library.pronunciation,library.fluency,library.integrity,30,library.dataid);
 			//处理分数
 			var score=library.score+"";
 			if(score!="null"){

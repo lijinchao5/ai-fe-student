@@ -181,11 +181,11 @@ body {
     float: right;
     width: 100px;
     height: 100px;
-    background-color: #c0f;
 }
 
 .library .sentences-degree {
     display: inline-block;
+    float: right;
 }
 
 .library .sentences-degree p {
