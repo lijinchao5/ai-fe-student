@@ -108,7 +108,7 @@ function initWebSocket(userId) {
                 $("#dialogButton").click()
             } else {
                 var text = $("#dialog_content").text();
-                $("#dialog_content").text(text + msg.data);
+                $("#dialog_content").append("<p>" + msg.data + "</p>");
             }
 
         };

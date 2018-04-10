@@ -43,10 +43,11 @@ function initWebSocket(userId) {
             if (ats == "1") {
                 $("#dialog_content").text(msg.data);
                 $("#dialogButton").attr("data-toggle1", "0");
-                $("#dialogButton").click()
+                $("#dialogButton").click();
             } else {
                 var text = $("#dialog_content").text();
-                $("#dialog_content").text(text + msg.data);
+                $("#dialog_content").append("<p>" + msg.data + "</p>");
+                // $("#dialog_content").text(text + msg.data);
             }
 
         };
@@ -66,3 +67,6 @@ function logout() {
     localStorage.removeItem("X-AUTH-TOKEN");
     window.location.href = getLoginPath();
 }
+window.onload(function () {
+    $('#dialogButton').modal({backdrop:'static', keyboard: false});
+})
