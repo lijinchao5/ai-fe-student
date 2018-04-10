@@ -1,13 +1,12 @@
-$(function () {
+$(function() {
     //获取用户信息
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#username").text(data.name);
-    if (null == data.photo || "" == data.photo) {
-    } else {
+    if (null == data.photo || "" == data.photo) {} else {
         $("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }
     initWebSocket(data.id)
-    //百度统计
+        //百度统计
     var _hmt = _hmt || [];
 
     var hm = document.createElement("script");
@@ -16,9 +15,11 @@ $(function () {
     s.parentNode.insertBefore(hm, s);
 
 });
-function dialogClose(){
-	$("#dialogButton").attr("data-toggle1","1");
+
+function dialogClose() {
+    $("#dialogButton").attr("data-toggle1", "1");
 }
+
 function initWebSocket(userId) {
     var socket;
     if (typeof(WebSocket) == "undefined") {
@@ -33,27 +34,27 @@ function initWebSocket(userId) {
         //socket = new SockJS("http://192.168.10.107:8080/mspjapi/webSocketServer/sockjs");
 
         // 打开事件
-        socket.onopen = function () {
+        socket.onopen = function() {
             console.log("Socket 已打开");
         };
         // 获得消息事件
-        socket.onmessage = function (msg) {
-        	var ats = $("#dialogButton").attr("data-toggle1");
-        	if(ats == "1"){
-        		$("#dialog_content").text(msg.data);
-        		$("#dialogButton").attr("data-toggle1","0");
-        		$("#dialogButton").click()
-        	}else{
-        		var text=$("#dialog_content").text();
-        		$("#dialog_content").text(text+msg.data);
-        	}
-            
+        socket.onmessage = function(msg) {
+            var ats = $("#dialogButton").attr("data-toggle1");
+            if (ats == "1") {
+                $("#dialog_content").text(msg.data);
+                $("#dialogButton").attr("data-toggle1", "0");
+                $("#dialogButton").click()
+            } else {
+                var text = $("#dialog_content").text();
+                $("#dialog_content").text(text + msg.data);
+            }
+
         };
         // 关闭事件
-        socket.onclose = function () {
+        socket.onclose = function() {
             console.log("Socket已关闭");
         };
-        socket.onerror = function () {
+        socket.onerror = function() {
             console.log("Socket发生了错误");
         }
     }
@@ -65,5 +66,3 @@ function logout() {
     localStorage.removeItem("X-AUTH-TOKEN");
     window.location.href = getLoginPath();
 }
-
-

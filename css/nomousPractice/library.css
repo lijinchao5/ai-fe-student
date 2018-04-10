@@ -131,7 +131,7 @@ body {
 }
 
 .library-content .part-num .current {
-    color: #11d8fc;
+    color: #00a0e9;
 }
 
 .library-content .part-scores {
@@ -143,7 +143,7 @@ body {
     display: inline-block;
     height: 34px;
     border-radius: 17px;
-    background-color: #93eefe;
+    /*background-color: #93eefe;*/
     padding: 0 3px;
 }
 
@@ -155,8 +155,8 @@ body {
     border-radius: 50%;
     line-height: 28px;
     text-align: center;
-    background-color: #fff;
-    color: #999;
+    background-color: #00a0e9;
+    color: #fff;
     font-size: 14px;
     font-weight: 700;
     float: left;
@@ -166,18 +166,22 @@ body {
 .library-content .part-scores .part-score.current::before {
     content: '';
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: #11d8fc;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
     border-radius: 50%;
-    margin: -7px;
+    margin: -1px;
 }
 
 /* 鍑嗙‘搴︿竴琛� */
 .library-content .library-point {
-    margin-top: -20px;
+    margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
+    float: right;
+    width: 100px;
+    height: 100px;
+    background-color: #c0f;
 }
 
 .library .sentences-degree {
@@ -233,7 +237,7 @@ body {
 }
 
 .library-content .carousel .carousel-inner .item .part {
-    height: 200px;
+    height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
     overflow: auto;
@@ -241,6 +245,8 @@ body {
     line-height: 28px;
     padding-right: 30px;
     text-align: justify;
+    margin: 10px 0 30px;
+    background-color: #ccc;
 }
 
 .library-content .carousel .carousel-inner .item .part .part-in {
@@ -284,12 +290,13 @@ body {
 .library-content .carousel .carousel-control {
     height: 0;
     top: 50%;
+    margin-top: -75px;
 }
 
 /* btn */
 .library-content .nomous-practice-btn {
     width: 330px;
-    margin: 0 auto;
+    margin: -110px auto 0;
     /*border: 1px solid #ccc;*/
     position: relative;
 }
@@ -315,13 +322,22 @@ body {
 
 /* 重做按钮 */
 .q_restart {
-    padding: 0 67px;
+    /*padding: 0 67px;*/
     display: none;
 }
 
 .library-content .nomous-practice-btn .play {
     display: inline-block;
-    margin: 20px 24px;
+    width: 110px;
+    height: 38px;
+    border-radius: 40px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    margin: 40px 26px 0;
+    color: #e5e5e5;
+    line-height: 38px;
+}
+.library-content .nomous-practice-btn .play:hover{
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 .library-content .nomous-practice-btn img {
@@ -331,7 +347,7 @@ body {
 
 .library-content .nomous-practice-btn p {
     width: 100%;
-    line-height: 32px;
+    /*line-height: 32px;*/
     font-size: 14px;
     text-align: center;
 }

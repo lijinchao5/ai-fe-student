@@ -323,7 +323,8 @@ function progressBar(second){
         element.progress('ly', n+'%');
       }, second/21);
 }
-
+// 雷达图变量
+var radarMapy;
 function submitlibrary(library){
 	var param = {};
 	param.file=library.lid;
@@ -349,10 +350,104 @@ function submitlibrary(library){
 				$("#pscore span").eq(i).attr("class","part-score");
 			}
 		})
+        pronunciation = data.exerciseDetailEntity.pronunciation;
+        fluency = data.exerciseDetailEntity.fluency;
+        integrity = data.exerciseDetailEntity.integrity;
+        radarMapy = document.getElementById("radarMap");
+        // radarMap(pronunciation,fluency,integrity,80);
+        radarMap(34,34,34,80);
 		$("#carousel-inner .active progress").eq(0).attr("value",data.exerciseDetailEntity.pronunciation);
 		$("#carousel-inner .active progress").eq(1).attr("value",data.exerciseDetailEntity.fluency);
 		$("#carousel-inner .active progress").eq(2).attr("value",data.exerciseDetailEntity.integrity);
 	});
+}
+
+function radarMap(pronunciation,fluency,integrity,size){
+    var myChart = echarts.init(radarMapy);
+    var app = {};
+    option = null;
+    option = {
+        /*title: {
+            text: '自定义雷达图'
+        },*/
+        /*legend: {
+            data: ['图一','图二', '张三', '李四']
+        },*/
+        grid:{
+            x:25,
+            y:45,
+            x2:5,
+            y2:20,
+            borderWidth:5
+        },
+        radar: [
+            {
+                indicator: [
+                    { text: '流利度',max:100,min:0},
+                    { text: '准确度',max:100,min:0},
+                    { text: '完整度',max:100,min:0}
+                ],
+                // center: ['25%', '50%'],  // 位置判断
+                radius: size,  // 调整整个图的大小
+                startAngle: 90,
+                splitNumber: 4,  // 圆环个数
+                shape: 'circle',
+                name: {
+                    formatter:'{value}',
+                    textStyle: {
+                        color:'#72ACD1'
+                    }
+                },
+                splitArea: {
+                    areaStyle: {
+                        color: ['rgba(114, 172, 209, 0.2)',
+                            'rgba(114, 172, 209, 0.4)', 'rgba(114, 172, 209, 0.6)',
+                            'rgba(114, 172, 209, 0.8)', 'rgba(114, 172, 209, 1)'],
+                        shadowColor: 'rgba(0, 0, 0, 0.3)',
+                        shadowBlur: 10
+                    }
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.5)'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.5)'
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: '雷达图',
+                type: 'radar',
+                itemStyle: {
+                    emphasis: {
+                        lineStyle: {
+                            width: 4
+                        }
+                    }
+                },
+                data: [
+                    {
+                        value: [pronunciation, fluency, integrity],
+                        // value: [1000, 100, 0],
+                        name: '图二',
+                        areaStyle: {
+                            normal: {
+                                color: 'rgba(255, 255, 255, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
 }
 
 

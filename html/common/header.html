@@ -2,62 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!--<link rel="stylesheet" href="../../css/common.css" type="text/css"/>-->
-    <link rel="stylesheet" href="../../css/common/header.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/common/header.css" type="text/css" />
 </head>
 
 <body>
-<div class="top">
-    <div class="center">
-        <a href="../index.html">
-            <div class="fl logo"></div>
-        </a>
-        <div class="fr">
-            <a href="../personInfo/personInfo.html">
-                <img class="fl" src="../../images/personInfo/xs-meb-icon.png" alt="头像" id="photo">
+    <div class="top">
+        <div class="center">
+            <a href="../index.html">
+                <div class="fl logo"></div>
             </a>
-            <p class="fl" id="username"></p>
-            <a href="../personInfo/personInfo.html">个人中心</a>
-            <a>|</a>
-            <!--退出弹窗-->
-            <a data-toggle="modal" data-target=".exits" class="exit-button">退出</a>
-            <div class="modal fade exits" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal" onclick="logout()">确定</button>
-                            <button type="button" class="btn" data-dismiss="modal">不了</button>
+            <div class="fr">
+                <a href="../personInfo/personInfo.html">
+                    <img class="fl" src="../../images/personInfo/xs-meb-icon.png" alt="头像" id="photo">
+                </a>
+                <p class="fl" id="username"></p>
+                <a href="../personInfo/personInfo.html">个人中心</a>
+                <a>|</a>
+                <!--退出弹窗-->
+                <a data-toggle="modal" data-target=".exits" class="exit-button">退出</a>
+                <div class="modal fade exits" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal" onclick="logout()">确定</button>
+                                <button type="button" class="btn" data-dismiss="modal">不了</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <a data-toggle="modal" data-toggle1="1" data-target=".exits1" class="exit-button" style="display: none;" id="dialogButton"></a>
-            <div class="modal fade exits1" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <p id="dialog_content"></p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">确定</button>
+                <a data-toggle="modal" data-toggle1="1" data-target=".exits1" class="exit-button" style="display: none;" id="dialogButton"></a>
+                <div class="modal fade exits1" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <p id="dialog_content"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal">确定</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="over" class="overLoading" style="display:none;">
-            <div id="layout" class="layoutLoading"><img src="../../images/common/loading.gif"/>
-                <p class="loading-text"></p>
+            <div id="over" class="overLoading" style="display:none;">
+                <div id="layout" class="layoutLoading"><img src="../../images/common/loading.gif" />
+                    <p class="loading-text"></p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 </body>
 
