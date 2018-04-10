@@ -333,7 +333,7 @@ body {
     border-radius: 40px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
     margin: 40px 26px 0;
-    color: #e5e5e5;
+    color: #fff;
     line-height: 38px;
 }
 .library-content .nomous-practice-btn .play:hover{
@@ -355,8 +355,9 @@ body {
 .library-content .nomous-practice-btn .end {
     position: absolute;
     top: -28px;
-    right: -250px;
+    right: -350px;
     display: none;
+    background: transparent;
 }
 
 .library-content .nomous-practice-btn .end img {

@@ -177,11 +177,117 @@
     <div class="item {active}" data={dataid}>
         <div class="part">{sentence_cont}</div>
         <div class="library-point">
-            <!--<div class="sentences-degree">-->
-            <div id="radarMap" style="height: 100%;width: 100%"></div>
-            <!--</div>-->
+            <div class="sentences-degree clearfix">
+                <div class={dataid} style="height: 100px;width: 100px;border:1px solid #ccc"></div>
+                <!--<p>-->
+                    <!--<span>准确度</span>-->
+                    <!--<progress class="accuracy" value="" max="100" id="endaccuracy"></progress>-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--<span>流利度</span>-->
+                    <!--<progress class="fluency" value="" max="100" id="endfluency"></progress>-->
+                <!--</p>-->
+                <!--<p>-->
+                    <!--<span>完整度</span>-->
+                    <!--<progress class="integrity" value="" max="100" id="endintegrity"></progress>-->
+                <!--</p>-->
+            </div>
         </div>
     </div>
 </script>
 
+<script>
+
+
+    radarMap(0,0,0,30,"radar-map");
+
+    function radarMap(pronunciation,fluency,integrity,size,className){
+        var dom = document.getElementsByClassName(className)[0];
+        var myChart = echarts.init(dom);
+        var app = {};
+        option = null;
+        option = {
+            /*title: {
+                text: '自定义雷达图'
+            },*/
+            /*legend: {
+                data: ['图一','图二', '张三', '李四']
+            },*/
+            grid:{
+                x:25,
+                y:45,
+                x2:5,
+                y2:20,
+                borderWidth:5
+            },
+            radar: [
+                {
+                    indicator: [
+                        { text: '流利度',max:100,min:0},
+                        { text: '准确度',max:100,min:0},
+                        { text: '完整度',max:100,min:0}
+                    ],
+                    // center: ['25%', '50%'],  // 位置判断
+                    radius: size,  // 调整整个图的大小
+                    startAngle: 90,
+                    splitNumber: 4,  // 圆环个数
+                    shape: 'circle',
+                    name: {
+                        formatter:'{value}',
+                        textStyle: {
+                            color:'#72ACD1'
+                        }
+                    },
+                    splitArea: {
+                        areaStyle: {
+                            color: ['rgba(114, 172, 209, 0.2)',
+                                'rgba(114, 172, 209, 0.4)', 'rgba(114, 172, 209, 0.6)',
+                                'rgba(114, 172, 209, 0.8)', 'rgba(114, 172, 209, 1)'],
+                            shadowColor: 'rgba(0, 0, 0, 0.3)',
+                            shadowBlur: 10
+                        }
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.5)'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.5)'
+                        }
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '雷达图',
+                    type: 'radar',
+                    itemStyle: {
+                        emphasis: {
+                            lineStyle: {
+                                width: 4
+                            }
+                        }
+                    },
+                    data: [
+                        {
+                            value: [pronunciation, fluency, integrity],
+                            // value: [1000, 100, 0],
+                            name: '图二',
+                            areaStyle: {
+                                normal: {
+                                    color: 'rgba(255, 255, 255, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    }
+</script>
 </html>
