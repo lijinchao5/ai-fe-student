@@ -10,7 +10,7 @@ $(function () {
     // webp 格式判断
     // See http://www.guanggua.com/question/5573096-detecting-webp-support.html
     function canUseWebP() {
-        var elem = document.createElement('canvas')
+        var elem = document.createElement('canvas');
         if (!!(elem.getContext && elem.getContext('2d'))) {
             // was able or not to get WebP representation
             return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0
@@ -18,6 +18,7 @@ $(function () {
         // very old browser like IE 8, canvas not supported
         return false
     }
+
     $('.blod-image').addClass(canUseWebP() ? 'webp' : 'no-webp');
     $('.bottom-bg li.first').addClass(canUseWebP() ? 'webp' : 'no-webp');
     $('.bottom-bg li.second').addClass(canUseWebP() ? 'webp' : 'no-webp');
@@ -47,10 +48,37 @@ $(function () {
             $("#indexphoto").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + user.photo)
         }
         initWebSocket(user.id);
+        getUserMessage(user.id);
     });
 });
-function dialogClose(){
-	$("#dialogButton").attr("data-toggle1","1");
+
+function getUserMessage(userId) {
+    var url = "message/getUserMessage.do";
+    doAjax("post", url, null, function (data) {
+        var ats = $("#dialogButton").attr("data-toggle1");
+        if (ats == "1") {
+            if (null != data && data.length > 0) {
+                var _dialogIn = "";
+                var _dialogContent = $("#dialog_content");
+                for (var usermsg = 0; usermsg < data.length; usermsg++) {
+                    _dialogIn = $("<p>" + data[usermsg].text + "</p>");
+                    _dialogContent.append(_dialogIn)
+                }
+                $("#dialogButton").attr("data-toggle1", "0");
+                $("#dialogButton").click()
+            }
+        } else {
+            var text = $("#dialog_content").text();
+            if (null != data && data.length > 0) {
+                $("#dialog_content").text(text + msg.data);
+            }
+        }
+    });
+}
+
+
+function dialogClose() {
+    $("#dialogButton").attr("data-toggle1", "1");
 }
 // 写一点儿websocket代码
 
@@ -73,16 +101,16 @@ function initWebSocket(userId) {
         };
         // 获得消息事件
         socket.onmessage = function (msg) {
-        	var ats = $("#dialogButton").attr("data-toggle1")
-        	if(ats == "1"){
-        		$("#dialog_content").text(msg.data);
-        		$("#dialogButton").attr("data-toggle1","0");
-        		$("#dialogButton").click()
-        	}else{
-        		var text=$("#dialog_content").text();
-        		$("#dialog_content").text(text+msg.data);
-        	}
-            
+            var ats = $("#dialogButton").attr("data-toggle1");
+            if (ats == "1") {
+                $("#dialog_content").text(msg.data);
+                $("#dialogButton").attr("data-toggle1", "0");
+                $("#dialogButton").click()
+            } else {
+                var text = $("#dialog_content").text();
+                $("#dialog_content").text(text + msg.data);
+            }
+
         };
         // 关闭事件
         socket.onclose = function () {

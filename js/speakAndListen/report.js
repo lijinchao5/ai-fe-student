@@ -234,6 +234,7 @@ function CalculationScoreword(word, score) {
     }
     return html;
 }
+//分数的颜色
 function addColor(score) {
     var html = "";
     if (score < 60) {
