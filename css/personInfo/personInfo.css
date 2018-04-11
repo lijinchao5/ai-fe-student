@@ -1,7 +1,13 @@
 @charset "utf-8";
-body {
-    width: 100%;
+html {
     height: 100%;
+    background: #05A2EA;
+}
+
+body {
+    color: #999;
+    font-size: 14px;
+    min-height: 748px;
 }
 
 .btn:focus,
@@ -15,25 +21,125 @@ body {
     box-shadow: none;
 }
 
-.out {
+.outs {
     width: 100%;
-    background: #eee;
+    height: 100%;
+    /*min-height: 687px;*/
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
 }
 
-.out .mains {
-    position: absolute;
-    top: 65px;
-    left: 50%;
+.outs .mains {
     width: 1200px;
-    margin: 0 0 15px -600px;
-    border: 10px solid transparent;
-    border-top: 80px solid transparent;
-    border-image: url("../../images/common/main-bg.png") 80 13 13 10 round;
+    margin: 0 auto;
+}
+
+#header {
+    height: 76px;
+    background: #fff;
 }
 
 #personInfo {
     width: 1200px;
-    padding-left: 36px;
+    height: 662px;
+}
+
+#footer {
+    margin: 1% 0 0 33%;
+}
+
+#personInfo .nav-wrap {
+    width: 264px;
+    height: 662px;
+    padding-top: 42px;
+    background-color: #4fc6fc;
+    color: #333;
+    border-radius: 5px;
+    float: left;
+}
+
+#personInfo .nav-wrap .user-icon-left {
+    width: 166px;
+    height: 163px;
+    margin: 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    border: solid 5px #00a0e9;
+}
+
+#personInfo .nav-wrap .user-icon-left img {
+    width: 156px;
+    height: 152px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#personInfo .nav-wrap .user-name,
+#personInfo .nav-wrap .student-id {
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#personInfo .nav-wrap .student-id {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#personInfo .nav-wrap .hd {
+    width: 264px;
+    margin-top: 40px;
+}
+
+#personInfo .nav-wrap .hd span {
+    display: block;
+    width: 264px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#personInfo .nav-wrap .hd span:last-of-type {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#personInfo .nav-wrap .hd span:hover {
+    text-decoration: none;
+}
+
+#personInfo .nav-wrap .hd .current {
+    display: block;
+    width: 264px;
+    background: #00a0e9;
+    color: #fff;
+}
+
+#personInfo .nav-wrap .hd span img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: -3px 10px 0 0;
+    line-height: 64px;
+    vertical-align: middle;
+}
+
+#personInfo #tabbd {
+    float: left;
+    width: 932px;
+    height: 662px;
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
 }
 
 #personInfo::after,
@@ -43,161 +149,114 @@ body {
     clear: both;
 }
 
-#personInfo .header-container .exit .modal-dialog .modal-body p {
-    top: -57px;
-    left: 7px;
-}
-
-#personInfo .left {
-    width: 260px;
-    padding: 0;
-}
-
-#personInfo .left .user-icon-left {
-    width: 126px;
-    height: 126px;
-    margin: 40px 60px 10px;
-    padding: 10px;
-    background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;
-}
-
-#personInfo .left .user-icon-left img {
-    width: 106px;
-    height: 106px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-#personInfo .left .user-name {
-    width: 260px;
-    height: 16px;
-    padding-top: 20px;
-    line-height: 16px;
-    text-align: center;
-    font-size: 16px;
-}
-
-#personInfo .left #tabhd {
-    margin-top: 75px;
-}
-
-#personInfo .left #tabhd span {
-    display: block;
-    width: 100%;
-    height: 64px;
-    line-height: 64px;
-    text-align: center;
-    color: #999;
-    border-bottom: 1px solid #dcdcdc;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#personInfo .left #tabhd .current {
-    color: #333;
-}
-
-#personInfo .left #tabhd .home a {
-    color: #999;
-}
-
-#personInfo .left #tabhd .home a:hover {
-    text-decoration: none;
-}
-
-#personInfo .left #tabhd span img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    line-height: 64px;
-}
-
-#personInfo #tabbd {
-    padding: 0 0 0 10px;
-    border-left: 10px solid transparent;
-    border-image: url("../../images/personInfo/T-bg.png") 0 0 0 27 round;
-    margin-bottom: 20px;
-}
+/*#personInfo .header-container .exit .modal-dialog .modal-body p {*/
+/*top: -57px;*/
+/*left: 7px;*/
+/*}*/
 
 #personInfo #tabbd li {
     display: none;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right {
-    width: 193px;
-    height: 260px;
-    padding-top: 10px;
-    margin: 30px auto 43px;
-    overflow: hidden;
-    background: url('../../images/personInfo/big-meb-icon.png') no-repeat center top;
+#personInfo #tabbd .info-title {
+    width: 197px;
+    height: 40px;
+    margin: 55px auto 0;
+    border-bottom: 5px solid #00a0e9;
 }
 
-.big-meb-icon {
-    width: 162px;
-    height: 162px;
+#personInfo #tabbd .info-title .each-title {
+    width: 143px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: #00a0e9;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: #fff;
+}
+
+#personInfo #tabbd .owner-message .modify-info {
+    width: 144px;
+    height: 193px;
+    /*margin: 0 auto;*/
+    margin: 65px auto 0;
+}
+
+#personInfo #tabbd .owner-message .modify-info .user-icon-right {
+    width: 144px;
+    height: 141px;
+    border: 5px solid #00a0e9;
     border-radius: 50%;
-    margin: 5px 0 0 14px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .edit-head-icon {
-    width: 145px;
-    height: 37px;
-    margin: 42px 0 0 24px;
-    background: url('../../images/common/set-meb-icon.png') no-repeat center center;
+#personInfo #tabbd .owner-message .modify-info .big-meb-icon {
+    width: 134px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+#personInfo #tabbd .owner-message .modify-info .edit-head-icon {
+    width: 134px;
+    height: 38px;
+    margin: 12px 0 0 5px;
+    background: url('../../images/common/normal-button.png') no-repeat center center;
     background-size: cover;
     text-align: center;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 38px;
     color: #fff;
     border: none;
     outline: none;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .edit-head-icon:hover {
-    background: url('../../images/common/hover-set-meb-icon.png') no-repeat center center;
+#personInfo #tabbd .owner-message .modify-info .edit-head-icon:hover {
+    background: url('../../images/common/hover-button.png') no-repeat center center;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-dialog {
+#personInfo #tabbd .owner-message .modify-info .modal-dialog {
     width: 878px;
     height: 516px;
     margin-top: 10%;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-dialog .modal-content {
+#personInfo #tabbd .owner-message .modify-info .modal-dialog .modal-content {
     width: 878px;
     height: 516px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-header {
+#personInfo #tabbd .owner-message .modify-info .modal-header {
     padding: 0;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-header button,
-#personInfo #tabbd .owner-message .user-icon-right .modal-header h4 {
+#personInfo #tabbd .owner-message .modify-info .modal-header button,
+#personInfo #tabbd .owner-message .modify-info .modal-header h4 {
     height: 55px;
     line-height: 55px;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     padding-right: 15px;
+    color:#333;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body {
+#personInfo #tabbd .owner-message .modify-info .modal-body {
     padding: 0 40px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .right {
+#personInfo #tabbd .owner-message .modify-info .modal-body .right {
     width: 230px;
     text-align: center;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-9 {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-9 {
     width: 526px;
     height: 354px;
     padding: 0;
     /*margin: 0 309px 44px 42px;*/
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-9 .avatar-upload {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-9 .avatar-upload {
     width: 529px;
     height: 29px;
     border: none;
@@ -205,39 +264,39 @@ body {
     line-height: 29px;
     text-align: left;
     font-size: 14px;
-    color: #ff8003;
+    color: #666;
 }
 
-/*#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-9 .local-img {
+/*#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-9 .local-img {
     width: 529px;
     height: 324px;
     background-color: #ff8003;
 }*/
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body #tabbd {
+#personInfo #tabbd .owner-message .modify-info .modal-body #tabbd {
     width: 262px;
     height: 354px;
     padding-left: 20px;
     margin: 0 309px 44px 42px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body #tabbd p {
+#personInfo #tabbd .owner-message .modify-info .modal-body #tabbd p {
     height: 14px;
     margin-top: 22px;
     font-size: 14px;
     color: #333;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 {
     width: 266px;
     padding: 0 10px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .pre-view {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .pre-view {
     margin-top: 24px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big .imageHead {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .big .imageHead {
     display: block;
     width: 168px;
     height: 168px;
@@ -247,9 +306,9 @@ body {
     background-size: 100% 100%;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big,
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .mid,
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .sml {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .big,
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .mid,
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .sml {
     display: inline-block;
     text-align: center;
     line-height: 24px;
@@ -257,11 +316,11 @@ body {
     margin-left: 34px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .big {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .big {
     margin: 0 60px;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .mid .imageHead {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .mid .imageHead {
     width: 97px;
     height: 97px;
     /*margin: 0 44px 0 18px;*/
@@ -270,7 +329,7 @@ body {
     background-size: 100% 100%;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .col-md-3 .sml .imageHead {
+#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-3 .sml .imageHead {
     /*display: inline-block;*/
     width: 75px;
     height: 75px;
@@ -280,16 +339,21 @@ body {
     background-size: 100% 100%;
 }
 
-#personInfo #tabbd .owner-message .user-icon-right .modal-body .confirm {
+#personInfo #tabbd .owner-message .modify-info .modal-body .confirm {
     display: block;
-    width: 145px;
-    height: 37px;
+    width: 134px;
+    height: 38px;
     font-size: 16px;
     margin: 10px auto 0;
     /*line-height: 37px;*/
     color: #fff;
     border: none;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
+}
+
+#personInfo #tabbd .owner-message .set-info {
+    margin-top: 20px;
 }
 
 #personInfo #tabbd .owner-message .set-info div {
@@ -297,7 +361,7 @@ body {
     height: 50px;
     text-align: left;
     line-height: 50px;
-    color: #333;
+    color: #00a0e9;
     font-size: 16px;
     margin: 5px auto;
 }
@@ -307,44 +371,53 @@ body {
     height: 50px;
     margin-left: 18px;
     padding: 0 25px;
+    border: 1px solid #eee;
+    color: #333;
 }
 
 .sure {
     display: block;
-    width: 145px;
-    height: 37px;
+    width: 134px;
+    height: 38px;
     font-size: 16px;
     margin: 42px auto 0;
     line-height: 37px;
     color: #fff;
     border: none;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
 }
 
 #personInfo #tabbd .owner-message .set-info .sure:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
     width: 100px;
     height: 30px;
     color: #333;
     cursor: pointer;
 }
 
-#personInfo #tabbd .owner-message .set-info #sexSelect .sex:last-child {
-    color: #999;
+#personInfo #tabbd .owner-message .set-info #sexSelect .sex img {
+    margin-right: 15px;
 }
 
-#personInfo #tabbd .owner-message .set-info #sexSelect .sex img {
-    margin-right: 20px;
+#personInfo #tabbd .owner-message .set-info #sexSelect .sex:last-child {
+    color: #999;
 }
 
 /*学校信息部分*/
 #personInfo .school-message {
     margin-top: 25px;
+    user-select: none;
+}
+
+#personInfo .school-message .school-info {
+    width: 790px;
+    margin: 20px auto 0;
 }
 
 #mark-label1,
@@ -356,13 +429,14 @@ body {
 #mark-label7,
 #mark-label8 {
     display: block;
-    width: 200px;
+    width: 150px;
     height: 51px;
     text-align: right;
     line-height: 51px;
     font-size: 16px;
     font-weight: 300;
-    color: #333;
+    color: #00a0e9;
+    float: left;
 }
 
 #region1,
@@ -370,17 +444,13 @@ body {
 #region3 {
     width: 158px;
     height: 51px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     background-color: #eeeeee;
     font-size: 16px;
     font-weight: 300;
     color: #999;
-}
-
-#region2,
-#region3 {
-    margin-left: 4px;
+    padding-left: 25px;
 }
 
 #school1,
@@ -393,20 +463,18 @@ body {
     width: 482px;
     height: 51px;
     margin-left: 0;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     background-color: #eeeeee;
     font-size: 16px;
     font-weight: 300;
     color: #999;
+    padding-left: 25px;
 }
 
 #personInfo .school-message .form-group {
-    margin-bottom: 16px;
-}
-
-#personInfo .form-group .col-md-9 {
-    padding-left: 0;
+    width: 790px;
+    margin-bottom: 10px;
 }
 
 #change-classnum,
@@ -418,7 +486,7 @@ body {
     background-color: #fff;
     font-size: 16px;
     font-weight: 300;
-    color: #f96;
+    color: #00a0e9;
     outline: none;
 }
 
@@ -428,27 +496,74 @@ body {
     margin: 200px auto;
 }
 
-.modal-dialog {
-    width: 100%;
+#myModal .modal-dialog .modal-content {
+    background: url("../../images/personInfo/changeclass.png") no-repeat center center;
+    background-size: cover;
+    box-shadow: none;
+    border: none;
 }
 
 #myModalLabel {
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 300;
-    color: #333;
+    color: #fff;
 }
 
 .modal-dialog .modal-header {
-    border-bottom: 1px solid #eee;
+    border-bottom: none;
 }
-
+/*#personInfo #tabbd #myModal .modal-header button{*/
+    /*color: #fff;*/
+    /*font-size: 16px;*/
+/*}*/
 .modal-dialog .modal-body {
     font-size: 16px;
     font-weight: 300;
-    color: #333;
+    color: #fff;
+    padding: 49px 0 20px 45px;
 }
 
+.modal-dialog .modal-body .user-msg {
+    width: 330px;
+    height: 43px;
+    background: transparent;
+    padding: 15px 0 15px 13px;
+    border: 1px solid #eee;
+    color: #fff;
+    font-size: 14px;
+}
+
+.modal-dialog .modal-body .user-msg::-webkit-input-placeholder {
+    color: #999;
+}
+
+.change-tips {
+    display: none;
+    margin-bottom: 12px;
+    color: #eefd00;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#sure-change {
+    width: 134px;
+    height: 38px;
+    border: none;
+    outline: none;
+    background: url('../../images/common/normal-button.png') no-repeat center center;
+    background-size: cover;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    padding: 6px 0;
+}
+
+#sure-change:hover {
+    background: url('../../images/common/hover-button.png') no-repeat center center;
+}
+
+/*编辑头像 模态窗*/
 .modal-dialog .modal-body .pre-view {
     width: 100%;
     text-align: left;
@@ -495,45 +610,9 @@ body {
     margin-top: 15px;
 }
 
-.modal-dialog .modal-body .user-msg {
-    width: 305px;
-    height: 40px;
-    padding: 15px 0 15px 13px;
-    border: 1px solid #eee;
-    color: #999;
-    font-size: 14px;
-}
-
-.change-tips {
-    display: none;
-    margin-bottom: 12px;
-    color: #ff0000;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-#sure-change {
-    border: none;
-    outline: none;
-    background: url('../../images/common/set-meb-icon.png') no-repeat center center;
-    font-size: 16px;
-    font-weight: 300;
-    color: #fff;
-    padding: 6px 0;
-}
-
 .modal .modal-dialog .modal-content .modal-footer {
     text-align: center;
     border-top: none;
-}
-
-#sure-change {
-    width: 170px;
-    height: 37px;
-}
-
-#sure-change:hover {
-    background: url('../../images/common/hover-set-meb-icon.png') no-repeat center center;
 }
 
 /* 账户信息部分 */
@@ -588,14 +667,15 @@ body {
     width: 145px;
     height: 38px;
     margin-top: -10px;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
     line-height: 38px;
     text-align: center;
     color: #fff;
 }
 
 #personInfo #tabbd .user-message .blocks .fr:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 /* 手机绑定表单样式 */
@@ -659,18 +739,19 @@ body {
 
 #personInfo #tabbd .user-message .login-form .confirm {
     display: block;
-    width: 145px;
-    height: 37px;
+    width: 134px;
+    height: 38px;
     margin: 20px auto;
     border: none;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
     font-size: 16px;
     line-height: 26px;
     color: #fff;
 }
 
 #personInfo #tabbd .user-message .login-form .confirm:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 /* 模态框 */

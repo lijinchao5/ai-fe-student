@@ -24,3 +24,7 @@ if (sessionStorage.element) {
 currentEl.click(function () {
     sessionStorage.element = $(this).index();
 });
+
+function hrefPerson() {
+    window.location.href="../personInfo/personInfo.html"
+}

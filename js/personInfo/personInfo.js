@@ -1,19 +1,19 @@
 $(function () {
     $('#header').load('../../html/common/header.html');
-    $('#background').load('../../html/common/background.html');
+    $('#footer').load('../../html/common/footer.html');
 });
 // tab 切换
 function navs() {
 
-    var navsTab = $('#tabhd span');
+    var navsTab = $('#details-nav span');
     var navLens = navsTab.length;
     navsTab.click(function () {
         $(this).addClass('current').siblings().removeClass('current');
         for (var i = 0; i < navLens; i++) {
-            navsTab.eq(i).find('img').attr('src', '../../images/personInfo/tabs' + i + '.png')
+            navsTab.eq(i).find('img').attr('src', '../../images/common/nav' + i + '.png')
         }
         tabsindex = $(this).index();
-        navsTab.eq(tabsindex).find('img').attr('src', '../../images/personInfo/tabs' + tabsindex + '-in.png');
+        navsTab.eq(tabsindex).find('img').attr('src', '../../images/common/nav' + tabsindex + '-in.png');
         $('#tabbd li').hide().eq(tabsindex).show();
     });
 }

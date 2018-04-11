@@ -13,6 +13,7 @@
     border-radius: 50%;
     text-align: center;
     border: solid 5px #00a0e9;
+    cursor: pointer;
 }
 
 .nav-wrap .user-icon-left img {

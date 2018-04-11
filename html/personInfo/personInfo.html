@@ -17,38 +17,37 @@
 
 <body>
 <div id="header"></div>
-<div class="out">
+<div class="outs">
     <div class="mains">
         <div id="personInfo">
-            <div class="left col-md-2">
+            <div class="nav-wrap">
                 <div class="user-icon-left">
-                    <img src="../../images/personInfo/xs-meb-icon.png" alt="头像" id="photo1">
+                    <img src="../../images/personInfo/xs-meb-icon.png" alt="头像" id="photo1"/>
                 </div>
                 <p class="user-name" id="username1"></p>
-                <div id="tabhd">
-                    <span class="home">
-                        <a href="../index.html"><img src="../../images/personInfo/tabs0.png">首&nbsp;&nbsp;页</a></span>
-                    <span class="current owner">
-                        <img src="../../images/personInfo/tabs1-in.png">个人资料</span>
-                    <span class="schoolmsg">
-                        <img src="../../images/personInfo/tabs2.png">学校信息</span>
-                    <span class="usermsg">
-                        <img src="../../images/personInfo/tabs3.png">账户信息</span>
+                <p class="student-id">学号：<span class="user-id" id="studentNum"></span></p>
+                <div class="hd" id="details-nav">
+                    <span onclick="index()"><img src="../../images/common/nav0.png">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</span>
+                    <span class="current"><img src="../../images/common/nav1.png"/>个人资料</span>
+                    <span><img src="../../images/common/nav2.png"/>学校信息</span>
+                    <span><img src="../../images/common/nav3.png"/>账户信息</span>
                 </div>
             </div>
-            <ul class="right bd col-md-9" id="tabbd">
+            <ul id="tabbd">
                 <li></li>
                 <li class="owner-message" style="display:block">
                     <!-- 个人资料 -->
-                    <div class="user-icon-right">
-                        <img src="../../images/personInfo/xs-meb-icon.png" alt="" id="photo2" class="big-meb-icon">
-                        <button type="button" class="btn btn-primary edit-head-icon" data-toggle="modal"
-                                data-target="#avatar-modal">编辑头像
-                        </button>
-                        <div class="user_pic" style="margin: 10px;">
-                            <img src=""/>
+                    <div class="info-title">
+                        <p class="each-title">个人资料</p>
+                    </div>
+                    <div class="modify-info">
+                        <div class="user-icon-right">
+                            <img src="../../images/personInfo/xs-meb-icon.png" alt="用户头像" id="photo2"
+                                 class="big-meb-icon">
                         </div>
-
+                        <button type="button" class=" edit-head-icon" data-toggle="modal" data-target="#avatar-modal">
+                            编辑头像
+                        </button>
                         <div class="modal fade" id="avatar-modal" aria-hidden="true"
                              aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
                             <div class="modal-dialog modal-lg">
@@ -80,15 +79,15 @@
                                                         <div class="big">
                                                             <div class="avatar-preview preview-lg imageHead"
                                                                  id="resultImg"></div>
-                                                            <p>168*168</p>
+                                                            <p>80*80</p>
                                                         </div>
                                                         <div class="mid">
                                                             <div class="avatar-preview preview-lg imageHead"></div>
-                                                            <p>168*168</p>
+                                                            <p>60*60</p>
                                                         </div>
                                                         <div class="sml">
                                                             <div class="avatar-preview preview-lg imageHead"></div>
-                                                            <p>168*168</p>
+                                                            <p>45*45</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -109,7 +108,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
                     </div>
                     <div class="set-info">
@@ -120,14 +118,12 @@
                         </div>
                         <div id="sexSelect">
                             性别：
-                            <span class="sex">
-                                <img src="../../images/personInfo/sex0-in.png"/>我是王子</span>
-                            <span class="sex">
-                                <img src="../../images/personInfo/sex1.png"/>我是公主</span>
+                            <span class="sex"><img src="../../images/personInfo/sex0-in.png"/>我是王子</span>
+                            <span class="sex"><img src="../../images/personInfo/sex1.png"/>我是公主</span>
                         </div>
                         <div>
                             生日：
-                            <input type="text" name="birthDate" id="birthDate"  placeholder="年-月-日"  >
+                            <input type="text" name="birthDate" id="birthDate" placeholder="年-月-日（例：2000-01-05）">
                             <!--data-provide="datepicker"-->
                             <!--class="form-control"-->
                             <!--<div class="input-daterange input-group form-control" id="datepicker">-->
@@ -136,78 +132,82 @@
                             <!--<input type="text" class="input-sm form-control" name="end" />-->
                             <!--</div>-->
                             <!--<input size="16" type="text" value="2012-06-15" readonly class="form_datetime">-->
-
-
                         </div>
                         <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
                     </div>
                 </li>
                 <li class="school-message">
                     <!-- 学校信息 -->
-                    <div class="form-group">
-                        <span id="mark-label1" class="col-md-3">地区：</span>
-                        <div class="col-md-9">
-                            <input type="text" id="region1" class="col-md-4" disabled>
-                            <input type="text" id="region2" class="col-md-4" disabled>
-                            <input type="text" id="region3" class="col-md-4" disabled>
+                    <div class="info-title">
+                        <p class="each-title">学校信息</p>
+                    </div>
+                    <div class="school-info">
+                        <div class="form-group">
+                            <span id="mark-label1" >地区：</span>
+                            <div >
+                                <input type="text" id="region1"  disabled>
+                                <input type="text" id="region2"  disabled>
+                                <input type="text" id="region3"  disabled>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label2" class="col-md-3">学校：</span>
-                        <input type="text" id="school1" class="col-md-4" disabled>
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label3" class="col-md-3">年级：</span>
-                        <input type="text" id="school2" class="col-md-4" disabled/>
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label4" class="col-md-3">班级：</span>
-                        <input type="text" id="school3" class="col-md-4" disabled/>
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label6" class="col-md-3">手机号：</span>
-                        <input type="text" id="school5" class="col-md-4" disabled>
-                        <!--for="disabledTextInput"-->
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label5" class="col-md-3">班级编号：</span>
-                        <input type="text" id="school4" class="col-md-4" disabled/>
-                        <button id="change-classnum" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                            我要转班
-                        </button>
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal"
-                                                aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title" id="myModalLabel">我要转班</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>班级编号：
-                                            <input type="text" class="user-msg" id="classId" placeholder="请输入您要转入的班级编号"
-                                                   title="请输入正确的账号"/>
-                                            <br/>
-                                        </p>
+                        <div class="form-group">
+                            <span id="mark-label2" >学校：</span>
+                            <input type="text" id="school1"  disabled>
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label3" >年级：</span>
+                            <input type="text" id="school2"  disabled/>
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label4" >班级：</span>
+                            <input type="text" id="school3"  disabled/>
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label6" >手机号：</span>
+                            <input type="text" id="school5"  disabled>
+                            <!--for="disabledTextInput"-->
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label5" >班级编号：</span>
+                            <input type="text" id="school4"  disabled/>
+                            <button id="change-classnum" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#myModal">
+                                我要转班
+                            </button>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel"
+                                 aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">我要转班</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>班级编号：
+                                                <input type="text" class="user-msg" id="classId"
+                                                       placeholder="请输入您要转入的班级编号"
+                                                       title="请输入正确的账号"/>
+                                                <br/>
+                                            </p>
 
-                                    </div>
-                                    <div class="modal-footer">
-                                        <p class="change-tips">您输入的班级编号不正确，请重新输入</p>
-                                        <button type="button" id="sure-change" class="btn">确 &nbsp;&nbsp;认</button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <p class="change-tips">您输入的班级编号不正确，请重新输入</p>
+                                            <button type="button" id="sure-change" class="btn">确 &nbsp;&nbsp;认</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <span id="mark-label8" class="col-md-3" for="disabledTextInput">个人账号：</span>
-                        <input type="text" id="school7" class="col-md-4" disabled>
-                    </div>
-                    <div class="form-group">
-                        <span id="mark-label7" class="col-md-3" for="disabledTextInput">教材：</span>
-                        <input type="text" id="school6" class="col-md-4" disabled>
+                        <div class="form-group">
+                            <span id="mark-label8"  for="disabledTextInput">个人账号：</span>
+                            <input type="text" id="school7"  disabled>
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label7"  for="disabledTextInput">教材：</span>
+                            <input type="text" id="school6"  disabled>
+                        </div>
                     </div>
                 </li>
                 <li class="user-message">
@@ -281,6 +281,7 @@
                 </li>
             </ul>
         </div>
+        <div id="footer"></div>
     </div>
 </div>
 
@@ -298,13 +299,15 @@
 <!--<script src="../../lib/avatar/qunit.js"></script>-->
 <script src="../../lib/avatar/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
-//    $('.datepicker').datepicker({
-//        startDate: '-3d'
-//    });
+    //    $('.datepicker').datepicker({
+    //        startDate: '-3d'
+    //    });
     //    $('#sandbox-container .input-daterange').datepicker({
     //    });
 
-    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-
+    //    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+    function index() {
+        window.location.href = "../index.html";
+    }
 </script>
 </html>
