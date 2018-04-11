@@ -238,7 +238,7 @@ body {
 }
 
 .library-content .carousel .carousel-inner .item .part {
-    height: 250px;
+    height: 270px;
     overflow-y: scroll;
     overflow-x: hidden;
     overflow: auto;
@@ -246,8 +246,12 @@ body {
     line-height: 28px;
     padding-right: 30px;
     text-align: justify;
-    margin: 10px 0 30px;
+    margin: 10px 0 10px;
     background-color: #ccc;
+    /*position: relative;*/
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .library-content .carousel .carousel-inner .item .part .part-in {

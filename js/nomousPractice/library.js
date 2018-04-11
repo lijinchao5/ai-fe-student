@@ -349,7 +349,7 @@ function submitlibrary(library){
 		var exerciseDetailWords=data.exerciseDetailWords;
 		var html=calculationScore(exerciseDetailWords);
 		library.sentence_cont=html;
-		$("#carousel-inner .active .part").html(html);
+		$("#carousel-inner .active .part .part-con").html(html);
 		map.put(library.dataid,library);
 		$("#carousel-inner .item").each(function(i,v){
 			var classname=$(this).attr("class");
