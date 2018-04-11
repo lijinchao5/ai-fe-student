@@ -120,6 +120,7 @@ body {
 .library-content {
     padding-top: 35px;
     position: relative;
+    overflow: hidden;
     /*display: none;*/
 }
 
@@ -347,24 +348,48 @@ body {
 
 .library-content .nomous-practice-btn p {
     width: 100%;
-    /*line-height: 32px;*/
-    font-size: 14px;
+    line-height: 38px;
     text-align: center;
+    font-size: 14px;
 }
 
 .library-content .nomous-practice-btn .end {
+    margin: 0;
+    width: 300px;
+    height:100px;
     position: absolute;
-    top: -28px;
-    right: -350px;
+    top: -160px;
+    /*right: -480px;*/
+    right: -301px;
     display: none;
-    background: transparent;
+    background: #fff;
+    border-radius: 50px 0 0 50px;
+    box-shadow: 0 0 15px #ccc;
+}
+.library-content .nomous-practice-btn .end-p {
+    line-height: 114px;
+    font-size: 46px;
+    font-weight: 700;
+    /*padding-left: 40px;*/
+    color: #00a0e9;
+}
+.library-content .nomous-practice-btn .end-p .span1{
+    font-size: 30px;
+}
+.library-content .nomous-practice-btn .end-p .span2{
+    color: #e5e5e5;
+    font-size: 14px;
 }
 
-.library-content .nomous-practice-btn .end img {
-    width: 130px;
-    height: 98px;
-    border-radius: 0%;
+.library-content .nomous-practice-btn .end:hover {
+    background: #fff;
 }
+
+/*.library-content .nomous-practice-btn .end img {*/
+    /*width: 130px;*/
+    /*height: 98px;*/
+    /*border-radius: 0%;*/
+/*}*/
 
 /* 鍚� wordspeaking .css line 135 */
 /* 寮�濮嬪仛浣滀笟 妯℃�佹 */
