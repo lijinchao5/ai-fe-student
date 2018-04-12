@@ -379,3 +379,20 @@ function submitlibrary(library){
 		$("#carousel-inner .active progress").eq(2).attr("value",data.exerciseDetailEntity.integrity);
 	});
 }
+
+// 语速
+$(".speak-speed .list").click(function () {
+    speakSpeed();
+})
+ function speakSpeed() {
+     $(".speak-speed ul").show();
+     $(".speak-speed ul li").each(function () {
+         // console.log(111)
+         $(this).click(function () {
+             var ht = $(this).html();
+             $(".speak-speed .list .current").html(ht);
+             // 处理语速数据
+             $(".speak-speed ul").hide();
+         })
+     })
+ }
