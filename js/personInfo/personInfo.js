@@ -2,18 +2,24 @@ $(function () {
     $('#header').load('../../html/common/header.html');
     $('#footer').load('../../html/common/footer.html');
 });
+
+function index() {
+    window.location.href = "../index.html";
+}
+
 // tab 切换
 function navs() {
 
     var navsTab = $('#details-nav span');
     var navLens = navsTab.length;
     navsTab.click(function () {
+
         $(this).addClass('current').siblings().removeClass('current');
         for (var i = 0; i < navLens; i++) {
-            navsTab.eq(i).find('img').attr('src', '../../images/common/nav' + i + '.png')
+            navsTab.eq(i).find('img').attr('src', '../../images/personInfo/nav' + i + '.png');
         }
         tabsindex = $(this).index();
-        navsTab.eq(tabsindex).find('img').attr('src', '../../images/common/nav' + tabsindex + '-in.png');
+        navsTab.eq(tabsindex).find('img').attr('src', '../../images/personInfo/nav' + tabsindex + '-in.png');
         $('#tabbd li').hide().eq(tabsindex).show();
     });
 }
@@ -58,7 +64,8 @@ $(function () {
     $("#username").text(data.name);
     $("#username1").text(data.name);
     if (null == data.photo || "" == data.photo) {
-
+        $("#photo1").attr("src","../../images/personInfo/xs-meb-icon.png");
+        $("#photo2").attr("src","../../images/personInfo/xs-meb-icon.png");
     } else {
         $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
         $("#photo2").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
@@ -121,6 +128,7 @@ function getStudentInfo() {
             $("#school5").val("您还没有绑定手机号");
         } else {
             $("#school5").val(user.mobile);
+            $("#phoneNum").css("background-color", " #11d8fc");
         }
         $("#school6").val(user.bookVersion);
         if (user.name_num == null) {
@@ -129,6 +137,7 @@ function getStudentInfo() {
             $("#school7").val(user.name_num)
         }
         localStorage.setItem("className", user.grade + user.className);
+
     });
 }
 // 图片验证码
@@ -154,16 +163,17 @@ function updateMobile() {
     var uuid = localStorage.getItem("uuid");
     var url = "user/updateMobile.do";
     var param = {};
-    param.password = $("#password1").val();
     param.mobileRandomKey = uuid;
-    param.mobileRandomStr = $("#messageValue").val();
+    param.password = $("#password1").val();
     param.newMobile = $("#newMobile").val();
+    param.mobileRandomStr = $("#messageValue").val();
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
             alert("操作成功!");
             window.location.reload();
         } else {
-            alert(data.message)
+            //alert(data.message)
+            alert("操作失败")
         }
     });
 }
@@ -194,7 +204,7 @@ function subUserInfo() {
     param.birthDate = $("#birthDate").val();
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
-        	alert("操作成功!");
+            alert("操作成功!");
             reloadUserInfo();
             window.location.reload();
         } else {
@@ -289,16 +299,16 @@ function run(input_file, get_data) {
 }
 
 //做个下简易的验证  大小 格式
-$('#avatarInput').on('change', function(e) {
+$('#avatarInput').on('change', function (e) {
     var filemaxsize = 1024 * 5;//5M
     var target = $(e.target);
     var Size = target[0].files[0].size / 1024;
-    if(Size > filemaxsize) {
+    if (Size > filemaxsize) {
         alert('图片过大，请重新选择!');
         $(".avatar-wrapper").children().remove;
         return false;
     }
-    if(!this.files[0].type.match(/image.*/)) {
+    if (!this.files[0].type.match(/image.*/)) {
         alert('请选择正确的图片!')
     } else {
         var filename = document.querySelector("#avatar-name");
@@ -316,7 +326,7 @@ function uploadImg() {
     html2canvas(img_lg, {
         allowTaint: true,
         taintTest: false,
-        onrendered: function(canvas) {
+        onrendered: function (canvas) {
             canvas.id = "mycanvas";
             //生成base64图片数据
             var dataUrl = canvas.toDataURL("image/jpeg");
@@ -342,7 +352,7 @@ function imagesAjax(src) {
 }
 $(function () {
     //  自动触发 编辑头像的 移动事件
-    $(".avatar-wrapper").hover(function(){
+    $(".avatar-wrapper").hover(function () {
         $(".fa-arrows").click();
     })
 })
