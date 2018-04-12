@@ -249,10 +249,6 @@ function showp(){
 			if(numcount==numnow){
 				$(".right").hide();
 				$(".end").show();
-                // $(".end").addClass("current");
-                // setInterval(function () {
-                //     $(".end").style.right = "-301px";
-                // },500)
 			}else{
 				$(".end").hide();
 				$(".right").show();
@@ -393,6 +389,12 @@ $(".speak-speed .list").click(function () {
              $(".speak-speed .list .current").html(ht);
              // 处理语速数据
              $(".speak-speed ul").hide();
+             if($("#player_audio").length != 0){
+                 var audio = document.getElementById("player_audio");
+                 var speed = $(this).attr("speed");
+                 audio.playbackRate = parseFloat(speed);
+                 audio.volume=1;
+             }
          })
      })
  }
