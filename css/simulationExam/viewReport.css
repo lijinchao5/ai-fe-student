@@ -63,15 +63,18 @@ body {
     background-color: #11d8fc;
 }
 
+#footer {
+    width: 804px;
+    height: 60px;
+    margin: 1% 0 0 33%;
+    background: transparent;
+}
+
 .go-top {
     position: absolute;
     bottom: 85px;
     right: 20px;
     cursor: pointer;
-}
-
-#footer {
-    margin: 1% 0 0 33%;
 }
 
 #nav,
@@ -223,7 +226,7 @@ body {
 .report-content {
     width: 100%;
     background-image: linear-gradient(to top, #fff, #fbfbfb);
-    margin: 50px  0;
+    margin: 50px 0;
 }
 
 .report-content #report-content {
@@ -276,7 +279,7 @@ body {
 }
 
 .report-content .question-content .subject,
-.report-content .question-content .select span{
+.report-content .question-content .select span {
     color: #333;
 }
 

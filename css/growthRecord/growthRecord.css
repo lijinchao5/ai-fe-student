@@ -62,6 +62,12 @@ body {
     border-radius: 5px;
 }
 
+#footer{
+    width: 804px;
+    height: 60px;
+    margin: 1% 0 0 33%;
+    background: transparent;
+}
 /* 成长记录 顶部按钮 */
 
 #growth-record .record-title {
