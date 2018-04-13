@@ -1,53 +1,70 @@
 /* 妯℃�佹 寮�濮� */
-.sinulation-exam-modal .modal-content{
+.sinulation-exam-modal .modal-content {
     width: 530px;
     height: 310px;
     margin: 150px auto;
     border: none;
+    background: transparent;
+    box-shadow: none;
 }
-.sinulation-exam-modal .modal-content .modal-header{
-    height: 55px;
+
+.sinulation-exam-modal .modal-content .modal-header {
+    width: 494px;
+    height: 140px;
+    background: url("../../images/common/startbg.png") no-repeat center center;
+    background-size: 100% 100%;
     text-align: center;
-    background-color: #355d94;
+    box-shadow: none;
     color: #fff;
-    font-size: 24px;
-    border: none;
+    border-bottom: none;
+    font-size: 30px;
 }
-.sinulation-exam-modal .modal-content .modal-header .modal-title{
-    line-height: 1;
-}
-.sinulation-exam-modal .modal-content .modal-header .close span{
-    color: #fff;
-}
-.sinulation-exam-modal .modal-content .modal-body{
-    /* height: 180px; */
-    margin-top: 40px;
+
+/*.sinulation-exam-modal .modal-content .modal-header .modal-title {*/
+    /*line-height: 1;*/
+/*}*/
+
+/*.sinulation-exam-modal .modal-content .modal-header .close span {*/
+    /*color: #fff;*/
+/*}*/
+
+.sinulation-exam-modal .modal-content .modal-body {
     line-height: 36px;
     text-align: center;
     font-size: 24px;
-    color: #355d94;
+    color: #fff;
+    height: 100px;
+    margin-top: 0;
 }
+
 /*鍐呭鏈夊琛�*/
-.sinulation-exam-modal .modal-content .modal-body .more-line{
+.sinulation-exam-modal .modal-content .modal-body .more-line {
     margin-top: 20px;
     line-height: 30px;
     padding: 30px;
 }
-.sinulation-exam-modal .modal-content .modal-footer{
+
+.sinulation-exam-modal .modal-content .modal-footer {
     width: 380px;
     border: none;
     text-align: center;
-    margin: 0px auto;
+    margin: 0 auto;
+    padding: 0;
 }
-.sinulation-exam-modal .modal-content .modal-footer button{
-    width: 160px;
-    height: 40px;
+
+.sinulation-exam-modal .modal-content .modal-footer button {
+    width: 110px;
+    height: 36px;
+    border-radius: 38px;
     margin-right: 7px;
-    background-color: #355d94;
+    background: url("../../images/common/normal-button.png")no-repeat center center;
+    background-size: 100% 100%;
     font-size: 16px;
     color: #fff;
+    border: none;
+    box-shadow: none;
+    outline:none;
 }
-.sinulation-exam-modal .modal-content .modal-footer .btn-default{
-    background-color: #448aca;
-}
+
+
 /* 妯℃�佹缁撴潫 */

@@ -1,21 +1,12 @@
 .exam-nav {
     width: 275px;
     height: 602px;
-    /*margin: 16px 0 15px 13px;*/
     padding-top: 56px;
     font-size: 16px;
     text-align: center;
     border-radius: 4px;
     background: url("../../images/simulationExam/nav-bg.jpg") no-repeat center center;
     background-size: cover;
-    /*background-color: #00a0e9;*/
-}
-
-.exam-nav .meb-icon img {
-    width: 156px;
-    height: 156px;
-    border-radius: 50%;
-    /*margin-top: 12px;*/
 }
 
 .exam-nav .meb-icon {
@@ -24,9 +15,13 @@
     border: 5px solid #4fc6fc;
     border-radius: 50%;
     margin: 0 auto;
-    /*text-align: center;*/
-    /*background: url('../../images/personInfo/small-meb-icon.png') no-repeat center center;*/
-    /*background-size: cover;*/
+    background-color: #00a0e9;
+}
+
+.exam-nav .meb-icon img {
+    width: 156px;
+    height: 156px;
+    border-radius: 50%;
 }
 
 .exam-nav .exam_userName {
@@ -38,6 +33,8 @@
 .exam-nav .test-number {
     width: 130px;
     color: #eaeaea;
+    text-align: left;
+    padding-left: 6px;
     margin: 30px auto 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eaeaea;
@@ -52,12 +49,7 @@
     font-size: 14px;
     color: #333;
     float: left;
-    /*letter-spacing: 7px;*/
 }
-
-/*.exam-nav .total-time {*/
-    /*letter-spacing: 0;*/
-/*}*/
 
 .exam-nav .remaining {
     float: left;

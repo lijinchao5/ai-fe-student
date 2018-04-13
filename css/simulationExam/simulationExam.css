@@ -1,52 +1,97 @@
-#notice {
-    position: absolute;
+body {
+    color: #999;
+    font-size: 16px;
+    min-height: 748px;
+    padding: 0;
+}
+
+#header {
     width: 100%;
-    /*height: 100%;*/
-    /*min-height: 768px;*/
-    background: url("../../images/common/background.jpg") no-repeat center;
+    height: 76px;
+    background: #fff;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    /*min-height: 687px;*/
+    background: url("../../images/common/background.jpg") no-repeat center center;
     background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#notice {
+    width: 1200px;
+    height: 620px;
+}
+
+#footer {
+    width: 804px;
+    height: 60px;
+    margin: 1% 0 0 33%;
+    background: transparent;
 }
 
 #nav, #nav1 {
     width: 275px;
-    /*height: 602px;*/
+    height: 602px;
 }
 
-#notice > div {
+#notice .wrap {
     width: 1200px;
-    /*margin: 0 auto;*/
-}
-
-.wrap {
-    /*position: absolute;*/
-    /*left: 83px;*/
-    /*top: 98px;*/
-    width: 1250px;
     height: 602px;
     min-width: 1200px;
     min-height: 600px;
-    margin: 26px auto;
+    margin: 17px auto 0;
     background: #fff;
     border-radius: 8px;
 }
 
 .student-notice .title {
     height: 100px;
-    line-height: 100px;
+    line-height: 225px;
     text-align: center;
-    font-size: 24px;
-    color: #004098;
+    font-size: 30px;
+    color: #00a0e9;
 }
 
 .student-notice .content {
-    margin: 0px 200px;
-}
-
-.student-notice .content p {
-    color: #666;
+    width: 750px;
+    height: 300px;
+    margin: 65px auto 0;
+    padding: 0 20px 20px;
     line-height: 26px;
     font-size: 16px;
-    margin-bottom: 12px;
+    color: #666;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.student-notice .content::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.student-notice .content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.student-notice .content::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
 }
 
 .student-notice .next {
@@ -63,10 +108,11 @@
     background: url("../../images/common/normal-button.png") no-repeat center center;
     cursor: pointer;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: 50%;
     margin-left: -55px;
 }
+
 .student-notice .next:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
 }
@@ -90,7 +136,7 @@
     padding: 50px 100px;
 }
 
-.content-bg .content-in .title p {
+.content-bg .content-in .title {
     width: 100%;
     height: 150px;
     text-align: center;
@@ -112,7 +158,7 @@
 }
 
 .content-bg .content-in .main .description {
-    height:60px;
+    height: 60px;
     line-height: 70px;
     font-size: 24px;
     color: #333;
@@ -201,10 +247,10 @@
 }
 
 /*.content-bg .content-in .main .fr img {*/
-    /*display: inline-block;*/
-    /*width: 187px;*/
-    /*height: 189px;*/
-    /*margin-top: 70px;*/
+/*display: inline-block;*/
+/*width: 187px;*/
+/*height: 189px;*/
+/*margin-top: 70px;*/
 /*}*/
 
 .content-bg .content-in .main .volume {
@@ -287,13 +333,13 @@
 /* volume bar end */
 .content-bg .content-in .main .finish {
     display: block;
-    width: 145px;
-    height: 37px;
-    line-height: 37px;
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
     text-align: center;
     font-size: 16px;
     color: #fff;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     margin-top: 80px;
     cursor: pointer;
 }
@@ -311,7 +357,7 @@
     width: 914px;
     height: 602px;
     position: absolute;
-    top:0;
+    top: 0;
     left: 285px;
     background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
     background-size: 100% 100%;
@@ -320,7 +366,6 @@
 
 .start-answer {
     height: 595px;
-    /*background-color: #fff;*/
 }
 
 .prepare-exam-exam {
@@ -346,8 +391,8 @@
 
 .prepare-exam .start-answer {
     display: block;
-    width: 134px;
-    height: 38px;
+    width: 110px;
+    height: 36px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
     border-radius: 38px;
@@ -355,7 +400,7 @@
     border: none;
     color: #fff;
     text-align: center;
-    line-height: 39px;
+    line-height: 36px;
     margin: 116px auto;
     font-size: 18px;
     cursor: pointer;
@@ -370,13 +415,11 @@
 }
 
 #notice .wrap:first-of-type {
-    /*display: block;*/
     position: relative;
     padding-bottom: 70px;
     height: 100%;
     min-height: 620px;
     background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
-    background-color: #fff;
     border-radius: 4px;
 }
 
@@ -385,13 +428,14 @@
     background-color: transparent;
     position: relative;
 }
+
 #notice .student-notice,
 #notice .content-bg {
     background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
-    background-color: #fff;
     background-size: 100% 100%;
     border-radius: 4px;
 }
+
 .start-exam .exam-title::after {
     content: "";
     display: block;
@@ -403,7 +447,6 @@
     height: 602px;
     overflow: hidden;
     background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
-    background-color: #fff;
     background-size: 100% 100%;
     border-radius: 4px;
 
@@ -626,10 +669,10 @@
 
 .start-exam .start-answer .submit-papers {
     display: none;
-    width: 148px;
-    height: 39px;
+    width: 110px;
+    height: 36px;
     margin: 26px auto 0;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
     border-radius: 5px;
     outline: none;
@@ -724,7 +767,7 @@
     width: 330px;
     top: 140px;
     left: 40px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .content-bg .content-in .main .djs .countdown {
@@ -741,7 +784,6 @@
 .content-bg .content-in .main .djs .layui-progress-bar {
     position: relative;
 }
-
 
 /*做题页面的录音进度条*/
 .djs {
@@ -762,7 +804,7 @@
 }
 
 #ytdt {
-    margin:60px 0 0 -45px;
+    margin: 60px 0 0 -45px;
     color: #00a0e9;
 }
 
@@ -798,10 +840,6 @@
     color: #004098;
 }
 
-.record-fail .modal-body p {
-    margin-top: 50px;
-}
-
 /* 下一步按钮的模态框/ */
 .next-modal .modal-content {
     width: 490px;
@@ -822,7 +860,8 @@
     text-align: center;
     font-size: 16px;
 }
-.modal-content .modal-header p{
+
+.modal-content .modal-header p {
     color: #fff;
     font-size: 24px;
     font-weight: 600;
@@ -839,11 +878,13 @@
     margin-top: 50px;
     text-align: center;
 }
+
 .modal-content .modal-body img {
     display: inline-block;
     width: 187px;
     height: 189px;
 }
+
 /*.modal-content .modal-body p {
 }*/
 
@@ -864,8 +905,11 @@
 
 .modal-content .modal-footer .btn-default,
 .modal-content .modal-footer .btn-primary {
-    outline: none;
+    /*outline: none;*/
+    /*border: none;*/
     box-shadow: none;
+    width: 110px;
+    height: 36px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
 }
 
@@ -878,3 +922,36 @@
     background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
+.record-fail {
+
+}
+
+.record-fail .modal-content {
+    width: 530px;
+    height: 310px;
+    margin: 150px auto;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.record-fail .modal-content .modal-header {
+    width: 494px;
+    height: 140px;
+    background: url("../../images/common/startbg.png") no-repeat center center;
+    background-size: 100% 100%;
+    text-align: center;
+    box-shadow: none;
+    color: #fff;
+    border-bottom: none;
+    font-size: 30px;
+}
+
+.record-fail .modal-content .modal-body {
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    height: 100px;
+    margin-top: 0;
+}

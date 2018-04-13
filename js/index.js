@@ -42,6 +42,9 @@ $(function () {
         }
         localStorage.setItem("userInfo", JSON.stringify(user));
         $("#indexusername").text(user.name);
+        if (user.name == "" || user.name == null) {
+            $("#indexusername").text("尚未设置昵称");
+        }
         if (null == user.photo || "" == user.photo) {
             $("#indexphoto").attr("src", "../images/common/l-meb-icon.png")
         } else {

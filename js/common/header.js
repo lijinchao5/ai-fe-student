@@ -2,12 +2,15 @@ $(function() {
     //获取用户信息
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#username").text(data.name);
+    if (data.name == "" || data.name == null) {
+        $("#username").text("尚未设置昵称");
+    }
     if (null == data.photo || "" == data.photo) {
         $("#photo").attr("src", "../../images/common/l-meb-icon.png")
     } else {
         $("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }
-    initWebSocket(data.id)
+    initWebSocket(data.id);
         //百度统计
     var _hmt = _hmt || [];
 

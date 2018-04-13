@@ -14,28 +14,28 @@
 <body>
 <div class="sinulation-exam-modal">
     <!-- 是否可以清晰听到播放的原音？  -->
-    <div style="visibility: hidden;">
-	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".fundamental-one" id="buttontip">是否可以清晰听到播放的原音</button>
-	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".record-fail" id="buttontsubtj" onclick="subtj();">提交试卷</button>
+    <div style="visibility: hidden">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".fundamental-one" id="buttontip">
+            是否可以清晰听到播放的原音
+        </button>
+        
     </div>
-    <div class="modal fade fundamental-one" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal fade fundamental-one" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">AI英语听说机考客户端</h4>
-                </div>
+                <div class="modal-header"></div>
                 <div class="modal-body">
-                    <p>请确定您的录音播放音量大小是否调至合适位置，点击确定完成测试语音，点击取消返回重新试音</p>
+                    <p>可以清晰地听到录音么？</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" onclick="nextwrap('exam-first');" data-dismiss="modal">确定</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetplay();">取消</button>
+                    <button type="button" class="btn btn-default" onclick="nextwrap('exam-first');" data-dismiss="modal">是</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetplay();">否</button>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
 
 </body>

@@ -2,6 +2,9 @@ $(function () {
     //获取用户信息
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#username1").text(data.name);
+    if (data.name == "" || data.name == null) {
+        $("#username1").text("尚未设置昵称").css("font-size", "16px")
+    }
     $("#studentNum").text(data.nameNum);
     if (null == data.photo || "" == data.photo) {
         $("#photo1").attr("src","../../images/common/l-meb-icon.png")
