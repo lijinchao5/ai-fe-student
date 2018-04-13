@@ -2,7 +2,9 @@ $(function() {
     //获取用户信息
     var data = JSON.parse(localStorage.getItem("userInfo"));
     $("#username").text(data.name);
-    if (null == data.photo || "" == data.photo) {} else {
+    if (null == data.photo || "" == data.photo) {
+        $("#photo").attr("src", "../../images/common/l-meb-icon.png")
+    } else {
         $("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }
     initWebSocket(data.id)
@@ -45,11 +47,10 @@ function initWebSocket(userId) {
                 $("#dialogButton").attr("data-toggle1", "0");
                 $("#dialogButton").click();
             } else {
-                var text = $("#dialog_content").text();
+                //var text = $("#dialog_content").text();
                 $("#dialog_content").append("<p>" + msg.data + "</p>");
                 // $("#dialog_content").text(text + msg.data);
             }
-
         };
         // 关闭事件
         socket.onclose = function() {

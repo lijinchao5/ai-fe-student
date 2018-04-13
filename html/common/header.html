@@ -29,7 +29,10 @@
                 <div class="modal fade exits" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
+                            <div class="modal-header" id="exit-header"></div>
                             <div class="modal-body">
+                                <img class="exit-eyes" src="../../images/common/exit-eyes.png"/>
+                                <p class="exit-text">确定要退出吗？</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn" data-dismiss="modal" onclick="logout()">确定</button>
@@ -39,11 +42,12 @@
                     </div>
                 </div>
 
-                <a data-toggle="modal" data-toggle1="1" data-target=".exits1" class="exit-button" style="display: none;" id="dialogButton"></a>
+                <a class="exit-button" id="dialogButton" style="display: none;" data-toggle="modal" data-toggle1="1" data-target=".exits1"></a>
                 <div class="modal fade exits1" tabindex="-1"  data-backdrop="static">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="modal-body">
+                            <div class="modal-header" id="exit1-header"></div>
+                            <div class="modal-body" >
                                 <p id="dialog_content"></p>
                             </div>
                             <div class="modal-footer">

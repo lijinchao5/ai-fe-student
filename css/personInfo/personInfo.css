@@ -346,8 +346,7 @@ body {
     width: 110px;
     height: 36px;
     font-size: 16px;
-    margin: 10px auto 0;
-    /*line-height: 37px;*/
+    margin: 0 auto;
     color: #fff;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
@@ -413,7 +412,6 @@ body {
 
 /*学校信息部分*/
 #personInfo .school-message {
-    /*margin-top: 25px;*/
     user-select: none;
 }
 
@@ -448,7 +446,7 @@ body {
     height: 51px;
     border: none;
     border-radius: 5px;
-    background-color: #eeeeee;
+    background-color: #eee;
     font-size: 16px;
     font-weight: 300;
     color: #999;
@@ -467,7 +465,7 @@ body {
     margin-left: 0;
     border: none;
     border-radius: 5px;
-    background-color: #eeeeee;
+    background-color: #eee;
     font-size: 16px;
     font-weight: 300;
     color: #999;
@@ -494,13 +492,19 @@ body {
 
 #myModal {
     width: 526px;
-    height: 500px;
+    height: 300px;
     margin: 200px auto;
 }
 
+#myModal .modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 75px 0 0 0;
+    margin: 0;
+}
+
 #myModal .modal-dialog .modal-content {
-    background: url("../../images/personInfo/changeclass.png") no-repeat center center;
-    background-size: cover;
+    background: transparent;
     box-shadow: none;
     border: none;
 }
@@ -513,18 +517,26 @@ body {
 }
 
 .modal-dialog .modal-header {
+    width: 85%;
+    height: 72px;
+    margin: 0 auto;
+    line-height: 72px;
+    text-align: center;
+    background: url("../../images/personInfo/changeclass.png") no-repeat center center;
+    background-size: 100% 100%;
     border-bottom: none;
 }
 
-/*#personInfo #tabbd #myModal .modal-header button{*/
-/*color: #fff;*/
-/*font-size: 16px;*/
-/*}*/
+#personInfo #tabbd #myModal .modal-header button {
+    color: #fff;
+    font-size: 28px;
+}
+
 .modal-dialog .modal-body {
     font-size: 16px;
     font-weight: 300;
     color: #fff;
-    padding: 49px 0 20px 45px;
+    padding: 15px 0 20px 45px;
 }
 
 .modal-dialog .modal-body .user-msg {
@@ -538,7 +550,7 @@ body {
 }
 
 .modal-dialog .modal-body .user-msg::-webkit-input-placeholder {
-    color: #999;
+    color: #fff;
 }
 
 .change-tips {
@@ -650,7 +662,7 @@ body {
 }
 
 #personInfo #tabbd .user-message .blocks:first-of-type {
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 #personInfo #tabbd .user-message .blocks .toggle-phone,
@@ -718,9 +730,9 @@ body {
 
 #personInfo #tabbd .user-message .login-form p {
     width: 614px;
-    height: 48px;
-    line-height: 48px;
-    font-size: 16px;
+    height: 35px;
+    line-height: 45px;
+    font-size: 14px;
     font-weight: 300;
     text-align: center;
     color: #ff8003;

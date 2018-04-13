@@ -10,6 +10,7 @@ function initUserInfo(){
     $(".number").text(data.nameNum);
     console.log(data);
     if (null == data.photo || "" == data.photo) {
+		$(".exam_photo").attr("src","../../images/common/l-meb-icon.png")
     } else {
         $(".exam_photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }

@@ -90,57 +90,128 @@
 }
 
 /*退出模态框*/
-.top .header-container .exit-button {
+.top .exit-button {
     cursor: pointer;
     padding-left: 7px;
 }
 
-.top .header-container .exit-button:hover {
+.top .exit-button:hover {
     text-decoration: none;
 }
 
-.top .header-container .exit {
+.top .exits {
     background-color: rgba(0, 0, 0, .1);
 }
 
-.header-container .exit .modal-dialog .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -150px;
-    margin-top: 200px;
-    width: 355px;
-    height: 330px;
+.top .exits .modal-dialog {
+    width: 490px;
+    height: 400px;
+    margin-top: 14%;
+}
+
+.top .exits .modal-dialog .modal-content {
     background-color: transparent;
     box-shadow: none;
     border: none;
 }
 
-.header-container .exit .modal-dialog .modal-body {
-    padding: 0;
-    margin: 0 auto;
-    width: 268px;
-    height: 210px;
-    background: url("../../images/common/exit.png");
+.top .exits .modal-dialog .modal-content #exit-header,
+.top .exits1 .modal-dialog .modal-content #exit1-header {
+    width: 490px;
+    height: 136px;
+    background: url("../../images/common/popupbg.png");
     background-size: cover;
-    position: relative;
+    border-bottom: none;
+    padding: 0;
 }
 
-.header-container .exit .modal-dialog .modal-footer {
+.top .exits .modal-dialog .modal-content .modal-body {
+    padding: 0;
+    margin: -35px auto 0;
+    /*position: relative;*/
+    text-align: center;
+}
+
+.top .exits .modal-dialog .modal-body .exit-eyes {
+    width: 131px;
+    height: 52px;
+    border: none;
+    margin: 0;
+}
+
+.top .exits .modal-dialog .modal-body .exit-text,
+.top .exits1 .modal-dialog .modal-body #dialog_content{
+    font-size: 30px;
+    width: 490px;
+    color: #ffffff;
+    display: block;
+    margin-top: -38px;
+    padding: 0 0 0 27px;
+    text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
+}
+
+.top .exits .modal-dialog .modal-footer {
     padding: 15px 0;
-    text-align: left;
+    text-align: center;
     border-top: none;
 }
 
-.header-container .exit .modal-dialog .modal-footer .btn {
-    width: 109px;
-    height: 37px;
+.top .exits .modal-dialog .modal-footer .btn {
+    width: 110px;
+    height: 36px;
     color: #fff;
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
 }
 
-.header-container .exit .modal-dialog .modal-footer .btn:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+.top .exits .modal-dialog .modal-footer .btn:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+}
+
+/*催作业模态框*/
+
+.top .exits1 {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.top .exits1 .modal-dialog {
+    width: 490px;
+    height: 400px;
+    margin-top: 14%;
+}
+
+.top .exits1 .modal-dialog .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.top .exits1 .modal-dialog .modal-content .modal-body {
+    padding: 0;
+    margin: -35px auto 0;
+    text-align: center;
+}
+.top .exits1 .modal-dialog .modal-body #dialog_content{
+    width: 480px;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+.top .exits1 .modal-dialog .modal-footer {
+    padding: 15px 0;
+    text-align: center;
+    border-top: none;
+}
+
+.top .exits1 .modal-dialog .modal-footer .btn {
+    width: 110px;
+    height: 36px;
+    color: #fff;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+}
+
+.top .exits1 .modal-dialog .modal-footer .btn:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 .overLoading {

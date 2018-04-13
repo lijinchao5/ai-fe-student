@@ -43,7 +43,7 @@ $(function () {
         localStorage.setItem("userInfo", JSON.stringify(user));
         $("#indexusername").text(user.name);
         if (null == user.photo || "" == user.photo) {
-
+            $("#indexphoto").attr("src", "../images/common/l-meb-icon.png")
         } else {
             $("#indexphoto").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + user.photo)
         }

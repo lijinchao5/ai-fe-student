@@ -4,7 +4,7 @@ $(function () {
     $("#username1").text(data.name);
     $("#studentNum").text(data.nameNum);
     if (null == data.photo || "" == data.photo) {
-
+        $("#photo1").attr("src","../../images/common/l-meb-icon.png")
     } else {
         $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }

@@ -64,14 +64,17 @@ $(function () {
     $("#username").text(data.name);
     $("#username1").text(data.name);
     if (null == data.photo || "" == data.photo) {
-        $("#photo1").attr("src","../../images/personInfo/xs-meb-icon.png");
-        $("#photo2").attr("src","../../images/personInfo/xs-meb-icon.png");
+        $("#photo1").attr("src","../../images/common/l-meb-icon.png");
+        $("#photo2").attr("src","../../images/common/l-meb-icon.png");
     } else {
         $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
         $("#photo2").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
     }
     $("#user_name").val(data.name);
     $("#mobiles").text(data.mobile);
+    if(data.mobile==null){
+        $("#phone-tips").css("visibility", "hidden");
+    }
     if (data.sex && data.sex == 'M') {
         chSex(0);
     } else {
