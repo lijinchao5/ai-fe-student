@@ -6,7 +6,7 @@ $(function(){
 })
 
 //读取单词
-function readrecord(id,fun){
+function readrecord(id,fun,speed){
 	console.log(id);
 	try {
 		if(id==null||id=="null"){
@@ -34,8 +34,16 @@ function readrecord(id,fun){
 		} catch (e) {
 			//console.log("读取声音大小错误！");
 		}
+
+        document.getElementById("player_audio").volume=1;
+        if(speed){
+            document.getElementById("player_audio").playbackRate = parseFloat(speed);
+        }
+        console.log(document.getElementById("player_audio").playbackRate);
+
 		document.getElementById("player_audio").play();
 		var recordtime= new Date().getTime();
+		console.log("时间"+recordtime);
 		document.getElementById("player_audio").addEventListener('ended', function() {
 			$("#readdiv").remove();
 			if(fun!=undefined)fun(new Date().getTime()-recordtime);

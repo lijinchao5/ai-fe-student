@@ -136,7 +136,9 @@ function readlibrary(isreadflag){
 		}
 		isswitchfunction(false);
 		ishideorshow("play-icon");
-		readrecord(library.audio_path,function(audiotime){
+        // var speeds = $(".speak-speed .list .current").attr("speed");
+        var speeds = $(".speak-speed .list .current").html();
+        readrecord(library.audio_path,function(audiotime){
 			readrecord(ConfigLY.startrecordid,function(){
 				$(".q_restart").hide();
 				$(".play-icon").hide();
@@ -156,7 +158,7 @@ function readlibrary(isreadflag){
 					});
 				},audiotime);
 			});
-		});
+		},speeds);
 	});
 }
 
