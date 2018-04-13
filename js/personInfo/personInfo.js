@@ -1,6 +1,10 @@
 $(function () {
     $('#header').load('../../html/common/header.html');
     $('#footer').load('../../html/common/footer.html');
+    $("#birthDate").attr('placeholder','年-月-日（例：2000-01-05）');
+    $("#user_name").attr('placeholder','请输入2到6个字符');
+    $("#sexSelect .boys img").attr("src","../../images/personInfo/sex0-in.png");
+    $("#sexSelect .girls img").attr("src","../../images/personInfo/sex1.png");
 });
 
 function index() {
@@ -28,16 +32,12 @@ navs();
 // 切换男女
 function chSex(index) {
     if (index == 0) {
-        $('#sexSelect span:eq(' + index + ')').find('img').attr('src', '../../images/personInfo/sex0-in.png');
-        $('#sexSelect span:eq(' + index + ')').css('color', '#333');
-        $('#sexSelect span:eq(' + index + ')').siblings().css('color', '#999');
-        $('#sexSelect span:eq(' + index + ')').siblings().find('img').attr('src', '../../images/personInfo/sex1.png');
+        $('#sexSelect span:eq(' + index + ')').css('color', '#333').find('img').attr('src', '../../images/personInfo/sex0-in.png');
+        $('#sexSelect span:eq(' + index + ')').siblings().css('color', '#999').find('img').attr('src', '../../images/personInfo/sex1.png');
         $("#sex").val("M")
     } else if (index == 1) {
-        $('#sexSelect span:eq(' + index + ')').find('img').attr('src', '../../images/personInfo/sex1-in.png');
-        $('#sexSelect span:eq(' + index + ')').css('color', '#333');
-        $('#sexSelect span:eq(' + index + ')').siblings().css('color', '#999');
-        $('#sexSelect span:eq(' + index + ')').siblings().find('img').attr('src', '../../images/personInfo/sex0.png');
+        $('#sexSelect span:eq(' + index + ')').css('color', '#333').find('img').attr('src', '../../images/personInfo/sex1-in.png');
+        $('#sexSelect span:eq(' + index + ')').siblings().css('color', '#999').find('img').attr('src', '../../images/personInfo/sex0.png');
         $("#sex").val("W");
     }
 }
@@ -61,20 +61,25 @@ $(function () {
     localStorage.setItem("uuid", uuid);
     randomPic();
     var data = JSON.parse(localStorage.getItem("userInfo"));
-    $("#username").text(data.name);
-    $("#username1").text(data.name);
+
     if (null == data.photo || "" == data.photo) {
-        $("#photo1").attr("src","../../images/common/l-meb-icon.png");
-        $("#photo2").attr("src","../../images/common/l-meb-icon.png");
+        $("#photo1").attr("src", "../../images/common/l-meb-icon.png");
+        $("#photo2").attr("src", "../../images/common/l-meb-icon.png");
     } else {
         $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
         $("#photo2").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
     }
+
     $("#user_name").val(data.name);
-    $("#mobiles").text(data.mobile);
-    if(data.mobile==null){
-        $("#phone-tips").css("visibility", "hidden");
+
+    //没有更改名字时
+    $("#username1").text(data.name);
+    if (data.name == "" || data.name == null) {
+        $("#username1").text("尚未设置昵称").css("font-size", "16px")
     }
+
+    $("#mobiles").text(data.mobile);
+
     if (data.sex && data.sex == 'M') {
         chSex(0);
     } else {
@@ -125,13 +130,15 @@ function getStudentInfo() {
         $("#school2").val(user.grade);
         $("#school3").val(user.className);
         $("#school4").val(user.clas_id);
-        console.log(user.clas_id);
+        //console.log(user.clas_id);
 
         if (user.mobile == null) {
             $("#school5").val("您还没有绑定手机号");
         } else {
             $("#school5").val(user.mobile);
             $("#phoneNum").css("background-color", " #11d8fc");
+            $(".link-phone").text("更换手机");
+            $(".link-phone-info").text("更换后原号码" + user.mobile + "不能提供登录和找回密码服务")
         }
         $("#school6").val(user.bookVersion);
         if (user.name_num == null) {
@@ -193,6 +200,24 @@ function updatePassword() {
         }
     });
 }
+
+function reloadUserInfo() {
+    var url = "user/getUserInfo.do";
+    doAjax("get", url, null, function (user) {
+        console.log(user.userName);
+        if (null == user.name || "" == user.name) {
+            if (null == user.mobile || "" == user.mobile) {
+                user.name = user.userName;
+            } else {
+                user.name = user.mobile;
+            }
+        }
+        localStorage.removeItem("userInfo");
+        localStorage.setItem("userInfo", JSON.stringify(user));
+        window.location.reload();
+    });
+}
+
 function subUserInfo() {
     var userName = $.trim($("#user_name").val());
     if (userName == '') {
@@ -207,30 +232,19 @@ function subUserInfo() {
     param.birthDate = $("#birthDate").val();
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
-            alert("操作成功!");
             reloadUserInfo();
-            window.location.reload();
+            alert("操作成功!");
+            $("#sexSelect").find("span img").attr("src","");
+            $("#birthDate").attr('placeholder','');
+            $("#user_name").attr('placeholder','');
+            //window.location.reload();
         } else {
             alert(data.message)
         }
     });
 
 }
-function reloadUserInfo() {
-    var url = "user/getUserInfo.do";
-    doAjax("get", url, null, function (user) {
-        if (null == user.name || "" == user.name) {
-            if (null == user.mobile || "" == user.mobile) {
-                user.name = user.userName;
-            } else {
-                user.name = user.mobile;
-            }
-        }
-        localStorage.removeItem("userInfo");
-        localStorage.setItem("userInfo", JSON.stringify(user));
-        window.location.reload();
-    });
-}
+
 // 更换头像 图片
 function uploadImg1() {
     // 获取 input file 元素

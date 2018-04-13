@@ -113,17 +113,19 @@
                     <div class="set-info">
                         <div>
                             姓名：
-                            <input type="text" placeholder="请输入2到6个字符" name="name" id="user_name">
+                            <input type="text"  name="name" id="user_name">
+                            <!--placeholder="请输入2到6个字符"-->
                             <input type="hidden" name="sex" id="sex">
                         </div>
                         <div id="sexSelect">
                             性别：
-                            <span class="sex"><img src="../../images/personInfo/sex0-in.png"/>我是王子</span>
-                            <span class="sex"><img src="../../images/personInfo/sex1.png"/>我是公主</span>
+                            <span class="sex boys"><img src="" alt="王子"/>我是王子</span>
+                            <span class="sex girls"><img src="" alt="公主"/>我是公主</span>
                         </div>
                         <div>
                             生日：
-                            <input type="text" name="birthDate" id="birthDate" placeholder="年-月-日（例：2000-01-05）">
+                            <input type="text" name="birthDate" id="birthDate" >
+                            <!--placeholder="年-月-日（例：2000-01-05）"-->
                             <!--data-provide="datepicker"-->
                             <!--class="form-control"-->
                             <!--<div class="input-daterange input-group form-control" id="datepicker">-->
@@ -223,7 +225,6 @@
                         </div>
                         <div class="current login-form change-phone" style="display:none">
                             <!-- 绑定手机号 表单 -->
-                            <p id="phone-tips">更换后，原号码<span id="mobiles"></span>不能作为登录和找回</p>
                             <div class="login-form-info">
                                 <span>密码：</span>
                                 <input type="password" id="password1" placeholder="请输入您的密码">

@@ -135,11 +135,6 @@ body {
     vertical-align: middle;
 }
 
-#personInfo .nav-wrap .hd span:nth-of-type(1) img {
-    width: 20px;
-    height: 20px;
-}
-
 #personInfo #tabbd {
     float: left;
     width: 932px;
@@ -235,7 +230,9 @@ body {
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-header {
+    width: 96%;
     padding: 0;
+    height: 50px;
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-header button,
@@ -247,7 +244,9 @@ body {
     padding-right: 15px;
     color: #333;
 }
-
+#personInfo #tabbd .owner-message .modify-info .modal-header button{
+    font-size: 32px;
+}
 #personInfo #tabbd .owner-message .modify-info .modal-body {
     padding: 0 40px;
 }
@@ -403,6 +402,8 @@ body {
 }
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex img {
+    width: 16px;
+    height: 15px;
     margin-right: 15px;
 }
 
@@ -492,13 +493,13 @@ body {
 
 #myModal {
     width: 526px;
-    height: 300px;
+    height: 400px;
     margin: 200px auto;
 }
 
 #myModal .modal-dialog {
-    width: 100%;
-    height: 100%;
+    width: 494px;
+    height: 400px;
     padding: 75px 0 0 0;
     margin: 0;
 }
@@ -514,21 +515,23 @@ body {
     font-size: 24px;
     font-weight: 300;
     color: #fff;
+    line-height: 150px;
 }
 
 .modal-dialog .modal-header {
-    width: 85%;
-    height: 72px;
+    width: 494px;
+    height: 140px;
     margin: 0 auto;
     line-height: 72px;
     text-align: center;
-    background: url("../../images/personInfo/changeclass.png") no-repeat center center;
+    background: url("../../images/common/startbg.png") no-repeat center center;
     background-size: 100% 100%;
     border-bottom: none;
 }
 
 #personInfo #tabbd #myModal .modal-header button {
     color: #fff;
+    line-height: 150px;
     font-size: 28px;
 }
 
@@ -536,7 +539,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     color: #fff;
-    padding: 15px 0 20px 45px;
+    padding: 15px 0 20px 20px;
 }
 
 .modal-dialog .modal-body .user-msg {
@@ -699,7 +702,7 @@ body {
 #personInfo #tabbd .user-message .blocks .link-phone-info,
 #personInfo #tabbd .user-message .blocks .login-psd-info {
     width: 428px;
-    margin-left: 14px;
+    margin-left: 34px;
     line-height: 36px;
     font-size: 14px;
 }
@@ -725,7 +728,7 @@ body {
 #personInfo #tabbd .user-message .login-form {
     width: 614px;
     height: 335px;
-    margin: 0 auto 0;
+    margin: 20px auto 0;
 }
 
 #personInfo #tabbd .user-message .login-form p {
