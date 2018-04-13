@@ -1,16 +1,16 @@
 $(function () {
-    $("body").css("padding-right","0");
+    $("body").css("padding-right", "0");
     $('#header').load('../common/header.html');
     $('#footer').load('../common/footer.html');
     $('#simulation-exam-modal').load('../common/simulationExamModal.html');
-    $('#nav').load('../../html/common/simulationExamNav.html', function () {
+    $('.nav').load('../../html/common/simulationExamNav.html', function () {
         initajax();
     });
-    $('#nav1').load('../../html/common/simulationExamNav.html', function () {
-        initajax();
-    });
-});
 
+});
+function examlist(){
+    window.location.href="../../html/simulationExam/examReport.html";
+}
 var map = new Map();
 function initajax() {
     $("#question-answer").html("");

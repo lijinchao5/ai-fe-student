@@ -17,13 +17,13 @@
 <div class="outs">
     <div class="mains">
         <div id="notice">
+            <!--考生须知-->
             <div class="student-notice wrap" style="display: none;">
                 <div class="title">考生须知</div>
-                <div class="content"  id="ksxzcontent">
-
-                </div>
+                <div class="content"  id="ksxzcontent"></div>
                 <a class="next fr slide" onclick="nextwrap('content-bg')" data-toggle="modal" data-target=".next-modal">下一步</a>
             </div>
+            <!--耳麦测试-->
             <div class="content-bg wrap">
                 <div class="content-in">
                     <div class="title">
@@ -98,8 +98,9 @@
                     </div>
                 </div>
             </div>
+            <!--开始做题-->
             <div class="exam-first wrap">
-                <div id="nav1"></div>
+                <div class="nav"></div>
                 <div id="simulation-exam">
                     <div class="prepare-exam">
                         <div class="paper-name" id="ksname">听力---2014年山东省德州市中考英语真题</div>
@@ -107,7 +108,9 @@
                     </div>
                 </div>
             </div>
+            <!--答题-->
             <div class="start-exam wrap">
+                <div class="nav"></div>
                 <div id="question-content">
                     <div class="djs">
                         <div id="ytdt">倒计时</div>
@@ -265,14 +268,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
-                         aria-hidden="true">
+                    <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header"></div>
                                 <div class="modal-body">
                                     <p>考试已结束，成绩分析预计需要1~2分钟，<br/>稍后请前往模拟考场查看分析报告</p>
-                                    <p><span id="subtj">3</span>秒钟后返回考试列表</p>
+                                    <p class="colofulyellow"><span id="subtj">3</span>秒钟后返回考试列表</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="examlist();" >我知道了</button>
                                 </div>
                             </div>
                         </div>
