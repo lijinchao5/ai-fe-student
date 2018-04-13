@@ -137,7 +137,7 @@ function readlibrary(isreadflag){
 		isswitchfunction(false);
 		ishideorshow("play-icon");
         // var speeds = $(".speak-speed .list .current").attr("speed");
-        var speeds = $(".speak-speed .list .current").html();
+        var speeds = $(".speak-speed .list .current").attr("speed");
         readrecord(library.audio_path,function(audiotime){
 			readrecord(ConfigLY.startrecordid,function(){
 				$(".q_restart").hide();
@@ -388,7 +388,9 @@ $(".speak-speed .list").click(function () {
          // console.log(111)
          $(this).click(function () {
              var ht = $(this).html();
+             var hs = $(this).attr("speed");
              $(".speak-speed .list .current").html(ht);
+             $(".speak-speed .list .current").attr("speed",hs);
              // 处理语速数据
              $(".speak-speed ul").hide();
              if($("#player_audio").length != 0){
