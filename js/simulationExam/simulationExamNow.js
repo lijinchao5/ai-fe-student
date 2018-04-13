@@ -3,13 +3,15 @@ $(function () {
     $('#header').load('../common/header.html');
     $('#footer').load('../common/footer.html');
     $('#simulation-exam-modal').load('../common/simulationExamModal.html');
-    $('.nav').load('../../html/common/simulationExamNav.html', function () {
-        initajax();
+    $('#nav').load('../../html/common/simulationExamNav.html', function () {
+        $('.nav').load('../../html/common/simulationExamNav.html', function () {
+            initajax();
+        });
     });
 
 });
-function examlist(){
-    window.location.href="../../html/simulationExam/examReport.html";
+function examlist() {
+    window.location.href = "../../html/simulationExam/examReport.html";
 }
 var map = new Map();
 function initajax() {
