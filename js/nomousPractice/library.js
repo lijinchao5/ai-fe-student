@@ -268,7 +268,9 @@ function submitend(){
 	ajaxAsync("post", url, param, function (data) {
 		//console.log(data);
 		var enddate=format(new Date(data.updateDate),"yy/mm/dd HH:mm");
+		console.log("找成绩"+data.score);
 		$("#endtime").html("20"+enddate);
+		$(".free-practice-result .num").html(Math.round(data.score));
 		$("#endaccuracy").val(data.pronunciation);
 		$("#endfluency").val(data.fluency);
 		$("#endintegrity").val(data.integrity);
