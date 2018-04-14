@@ -68,3 +68,10 @@ function resetplay() {
 function ok() {
     $("#buttontip").click();
 }
+
+function audiostop(){
+    $("#lyhf").attr("onclick", "stopaudio()");
+    readrecord("lib", function(audiotime) {
+        $("#lyhf").attr("onclick", "palyaudio()");
+    });
+}
