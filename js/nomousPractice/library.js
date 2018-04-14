@@ -264,16 +264,19 @@ function submitend(){
 	
 	var param = {};
 	param.articleId=getParam("id");
+	console.log(param.articleId);
 	var url = "exercise/submitExercise.do";
 	ajaxAsync("post", url, param, function (data) {
-		//console.log(data);
 		var enddate=format(new Date(data.updateDate),"yy/mm/dd HH:mm");
-		console.log("找成绩"+data.score);
 		$("#endtime").html("20"+enddate);
+		var pronunciation = data.pronunciation;
+		var fluency = data.fluency;
+		var integrity = data.integrity;
+        radarMap(pronunciation,fluency,integrity,30,"radar-score");
 		$(".free-practice-result .num").html(Math.round(data.score));
-		$("#endaccuracy").val(data.pronunciation);
-		$("#endfluency").val(data.fluency);
-		$("#endintegrity").val(data.integrity);
+		// $("#endaccuracy").val(data.pronunciation);
+		// $("#endfluency").val(data.fluency);
+		// $("#endintegrity").val(data.integrity);
 		if(data.score<80){
 			$(".score70").show();
 		}else if(data.score>79&&data.score<90){
