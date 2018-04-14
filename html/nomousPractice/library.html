@@ -97,6 +97,10 @@
                         </div>
 
                     </div>
+                    <!-- 雷达图 -->
+                    <div class="part-radars">
+                        <p id="rscore"></p>
+                    </div>
                     <!-- 旋转木马 结束 -->
                     <div class="nomous-practice-btn">
                         <!-- 播放图标 -->
@@ -138,6 +142,7 @@
                 </button>
                 </div>
 
+                <!-- 进入时候的模态框 -->
                 <div class="modal fade bs-example-modal-lg ready-go" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
@@ -233,7 +238,7 @@
         </div>
         <div class="library-point">
             <div class="sentences-degree clearfix">
-                <div class={dataid} style="height: 120px;width: 150px;"></div>
+                <!--<div class={dataid} style="height: 120px;width: 150px;"></div>-->
             </div>
         </div>
     </div>
@@ -242,7 +247,7 @@
 <script>
 
 
-    radarMap(0,0,0,30,"radar-map");
+//    radarMap(0,0,0,30,"radar-map");
 
     function radarMap(pronunciation,fluency,integrity,size,className){
         var dom = document.getElementsByClassName(className)[0];

@@ -226,7 +226,7 @@ body {
 /* 鏃嬭浆鏈ㄩ┈ */
 .library-content .carousel .carousel-inner {
     margin-top: 20px;
-    /*height: 240px;*/
+    height: 290px;
     /*border: 1px solid #ccc;*/
 }
 
@@ -247,8 +247,6 @@ body {
     padding-right: 30px;
     text-align: justify;
     margin: 10px 0 10px;
-    background-color: #ccc;
-    /*position: relative;*/
     display: flex;
     align-items: center;
     justify-items: center;
@@ -295,21 +293,35 @@ body {
 .library-content .carousel .carousel-control {
     height: 0;
     top: 50%;
-    margin-top: -75px;
+    margin-top: 15px;
 }
-
-/* btn */
+/* 雷达图 */
+.library-content .part-radars {
+    float: right;
+    width: 150px;
+    height: 120px;
+    margin: 30px 100px 0 0;
+}
+.library-content .part-radars div{
+    width: 100px;
+    height: 100px;
+    /*background: #abf;*/
+    /*display: none;*/
+}
 .library-content .nomous-practice-btn {
     width: 330px;
-    margin: -110px auto 0;
+    height: 50px;
+    margin: 60px auto 0;
     /*border: 1px solid #ccc;*/
     position: relative;
 }
-
+.library-content .nomous-practice-btn .speed {
+    padding-top: 26px;
+}
 .library-content .nomous-practice-btn .play-icon {
     border-radius: 0%;
     margin-left: 108px;
-    margin-top: 20px;
+    padding-top: 10px;
 }
 
 /* 录音中 */
@@ -333,11 +345,11 @@ body {
 
 .library-content .nomous-practice-btn .play {
     display: inline-block;
-    width: 110px;
+    width: 100px;
     height: 38px;
     border-radius: 40px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    margin: 40px 26px 0;
+    margin: 14px 26px 0;
     color: #fff;
     line-height: 38px;
 }

@@ -83,6 +83,8 @@ function initDataAll(id){
 			}
 			var html = formatTemplate(library, $("#libraryscript").html());
 			$("#carousel-inner").append(html);
+            var radarhtml = '<div class="'+library.dataid+'" style="height: 120px;width: 150px;"></div>';
+            $("#rscore").append(radarhtml);
 			// 处理 雷达图
             radarMap(library.pronunciation,library.fluency,library.integrity,30,library.dataid);
 			//处理分数
@@ -234,12 +236,17 @@ function showp(){
 		$(this).attr("class","part-score");
 		$(this).html($(this).attr("data"));
 	})
+    $("#rscore > div").each(function(){
+        $(this).css("display","none")
+    })
 	$("#carousel-inner .item").each(function(i,v){
 		var classname=$(this).attr("class");
 		if(classname=="item active"){
 			var objspan=$("#pscore span").eq(i);
 			objspan.addClass("current");
-			objspan.html("");
+            objspan.html("");
+            var radardiv=$("#rscore > div").eq(i);
+            radardiv.css("display","block");
 			$("#numnow").html(i+1);
 			var numnow=$("#numnow").html();
 			var numcount=$("#numcount").html();
