@@ -12,6 +12,7 @@ $(function () {
 });
 function examlist() {
     window.location.href = "../../html/simulationExam/examReport.html";
+    $(".record-fail").modal("show")
 }
 var map = new Map();
 function initajax() {
@@ -24,6 +25,7 @@ function initajax() {
         var examStudentInfo = data.examStudentInfo;
         var paperInfo = data.paperInfo;
         $("#ksname").html(examDetail.name);
+        //考生须知
         $("#ksxzcontent").html(examDetail.notice);
         totalTime = paperInfo.totalTime;
         setmmssTime("total-time", totalTime);

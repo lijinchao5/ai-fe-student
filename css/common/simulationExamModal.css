@@ -1,4 +1,15 @@
 /* 妯℃�佹 寮�濮� */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 .sinulation-exam-modal .modal-content {
     width: 530px;
     height: 310px;

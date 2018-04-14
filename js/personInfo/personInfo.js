@@ -179,11 +179,11 @@ function updateMobile() {
     param.mobileRandomStr = $("#messageValue").val();
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
-            alert("操作成功!");
+            alert("设置成功!");
             window.location.reload();
         } else {
             //alert(data.message)
-            alert("操作失败")
+            alert("设置失败")
         }
     });
 }

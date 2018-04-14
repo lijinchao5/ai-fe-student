@@ -5,6 +5,17 @@ body {
     padding: 0;
 }
 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 #header {
     width: 100%;
     height: 76px;
@@ -33,7 +44,7 @@ body {
 
 #notice {
     width: 1200px;
-    height: 620px;
+    height: 605px;
 }
 
 #footer {
@@ -521,7 +532,6 @@ body {
 
 /* 填空题图片样式 */
 .start-exam .start-answer .fill-in {
-    color: green;
     width: 80%;
     margin: 10px 0;
 }
@@ -735,16 +745,12 @@ body {
 }
 
 .start-exam .modal-content .modal-footer .btn {
-    width: 160px;
-    height: 40px;
+    width: 110px;
+    height: 36px;
     margin-right: 7px;
-    background-color: #355d94;
     font-size: 16px;
     color: #fff;
-}
-
-.start-exam .modal-content .modal-footer .btn:hover {
-    background-color: #448aca;
+    outline: none;
 }
 
 .start-exam .start-answer .bar-size::-webkit-scrollbar {
@@ -885,9 +891,6 @@ body {
     height: 189px;
 }
 
-/*.modal-content .modal-body p {
-}*/
-
 .modal-content .modal-footer {
     padding: 50px 0 0 0;
     text-align: center;
@@ -922,10 +925,6 @@ body {
     background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
-.record-fail {
-
-}
-
 .record-fail .modal-content {
     width: 530px;
     height: 310px;
@@ -956,7 +955,7 @@ body {
     margin-top: 0;
 }
 
-.colofulyellow{
+.colofulyellow {
     margin-top: 15px;
     color: #eefd00;
     font-size: 14px;

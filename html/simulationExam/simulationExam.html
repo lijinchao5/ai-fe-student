@@ -20,7 +20,7 @@
             <!--考生须知-->
             <div class="student-notice wrap" style="display: none;">
                 <div class="title">考生须知</div>
-                <div class="content"  id="ksxzcontent"></div>
+                <div class="content" id="ksxzcontent"></div>
                 <a class="next fr slide" onclick="nextwrap('content-bg')" data-toggle="modal" data-target=".next-modal">下一步</a>
             </div>
             <!--耳麦测试-->
@@ -268,7 +268,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".record-fail" id="recordFail" style="visibility: hidden" onclick="subtj()">
+                       提交试卷
+                    </button>
+                    <div class="modal fade record-fail" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+                         aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header"></div>
@@ -277,7 +281,9 @@
                                     <p class="colofulyellow"><span id="subtj">3</span>秒钟后返回考试列表</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="examlist();" >我知道了</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                            onclick="examlist();">我知道了
+                                    </button>
                                 </div>
                             </div>
                         </div>
