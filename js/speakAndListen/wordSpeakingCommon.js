@@ -89,7 +89,13 @@ function sendform(par){
 			jsonobjtmp.studentText=newhtml;
 			map.put("data"+par.sectionId,jsonobjtmp);
 		}else if(jsonobjtmp.homeworkType=="1"){
-			var newhtml=CalculationScoreword(jsonobjtmp.standerText,score);
+            var newhtml= "";
+			if((jsonobjtmp.standerText).indexOf("b class")>0){
+                var standerText=$(jsonobjtmp.standerText).text();
+                newhtml=CalculationScoreword(standerText,score);
+			}else{
+                newhtml=CalculationScoreword(jsonobjtmp.standerText,score);
+			}
 			$("div[data='data"+par.sectionId+"'] .text").html(newhtml);
 			jsonobjtmp.studentText=newhtml;
 			map.put("data"+par.sectionId,jsonobjtmp);
@@ -139,11 +145,11 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 function CalculationScoreword(word,score){
 	var html="";
 	if(score<60){
-		html+="<b class='red'>"+word+"</b>";
+		html="<b class='red'>"+word+"</b>";
 	}else if(score>=60&&score<=85){
-		html+="<b class='orange'>"+word+"</b>";
+		html="<b class='orange'>"+word+"</b>";
 	}else if(score>85){
-		html+="<b class='green'>"+word+"</b>";
+		html="<b class='green'>"+word+"</b>";
 	}
 	return html;
 }
