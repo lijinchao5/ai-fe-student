@@ -23,7 +23,6 @@ html, body {
     height: 90px;
     line-height: 70px;
     background-color: #fff;
-    background-color: #fff;
     border-bottom: 27px solid transparent;
     border-image: url("../images/index/top-bottom.png") 0 0 27 0 stretch;
     color: #00a0e9;
@@ -36,7 +35,7 @@ html, body {
     height: 47px;
     margin-top: 10px;
     user-select: none;
-    background: url("../images/index/index.png") no-repeat 0px 0px;
+    background: url("../images/index/index.png") no-repeat 0 0;
 }
 
 .top .left:after {
@@ -48,7 +47,7 @@ html, body {
     line-height: 63px;
     margin-left: 20px;
     user-select: none;
-    background: url("../images/index/index.png") no-repeat 0px -50px;
+    background: url("../images/index/index.png") no-repeat 0 -50px;
 }
 
 .top .fl p {
@@ -102,57 +101,148 @@ html, body {
 }
 
 /*退出模态框*/
-.top .header-container .exit-button {
+.top .exit-button {
+    cursor: pointer;
     padding-left: 7px;
 }
 
-.top .header-container .exit-button:hover {
+.top .exit-button:hover {
     text-decoration: none;
 }
 
-.top .header-container .exit {
+.top .exits {
     background-color: rgba(0, 0, 0, .1);
 }
 
-.top .exit .modal-dialog .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -150px;
-    margin-top: 200px;
-    width: 355px;
-    height: 330px;
+.top .exits .modal-dialog {
+    width: 490px;
+    height: 400px;
+    margin-top: 14%;
+}
+
+.top .exits .modal-dialog .modal-content {
     background-color: transparent;
     box-shadow: none;
     border: none;
 }
 
-.top .exit .modal-dialog .modal-body {
-    padding: 0;
-    margin: 0 auto;
-    width: 268px;
-    height: 210px;
-    background: url("../images/common/exit.png");
+.top .exits .modal-dialog .modal-content #exit-header,
+.top .exits1 .modal-dialog .modal-content #exit1-header {
+    width: 494px;
+    height: 136px;
+    background: url("../images/common/startbg.png");
     background-size: cover;
-    position: relative;
+    border-bottom: none;
+    padding: 0;
 }
 
-.top .exit .modal-dialog .modal-footer {
+.top .exits .modal-dialog .modal-content .modal-body {
+    padding: 0;
+    margin: -35px auto 0;
+    text-align: center;
+}
+
+.top .exits .modal-dialog .modal-body .exit-eyes {
+    width: 131px;
+    height: 52px;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+}
+
+.top .exits .modal-dialog .modal-body .exit-text,
+.top .exits1 .modal-dialog .modal-body #dialog_content{
+    font-size: 30px;
+    width: 494px;
+    color: #ffffff;
+    display: block;
+    margin-top: -29px;
+    padding: 0 0 0 27px;
+    text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
+}
+
+.top .exits .modal-dialog .modal-footer {
     padding: 15px 0;
-    text-align: left;
+    text-align: center;
     border-top: none;
 }
 
-.top .exit .modal-dialog .modal-footer .btn {
-    width: 109px;
-    height: 37px;
+.top .exits .modal-dialog .modal-footer .btn {
+    width: 110px;
+    height: 36px;
     color: #fff;
-    background: url("../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../images/common/normal-button.png") no-repeat center center;
 }
 
-.top .exit .modal-dialog .modal-footer .btn:hover {
-    background: url("../images/common/hover-set-meb-icon.png") no-repeat center center;
+.top .exits .modal-dialog .modal-footer .btn:hover {
+    background: url("../images/common/hover-button.png") no-repeat center center;
 }
+
+/*催作业模态框*/
+
+.top .exits1 {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.top .exits1 .modal-dialog {
+    width: 494px;
+    height: 400px;
+    margin-top: 14%;
+}
+
+.top .exits1 .modal-dialog .modal-content {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.top .exits1 .modal-dialog .modal-content .modal-body {
+    padding: 0;
+    margin: -35px auto 0;
+    text-align: center;
+}
+.top .exits1 .modal-dialog .modal-body #dialog_content{
+    width: 480px;
+    word-wrap:break-word;
+    word-break:break-all;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
+}
+
+.top .exits1 .modal-dialog .modal-footer {
+    padding: 15px 0;
+    text-align: center;
+    border-top: none;
+}
+
+.top .exits1 .modal-dialog .modal-footer .btn {
+    width: 110px;
+    height: 36px;
+    color: #fff;
+    background: url("../images/common/normal-button.png") no-repeat center center;
+}
+
+.top .exits1 .modal-dialog .modal-footer .btn:hover {
+    background: url("../images/common/hover-button.png") no-repeat center center;
+}
+
+
 
 /* 内容区域 */
 
@@ -214,6 +304,7 @@ html, body {
     background: url("../images/index/11.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(239, 129, 24);
 }
+
 .content .bottom-bg li.first.webp {
     background: url("../images/index/11.webp") no-repeat center center;
 }
@@ -222,6 +313,7 @@ html, body {
     background: url("../images/index/22.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(231, 51, 170);
 }
+
 .content .bottom-bg li.second.webp {
     background: url("../images/index/22.webp") no-repeat center center;
 }
@@ -230,6 +322,7 @@ html, body {
     background: url("../images/index/33.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(127, 231, 43);
 }
+
 .content .bottom-bg li.third.webp {
     background: url("../images/index/33.webp") no-repeat center center;
 }
@@ -238,6 +331,7 @@ html, body {
     background: url("../images/index/44.jpg") no-repeat center center;
     box-shadow: 0 0 30px rgb(238, 235, 8);
 }
+
 .content .bottom-bg li.last.webp {
     background: url("../images/index/44.webp") no-repeat center center;
 }
@@ -316,6 +410,7 @@ html, body {
     left: 50%;
     margin-left: -458px;
 }
+
 .content .thin .nomal .blod .blod-image.webp {
     background: url("../images/index/qiuqiu.webp") no-repeat center top;
 }
@@ -362,6 +457,7 @@ html, body {
         opacity: 0;
     }
 }
+
 .content .starb {
     position: absolute;
     bottom: 71%;
@@ -419,6 +515,7 @@ html, body {
         opacity: 1;
     }
 }
+
 .content .star-one {
     position: absolute;
     top: 16%;
@@ -432,6 +529,7 @@ html, body {
     -webkit-animation: sider 3s infinite linear; /* Safari and Chrome */
     -o-animation: sider 3s infinite linear; /* Opera */
 }
+
 .content .star-two {
     position: absolute;
     bottom: 50%;
@@ -445,6 +543,7 @@ html, body {
     -webkit-animation: starsml 4s infinite linear; /* Safari and Chrome */
     -o-animation: starsml 4s infinite linear; /* Opera */
 }
+
 .content .star-three {
     position: absolute;
     top: 90%;
@@ -458,6 +557,7 @@ html, body {
     -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
     -o-animation: stars 3s infinite linear; /* Opera */
 }
+
 .content .star-four {
     position: absolute;
     top: 60%;
@@ -471,6 +571,7 @@ html, body {
     -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
     -o-animation: starsml 2s infinite linear; /* Opera */
 }
+
 .content .star-five {
     position: absolute;
     bottom: 80%;
@@ -484,6 +585,7 @@ html, body {
     -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
     -o-animation: starsml 2s infinite linear; /* Opera */
 }
+
 .content .star-six {
     position: absolute;
     bottom: 37%;
@@ -497,6 +599,7 @@ html, body {
     -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
     -o-animation: stars 3s infinite linear; /* Opera */
 }
+
 .content .star-seven {
     position: absolute;
     bottom: 17%;
@@ -510,6 +613,7 @@ html, body {
     -webkit-animation: starsml 2s infinite linear; /* Safari and Chrome */
     -o-animation: starsml 2s infinite linear; /* Opera */
 }
+
 .content .star-eight {
     position: absolute;
     bottom: 1%;
@@ -523,6 +627,7 @@ html, body {
     -webkit-animation: sider 3s infinite linear; /* Safari and Chrome */
     -o-animation: sider 3s infinite linear; /* Opera */
 }
+
 .content .star-nine {
     position: absolute;
     top: 50%;
@@ -536,6 +641,7 @@ html, body {
     -webkit-animation: starsml 4s infinite linear; /* Safari and Chrome */
     -o-animation: starsml 4s infinite linear; /* Opera */
 }
+
 .content .star-ten {
     position: absolute;
     top: 11%;
@@ -549,6 +655,7 @@ html, body {
     -webkit-animation: stars 3s infinite linear; /* Safari and Chrome */
     -o-animation: stars 3s infinite linear; /* Opera */
 }
+
 @keyframes sidel {
     0% {
         transform: scale(0.6) translate(50px, -50px);
@@ -567,6 +674,7 @@ html, body {
         opacity: 0;
     }
 }
+
 @keyframes sider {
     0% {
         transform: scale(0.6) translate(50px, -50px);
@@ -585,7 +693,8 @@ html, body {
         opacity: 0.8;
     }
 }
-@keyframes starsml {  /* 2 */
+
+@keyframes starsml { /* 2 */
     0% {
         transform: scale(0.4);
         opacity: 0;
@@ -636,6 +745,7 @@ html, body {
         transform: rotate(0deg) scale(0.9);
     }
 }
+
 .content .ball1 {
     position: absolute;
     top: 120px;

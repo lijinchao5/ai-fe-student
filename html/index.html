@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!--<meta data-n-head="true" http-equiv="renderer" content="webkit"/>-->
-    <meta data-n-head="true" name="renderer" content="webkit" />
+    <meta data-n-head="true" name="renderer" content="webkit"/>
     <link rel="stylesheet" href="../lib/bootstrap-3.3.7/bootstrap.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/index1.css">
@@ -81,13 +81,17 @@
             </a>
             <p class="fl" id="indexusername"></p>
             <a href="./personInfo/personInfo.html">个人中心</a>
-            <!--退出弹窗-->
+
             <a>|</a>
+            <!--退出弹窗-->
             <a data-toggle="modal" data-target=".exits" class="exit-button">退出</a>
-            <div class="modal fade exits" tabindex="-1" data-backdrop="static">
+            <div class="modal fade exits" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
+                        <div class="modal-header" id="exit-header"></div>
                         <div class="modal-body">
+                            <img class="exit-eyes" src="../images/common/exit.png"/>
+                            <p class="exit-text">确定要退出吗？</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn" data-dismiss="modal" onclick="logout()">确定</button>
@@ -96,19 +100,17 @@
                     </div>
                 </div>
             </div>
-            
-            
-            <a data-toggle="modal" data-toggle1="1" data-target=".exits1" class="exit-button" style="hidden:true;display: none;" id="dialogButton"></a>
-            <div class="modal fade exits1" tabindex="-1" data-backdrop="static">
+
+            <a class="exit-button" id="dialogButton" style="display: none;" data-toggle="modal" data-toggle1="1" data-target=".exits1"></a>
+            <div class="modal fade exits1" tabindex="-1"  data-backdrop="static">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-body">
-                        	<div id="dialog_content">
-
-                            </div>
+                        <div class="modal-header" id="exit1-header"></div>
+                        <div class="modal-body" >
+                            <p id="dialog_content"></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal" onclick="dialogClose();">确定</button>
+                            <button type="button" class="btn" data-dismiss="modal">确定</button>
                         </div>
                     </div>
                 </div>
