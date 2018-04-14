@@ -328,6 +328,7 @@ html, body {
     height: 107px;
     background: url("../images/index/index.png") no-repeat 0px -280px;
     background-size: cover;
+    cursor: default;
     /* css3 动画 */
     animation: rocket 3s infinite linear;
     -moz-animation: rocket 3s infinite linear; /* Firefox */
@@ -610,6 +611,7 @@ html, body {
     width: 97px;
     height: 100px;
     background: url("../images/index/index.png") no-repeat -50px -180px;
+    cursor: default;
     /* css3 动画 */
     animation: astronaut 5s infinite linear;
     -moz-animation: astronaut 5s infinite linear; /* Firefox */
