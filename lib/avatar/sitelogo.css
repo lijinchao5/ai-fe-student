@@ -28,6 +28,9 @@
   clear: left;
   width: 100px;
 }
+.avatar-upload label:hover {
+  color: #00a0e9;
+}
 
 .avatar-upload input {
   display: block;

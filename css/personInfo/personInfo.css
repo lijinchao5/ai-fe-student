@@ -353,7 +353,9 @@ body {
     background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
 }
-
+#personInfo #tabbd .owner-message .modify-info .modal-body .confirm:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+}
 #personInfo #tabbd .owner-message .set-info {
     margin-top: 20px;
 }
