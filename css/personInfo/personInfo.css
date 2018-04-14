@@ -244,9 +244,11 @@ body {
     padding-right: 15px;
     color: #333;
 }
-#personInfo #tabbd .owner-message .modify-info .modal-header button{
+
+#personInfo #tabbd .owner-message .modify-info .modal-header button {
     font-size: 32px;
 }
+
 #personInfo #tabbd .owner-message .modify-info .modal-body {
     padding: 0 40px;
 }
@@ -533,6 +535,16 @@ body {
     color: #fff;
     line-height: 150px;
     font-size: 28px;
+}
+
+#personInfo #tabbd #myModal .close {
+    width: 43px;
+    height: 43px;
+    margin-top: -52px;
+    color: #fff;
+    line-height: 0;
+    font-size: 56px;
+    text-shadow: none;
 }
 
 .modal-dialog .modal-body {
@@ -845,4 +857,48 @@ body {
     font-size: 14px;
     text-align: center;
     color: #333;
+}
+
+#personInfo #tabbd .owner-message .set-info #suremsg {
+    width: 494px;
+    height: 400px;
+    margin: 200px auto;
+}
+
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-dialog {
+    width: 494px;
+}
+
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-dialog,
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-content {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-header {
+    width: 494px;
+    height: 140px;
+}
+
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-title {
+    width: 494px;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
+    font-size: 30px;
+    text-align: center;
+    margin: -40px 0 0 -50px;
+    padding: 0;
+}
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-footer{
+
+
+}
+#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-footer #sure-msg{
+    width: 110px;
+    height: 36px;
+    color: #fff;
+    margin-left:154px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: 100% 100%;
 }

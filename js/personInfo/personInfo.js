@@ -233,7 +233,7 @@ function subUserInfo() {
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
             reloadUserInfo();
-            alert("操作成功!");
+            //alert("操作成功!");
             $("#sexSelect").find("span img").attr("src","");
             $("#birthDate").attr('placeholder','');
             $("#user_name").attr('placeholder','');
