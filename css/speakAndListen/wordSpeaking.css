@@ -335,7 +335,10 @@ body {
     /* flex-direction: column; */
     justify-content: center;
 }
-
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
+    width: 100%;
+    word-break: break-all;
+}
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
     word-wrap: break-word;
 }

@@ -120,7 +120,7 @@ function sendform(par){
 
 //获取评分
 function CalculationScore(homeworkStudentScoreWordEntities){
-	var html="";
+    var html='<div class="text-in">';
 	for(var i=0;i<homeworkStudentScoreWordEntities.length;i++){
 		var wordEntitie=homeworkStudentScoreWordEntities[i];
 		if(wordEntitie.type=="7"){
@@ -139,11 +139,12 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 			}
 		}
 	}
+    html+='</div>';
 	return html;
 }
 
 function CalculationScoreword(word,score){
-	var html="";
+	var html='<div class="text-in">';
 	if(score<60){
 		html="<b class='red'>"+word+"</b>";
 	}else if(score>=60&&score<=85){
@@ -151,6 +152,7 @@ function CalculationScoreword(word,score){
 	}else if(score>85){
 		html="<b class='green'>"+word+"</b>";
 	}
+    html+='</div>';
 	return html;
 }
 
