@@ -49,7 +49,7 @@ function doAjax(type, url, param, successfn) {
             if (data && data != null) {
                 if (data.code == 0 || data.code == '0') {
                     console.log(data.result);
-                    successfn(data.result, data.code);
+                    successfn(data.result, data.code,data.message);
                     showLoading(false)
                 } else {
                     if (data.code == '99998') {
@@ -58,9 +58,9 @@ function doAjax(type, url, param, successfn) {
                         localStorage.removeItem('X-AUTH-TOKEN');
                         window.location.href = getLoginPath()
                     } else {
-                        successfn(data.result, data.code);
-                        //alert(data.message)
                         showLoading(false)
+                        successfn(data.result, data.code,data.message);
+                        //alert(data.message)
                     }
                 }
             } else {
@@ -96,10 +96,10 @@ function ajaxAsync(type, url, param, successfn) {
         beforeSend: function (xhr) {
         },
         success: function (data, textStatus, jqXHR) {
+            console.log(data.result);
             if (data && data != null) {
                 if (data.code == 0 || data.code == '0') {
-                    console.log(data.result);
-                    successfn(data.result, data.code)
+                    successfn(data.result, data.code,data.message)
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
@@ -107,8 +107,8 @@ function ajaxAsync(type, url, param, successfn) {
                         localStorage.removeItem('X-AUTH-TOKEN');
                         window.location.href = getLoginPath()
                     } else {
-                        successfn(data.result, data.code);
-                        //alert(data.message)
+                        alert(data.message)
+                        successfn(data.result, data.code,data.message);
                     }
                 }
             } else {

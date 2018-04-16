@@ -1,10 +1,10 @@
 $(function () {
     $('#header').load('../../html/common/header.html');
     $('#footer').load('../../html/common/footer.html');
-    $("#birthDate").attr('placeholder','年-月-日（例：2000-01-05）');
-    $("#user_name").attr('placeholder','请输入2到6个字符');
-    $("#sexSelect .boys img").attr("src","../../images/personInfo/sex0-in.png");
-    $("#sexSelect .girls img").attr("src","../../images/personInfo/sex1.png");
+    $("#birthDate").attr('placeholder', '年-月-日（例：2000-01-05）');
+    $("#user_name").attr('placeholder', '请输入2到6个字符');
+    $("#sexSelect .boys img").attr("src", "../../images/personInfo/sex0-in.png");
+    $("#sexSelect .girls img").attr("src", "../../images/personInfo/sex1.png");
 });
 
 function index() {
@@ -173,8 +173,8 @@ function sendMessage() {
         }
     });
 }
+//更换手机号
 function updateMobile() {
-
     var uuid = localStorage.getItem("uuid");
     var url = "user/updateMobile.do";
     var param = {};
@@ -182,33 +182,41 @@ function updateMobile() {
     param.password = $("#password1").val();
     param.newMobile = $("#newMobile").val();
     param.mobileRandomStr = $("#messageValue").val();
-    doAjax("post", url, param, function (data, code,message) {
-        alert(data)
+    doAjax("post", url, param, function (data, code, message) {
+        //console.log(data.code);
+        //alert(data)
         if (code == '0' || code == 0) {
             //alert("设置成功!");
-            $(".change-phone").modal(show);
+            $(".change-phone").modal("show");
             //window.location.reload();
+            $(".phone-warms").css("display", "none")
         } else {
+            console.log(data.code);
             //alert(data.message)
             //alert("设置失败");
-            $(".phone-warms").css("display","block").text(message);
+            $(".phone-warms").css("display", "block").text(message);
         }
     });
 }
+
+//更换密码
 function updatePassword() {
     var url = "user/updatePassword.do";
     var param = {};
     param.oldPassword = $("#password2").val();
     param.newPassword = $("#password3").val();
-    doAjax("post", url, param, function (data, code) {
+    doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
-            alert("操作成功,重新登录后用户信息生效");
+            //alert("操作成功,重新登录后用户信息生效");
+            $(".bs-example-modal-sm").modal("show");
+            $(".pwd-warms").css("display", "none")
         } else {
-            alert(data.message)
+            $(".pwd-warms").css("display", "block").text(message);
         }
     });
 }
 
+//获取用户信息
 function reloadUserInfo() {
     var url = "user/getUserInfo.do";
     doAjax("get", url, null, function (user) {
@@ -226,31 +234,33 @@ function reloadUserInfo() {
     });
 }
 
+//更改个人信息
 function subUserInfo() {
     var userName = $.trim($("#user_name").val());
     if (userName == '') {
         alert("请输入姓名");
         return false;
     }
-
     var url = "user/updatePersionalInfo.do";
     var param = {};
     param.name = $("#user_name").val();
     param.sex = $("#sex").val();
     param.birthDate = $("#birthDate").val();
-    doAjax("post", url, param, function (data, code) {
+    doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
             reloadUserInfo();
             //alert("操作成功!");
-            $("#sexSelect").find("span img").attr("src","");
-            $("#birthDate").attr('placeholder','');
-            $("#user_name").attr('placeholder','');
+            $("#suremsg").modal("show");
+            $("#sexSelect").find("span img").attr("src", "");
+            $("#birthDate").attr('placeholder', '');
+            $("#user_name").attr('placeholder', '');
             //window.location.reload();
         } else {
-            alert(data.message)
+            $("#suremsg").modal("show");
+            $("#suremsg .modal-title").text(message);
+            //alert(data.message)
         }
     });
-
 }
 
 // 更换头像 图片
@@ -280,8 +290,8 @@ function uploadImg1() {
             //window.location.reload();
         }
     });
-
 }
+
 function imgOnChange() {
     var src = window.URL.createObjectURL(document.getElementById('picImgFile').files[0]);
     document.getElementById('preImg').src = src;
@@ -302,6 +312,7 @@ function dataURItoBlob(dataURI) {
         type: mimeString
     });
 }
+
 function run(input_file, get_data) {
     if (typeof(FileReader) === 'undefined') {
         alert("抱歉，你的浏览器不支持 FileReader，不能将图片转换为Base64，请使用现代浏览器操作！");
@@ -342,7 +353,6 @@ $('#avatarInput').on('change', function (e) {
         testend = teststr.match(/[^\\]+\.[^\(]+/i); //直接完整文件名的
         filename.innerHTML = testend;
     }
-
 });
 
 function uploadImg() {
@@ -380,4 +390,4 @@ $(function () {
     $(".avatar-wrapper").hover(function () {
         $(".fa-arrows").click();
     })
-})
+});

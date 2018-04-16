@@ -30,6 +30,7 @@
 }
 .avatar-upload label:hover {
   color: #00a0e9;
+  cursor: pointer;
 }
 
 .avatar-upload input {

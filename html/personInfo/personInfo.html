@@ -42,8 +42,7 @@
                     </div>
                     <div class="modify-info">
                         <div class="user-icon-right">
-                            <img src="" alt="用户头像" id="photo2"
-                                 class="big-meb-icon">
+                            <img src="" alt="用户头像" id="photo2" class="big-meb-icon">
                         </div>
                         <button type="button" class=" edit-head-icon" data-toggle="modal" data-target="#avatar-modal">
                             编辑头像
@@ -59,7 +58,6 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="avatar-body">
-
                                                 <div class="row">
                                                     <div class="col-md-9">
                                                         <div class="avatar-upload">
@@ -114,7 +112,6 @@
                         <div>
                             姓名：
                             <input type="text" name="name" id="user_name">
-                            <!--placeholder="请输入2到6个字符"-->
                             <input type="hidden" name="sex" id="sex">
                         </div>
                         <div id="sexSelect">
@@ -126,8 +123,7 @@
                             生日：
                             <input type="text" name="birthDate" id="birthDate">
                         </div>
-                        <input class="sure" type="button" value="确 &nbsp;&nbsp;认" data-toggle="modal"
-                               data-target="#suremsg"/>
+                        <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
                         <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                              aria-hidden="true" data-backdrop="static">
                             <div class="modal-dialog">
@@ -137,8 +133,7 @@
                                         <h4 class="modal-title">设置成功</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal"
-                                                onclick="subUserInfo()">我知道了
+                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal">我知道了
                                         </button>
                                     </div>
                                 </div>
@@ -252,7 +247,7 @@
                                 <input type="text" id="messageValue" class="verification-code" placeholder="请输入您的验证码">
                             </div>
                             <div class="phone-warms warms"></div>
-                            <input type="button" value="确认" class="confirm" onclick="updateMobile()" >
+                            <input type="button" value="确认" class="confirm" onclick="updateMobile()">
                             <div class="modal fade phone-change" tabindex="-1" role="dialog"
                                  aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
                                 <div class="modal-dialog">
@@ -263,7 +258,7 @@
                                             <p class="tips-of-change"></p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button"  class="btn" data-dismiss="modal">我知道了</button>
+                                            <button type="button" class="btn" data-dismiss="modal">我知道了</button>
                                         </div>
                                     </div>
                                 </div>
@@ -290,19 +285,26 @@
                                 <span>再次输入密码：</span>
                                 <input type="password" placeholder="请再次输入您的密码" id="password4">
                             </div>
-                            <div class="warms">提示信息</div>
+                            <div class="pwd-warms warms">提示信息</div>
                             <!-- 遮罩层 + 模态框 -->
                             <input type="button" value="确认" class="btn btn-primary confirm" data-toggle="modal"
-                                   data-target=".bs-example-modal-sm" onclick="updatePassword()">
+                                   onclick="updatePassword()">
                             <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
-                                 aria-labelledby="mySmallModalLabel">
-                                <div class="modal-dialog modal-sm" role="document">
+                                 aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                                <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <p>更改成功</p>
-                                        <span>下次登录可以使用新手机号登录</span>
+                                        <div class="modal-header"></div>
+                                        <div class="modal-body">
+                                            <p class="pwd-tips">更改成功</p>
+                                            <p class="tips-of-pwd">下次登录可使用新密码登录</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn" data-dismiss="modal">我知道了</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </li>
