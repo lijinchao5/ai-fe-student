@@ -142,7 +142,7 @@ html, body {
     text-align: center;
 }
 
-.top .exits .modal-dialog .modal-body .exit-eyes {
+.top .exits .modal-dialog .modal-content .modal-body .exit-eyes {
     width: 131px;
     height: 52px;
     border-radius: 0;
@@ -150,24 +150,35 @@ html, body {
     margin: 0;
 }
 
-.top .exits .modal-dialog .modal-body .exit-text,
-.top .exits1 .modal-dialog .modal-body #dialog_content{
+.top .exits .modal-dialog .modal-content .modal-body .exit-text,
+.top .exits1 .modal-dialog .modal-content .modal-body #dialog_content{
     font-size: 30px;
     width: 494px;
-    color: #ffffff;
+    color: #fff;
     display: block;
     margin-top: -29px;
     padding: 0 0 0 27px;
     text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
 }
 
-.top .exits .modal-dialog .modal-footer {
+.top .exits1 .modal-dialog .modal-content .modal-body #dialog_content p{
+    font-size: 30px;
+    color: #fff;
+    margin-top: 10px;
+    display: block;
+    height: 42px;
+    padding: 0 0 0 27px;
+    text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
+    line-height: 95px;
+}
+
+.top .exits .modal-dialog .modal-content .modal-footer {
     padding: 15px 0;
     text-align: center;
     border-top: none;
 }
 
-.top .exits .modal-dialog .modal-footer .btn {
+.top .exits .modal-dialog .modal-content .modal-footer .btn {
     width: 110px;
     height: 36px;
     color: #fff;
@@ -200,28 +211,32 @@ html, body {
     padding: 0;
     margin: -35px auto 0;
     text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 430px;
+    max-height: 300px;
 }
 .top .exits1 .modal-dialog .modal-body #dialog_content{
-    width: 480px;
+    width: 400px;
     word-wrap:break-word;
     word-break:break-all;
     max-height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    margin-top: 0;
+
 }
-.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar {
-    width: 6px;
+.top .exits1 .modal-dialog .modal-content .modal-body::-webkit-scrollbar {
+    width: 3px;
     height: 10px;
     background-color: #F5F5F5;
     border-radius: 5px;
 }
 
-.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar-track {
+.top .exits1 .modal-dialog .modal-content .modal-body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
 }
 
-.top .exits1 .modal-dialog .modal-body #dialog_content::-webkit-scrollbar-thumb {
+.top .exits1 .modal-dialog .modal-content .modal-body::-webkit-scrollbar-thumb {
     background-color: #11d8fc;
 }
 

@@ -64,7 +64,7 @@ function getUserMessage(userId) {
                 var _dialogIn = "";
                 var _dialogContent = $("#dialog_content");
                 for (var usermsg = 0; usermsg < data.length; usermsg++) {
-                    _dialogIn = $("<p>" + data[usermsg].text + "</p>");
+                    _dialogIn = $("<p>" + data[usermsg].text + ",老师催收了！</p>");
                     _dialogContent.append(_dialogIn)
                 }
                 $("#dialogButton").attr("data-toggle1", "0");
@@ -73,7 +73,7 @@ function getUserMessage(userId) {
         } else {
             var text = $("#dialog_content").text();
             if (null != data && data.length > 0) {
-                $("#dialog_content").text(text + msg.data);
+                $("#dialog_content").text(text + msg.data+",老师催收了！");
             }
         }
     });
@@ -106,12 +106,13 @@ function initWebSocket(userId) {
         socket.onmessage = function (msg) {
             var ats = $("#dialogButton").attr("data-toggle1");
             if (ats == "1") {
-                $("#dialog_content").text(msg.data);
+                $("#dialog_content").text(msg.data+",老师催收了！");
                 $("#dialogButton").attr("data-toggle1", "0");
                 $("#dialogButton").click()
             } else {
-                var text = $("#dialog_content").text();
-                $("#dialog_content").append("<p>" + msg.data + "</p>");
+                //var text = $("#dialog_content").text();
+                $("#dialog_content").append("<p>" + msg.data + ",老师催收了！</p>");
+                console.log(msg.data);
             }
 
         };
