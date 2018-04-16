@@ -125,17 +125,21 @@
                         <div>
                             生日：
                             <input type="text" name="birthDate" id="birthDate" >
-                            <!--placeholder="年-月-日（例：2000-01-05）"-->
-                            <!--data-provide="datepicker"-->
-                            <!--class="form-control"-->
-                            <!--<div class="input-daterange input-group form-control" id="datepicker">-->
-                            <!--<input type="text" class="input-sm form-control" name="start" />-->
-                            <!--<span class="input-group-addon">to</span>-->
-                            <!--<input type="text" class="input-sm form-control" name="end" />-->
-                            <!--</div>-->
-                            <!--<input size="16" type="text" value="2012-06-15" readonly class="form_datetime">-->
                         </div>
-                        <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
+                        <input class="sure" type="button"  value="确 &nbsp;&nbsp;认" data-toggle="modal" data-target="#suremsg"/>
+                        <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header"></div>
+                                    <div class="modal-body">
+                                        <h4 class="modal-title">设置成功</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal" onclick="subUserInfo()">我知道了</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="school-message">
@@ -302,14 +306,4 @@
 <script src="../../lib/avatar/sitelogo.js"></script>
 <!--<script src="../../lib/avatar/qunit.js"></script>-->
 <script src="../../lib/avatar/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    //    $('.datepicker').datepicker({
-    //        startDate: '-3d'
-    //    });
-    //    $('#sandbox-container .input-daterange').datepicker({
-    //    });
-
-    //    $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-
-</script>
 </html>
