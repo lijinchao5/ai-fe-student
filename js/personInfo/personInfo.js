@@ -134,11 +134,15 @@ function getStudentInfo() {
 
         if (user.mobile == null) {
             $("#school5").val("您还没有绑定手机号");
+            $(".phone-tips").text("绑定成功");
+            $(".tips-of-change").text("下次登录可使用手机号登录");
         } else {
             $("#school5").val(user.mobile);
             $("#phoneNum").css("background-color", " #11d8fc");
             $(".link-phone").text("更换手机");
-            $(".link-phone-info").text("更换后原号码" + user.mobile + "不能提供登录和找回密码服务")
+            $(".link-phone-info").text("更换后原号码" + user.mobile + "不能提供登录和找回密码服务");
+            $(".phone-tips").text("更改成功");
+            $(".tips-of-change").text("下次登录可使用新手机号登录")
         }
         $("#school6").val(user.bookVersion);
         if (user.name_num == null) {
@@ -170,6 +174,7 @@ function sendMessage() {
     });
 }
 function updateMobile() {
+
     var uuid = localStorage.getItem("uuid");
     var url = "user/updateMobile.do";
     var param = {};
@@ -177,13 +182,16 @@ function updateMobile() {
     param.password = $("#password1").val();
     param.newMobile = $("#newMobile").val();
     param.mobileRandomStr = $("#messageValue").val();
-    doAjax("post", url, param, function (data, code) {
+    doAjax("post", url, param, function (data, code,message) {
+        alert(data)
         if (code == '0' || code == 0) {
-            alert("设置成功!");
-            window.location.reload();
+            //alert("设置成功!");
+            $(".change-phone").modal(show);
+            //window.location.reload();
         } else {
             //alert(data.message)
-            alert("设置失败")
+            //alert("设置失败");
+            $(".phone-warms").css("display","block").text(message);
         }
     });
 }

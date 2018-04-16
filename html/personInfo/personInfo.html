@@ -113,7 +113,7 @@
                     <div class="set-info">
                         <div>
                             姓名：
-                            <input type="text"  name="name" id="user_name">
+                            <input type="text" name="name" id="user_name">
                             <!--placeholder="请输入2到6个字符"-->
                             <input type="hidden" name="sex" id="sex">
                         </div>
@@ -124,10 +124,12 @@
                         </div>
                         <div>
                             生日：
-                            <input type="text" name="birthDate" id="birthDate" >
+                            <input type="text" name="birthDate" id="birthDate">
                         </div>
-                        <input class="sure" type="button"  value="确 &nbsp;&nbsp;认" data-toggle="modal" data-target="#suremsg"/>
-                        <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                        <input class="sure" type="button" value="确 &nbsp;&nbsp;认" data-toggle="modal"
+                               data-target="#suremsg"/>
+                        <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true" data-backdrop="static">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header"></div>
@@ -135,7 +137,9 @@
                                         <h4 class="modal-title">设置成功</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal" onclick="subUserInfo()">我知道了</button>
+                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal"
+                                                onclick="subUserInfo()">我知道了
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -247,8 +251,23 @@
                                 <span>短信验证码：</span>
                                 <input type="text" id="messageValue" class="verification-code" placeholder="请输入您的验证码">
                             </div>
-                            <div class="warms">提示信息</div>
-                            <input type="button" value="确认" class="confirm" onclick="updateMobile()">
+                            <div class="phone-warms warms"></div>
+                            <input type="button" value="确认" class="confirm" onclick="updateMobile()" >
+                            <div class="modal fade phone-change" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header"></div>
+                                        <div class="modal-body">
+                                            <p class="phone-tips"></p>
+                                            <p class="tips-of-change"></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button"  class="btn" data-dismiss="modal">我知道了</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="blocks">
                             <!-- 修改密码 -->
