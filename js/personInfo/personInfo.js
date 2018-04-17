@@ -234,13 +234,19 @@ function reloadUserInfo() {
     });
 }
 
-//更改个人信息
-function subUserInfo() {
+$("#user_name").blur(function () {
     var userName = $.trim($("#user_name").val());
     if (userName == '') {
-        alert("请输入姓名");
-        return;
+        $(".name-tips").css("display", "block");
+        $(".sure").attr("disabled", true);
+    }else{
+        $(".name-tips").css("display", "none");
+        $(".sure").attr("disabled", false);
     }
+});
+
+//更改个人信息
+function subUserInfo() {
     var url = "user/updatePersionalInfo.do";
     var param = {};
     param.name = $("#user_name").val();
@@ -248,17 +254,14 @@ function subUserInfo() {
     param.birthDate = $("#birthDate").val();
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
-            //reloadUserInfo();
-            //alert("操作成功!");
-            $("#suremsg").modal("show");
+            reloadUserInfo();
             $("#sexSelect").find("span img").attr("src", "");
             $("#birthDate").attr('placeholder', '');
             $("#user_name").attr('placeholder', '');
             //window.location.reload();
-        } else {
-            $("#suremsg").modal("show");
-            $("#suremsg .modal-title").text(message);
-            //alert(data.message)
+        }
+        else {
+            alert(message);
         }
     });
 }

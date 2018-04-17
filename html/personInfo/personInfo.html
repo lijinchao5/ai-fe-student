@@ -123,7 +123,8 @@
                             生日：
                             <input type="text" name="birthDate" id="birthDate">
                         </div>
-                        <input class="sure" type="button" onclick="subUserInfo()" value="确 &nbsp;&nbsp;认"/>
+                        <p class="name-tips" style="display: none">名字不能为空哦</p>
+                        <input class="sure" type="button"  value="确 &nbsp;&nbsp;认" data-toggle="modal" data-target="#suremsg"/>
                         <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                              aria-hidden="true" data-backdrop="static">
                             <div class="modal-dialog">
@@ -133,7 +134,7 @@
                                         <h4 class="modal-title">设置成功</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal">我知道了
+                                        <button type="button" id="sure-msg" class="btn" onclick="subUserInfo()" data-dismiss="modal">我知道了
                                         </button>
                                     </div>
                                 </div>
