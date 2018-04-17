@@ -47,10 +47,10 @@ function doAjax(type, url, param, successfn) {
         },
         success: function (data, textStatus, jqXHR) {
             if (data && data != null) {
+            	console.log(data);
                 if (data.code == 0 || data.code == '0') {
-                    console.log(data.result);
-                    successfn(data.result, data.code,data.message);
                     showLoading(false)
+                    successfn(data.result, data.code,data.message);
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
@@ -136,18 +136,16 @@ function getParam(key) {
     return ''
 }
 function getLoginPath() {
-    return window.location.protocol + '//' + window.location.host + '/login';
-    //return "http://localhost:8092/";
+//    return window.location.protocol + '//' + window.location.host + '/login';
+    return "https://www.aienglish.vip/login";
 }
 function getRootPath() {
-    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-    //return "http://localhost:8092/";
-    //return "https://www.aienglish.vip/oep-be/";
-    // return "https://39.104.76.67/oep-be/";
+//    return window.location.protocol + '//' + window.location.host + '/oep-be/';
+    return "https://www.aienglish.vip/oep-be/";
 }
 function getWebSocketRootPath() {
-    //	return "localhost:8092/";
-    return window.location.host + '/oep-be/';
+    return "www.aienglish.vip/oep-be/";
+//    return window.location.host + '/oep-be/';
 }
 function showLoading(show) {
     if (show) {

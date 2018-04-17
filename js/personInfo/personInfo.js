@@ -239,7 +239,7 @@ function subUserInfo() {
     var userName = $.trim($("#user_name").val());
     if (userName == '') {
         alert("请输入姓名");
-        return false;
+        return;
     }
     var url = "user/updatePersionalInfo.do";
     var param = {};
@@ -248,7 +248,7 @@ function subUserInfo() {
     param.birthDate = $("#birthDate").val();
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
-            reloadUserInfo();
+            //reloadUserInfo();
             //alert("操作成功!");
             $("#suremsg").modal("show");
             $("#sexSelect").find("span img").attr("src", "");
