@@ -291,7 +291,7 @@ body {
     width: 68px;
     height: 68px;
     /*border-radius: 50%;*/
-    margin: 16px auto 40px;
+    margin: 16px auto 0px;
     /*background: url("../../images/speakAndListen/score.png") no-repeat center left;*/
     background: #d43f3a;
     line-height: 68px;
@@ -304,7 +304,7 @@ body {
 .word-speaking .speak-listen-tab-bd .gd {
     height: 30px;
     /*border-radius: 50%;*/
-    margin: 108px auto 0;
+    margin: 0 auto;
     line-height: 30px;
     font-size: 16px;
     color: #00a0e9;
@@ -313,7 +313,28 @@ body {
 .word-speaking .speak-listen-tab-bd .gd span{
     font-weight: 200;
 }
+/* 分数等级指示 */
+.word-speaking .speak-listen-tab-bd .word-degree {
+    width: 330px;
+    height: 20px;
+    margin: 20px auto 10px;
+    text-align: center;
+    font-size:14px;
+    font-weight:400;
+    color:#999;
+}
+.word-speaking .speak-listen-tab-bd .jsbyclass .word-degree {
+    margin: 60px auto 20px;
+}
+.word-speaking .speak-listen-tab-bd .word-degree .degree-fail,
+.word-speaking .speak-listen-tab-bd .word-degree .degree-well{
+    width: 100px;
+}
 
+.word-speaking .speak-listen-tab-bd .word-degree .degree-good{
+    width:110px;
+    margin: 0 10px;
+}
 /* 旋转木马盒子公共样式 */
 /*.word-speaking .speak-listen-tab-bd .carousel {
     height: 290px;
@@ -883,7 +904,7 @@ button {
     line-height: 69px;
     border-radius: 50%;
     position: relative;
-    bottom: 70px;
+    bottom: 80px;
     right: -827px;
 }
 

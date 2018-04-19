@@ -76,18 +76,6 @@
                     <ul class="speak-listen-tab-bd " id="speak-listen-tab-content">
                         <li class="word-speak first dcclass">
                             <!-- 单词跟读 -->
-                            <!-- 添加等级示图 -->
-                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                                <p class="degree-fail" style="width:100px">
-                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                                </p>
-                                <p class="degree-good" style="width:100px">
-                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                                </p>
-                                <p class="degree-well" style="width:100px">
-                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                                </p>
-                            </div>
                             <!--<div class="score">76</div>-->
                             <!-- 旋转木马 -->
                             <div class="word-speaking-carousel">
@@ -273,18 +261,18 @@
                         </li>
                         <li class="jsbyclass">
                             <!-- 角色扮演 -->
-                            <!-- 添加等级示图 -->
-                            <div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">
-                                <p class="degree-fail" style="width:100px">
-                                    <img src="../../images/common/red.png" alt="继续努力"> 60分以下
-                                </p>
-                                <p class="degree-good" style="width:100px">
-                                    <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
-                                </p>
-                                <p class="degree-well" style="width:100px">
-                                    <img src="../../images/common/blue.png" alt="优秀"> 85分以上
-                                </p>
-                            </div>
+                            <!--&lt;!&ndash; 添加等级示图 &ndash;&gt;-->
+                            <!--<div class="word-degree fr" style="width:0;position: absolute;top: 5px;right: 100px">-->
+                                <!--<p class="degree-fail" style="width:100px">-->
+                                    <!--<img src="../../images/common/red.png" alt="继续努力"> 60分以下-->
+                                <!--</p>-->
+                                <!--<p class="degree-good" style="width:100px">-->
+                                    <!--<img src="../../images/common/yellow.png" alt="良好"> 60分~85分-->
+                                <!--</p>-->
+                                <!--<p class="degree-well" style="width:100px">-->
+                                    <!--<img src="../../images/common/blue.png" alt="优秀"> 85分以上-->
+                                <!--</p>-->
+                            <!--</div>-->
                             <!-- 旋转木马 -->
                             <div class="cosplay-carousel">
                                 <div id="cosplay-carousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false" data-wrap="false">
@@ -480,6 +468,18 @@
 <script id="dcscript" type="text/html">
     <div class="item {active}" data='{jsonobj}'>
         <div class="score" id="score{sectionDetailId}" style="{display}">{studentScore}</div>
+        <!-- 添加等级示图 -->
+        <div class="word-degree">
+            <p class="degree-fail fl">
+                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+            </p>
+            <p class="degree-good fl">
+                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+            </p>
+            <p class="degree-well fl">
+                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+            </p>
+        </div>
         <div class="text {color}">
             {standerText}
         </div>
@@ -508,6 +508,18 @@
 </script>
 <script id="jsbyscript" type="text/html">
     <div class="item {active}" dialogNum="{dialogNum}">
+        <!-- 添加等级示图 -->
+        <div class="word-degree">
+            <p class="degree-fail fl">
+                <img src="../../images/common/red.png" alt="继续努力"> 60分以下
+            </p>
+            <p class="degree-good fl">
+                <img src="../../images/common/yellow.png" alt="良好"> 60分~85分
+            </p>
+            <p class="degree-well fl">
+                <img src="../../images/common/blue.png" alt="优秀"> 85分以上
+            </p>
+        </div>
         <div class="gd"><span>跟读：</span></div>
         <div class="lunbo-portrait text green dialogNum{dialogNum}">
             <div class="ul">
