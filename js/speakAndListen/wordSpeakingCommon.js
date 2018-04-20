@@ -84,11 +84,13 @@ function sendform(par){
 		}
 		//彩色文字
 		if(jsonobjtmp.homeworkType=="2"||jsonobjtmp.homeworkType=="3"){
+			getAudioCheck(data.audioCheck);
 			var newhtml=CalculationScore(data.homeworkStudentScoreWordEntities);
 			$("div[data='data"+par.sectionId+"'] .text").html(newhtml);
 			jsonobjtmp.studentText=newhtml;
 			map.put("data"+par.sectionId,jsonobjtmp);
 		}else if(jsonobjtmp.homeworkType=="1"){
+			getAudioCheck(data.audioCheck);
             var newhtml= "";
 			if((jsonobjtmp.standerText).indexOf("b class")>0){
                 var standerText=$(jsonobjtmp.standerText).text();
@@ -100,6 +102,7 @@ function sendform(par){
 			jsonobjtmp.studentText=newhtml;
 			map.put("data"+par.sectionId,jsonobjtmp);
 		}else if(jsonobjtmp.homeworkType=="4"){
+			getAudioCheck(data.audioCheck);
 			var newhtml=CalculationScore(data.homeworkStudentScoreWordEntities);
 			var classname=$("p[data='data"+par.sectionId+"']").attr("class");
 			if(classname=="role1 role-in item-in"){
@@ -117,7 +120,24 @@ function sendform(par){
 		console.log("保存成功");
 	});
 }
-
+function getAudioCheck(checkList){
+    if(null == checkList || checkList.length<=0){
+    	$(".normal").css("display","block");
+    	$(".abnormal").css("display","none");
+    }else{
+    	$(".normal").css("display","none");
+    	$(".abnormal").css("display","block");
+    	var text = "";
+    	for(var h=0;h<checkList.length;h++){
+    		if(h==0){
+    			text = checkList[h];
+    		}else{
+    			text = text+","+checkList[h];
+    		}
+    	}
+    	$(".abnormal").html("["+text+"]");
+    }
+}
 //获取评分
 function CalculationScore(homeworkStudentScoreWordEntities){
     var html='<div class="text-in">';
