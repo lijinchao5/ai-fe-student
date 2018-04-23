@@ -20,11 +20,11 @@ html, body {
     margin-left: -50%;
     width: 100%;
     min-width: 1366px;
-    height: 90px;
+    height: 70px;
     line-height: 70px;
     background-color: #fff;
-    border-bottom: 27px solid transparent;
-    border-image: url("../images/index/top-bottom.png") 0 0 27 0 stretch;
+    /*border-bottom: 27px solid transparent;*/
+    /*border-image: url("../images/index/top-bottom.png") 0 0 27 0 stretch;*/
     color: #00a0e9;
 }
 
@@ -281,6 +281,7 @@ html, body {
     min-height: 640px;
     /*margin-top: 100px;*/
     position: relative;
+    background-color: #0193f9;
     overflow: hidden;
 }
 
@@ -366,7 +367,7 @@ html, body {
 }
 
 /*================*/
-.content .thin {
+/*.content .thin {
     width: 1366px;
     height: 1366px;
     border-radius: 1200px;
@@ -388,7 +389,7 @@ html, body {
     bottom: 64px;
     left: 50%;
     margin-left: -609px;
-}
+}*/
 
 /*.content .thin .nomal .blod{*/
 /*width: 1000px;*/
@@ -401,7 +402,7 @@ html, body {
 /*left: 50%;*/
 /*margin-left: -520px;*/
 /*}*/
-.content .thin .nomal .blod {
+/*.content .thin .nomal .blod {
     width: 1116px;
     height: 1116px;
     border-radius: 1116px;
@@ -411,7 +412,7 @@ html, body {
     bottom: 32px;
     left: 50%;
     margin-left: -560px;
-    /*background-color: deepskyblue;*/
+    !*background-color: deepskyblue;*!
 }
 
 .content .thin .nomal .blod .blod-image {
@@ -419,7 +420,7 @@ html, body {
     height: 916px;
     border-radius: 916px;
     background: url("../images/index/qiuqiu.jpg") no-repeat center top;
-    /*border: 100px solid lightblue;*/
+    !*border: 100px solid lightblue;*!
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -428,6 +429,262 @@ html, body {
 
 .content .thin .nomal .blod .blod-image.webp {
     background: url("../images/index/qiuqiu.webp") no-repeat center top;
+}*/
+/*.content {
+    width: 100%;
+    height: 100%;
+}*/
+.content .sun {
+    /*width: 125px;*/
+    width: 13%;
+    height: 20%;
+    background:url("../images/index/sun.png") no-repeat left top;
+    /*background-color: pink;*/
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+.content .top-left-line {
+    /*width: 304px;*/
+    width: 22.25%;
+    height: 3px;
+    /*background-color: #fff;*/
+    position: absolute;
+    top: 31.25%;
+    left: 10%;
+    /*background-color: pink;*/
+}
+.content .top-left-line:before{
+    content: "";
+    display: block;
+    float: left;
+    width: 56%;
+    height:3px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.content .top-left-line .line-center{
+    float: left;
+    width: 18%;
+    height: 3px;
+    margin: 0 6.4% 0 9.6%;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.content .top-left-line:after{
+    content: "";
+    display: block;
+    float: left;
+    width: 10%;
+    height:3px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.content .top-cloud {
+    width:10%;
+    height:12.76%;
+    background: url("../images/index/cloud-top.png") no-repeat center center;
+    background-size: 100% 100%;
+    position: absolute;
+    top:27.34%;
+    right: 21.23%;
+}
+.content .top-right-line {
+    width: 7.32%;
+    height: 3px;
+    position: absolute;
+    top: 37.37%;
+    right: 10.54%;
+    /*background-color: pink;*/
+}
+.content .top-right-line:before{
+    content: "";
+    display: block;
+    float: left;
+    width: 50%;
+    height:3px;
+    margin-right: 20%;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.content .top-right-line:after{
+    content: "";
+    display: block;
+    float: left;
+    width: 30%;
+    height:3px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.content .clund-left{
+    width:37.34%;
+    height:44%;
+    background: url("../images/index/cloud-left.png") no-repeat left top;
+    background-size: 100% 100%;
+    /*background-color: #fab;*/
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+.content .clund-center{
+    width:28.08%;
+    height:9.78%;
+    background: url("../images/index/cloud-center.png") no-repeat left bottom;
+    background-size: 100% 100%;
+    /*background-color: #fab;*/
+    position: absolute;
+    left:37.34%;
+    bottom: 0;
+}
+.content .clund-right{
+    width:34.58%;
+    height:44%;
+    background-color: #bb0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.content .top-right-point1,
+.content .top-right-point2 {
+    width: 0.634%;
+    height: 31.25%;
+    /*background-color: pink;*/
+}
+.content .top-right-point1 li,
+.content .top-right-point2 li{
+    width: 100%;
+    height: 4.172%;
+    margin-bottom: 500%;
+    border-radius: 50%;
+    background-color: #fff;
+    /*position: absolute;*/
+}
+.content .top-right-point1{
+    position: absolute;
+    right: 5.4%;
+    top: 24.1%;
+}
+.content .top-right-point2{
+    position: absolute;
+    top: 19.14%;
+    right: 9.5%;
+}
+.content .bottom-left-point1,
+.content .bottom-left-point2,
+.content .bottom-left-point3 {
+    /*width: 26.36%;*/
+    width: 17.57%;
+    height: 1.302%;
+    /*background-color: pink;*/
+}
+.content .bottom-left-point1 li,
+.content .bottom-left-point2 li,
+.content .bottom-left-point3 li{
+    width: 3.61%;
+    height: 100%;
+    margin-right: 21%;
+    border-radius: 50%;
+    background-color: #fff;
+    float: left;
+    /*position: absolute;*/
+}
+.content .bottom-left-point1{
+    position: absolute;
+    left: 1.98%;
+    bottom: 5.6%;
+}
+.content .bottom-left-point2{
+    position: absolute;
+    left: 6.22%;
+    bottom: 12.24%;
+}
+.content .bottom-left-point3{
+    position: absolute;
+    left: 4.465%;
+    bottom: 18.1%;
+}
+.content .nav{
+    width:41%;
+    height: 36.198%;
+    position: absolute;
+    top: 45%;
+    left: 30.75%;
+    /*margin: 45.58% auto 0;*/
+}
+/*.content .nav-in{
+    width:40.4%;
+    height: 100%;
+    background-color: blueviolet;
+}*/
+.content .nav .left-nav,
+.content .nav .right-nav{
+    float: left;
+    width: 34.64%;
+    height: 69.785%;
+    border-radius: 50%;
+}
+.content .nav .left-nav{
+    margin-right: 30.7%;
+    background: -webkit-linear-gradient(#3ff4ed, #0eebd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#3ff4ed, #0eebd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#3ff4ed, #0eebd9); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#3ff4ed, #0eebd9); /* 标准的语法（必须放在最后） */
+}
+.content .nav .right-nav{
+    background: -webkit-linear-gradient(#ff7441, #ff305f); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ff7441, #ff305f); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ff7441, #ff305f); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ff7441, #ff305f); /* 标准的语法（必须放在最后） */
+}
+.content .nav .left-nav:before,
+.content .nav .left-nav:after{
+    display: inline-block;
+    content: "";
+    width: 20%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.content .nav .left-nav:before{
+    position: absolute;
+    bottom:42px;
+    left: -24px;
+    transform:rotate(-56deg);
+
+}
+.content .nav .left-nav:after {
+    position: absolute;
+    bottom:42px;
+    right: -24px;
+    transform:rotate(56deg);
+}
+
+.content .nav .left-nav-in,
+.content .nav .right-nav-in{
+    /*float: left;*/
+    width: 70%;
+    height: 70%;
+    margin: 15%;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.content .nav .left-nav-in{
+    color: #05516c;
+    background: -webkit-linear-gradient(#3af3eb, #fff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#3af3eb, #fff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#3af3eb, #fff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#3af3eb, #fff); /* 标准的语法（必须放在最后） */
+}
+.content .nav .right-nav-in {
+    color: #630216;
+    background: -webkit-linear-gradient(#ff6e45, #fff); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#ff6e45, #fff); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#ff6e45, #fff); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#ff6e45, #fff); /* 标准的语法（必须放在最后） */
 }
 
 .content .lamp {
