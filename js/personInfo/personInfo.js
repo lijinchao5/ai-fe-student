@@ -58,9 +58,9 @@ togg('.toggle-pwd', '.change-pwd');
 
 $(function () {
     var uuid = new UUID();
-    localStorage.setItem("uuid", uuid);
+   store.set("uuid", uuid);
     randomPic();
-    var data = JSON.parse(localStorage.getItem("userInfo"));
+    var data = JSON.parse(store.get("userInfo"));
 
     if (null == data.photo || "" == data.photo) {
         $("#photo1").attr("src", "../../images/common/l-meb-icon.png");
@@ -146,18 +146,18 @@ function getStudentInfo() {
         } else {
             $("#school7").val(user.name_num)
         }
-        localStorage.setItem("className", user.grade + user.className);
+       store.set("className", user.grade + user.className);
 
     });
 }
 // 图片验证码
 function randomPic() {
-    var uuid = localStorage.getItem("uuid");
+    var uuid = store.get("uuid");
     // localhost:8092/picture.do?type=2&randomKey=123
     $("#randomPic").attr("src", getRootPath() + "picture.do?type=2&randomKey=" + uuid + "&t=" + new Date().getTime());
 }
 function sendMessage() {
-    var uuid = localStorage.getItem("uuid");
+    var uuid = store.get("uuid");
     var url = "mobileMessage/registMsg.do";
     var param = {};
     param.randomKey = uuid;
@@ -171,7 +171,7 @@ function sendMessage() {
 }
 //更换手机号
 function updateMobile() {
-    var uuid = localStorage.getItem("uuid");
+    var uuid = store.get("uuid");
     var url = "user/updateMobile.do";
     var param = {};
     param.mobileRandomKey = uuid;
@@ -224,8 +224,7 @@ function reloadUserInfo() {
                 user.name = user.mobile;
             }
         }
-        localStorage.removeItem("userInfo");
-        localStorage.setItem("userInfo", JSON.stringify(user));
+        store.set("userInfo", JSON.stringify(user));
         window.location.reload();
     });
 }

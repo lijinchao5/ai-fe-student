@@ -18,7 +18,7 @@ $(function() {
 });
 
 function initnvl(){
-	var data = JSON.parse(localStorage.getItem("userInfo"));
+	var data = JSON.parse(store.get("userInfo"));
     $(".user-name").text(data.name);
     if (null == data.photo || "" == data.photo) {
 
@@ -52,7 +52,7 @@ function initData(id){
     	$("#wordNum2").text(wordNum);
     	$("#levelName2").text(levelName);
     	
-    	var data = JSON.parse(localStorage.getItem("userInfo"));
+    	var data = JSON.parse(store.get("userInfo"));
         $(".user-name").text(data.name);
         if (null == data.photo || "" == data.photo) {
 

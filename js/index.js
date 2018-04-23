@@ -28,8 +28,7 @@ $(function () {
     // 开始获取用户信息
     var tokenId = getParam("tokenId");
     if (tokenId && null != tokenId && "" != tokenId) {
-        localStorage.setItem("X-AUTH-TOKEN", tokenId);
-        console.log("手动设置tokenId:" + tokenId);
+        localStorage.setItem('X-AUTH-TOKEN',tokenId);
     }
     var url = "user/getUserInfo.do";
     doAjax("get", url, null, function (user) {
@@ -40,7 +39,7 @@ $(function () {
                 user.name = user.mobile
             }
         }
-        localStorage.setItem("userInfo", JSON.stringify(user));
+       store.set("userInfo", JSON.stringify(user));
         $("#indexusername").text(user.name);
         if (user.name == "" || user.name == null) {
             $("#indexusername").text("尚未设置昵称");
@@ -132,7 +131,7 @@ $(".add-top li").click(function () {
 });
 
 function logout() {
-    localStorage.removeItem("userInfo");
-    localStorage.removeItem("X-AUTH-TOKEN");
+	store.clear();
+	localStorage.clear();
     window.location.href = getLoginPath();
 }

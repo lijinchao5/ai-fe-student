@@ -54,8 +54,8 @@ function doAjax(type, url, param, successfn) {
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
-                        localStorage.removeItem('userInfo');
-                        localStorage.removeItem('X-AUTH-TOKEN');
+                        store.clear();
+                        localStorage.clear();
                         window.location.href = getLoginPath()
                     } else {
                         showLoading(false)
@@ -103,11 +103,10 @@ function ajaxAsync(type, url, param, successfn) {
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
-                        localStorage.removeItem('userInfo');
-                        localStorage.removeItem('X-AUTH-TOKEN');
+                        store.clear();
+                        localStorage.clear();
                         window.location.href = getLoginPath()
                     } else {
-                        alert(data.message)
                         successfn(data.result, data.code,data.message);
                     }
                 }
@@ -141,7 +140,8 @@ function getLoginPath() {
 }
 function getRootPath() {
 //    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-    return "https://www.aienglish.vip/oep-be/";
+	return "http://localhost:8092/";
+//    return "https://www.aienglish.vip/oep-be/";
 }
 function getWebSocketRootPath() {
     return "www.aienglish.vip/oep-be/";

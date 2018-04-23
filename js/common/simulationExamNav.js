@@ -2,12 +2,12 @@ $(function () {
     initUserInfo();
 });
 function initUserInfo() {
-    var data = JSON.parse(localStorage.getItem("userInfo"));
+    var data = JSON.parse(store.get("userInfo"));
     $(".exam_userName").text(data.name);
     if (data.name == "" || data.name == null) {
         $(".exam_userName").text("尚未设置昵称").css("font-size", "16px")
     }
-    var className = localStorage.getItem("className");
+    var className = store.get("className");
     className = className.replace(/\"/g, "");
     $(".exam_userClass").text(className);
     $(".number").text(data.nameNum);

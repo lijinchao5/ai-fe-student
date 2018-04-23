@@ -56,7 +56,7 @@ var onkeydownflag=true;
         });
     });
     //获取用户信息
-    var data = JSON.parse(localStorage.getItem("userInfo"));
+    var data = JSON.parse(store.get("userInfo"));
 	$("#username").text(data.name);
 	$("#username1").text(data.name);
 	$("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
