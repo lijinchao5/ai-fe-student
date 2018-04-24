@@ -527,8 +527,9 @@ html, body {
     bottom: -4px;
 }
 .content .clund-center{
-    width:28.08%;
+    width:28.415%;
     height:9.78%;
+    margin-left: -0.2615%;
     background: url("../images/index/cloud-center.png") no-repeat left bottom;
     background-size: 100% 100%;
     /*background-color: #fab;*/
@@ -539,7 +540,8 @@ html, body {
 .content .clund-right{
     width:34.58%;
     height:44%;
-    background-color: #bb0;
+    background: url("../images/index/cloud-center.png") no-repeat left bottom;
+    background-size: 100% 100%;
     position: absolute;
     right: 0;
     bottom: 0;

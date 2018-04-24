@@ -161,21 +161,22 @@ body {
 }
 
 #personInfo #tabbd .info-title {
-    width: 197px;
-    height: 40px;
-    margin: 55px auto 0;
+    width: 212px;
+    height: 106px;
+    margin: 10px auto 0;
     border-bottom: 5px solid #00a0e9;
 }
 
 #personInfo #tabbd .info-title .each-title {
-    width: 143px;
-    height: 40px;
+    width: 212px;
+    height: 106px;
     margin: 0 auto;
     border-radius: 5px;
     background: #00a0e9;
     text-align: center;
-    line-height: 45px;
+    line-height: 106px;
     font-size: 20px;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -183,7 +184,7 @@ body {
     width: 144px;
     height: 193px;
     /*margin: 0 auto;*/
-    margin: 65px auto 0;
+    margin: 55px auto 0;
 }
 
 #personInfo #tabbd .owner-message .modify-info .user-icon-right {
@@ -424,7 +425,7 @@ body {
 
 #personInfo .school-message .school-info {
     width: 790px;
-    margin: 20px auto 0;
+    margin: 120px auto 177px;
 }
 
 #mark-label1,
