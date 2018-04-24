@@ -136,15 +136,15 @@ function getParam(key) {
 }
 function getLoginPath() {
 //    return window.location.protocol + '//' + window.location.host + '/login';
-    return "https://www.aienglish.vip/login";
+    return "https://39.104.76.67/ai-be/";
 }
 function getRootPath() {
 //    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-	return "http://localhost:8092/";
+	return "https://39.104.76.67/ai-be/";
 //    return "https://www.aienglish.vip/oep-be/";
 }
 function getWebSocketRootPath() {
-    return "www.aienglish.vip/oep-be/";
+    return "39.104.76.67/ai-be/";
 //    return window.location.host + '/oep-be/';
 }
 function showLoading(show) {
