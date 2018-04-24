@@ -136,11 +136,11 @@ function getParam(key) {
 }
 function getLoginPath() {
 //    return window.location.protocol + '//' + window.location.host + '/login';
-    return "https://39.104.76.67/ai-be/";
+    return "https://39.104.76.67:8092/ai-be/";
 }
 function getRootPath() {
 //    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-	return "https://39.104.76.67/ai-be/";
+	return "https://39.104.76.67:8092/ai-be/";
 //    return "https://www.aienglish.vip/oep-be/";
 }
 function getWebSocketRootPath() {
