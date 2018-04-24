@@ -124,7 +124,6 @@ function getStudentInfo() {
 		$("#region2").val(user.address_city);
 		$("#region3").val(user.address_area);
 		$("#school1").val(user.schoolName);
-		$("#school2").val(user.grade);
 		if (user.mobile == null) {
 			$("#school5").val("您还没有绑定手机号");
 			$(".phone-tips").text("绑定成功");
