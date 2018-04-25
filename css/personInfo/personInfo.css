@@ -395,8 +395,8 @@ body {
     background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
 }
-
-#personInfo #tabbd .owner-message .set-info .sure:hover {
+/*  .owner-message .set-info  */
+#personInfo #tabbd  .sure:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
@@ -493,6 +493,10 @@ body {
     width: 482px;
     display: inline-block;
 }
+/* 学校信息 底部按钮 */
+#personInfo .school-message .sure {
+    margin-top: 116px;
+}
 #change-classnum,
 #change-classnum:focus {
     width: 65px;
@@ -505,7 +509,6 @@ body {
     color: #00a0e9;
     outline: none;
 }
-
 #myModal {
     width: 526px;
     height: 400px;

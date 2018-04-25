@@ -394,7 +394,7 @@ $(function() {
 		$(".fa-arrows").click();
 	})
 });
-
+// 联动
 function selectLoadData(id,data,selectId){
 	if(null == data || data.length<=0){
 	}else{
@@ -424,7 +424,21 @@ function selectSchoolData(id,data,selectId){
 		select1.selectpicker('render');
 	}
 }
-
+// 教材版本
+function selectTeachData(id,data,selectId){
+    if(null == data || data.length<=0){
+    }else{
+        var select1 = $("#"+id);
+        for(var i=0;i<data.length;i++){
+            select1.append("<option value='"+data[i].nameVal+"'>"+ data[i].name + "</option>");
+        }
+        select1.selectpicker('refresh');
+        if(selectId && selectId!=null){
+            select1.selectpicker("val",selectId)
+        }
+        select1.selectpicker('render');
+    }
+}
 
 
 function initSelect(userInfo){
@@ -443,8 +457,33 @@ function initSelect(userInfo){
 			});
 		}
 	});
+    doAjax("get", "dic/findDicByType.do?type=3", null, function(data, code) {
+    	console.log(data)
+        if(null == data || data.length<=0){
+        }else {
+            selectTeachData("fifth-disabled", data, userInfo.address_province)
+        }
+	});
 }
-
+//  教材版本数据渲染
+/*function initSelect(userInfo){
+    doAjax("get", "area/getRegion.do?level=1", null, function(data, code) {
+        if(null == data || data.length<=0){
+        }else{
+            selectLoadData("first-disabled",data,userInfo.address_province)
+            doAjax("get", "area/getRegion.do?regionId="+userInfo.address_province, null, function(data, code) {
+                selectLoadData("second-disabled",data,userInfo.address_city)
+                doAjax("get", "area/getRegion.do?regionId="+userInfo.address_city, null, function(data, code) {
+                    selectLoadData("thired-disabled",data,userInfo.address_area)
+                    doAjax("get", "school/getSchoolByRegion.do?regionId="+userInfo.address_area, null, function(data, code) {
+                        selectSchoolData("forth-disabled",data,userInfo.schoolId)
+                    });
+                });
+            });
+        }
+    });
+}*/
+// 数据发生改变
 function initSelectChange(){
 	$('#first-disabled').on('change', function (data,index) {
 		cleanSelectVal($("#second-disabled"));
@@ -476,9 +515,15 @@ function initSelectChange(){
 			selectSchoolData("forth-disabled",data,null)
 		});
 	});
+   /* $('#fifth-disabled').on('change', function (data,index) {
+        cleanSelectVal($("#fifth-disabled"));
+        doAjax("get", "dic/findDicByType.do?type="+$(this).val(), null, function(data, code) {
+            selectSchoolData("fifth-disabled",data,null)
+        });
+    });*/
 }
 
-
+// 清除改变前的数据
 function cleanSelectVal(selector){
 	selector.find('option').remove();
 	selector.selectpicker('refresh');
