@@ -99,6 +99,7 @@ $(function() {
 	}
 	// 获取班级等信息
 	getStudentInfo();
+	initSelectChange();
 });
 
 $("#sure-change").click(function() {
@@ -143,7 +144,7 @@ function getStudentInfo() {
 			$("#school7").val(user.name_num)
 		}
 		store.set("className", user.grade + user.className);
-
+		initSelect(user);
 	});
 }
 // 图片验证码
@@ -384,3 +385,92 @@ $(function() {
 		$(".fa-arrows").click();
 	})
 });
+
+function selectLoadData(id,data,selectId){
+	if(null == data || data.length<=0){
+	}else{
+		var select1 = $("#"+id);
+		for(var i=0;i<data.length;i++){
+			select1.append("<option value='"+data[i].code+"'>"+ data[i].text + "</option>");  
+		}
+		select1.selectpicker('refresh');
+		if(selectId && selectId!=null){
+			select1.selectpicker("val",selectId)
+		}
+		select1.selectpicker('render');
+	}
+}
+
+function selectSchoolData(id,data,selectId){
+	if(null == data || data.length<=0){
+	}else{
+		var select1 = $("#"+id);
+		for(var i=0;i<data.length;i++){
+			select1.append("<option value='"+data[i].id+"'>"+ data[i].schoolName + "</option>");  
+		}
+		select1.selectpicker('refresh');
+		if(selectId && selectId!=null){
+			select1.selectpicker("val",selectId)
+		}
+		select1.selectpicker('render');
+	}
+}
+
+
+
+function initSelect(userInfo){
+	doAjax("get", "area/getRegion.do?level=1", null, function(data, code) {
+		if(null == data || data.length<=0){
+		}else{
+			selectLoadData("first-disabled",data,userInfo.address_province)
+			doAjax("get", "area/getRegion.do?regionId="+userInfo.address_province, null, function(data, code) {
+					selectLoadData("second-disabled",data,userInfo.address_city)
+					doAjax("get", "area/getRegion.do?regionId="+userInfo.address_city, null, function(data, code) {
+							selectLoadData("thired-disabled",data,userInfo.address_area)
+							doAjax("get", "school/getSchoolByRegion.do?regionId="+userInfo.address_area, null, function(data, code) {
+									selectSchoolData("forth-disabled",data,userInfo.schoolId)
+							});
+					});
+			});
+		}
+	});
+}
+
+function initSelectChange(){
+	$('#first-disabled').on('change', function (data,index) {
+		cleanSelectVal($("#second-disabled"));
+		cleanSelectVal($("#thired-disabled"));
+		cleanSelectVal($("#forth-disabled"));
+		doAjax("get", "area/getRegion.do?regionId="+$(this).val(), null, function(data1, code) {
+			selectLoadData("second-disabled",data1,null);
+			doAjax("get", "area/getRegion.do?regionId="+data1[0].code, null, function(data2, code) {
+				selectLoadData("thired-disabled",data2,null);
+				doAjax("get", "school/getSchoolByRegion.do?regionId="+data2[0].code, null, function(data3, code) {
+					selectSchoolData("forth-disabled",data3,null)
+				});
+			});
+		});
+	});
+	$('#second-disabled').on('change', function (data,index) {
+		cleanSelectVal($("#thired-disabled"));
+		cleanSelectVal($("#forth-disabled"));
+		doAjax("get", "area/getRegion.do?regionId="+$(this).val(), null, function(data2, code) {
+			selectLoadData("thired-disabled",data2,null);
+			doAjax("get", "school/getSchoolByRegion.do?regionId="+data2[0].code, null, function(data3, code) {
+				selectSchoolData("forth-disabled",data3,null)
+			});
+		});
+	});
+	$('#thired-disabled').on('change', function (data,index) {
+		cleanSelectVal($("#forth-disabled"));
+		doAjax("get", "school/getSchoolByRegion.do?regionId="+$(this).val(), null, function(data, code) {
+			selectSchoolData("forth-disabled",data,null)
+		});
+	});
+}
+
+
+function cleanSelectVal(selector){
+	selector.find('option').remove();
+	selector.selectpicker('refresh');
+}
