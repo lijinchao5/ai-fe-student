@@ -97,15 +97,15 @@ $(function() {
 		var birth = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
 		$("#birthDate").val(birth)
 	}
-	 $("#second-disable").selectpicker({  
-         noneSelectedText : '请选择'  
-     });  
-	 $("#thired-disabled").selectpicker({  
-		 noneSelectedText : '请选择'  
-	 });  
-	 $("#forth-disable").selectpicker({  
-		 noneSelectedText : '请选择'  
-	 });  
+	$("#second-disable").selectpicker({
+		noneSelectedText : '请选择'
+	});
+	$("#thired-disabled").selectpicker({
+		noneSelectedText : '请选择'
+	});
+	$("#forth-disable").selectpicker({
+		noneSelectedText : '请选择'
+	});
 	// 获取班级等信息
 	getStudentInfo();
 	initSelectChange();
@@ -395,136 +395,135 @@ $(function() {
 	})
 });
 // 联动
-function selectLoadData(id,data,selectId){
-	if(null == data || data.length<=0){
-	}else{
-		var select1 = $("#"+id);
-		for(var i=0;i<data.length;i++){
-			select1.append("<option value='"+data[i].code+"'>"+ data[i].text + "</option>");  
+function selectLoadData(id, data, selectId) {
+	if (null == data || data.length <= 0) {
+	} else {
+		var select1 = $("#" + id);
+		for (var i = 0; i < data.length; i++) {
+			select1.append("<option value='" + data[i].code + "'>" + data[i].text + "</option>");
 		}
 		select1.selectpicker('refresh');
-		if(selectId && selectId!=null){
-			select1.selectpicker("val",selectId)
+		if (selectId && selectId != null) {
+			select1.selectpicker("val", selectId)
 		}
 		select1.selectpicker('render');
 	}
 }
 
-function selectSchoolData(id,data,selectId){
-	if(null == data || data.length<=0){
-	}else{
-		var select1 = $("#"+id);
-		for(var i=0;i<data.length;i++){
-			select1.append("<option value='"+data[i].id+"'>"+ data[i].schoolName + "</option>");  
+function selectSchoolData(id, data, selectId) {
+	if (null == data || data.length <= 0) {
+	} else {
+		var select1 = $("#" + id);
+		for (var i = 0; i < data.length; i++) {
+			select1.append("<option value='" + data[i].id + "'>" + data[i].schoolName + "</option>");
 		}
 		select1.selectpicker('refresh');
-		if(selectId && selectId!=null){
-			select1.selectpicker("val",selectId)
+		if (selectId && selectId != null) {
+			select1.selectpicker("val", selectId)
 		}
 		select1.selectpicker('render');
 	}
 }
 // 教材版本
-function selectTeachData(id,data,selectId){
-    if(null == data || data.length<=0){
-    }else{
-        var select1 = $("#"+id);
-        for(var i=0;i<data.length;i++){
-            select1.append("<option value='"+data[i].nameVal+"'>"+ data[i].name + "</option>");
-        }
-        select1.selectpicker('refresh');
-        if(selectId && selectId!=null){
-            select1.selectpicker("val",selectId)
-        }
-        select1.selectpicker('render');
-    }
+function selectTeachData(id, data, selectId) {
+	if (null == data || data.length <= 0) {
+	} else {
+		var select1 = $("#" + id);
+		for (var i = 0; i < data.length; i++) {
+			select1.append("<option value='" + data[i].nameVal + "'>" + data[i].name + "</option>");
+		}
+		select1.selectpicker('refresh');
+		if (selectId && selectId != null) {
+			select1.selectpicker("val", selectId)
+		}
+		select1.selectpicker('render');
+	}
 }
 
-
-function initSelect(userInfo){
+function initSelect(userInfo) {
 	doAjax("get", "area/getRegion.do?level=1", null, function(data, code) {
-		if(null == data || data.length<=0){
-		}else{
-			selectLoadData("first-disabled",data,userInfo.address_province)
-			doAjax("get", "area/getRegion.do?regionId="+userInfo.address_province, null, function(data, code) {
-					selectLoadData("second-disabled",data,userInfo.address_city)
-					doAjax("get", "area/getRegion.do?regionId="+userInfo.address_city, null, function(data, code) {
-							selectLoadData("thired-disabled",data,userInfo.address_area)
-							doAjax("get", "school/getSchoolByRegion.do?regionId="+userInfo.address_area, null, function(data, code) {
-									selectSchoolData("forth-disabled",data,userInfo.schoolId)
-							});
+		if (null == data || data.length <= 0) {
+		} else {
+			selectLoadData("first-disabled", data, userInfo.address_province)
+			if(null == userInfo.address_province || userInfo.address_province == ""){
+				$("#first-disabled").selectpicker("val", "0")
+				$("#first-disabled").selectpicker('render');
+			}
+			doAjax("get", "area/getRegion.do?regionId=" + userInfo.address_province, null, function(data, code) {
+				selectLoadData("second-disabled", data, userInfo.address_city)
+				doAjax("get", "area/getRegion.do?regionId=" + userInfo.address_city, null, function(data, code) {
+					selectLoadData("thired-disabled", data, userInfo.address_area)
+					doAjax("get", "school/getSchoolByRegion.do?regionId=" + userInfo.address_area, null, function(data, code) {
+						selectSchoolData("forth-disabled", data, userInfo.schoolId)
 					});
+				});
 			});
 		}
 	});
-    doAjax("get", "dic/findDicByType.do?type=3", null, function(data, code) {
-    	console.log(data)
-        if(null == data || data.length<=0){
-        }else {
-            selectTeachData("fifth-disabled", data, userInfo.address_province)
-        }
+	doAjax("get", "dic/findDicByType.do?type=3", null, function(data, code) {
+		console.log(data)
+		if (null == data || data.length <= 0) {
+		} else {
+			selectTeachData("fifth-disabled", data, userInfo.address_province)
+		}
 	});
 }
-//  教材版本数据渲染
-/*function initSelect(userInfo){
-    doAjax("get", "area/getRegion.do?level=1", null, function(data, code) {
-        if(null == data || data.length<=0){
-        }else{
-            selectLoadData("first-disabled",data,userInfo.address_province)
-            doAjax("get", "area/getRegion.do?regionId="+userInfo.address_province, null, function(data, code) {
-                selectLoadData("second-disabled",data,userInfo.address_city)
-                doAjax("get", "area/getRegion.do?regionId="+userInfo.address_city, null, function(data, code) {
-                    selectLoadData("thired-disabled",data,userInfo.address_area)
-                    doAjax("get", "school/getSchoolByRegion.do?regionId="+userInfo.address_area, null, function(data, code) {
-                        selectSchoolData("forth-disabled",data,userInfo.schoolId)
-                    });
-                });
-            });
-        }
-    });
-}*/
+// 教材版本数据渲染
+/*
+ * function initSelect(userInfo){ doAjax("get", "area/getRegion.do?level=1",
+ * null, function(data, code) { if(null == data || data.length<=0){ }else{
+ * selectLoadData("first-disabled",data,userInfo.address_province) doAjax("get",
+ * "area/getRegion.do?regionId="+userInfo.address_province, null, function(data,
+ * code) { selectLoadData("second-disabled",data,userInfo.address_city)
+ * doAjax("get", "area/getRegion.do?regionId="+userInfo.address_city, null,
+ * function(data, code) {
+ * selectLoadData("thired-disabled",data,userInfo.address_area) doAjax("get",
+ * "school/getSchoolByRegion.do?regionId="+userInfo.address_area, null,
+ * function(data, code) {
+ * selectSchoolData("forth-disabled",data,userInfo.schoolId) }); }); }); } }); }
+ */
 // 数据发生改变
-function initSelectChange(){
-	$('#first-disabled').on('change', function (data,index) {
+function initSelectChange() {
+	$('#first-disabled').on('change', function(data, index) {
 		cleanSelectVal($("#second-disabled"));
 		cleanSelectVal($("#thired-disabled"));
 		cleanSelectVal($("#forth-disabled"));
-		doAjax("get", "area/getRegion.do?regionId="+$(this).val(), null, function(data1, code) {
-			selectLoadData("second-disabled",data1,null);
-			doAjax("get", "area/getRegion.do?regionId="+data1[0].code, null, function(data2, code) {
-				selectLoadData("thired-disabled",data2,null);
-				doAjax("get", "school/getSchoolByRegion.do?regionId="+data2[0].code, null, function(data3, code) {
-					selectSchoolData("forth-disabled",data3,null)
+		doAjax("get", "area/getRegion.do?regionId=" + $(this).val(), null, function(data1, code) {
+			selectLoadData("second-disabled", data1, null);
+			doAjax("get", "area/getRegion.do?regionId=" + data1[0].code, null, function(data2, code) {
+				selectLoadData("thired-disabled", data2, null);
+				doAjax("get", "school/getSchoolByRegion.do?regionId=" + data2[0].code, null, function(data3, code) {
+					selectSchoolData("forth-disabled", data3, null)
 				});
 			});
 		});
 	});
-	$('#second-disabled').on('change', function (data,index) {
+	$('#second-disabled').on('change', function(data, index) {
 		cleanSelectVal($("#thired-disabled"));
 		cleanSelectVal($("#forth-disabled"));
-		doAjax("get", "area/getRegion.do?regionId="+$(this).val(), null, function(data2, code) {
-			selectLoadData("thired-disabled",data2,null);
-			doAjax("get", "school/getSchoolByRegion.do?regionId="+data2[0].code, null, function(data3, code) {
-				selectSchoolData("forth-disabled",data3,null)
+		doAjax("get", "area/getRegion.do?regionId=" + $(this).val(), null, function(data2, code) {
+			selectLoadData("thired-disabled", data2, null);
+			doAjax("get", "school/getSchoolByRegion.do?regionId=" + data2[0].code, null, function(data3, code) {
+				selectSchoolData("forth-disabled", data3, null)
 			});
 		});
 	});
-	$('#thired-disabled').on('change', function (data,index) {
+	$('#thired-disabled').on('change', function(data, index) {
 		cleanSelectVal($("#forth-disabled"));
-		doAjax("get", "school/getSchoolByRegion.do?regionId="+$(this).val(), null, function(data, code) {
-			selectSchoolData("forth-disabled",data,null)
+		doAjax("get", "school/getSchoolByRegion.do?regionId=" + $(this).val(), null, function(data, code) {
+			selectSchoolData("forth-disabled", data, null)
 		});
 	});
-   /* $('#fifth-disabled').on('change', function (data,index) {
-        cleanSelectVal($("#fifth-disabled"));
-        doAjax("get", "dic/findDicByType.do?type="+$(this).val(), null, function(data, code) {
-            selectSchoolData("fifth-disabled",data,null)
-        });
-    });*/
+	/*
+	 * $('#fifth-disabled').on('change', function (data,index) {
+	 * cleanSelectVal($("#fifth-disabled")); doAjax("get",
+	 * "dic/findDicByType.do?type="+$(this).val(), null, function(data, code) {
+	 * selectSchoolData("fifth-disabled",data,null) }); });
+	 */
 }
 
 // 清除改变前的数据
-function cleanSelectVal(selector){
+function cleanSelectVal(selector) {
 	selector.find('option').remove();
 	selector.selectpicker('refresh');
 }
