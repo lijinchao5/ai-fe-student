@@ -157,51 +157,74 @@
                                 <!--<input type="text" id="region1" >
                                 <input type="text" id="region2" >
                                 <input type="text" id="region3" >-->
-                                <select id="first-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
+                                <div class="in-3">
+                                    <select id="first-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
+                                        <optgroup disabled="disabled" label="disabled">
+                                            <option>Hidden</option>
+                                        </optgroup>
+                                        <optgroup>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div class="in-3">
+                                    <select id="second-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
+                                        <optgroup disabled="disabled" label="disabled">
+                                            <option>Hidden</option>
+                                        </optgroup>
+                                        <optgroup class="list1">
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div class="in-3">
+                                    <select id="thired-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
+                                        <!-- <optgroup disabled="disabled" label="disabled">
+                                          <option>Hidden</option>
+                                        </optgroup> -->
+                                        <optgroup>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                            <option>Apple</option>
+                                            <option>Orange</option>
+                                            <option>Corn</option>
+                                            <option>Carrot</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span id="mark-label2">学校：</span>
+                            <!--<input type="text" id="school1" >-->
+                            <div class="in-1">
+                                <select id="forth-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
                                     <optgroup disabled="disabled" label="disabled">
                                         <option>Hidden</option>
                                     </optgroup>
                                     <optgroup>
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
-                                    </optgroup>
-                                </select>
-
-                                <select id="second-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
-                                    <optgroup disabled="disabled" label="disabled">
-                                        <option>Hidden</option>
-                                    </optgroup>
-                                    <optgroup class="list1">
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
-                                    </optgroup>
-                                </select>
-
-                                <select id="thired-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
-                                    <!-- <optgroup disabled="disabled" label="disabled">
-                                      <option>Hidden</option>
-                                    </optgroup> -->
-                                    <optgroup>
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
-                                        <option>Apple</option>
-                                        <option>Orange</option>
-                                        <option>Corn</option>
-                                        <option>Carrot</option>
                                         <option>Apple</option>
                                         <option>Orange</option>
                                         <option>Corn</option>
@@ -209,21 +232,6 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <span id="mark-label2">学校：</span>
-                            <!--<input type="text" id="school1" >-->
-                            <select id="forth-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true">
-                                <optgroup disabled="disabled" label="disabled">
-                                    <option>Hidden</option>
-                                </optgroup>
-                                <optgroup>
-                                    <option>Apple</option>
-                                    <option>Orange</option>
-                                    <option>Corn</option>
-                                    <option>Carrot</option>
-                                </optgroup>
-                            </select>
                         </div>
                         <div class="form-group">
                             <span id="mark-label6">手机号：</span>
@@ -356,26 +364,5 @@
 <script src="../../lib/avatar/sitelogo.js"></script>
 <!--<script src="../../lib/avatar/qunit.js"></script>-->
 <script src="../../lib/avatar/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
-
-<script>
-    $(document).ready(function () {
-        var mySelect = $('#first-disabled2');
-
-        $('#special').on('click', function () {
-            mySelect.find('option:selected').prop('disabled', true);
-            mySelect.selectpicker('refresh');
-        });
-
-        $('#special2').on('click', function () {
-            mySelect.find('option:disabled').prop('disabled', false);
-            mySelect.selectpicker('refresh');
-        });
-
-        $('#basic2').selectpicker({
-            liveSearch: true,
-            maxOptions: 1
-        });
-    });
-</script>
 
 </html>

@@ -485,7 +485,14 @@ body {
     width: 790px;
     margin-bottom: 10px;
 }
-
+#personInfo .school-message .in-3 {
+    width: 157px;
+    display: inline-block;
+}
+#personInfo .school-message .in-1 {
+    width: 482px;
+    display: inline-block;
+}
 #change-classnum,
 #change-classnum:focus {
     width: 65px;
