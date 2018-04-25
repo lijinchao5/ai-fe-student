@@ -97,6 +97,15 @@ $(function() {
 		var birth = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
 		$("#birthDate").val(birth)
 	}
+	 $("#second-disable").selectpicker({  
+         noneSelectedText : '请选择'  
+     });  
+	 $("#thired-disabled").selectpicker({  
+		 noneSelectedText : '请选择'  
+	 });  
+	 $("#forth-disable").selectpicker({  
+		 noneSelectedText : '请选择'  
+	 });  
 	// 获取班级等信息
 	getStudentInfo();
 	initSelectChange();
