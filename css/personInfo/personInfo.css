@@ -156,7 +156,8 @@ body {
 /*left: 7px;*/
 /*}*/
 
-#personInfo #tabbd li {
+#personInfo #tabbd .tab-bd {
+/*#personInfo #tabbd li {*/
     display: none;
 }
 

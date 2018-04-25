@@ -23,7 +23,7 @@ function navs() {
 		}
 		tabsindex = $(this).index();
 		navsTab.eq(tabsindex).find('img').attr('src', '../../images/personInfo/nav' + tabsindex + '-in.png');
-		$('#tabbd li').hide().eq(tabsindex).show();
+		$('#tabbd >li').hide().eq(tabsindex).show();
 	});
 }
 navs();
