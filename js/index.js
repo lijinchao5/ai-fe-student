@@ -113,7 +113,6 @@ function initWebSocket(userId) {
                 $("#dialog_content").append("<p>" + msg.data + ",老师催收了！</p>");
                 console.log(msg.data);
             }
-
         };
         // 关闭事件
         socket.onclose = function () {
@@ -123,7 +122,6 @@ function initWebSocket(userId) {
             console.log("Socket发生了错误");
         }
     }
-
 }
 //nav 添加类名
 $(".add-top li").click(function () {

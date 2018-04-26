@@ -73,11 +73,22 @@
     color: #00a0e9;
 }
 
-.nav-wrap .hd a span img {
+.nav-wrap .hd a p {
+    text-align: center;
+}
+
+.nav-wrap .hd a p img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin: -3px 10px 0 0;
     line-height: 64px;
     vertical-align: middle;
+}
+
+.nav-wrap .hd a p span {
+    display: inline-block;
+    width: 70px;
+    /*background-color: #8D8D8D;*/
+    text-align: left;
 }

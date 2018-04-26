@@ -1,0 +1,320 @@
+body {
+    color: #999;
+    font-size: 18px;
+    min-height: 748px;
+}
+
+.outs .mains::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#nav,
+#class-list,
+#footer,
+.class-wrap li,
+.class-wrap li p {
+    float: left;
+}
+
+.class-wrap li::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#header {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+}
+
+#nav {
+    width: 264px;
+    height: 662px;
+    background-color: #4fc6fc;
+    color: #333;
+    border-radius: 5px;
+}
+
+#class-list {
+    width: 932px;
+    height: 662px;
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#footer {
+    width: 804px;
+    height: 52px;
+    margin: 1.5% 0 0 17%;
+    background: transparent;
+}
+
+.class-wrap {
+    width: 886px;
+    height: 508px;
+    margin: 50px auto 0;
+}
+
+.class-wrap li {
+    width: 422px;
+    height: 233px;
+    margin: 14px 14px 0 14px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding-top: 30px;
+    position: relative;
+}
+
+.class-wrap li p {
+    text-align: center;
+
+}
+
+.class-wrap li:hover {
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
+}
+
+.class-wrap li:nth-last-of-type(2n-1) {
+    margin-left: 0;
+}
+
+.class-wrap li .class-name {
+    width: 310px;
+    height: 20px;
+    line-height: 20px;
+    color: #00a0e9;
+    font-weight: bold;
+    /*padding-left: 144px;*/
+}
+
+.class-wrap li .class-number {
+    width: 110px;
+    height: 20px;
+    line-height: 20px;
+    letter-spacing: 1.1px;
+    color: #f08118;
+    text-align: left;
+}
+
+.class-wrap li .completed-work,
+.class-wrap li .completed-exam {
+    width: 50%;
+    margin-top: 40px;
+    padding-left: 60px;
+}
+
+.class-wrap li .completed-work-text,
+.class-wrap li .completed-exam-text {
+    width: 35%;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.class-wrap li .completed-exam,
+.class-wrap li .completed-exam-text {
+    margin-top: 20px;
+}
+
+.class-wrap li .finished-work,
+.class-wrap li .finished-exam {
+    color: #f08118;
+}
+
+.class-wrap li .enter-class {
+    width: 105px;
+    height: 30px;
+    font-size: 14px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 30px 0 0 135px;
+}
+
+.class-wrap li .enter-class:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.class-wrap li .withdraw-class {
+    cursor: pointer;
+    width: 64px;
+    height: 27px;
+    border-radius: 13.5px;
+    border: solid 1px #47bafb;
+    color: #00a0e9;
+    font-size: 14px;
+    text-align: center;
+    line-height: 27px;
+    margin: 30px 0 0 62px;
+}
+
+.class-wrap li .class-disbanded {
+    width: 102px;
+    height: 97px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.class-wrap li .class-add {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    margin: 55px 0 30px 175px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.class-wrap li .add-text {
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    float: none;
+    font-size: 16px;
+    font-weight: normal;
+    color: #36b0ed;
+    cursor: pointer;
+}
+
+.without-class {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.without-class .without-content {
+    width: 494px;
+    height: 500px;
+    margin: 10% auto 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+.without-class .without-header {
+    width: 100%;
+    height: 140px;
+    background: url("../../images/common/startbg.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.without-class .without-body {
+    width: 90%;
+    height: 100px;
+    margin: 10px auto 0;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.without-class .without-body .append-class {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid #999;
+    outline: none;
+    padding-left: 10px;
+}
+
+.without-class .without-body .append-class::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.without-class .without-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.without-class .without-footer button {
+    width: 110px;
+    height: 36px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: 100% 100%;
+    outline: none;
+    border: none;
+}
+
+.without-class .without-footer button:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.page-wrap {
+    position: relative;
+    width: 848px;
+    margin: 35px auto 0;
+    height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.page-wrap:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    float: left;
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    float: left;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #4fc6fc;
+    color: #fff;
+    border: none;
+}

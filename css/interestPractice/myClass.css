@@ -1,0 +1,489 @@
+body {
+    color: #999;
+    font-size: 16px;
+    min-height: 748px;
+}
+
+.outs .mains::after,
+#exam-report .report-banner .main::after,
+.paging .toggles::after,
+.paging .toggles::before,
+.report-banner .main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#nav,
+#my-class,
+#footer,
+#exam-report .report-banner .main .exam-date,
+#exam-report .report-banner .main .final-time,
+#exam-report .report-banner .main .start-time,
+#exam-report .report-banner .main li {
+    float: left;
+}
+
+#header {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+}
+
+#nav {
+    width: 264px;
+    height: 662px;
+    background-color: #4fc6fc;
+    color: #333;
+    border-radius: 5px;
+}
+
+#my-class {
+    width: 932px;
+    height: 662px;
+    margin-left: 4px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#footer {
+    width: 804px;
+    height: 52px;
+    margin: 1.5% 0 0 17%;
+    background: transparent;
+}
+
+.present-class {
+    width: 90%;
+    height: 48px;
+    padding-top: 20px;
+    margin: 0 auto;
+    /*background: #f0ad4e;*/
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+.present-class p,
+.present-class #present-class {
+    float: left;
+}
+
+.present-class .my-classmate {
+    float: right;
+    cursor: pointer;
+}
+
+.present-class #present-class {
+    font-size: 18px;
+    color: #00a0e9;
+    position: relative;
+}
+
+.present-class ul {
+    display: none;
+    background: #2e6da4;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    width: 114px;
+}
+
+.present-class ul li {
+    height: 25px;
+    line-height: 25px;
+}
+
+.present-class button {
+    float: left;
+    width: 76px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: #00a0e9;
+    border: 1px solid #00a0e9;
+    margin-left: 17px;
+}
+
+.task-list .task-title {
+    width: 356px;
+    margin: 30px auto 0;
+}
+
+.task-list .task-title::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.task-list .task-title li {
+    float: left;
+    width: 183px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 30px;
+    color: #999;
+    cursor: pointer;
+}
+
+.task-list .task-title li.current {
+    width: 173px;
+    color: #fff;
+    background-color: #00a0e9;
+}
+
+.task-list .task-content .reports {
+    display: none;
+}
+
+.screen {
+    width: 856px;
+    height: 22px;
+    margin: 30px auto 0;
+    font-weight: 300;
+}
+
+.screen span {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.screen .btn {
+    height: 22px;
+    padding: 0 6px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #fff;
+}
+
+.screen .btn-primary {
+    background: #00a0e9;
+    color: #fff;
+}
+
+.page-wrap {
+    width: 848px;
+    height: 30px;
+    margin: 3px auto 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.page-wrap::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    float: left;
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    float: left;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #4fc6fc;
+    color: #fff;
+    border: none;
+}
+
+.task-content #work-report .report-banner {
+    position: relative;
+    width: 775px;
+    height: 440px;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+
+.task-content #work-report .report-banner .main li {
+    float: left;
+    width: 248px;
+    height: 207px;
+    margin: 8px 0 0 8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+.task-content #work-report .report-banner .main li:hover {
+    border-color: transparent;
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
+}
+
+.task-content #work-report .report-banner .main li p {
+    margin-top: 30px;
+    color: #999;
+    font-weight: 300;
+}
+
+.task-content #work-report .report-banner .main li p:first-of-type {
+    color: #00a0e9;
+    font-size: 16px;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+    margin: 15px auto 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.task-content #work-report .report-banner .main li p.start-time,
+.task-content #work-report .report-banner .main li p.final-time {
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 22%;
+}
+
+.task-content #work-report .report-banner .main li p.final-time {
+    margin-top: 0;
+}
+
+.task-content #work-report .report-banner .main li p.end-time {
+    margin-top: 25px;
+}
+
+.task-content #work-report .report-banner .main li p .color-blue,
+.task-content #work-report .report-banner .main li p .color-normal {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.task-content #work-report .report-banner .main li p .color-blue {
+    color: #f08118;
+    margin-right: -5px;
+}
+
+.task-content #work-report .report-banner .main li p .color-normal {
+    color: #333;
+}
+
+.task-content #work-report .report-banner .main li .do-homework,
+.task-content #work-report .report-banner .main li .check-report {
+    display: block;
+    width: 106px;
+    height: 30px;
+    border-radius: 5px;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
+    line-height: 30px;
+    color: #fff;
+    margin: 28px auto 0;
+}
+
+.task-content #work-report .report-banner .main li .check-report {
+    margin: 18px auto 0;
+}
+
+.task-content #work-report .report-banner .main li .do-homework:hover,
+.task-content #work-report .report-banner .main li .check-report:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
+}
+
+.task-content #work-report .report-banner .main li a {
+    margin-bottom: 10px;
+}
+
+.task-content #work-report .report-banner .main li a:hover {
+    text-decoration: none;
+}
+
+.task-content #work-report .report-banner .main .score {
+    width: 75px;
+    height: 35px;
+    margin: 30px auto 0;
+}
+
+.task-content #work-report .report-banner .main .score .blue-color {
+    color: #f08118;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+.task-content #work-report .report-banner .main .score .normal-color {
+    font-size: 13px;
+    color: #999;
+}
+
+#exam-report .report-banner {
+    /*position: relative;*/
+    width: 870px;
+    height: 435px;
+    overflow: hidden;
+    margin: 27px auto 0;
+}
+
+#exam-report .report-banner .main li {
+    width: 422px;
+    height: 200px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    margin: 8px 0 0 8px;
+    text-align: center;
+}
+
+#exam-report .report-banner .main li:hover {
+    /*box-shadow: 0 0 8px 2px rgba(17, 216, 252, 0.26);*/
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
+}
+
+#exam-report .report-banner .main .topic {
+    width: 90%;
+    margin: 15px auto 0;
+    font-size: 18px;
+    color: #00a0e9;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#exam-report .report-banner .main .examiner,
+#exam-report .report-banner .main .score-and-rank {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 300;
+    height: 40px;
+}
+
+#exam-report .report-banner .main .examiner {
+    line-height: 40px;
+}
+
+#exam-report .report-banner .main .exam-date {
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    margin-top: 30px;
+}
+
+#exam-report .report-banner .main .start-time {
+    width: 50%;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 40px;
+    margin-top: 30px;
+}
+
+#exam-report .report-banner .main .final-time {
+    font-size: 12px;
+    text-align: right;
+    width: 50%;
+    padding-right: 40px;
+    margin-top: 30px;
+
+}
+
+#exam-report .report-banner .main .enter-exam,
+#exam-report .report-banner .main .enter-report {
+    display: block;
+    width: 106px;
+    height: 30px;
+    margin: 15px auto 0;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: cover;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#exam-report .report-banner .main .enter-exam:hover,
+#exam-report .report-banner .main .enter-report:hover {
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-decoration: none;
+}
+
+#exam-report .report-banner .main .enter-report {
+    margin-top: 15px;
+}
+
+#exam-report .report-banner .main .complete-number {
+    color: #f08118;
+}
+
+#exam-report .report-banner .main .complete-score {
+    color: #f08118;
+    font-size: 30px;
+    margin-left: -13px;
+}
+
+#exam-report .report-banner .main .score-rank {
+    color: #f08118;
+    font-size: 30px;
+}
+
+#exam-report .report-banner .main .complete-rank {
+    margin-left: 50px;
+}
+
+.empty-all {
+    width: 180px;
+    margin: 85px auto 0;
+}
+
+.empty-all img {
+    width: 180px;
+    height: 160px;
+}
+
+.empty-all .empty-text {
+    width: 180px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
