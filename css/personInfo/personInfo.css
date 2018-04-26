@@ -230,8 +230,8 @@ body {
     width: 878px;
     height: 516px;
 }
-
-#personInfo #tabbd .owner-message .modify-info .modal-header {
+/* .owner-message */
+#personInfo #tabbd  .modify-info .modal-header {
     width: 96%;
     padding: 0;
     height: 50px;
@@ -250,8 +250,8 @@ body {
 #personInfo #tabbd .owner-message .modify-info .modal-header button {
     font-size: 32px;
 }
-
-#personInfo #tabbd .owner-message .modify-info .modal-body {
+/*  .owner-message */
+#personInfo #tabbd .modify-info .modal-body {
     padding: 0 40px;
 }
 
@@ -874,30 +874,30 @@ body {
     text-align: center;
     color: #333;
 }
-
-#personInfo #tabbd .owner-message .set-info #suremsg {
+/* .owner-message .set-info */
+#personInfo #tabbd #suremsg {
     width: 494px;
     height: 400px;
     margin: 200px auto;
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-dialog {
+#personInfo #tabbd  #suremsg .modal-dialog {
     width: 494px;
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-dialog,
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-content {
+#personInfo #tabbd  #suremsg .modal-dialog,
+#personInfo #tabbd  #suremsg .modal-content {
     background: transparent;
     box-shadow: none;
     border: none;
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-header {
+#personInfo #tabbd  #suremsg .modal-header {
     width: 494px;
     height: 140px;
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-title {
+#personInfo #tabbd  #suremsg .modal-content .modal-title {
     width: 494px;
     color: #fff;
     text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
@@ -907,11 +907,11 @@ body {
     padding: 0;
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-footer {
+#personInfo #tabbd #suremsg .modal-content .modal-footer {
 
 }
 
-#personInfo #tabbd .owner-message .set-info #suremsg .modal-content .modal-footer #sure-msg {
+#personInfo #tabbd #suremsg .modal-content .modal-footer #sure-msg {
     width: 110px;
     height: 36px;
     color: #fff;
