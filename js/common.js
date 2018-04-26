@@ -136,15 +136,17 @@ function getParam(key) {
 }
 function getLoginPath() {
 //    return window.location.protocol + '//' + window.location.host + '/login';
-    return "https://39.104.76.67:8092/ai-be/";
+//    return "https://39.104.76.67:8092/ai-be/";
+//	return "http://192.168.0.126:8092/";
 }
 function getRootPath() {
 //    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-	return "https://39.104.76.67:8092/ai-be/";
+//	return "https://39.104.76.67:8092/ai-be/";
 //    return "https://www.aienglish.vip/oep-be/";
+	return "http://192.168.0.126:8092/"
 }
 function getWebSocketRootPath() {
-    return "39.104.76.67/ai-be/";
+    return "192.168.0.126:8092/";
 //    return window.location.host + '/oep-be/';
 }
 function showLoading(show) {
