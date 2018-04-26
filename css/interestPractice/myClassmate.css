@@ -1,0 +1,179 @@
+body {
+    color: #999;
+    font-size: 16px;
+    min-height: 748px;
+}
+
+.outs .mains::after,
+#exam-report .report-banner .main::after,
+.paging .toggles::after,
+.paging .toggles::before,
+.report-banner .main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.outs {
+    width: 100%;
+    height: 100%;
+    background: url("../../images/common/background.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.outs .mains {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#nav,
+#my-classmate,
+#footer,
+#exam-report .report-banner .main .exam-date,
+#exam-report .report-banner .main .final-time,
+#exam-report .report-banner .main .start-time,
+#exam-report .report-banner .main li {
+    float: left;
+}
+
+#header {
+    width: 100%;
+    height: 76px;
+    background: #fff;
+}
+
+#nav {
+    width: 264px;
+    height: 662px;
+    background-color: #4fc6fc;
+    color: #333;
+    border-radius: 5px;
+}
+
+#my-classmate {
+    width: 932px;
+    height: 662px;
+    margin-left: 4px;
+    padding: 20px 40px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#footer {
+    width: 804px;
+    height: 52px;
+    margin: 1.5% 0 0 17%;
+    background: transparent;
+}
+.back{
+    display: block;
+    height: 40px;
+    /*margin: 20px 0;*/
+    line-height: 40px;
+}
+.back .back-img{
+    width: 15px;
+    height: 25px;
+    background-color: #fba;
+}
+.back .back-txt{
+    padding-left: 20px;
+}
+.classmates{
+
+}
+.classmates .items{
+    height: 520px;
+    padding-right: 10px;
+    /*background-color: pink;*/
+    overflow-y: scroll;
+    overflow: auto;
+}
+
+.classmates .items::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.classmates .items::-webkit-scrollbar
+{
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+.classmates .items::-webkit-scrollbar-thumb
+{
+    background-color: #11d8fc;
+}
+.classmates .items .item{
+    float: left;
+    /*padding: 15px 0;*/
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.classmates .items .item .item-icon{
+    width: 56px;
+    height: 56px;
+    margin-top: 15px;
+    padding: 6px;
+    background: -webkit-linear-gradient(#4bf2fd, #4dadf1); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#4bf2fd, #4dadf1); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#4bf2fd, #4dadf1); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#4bf2fd, #4dadf1);
+    border-radius: 50%;
+}
+.classmates .items .item .item-txt{
+    height: 20px;
+    font-size: 16px;
+    color: #008fe9;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/* 翻页 */
+.paging {
+    display: inline-block;
+}
+
+.paging .up,
+.paging .down {
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.paging .toggles {
+    float: left;
+    margin: 0 10px;
+}
+
+.paging .toggles li {
+    width: 30px;
+    height: 30px;
+    margin-left: 4px;
+    border: 1px solid #eee;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+    float: left;
+    cursor: pointer;
+}
+
+.paging .toggles .col {
+    background-color: #4fc6fc;
+    color: #fff;
+    border: none;
+}
