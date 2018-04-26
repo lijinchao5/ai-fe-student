@@ -1,7 +1,29 @@
 $(function () {
-    getWork()
+    $(".task-title li").eq(0).click()
 });
-// button 按钮
+
+$(".task-title li").click(function () {
+    $(this).addClass("current").siblings().removeClass("current");
+     var Liindex = $(this).index();
+    $(".task-content .reports").eq(Liindex).show().siblings().hide();
+    console.log($(".task-content li").eq(Liindex));
+});
+
+function formateDate(da) {
+    if (null == da || da == '') {
+        return "1990-10-01";
+    }
+    var date = new Date(da);
+    var y = date.getFullYear();
+    var m = date.getMonth() + 1;
+    var d = date.getDate();
+    var h = date.getHours();
+    var mm = date.getMinutes();
+    var s = date.getSeconds();
+    var d = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d) + " " + (h < 10 ? ('0' + h) : h) + ":" + (mm < 10 ? ('0' + mm) : mm) + ":" + (s < 10 ? ('0' + s) : s);
+    return d;
+}
+
 $("#work-report .screen button").click(function () {
     $(this).addClass("btn-primary").siblings().removeClass("btn-primary");
     cliindex = 0;
@@ -13,19 +35,11 @@ $("#exam-report .screen button").click(function () {
     addListE();
 });
 
-$(".task-title li").click(function () {
-    $(this).addClass("current").siblings().removeClass("current");
-    Liindex = $(this).index();
-    console.log(Liindex);
-    $(".task-content li").eq(Liindex).show().siblings().hide()
-});
-
 
 function getWork() {
     initData();
     addListeners();
 }
-
 var currentPage = 0;
 var totalPage = 0;
 var cliindex = 0;
@@ -53,7 +67,6 @@ function addListeners() {
         initData();
     });
 }
-
 function goHomeworkReport(id, com) {
     if (com == 'F') {
         alert("作业未完成,作业报告为空!")
@@ -61,7 +74,6 @@ function goHomeworkReport(id, com) {
         window.location.href = "homeworkReport.html?id=" + id;
     }
 }
-
 function isflash() {
     var flag = 0;
     $(".btn-md").each(function (i, v) {
@@ -73,7 +85,6 @@ function isflash() {
     });
     return flag;
 }
-
 function initData() {
     console.log("isflash:" + isflash());
     var param = {};
@@ -86,7 +97,7 @@ function initData() {
     }
     param.page = cliindex + 1;
     var url = "homework/getStudentHomeWorkList.do";
-    var _reportAll = $(".report-banner");
+    var _reportAll = $("#work-report .report-banner");
     doAjax("get", url, param, function (data) {
         currentPage = parseInt(data.page) - 1;
         totalPage = data.countPage;
@@ -118,8 +129,8 @@ function initData() {
             if (totalPage == 1) {
                 _toggles = $("<li class='col'>" + "1" + "</li>");
                 _toggleLi.append(_toggles);
-                $(".paging .up").css('visibility', 'hidden');
-                $(".paging .down").css('visibility', 'hidden');
+                $("#toggleLi .paging .up").css('visibility', 'hidden');
+                $("#toggleLi .paging .down").css('visibility', 'hidden');
             } else {
                 for (var num = 1; num <= totalPage; num++) {
                     _toggles = $("<li>" + num + "</li>");
@@ -130,14 +141,14 @@ function initData() {
                     });
                 }
                 if ((cliindex + 1) == totalPage) {
-                    $(".paging .down").css('visibility', 'hidden');
-                    $(".paging .up").css('visibility', 'visible');
+                    $("#toggleLi .paging .down").css('visibility', 'hidden');
+                    $("#toggleLi .paging .up").css('visibility', 'visible');
                 } else if ((cliindex + 1) == 1) {
-                    $(".paging .down").css('visibility', 'visible');
-                    $(".paging .up").css('visibility', 'hidden')
+                    $("#toggleLi .paging .down").css('visibility', 'visible');
+                    $("#toggleLi .paging .up").css('visibility', 'hidden')
                 } else {
-                    $(".paging .down").css('visibility', 'visible');
-                    $(".paging .up").css('visibility', 'visible')
+                    $("#toggleLi .paging .down").css('visibility', 'visible');
+                    $("#toggleLi .paging .up").css('visibility', 'visible')
                 }
                 _toggleLi.find("li").eq(currentPage).addClass('col').siblings().removeClass('col');
                 $("#toggleLi").css('visibility', 'visible');
@@ -146,27 +157,12 @@ function initData() {
             var _reportEmpty = "";
             _reportEmpty = $("<div class='empty-all'>" + "<img src='../../images/common/empty.png' alt='没有作业'/>" + "<p class='empty-text'>" + "老师还没有布置作业哦！" + "</p>" + "</div>");
             _reportAll.append(_reportEmpty);
-            $(".paging .up").css('visibility', 'hidden');
-            $(".paging .down").css('visibility', 'hidden');
-            $("#toggleLi").css('visibility', 'hidden');
+            $("#toggleLi .paging .up").css('visibility', 'hidden');
+            $("#toggleLi .paging .down").css('visibility', 'hidden');
+            $("#toggleLi #toggleLi").css('visibility', 'hidden');
 
         }
     });
-}
-
-function formateDate(da) {
-    if (null == da || da == '') {
-        return "1990-10-01";
-    }
-    var date = new Date(da);
-    var y = date.getFullYear();
-    var m = date.getMonth() + 1;
-    var d = date.getDate();
-    var h = date.getHours();
-    var mm = date.getMinutes();
-    var s = date.getSeconds();
-    var d = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d) + " " + (h < 10 ? ('0' + h) : h) + ":" + (mm < 10 ? ('0' + mm) : mm) + ":" + (s < 10 ? ('0' + s) : s);
-    return d;
 }
 
 
@@ -174,8 +170,6 @@ function getExam() {
     addListE();
     addListenersE();
 }
-
-
 var currentPages = 0;
 var totalPages = 0;
 var cliindexs = 0;
