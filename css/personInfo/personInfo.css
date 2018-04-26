@@ -165,15 +165,16 @@ body {
     width: 212px;
     height: 106px;
     margin: 10px auto 0;
-    border-bottom: 5px solid #00a0e9;
+    /*border-bottom: 5px solid #00a0e9;*/
 }
 
 #personInfo #tabbd .info-title .each-title {
     width: 212px;
-    height: 106px;
+    height: 110px;
     margin: 0 auto;
     border-radius: 5px;
-    background: #00a0e9;
+    background: url("../../images/personInfo/tit-bg1.png") no-repeat center center;
+    background-size: 100% 100%;
     text-align: center;
     line-height: 106px;
     font-size: 20px;
