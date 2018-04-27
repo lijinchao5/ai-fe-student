@@ -56,7 +56,7 @@ togg('.toggle-pwd', '.change-pwd');
 
 $(function() {
 	var uuid = new UUID();
-	store.set("uuid", uuid);
+	store.set("uuid", uuid.id);
 	randomPic();
 	var data = JSON.parse(store.get("userInfo"));
 
