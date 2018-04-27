@@ -94,13 +94,45 @@ body {
     position: relative;
 }
 
-.present-class ul {
+#currentClass {
+    width: 125px;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.class-list {
     display: none;
-    background: #2e6da4;
     position: absolute;
-    top: 24px;
-    left: 0;
-    width: 114px;
+    top: 129px;
+    left: 634px;
+    width: 130px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.class-list li {
+    cursor: pointer;
+}
+
+.present-class ul::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.present-class ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.present-class ul::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
 }
 
 .present-class ul li {
@@ -115,7 +147,7 @@ body {
     border-radius: 4px;
     background-color: #00a0e9;
     border: 1px solid #00a0e9;
-    margin-left: 17px;
+    color: #fff;
 }
 
 .task-list .task-title {
@@ -471,7 +503,7 @@ body {
 
 .empty-all {
     width: 180px;
-    margin: 85px auto 0;
+    margin: 120px auto 0;
 }
 
 .empty-all img {

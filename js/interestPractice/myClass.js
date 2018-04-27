@@ -1,10 +1,20 @@
 $(function () {
-    $(".task-title li").eq(0).click()
+    //getWork();
+    getClass();
+    $(".task-title li").eq(0).click();
+    $('#header').load('../common/header.html');
+    $('#nav').load('../common/nav.html');
+    $('#footer').load('../common/footer.html');
 });
 
+function changeClass() {
+    $(".class-list").toggle()
+}
+
+//作业模考切换
 $(".task-title li").click(function () {
     $(this).addClass("current").siblings().removeClass("current");
-     var Liindex = $(this).index();
+    var Liindex = $(this).index();
     $(".task-content .reports").eq(Liindex).show().siblings().hide();
     console.log($(".task-content li").eq(Liindex));
 });
@@ -24,11 +34,14 @@ function formateDate(da) {
     return d;
 }
 
+//作业筛选信息
 $("#work-report .screen button").click(function () {
     $(this).addClass("btn-primary").siblings().removeClass("btn-primary");
     cliindex = 0;
     initData();
 });
+
+//模考筛选信息
 $("#exam-report .screen button").click(function () {
     $(this).addClass("btn-primary").siblings().removeClass("btn-primary");
     cliindexs = 0;
@@ -36,6 +49,35 @@ $("#exam-report .screen button").click(function () {
 });
 
 
+//班级列表
+function getClass() {
+    var url = "studentClass/getStudentClass.do";
+    var param = {};
+    doAjax("get", url, param, function (data, code) {
+        console.log(data);
+        if (code == 0 || code == "0") {
+            var _getClass = $(".class-list");
+            _getClass.html("");
+            var _current = getParam("id");
+            var noCurrent = [];
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].id == _current) {
+                    $("#currentClass").text(data[i].grade + '年级' + data[i].name)
+                } else {
+                    noCurrent.push(data[i]);
+                }
+            }
+            for (var i = 0; i < noCurrent.length; i++) {
+                var _getList = "";
+                var d = noCurrent[i];
+                _getList = $("<li>" + d.grade + "年级" + d.name + "</li>");
+                _getClass.prepend(_getList);
+            }
+        }
+    })
+}
+
+//获取作业信息
 function getWork() {
     initData();
     addListeners();
@@ -87,6 +129,7 @@ function isflash() {
 }
 function initData() {
     console.log("isflash:" + isflash());
+    var getId = getParam("id");
     var param = {};
     param.rows = 6;
     var isflashflag = isflash();
@@ -95,6 +138,7 @@ function initData() {
     } else if (isflashflag == 2) {
         param.over = 'F';
     }
+    param.classId = getId;
     param.page = cliindex + 1;
     var url = "homework/getStudentHomeWorkList.do";
     var _reportAll = $("#work-report .report-banner");
@@ -116,21 +160,21 @@ function initData() {
                     _job = $("<li>" +
                         "<p>" + d.name + "</p>" +
                         "<p><a class='color-blue'>" + d.complateStudent + "</a>&nbsp;/&nbsp;<a class='color-normal'>" + d.totalStudent + "人</a></p>" +
-                        "<a href='../speakAndListen/wordSpeaking.html?id=" + d.id + "' class='do-homework''>写作业</a>" +
+                        "<a href='wordSpeaking.html?id=" + d.id + "' class='do-homework''>写作业</a>" +
                         "<p class='start-time'>From：" + formateDate(d.createDate) + "</span></p>" +
                         "<p class='final-time'>To：" + formateDate(d.endTime) + "</span></p>" +
                         "</li>");
                 }
                 _jobList.append(_job);
             }
-            var _toggleLi = $("#toggleLi");
+            var _toggleLi = $("#work-report #toggleLi");
             var _toggles = "";
             _toggleLi.html("");
             if (totalPage == 1) {
                 _toggles = $("<li class='col'>" + "1" + "</li>");
                 _toggleLi.append(_toggles);
-                $("#toggleLi .paging .up").css('visibility', 'hidden');
-                $("#toggleLi .paging .down").css('visibility', 'hidden');
+                $("#work-report .paging .up").css('visibility', 'hidden');
+                $("#work-report .paging .down").css('visibility', 'hidden');
             } else {
                 for (var num = 1; num <= totalPage; num++) {
                     _toggles = $("<li>" + num + "</li>");
@@ -141,31 +185,31 @@ function initData() {
                     });
                 }
                 if ((cliindex + 1) == totalPage) {
-                    $("#toggleLi .paging .down").css('visibility', 'hidden');
-                    $("#toggleLi .paging .up").css('visibility', 'visible');
+                    $("#work-report .paging .down").css('visibility', 'hidden');
+                    $("#work-report .paging .up").css('visibility', 'visible');
                 } else if ((cliindex + 1) == 1) {
-                    $("#toggleLi .paging .down").css('visibility', 'visible');
-                    $("#toggleLi .paging .up").css('visibility', 'hidden')
+                    $("#work-report .paging .down").css('visibility', 'visible');
+                    $("#work-report .paging .up").css('visibility', 'hidden')
                 } else {
-                    $("#toggleLi .paging .down").css('visibility', 'visible');
-                    $("#toggleLi .paging .up").css('visibility', 'visible')
+                    $("#work-report .paging .down").css('visibility', 'visible');
+                    $("#work-report .paging .up").css('visibility', 'visible')
                 }
                 _toggleLi.find("li").eq(currentPage).addClass('col').siblings().removeClass('col');
-                $("#toggleLi").css('visibility', 'visible');
+                $("#work-report #toggleLi").css('visibility', 'visible');
             }
         } else {
             var _reportEmpty = "";
             _reportEmpty = $("<div class='empty-all'>" + "<img src='../../images/common/empty.png' alt='没有作业'/>" + "<p class='empty-text'>" + "老师还没有布置作业哦！" + "</p>" + "</div>");
             _reportAll.append(_reportEmpty);
-            $("#toggleLi .paging .up").css('visibility', 'hidden');
-            $("#toggleLi .paging .down").css('visibility', 'hidden');
-            $("#toggleLi #toggleLi").css('visibility', 'hidden');
+            $("#work-report .paging .up").css('visibility', 'hidden');
+            $("#work-report .paging .down").css('visibility', 'hidden');
+            $("#work-report #toggleLi").css('visibility', 'hidden');
 
         }
     });
 }
 
-
+//获取模考信息
 function getExam() {
     addListE();
     addListenersE();
@@ -215,6 +259,8 @@ function addListE() {
     var param = {};
     param.rows = 4;
     var isflashflagE = isflashE();
+    var getId = getParam("id");
+    //var getId = $("#currentClass").text();
     if (isflashflagE == 1) {
         param.state = '0';
     } else if (isflashflagE == 2) {
@@ -223,6 +269,7 @@ function addListE() {
         param.state = '2';
     }
     param.page = cliindexs + 1;
+    param.classId = getId;
     var url = "exam/findStudentExamByPage.do";
     var _examReport = $("#exam-report .report-banner");
     doAjax("get", url, param, function (data) {
@@ -251,7 +298,6 @@ function addListE() {
                             "<a href='javascript:void(0)' class='enter-exam' onclick=goTo('simulationExam.html','" + d.examId + "')>进入考试</a>" +
                             "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                             "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
-
                             "</li>");
                     } else {
                         if (d.state == 0) {
@@ -330,7 +376,7 @@ function addListE() {
                         "<span class='complete-score'>" + num.toFixed(1) + "</span><span>分</span>" +
                         "<span class='complete-rank'>NO.</span>" +
                         "<span class='score-rank'>" + d.studentRank + "</span></p>" +
-                        "<a href='javascript:void(0)' class='enter-report' onclick=goTo('../simulationExam/viewReport.html','" + d.examId + "')>查看报告</a>" +
+                        "<a href='javascript:void(0)' class='enter-report' onclick=goTo('viewReport.html','" + d.examId + "')>查看报告</a>" +
                         "<p class='exam-date'>" + formateDate(d.endTime) + "</p>" +
                         "</li>");
                     _examList.append(endExam);

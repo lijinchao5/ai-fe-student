@@ -22,16 +22,11 @@
             <div class="present-class">
                 <p>当前班级:</p>
                 <div id="present-class">
-                    三年级二班
-                    <ul class="class-list">
-                        <li>三年级一班</li>
-                        <li>五年级二班</li>
-                        <li>四年级二班</li>
-                        <li>三年级四班</li>
-                    </ul>
+                    <p id="currentClass"></p>
                 </div>
                 <button onclick="changeClass()">切换班级</button>
-                <a class="my-classmate" href="./myClassmate.html"><img src="" alt="">我的同学</a>
+                <ul class="class-list"></ul>
+                <p class="my-classmate" onclick="window.location.href='./myClassmate.html'"><img src="" alt="" >我的同学</p>
             </div>
             <div class="task-list">
                 <ul class="task-title">
@@ -68,8 +63,8 @@
                             <button type="button" class="btn btn-md">已完成</button>
                         </div>
                         <div class="report-banner">
-                            <div class="empty-all" style="display: none;"><img src="../../images/common/empty.png"
-                                                                               alt="没有模考">
+                            <div class="empty-all" style="display: none;">
+                                <img src="../../images/common/empty.png" alt="没有模考">
                                 <p class="empty-text">老师还没有布置模考哦！</p></div>
                             <ul class="main" id="examList">
                             </ul>
@@ -100,14 +95,6 @@
 <script type="text/javascript" src="../../js/interestPractice/myClass.js"></script>
 
 <script>
-    $(function () {
-        $('#header').load('../common/header.html');
-        $('#nav').load('../common/nav.html');
-        $('#footer').load('../common/footer.html');
 
-    });
-    function changeClass() {
-        $(".class-list").toggle()
-    }
 </script>
 </html>
