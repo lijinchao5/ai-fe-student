@@ -268,6 +268,8 @@ function initdata(){
 //左右切换自动读取单词和修改当前使用的第几个 
 //读单词，录音 核心方法
 function readword(isreset){
+    var speeds = $(".speak-speed .list .current").attr("speed");
+    console.log(speeds)
 	if(speakAndListenTabIndex==0){
 		$("#dc .active").each(function(){
 			var jsonobj=map.get($(this).attr("data"));
@@ -291,7 +293,7 @@ function readword(isreset){
 						q_restart();
 					},gettimes(audiotime*times));
 				});
-			});
+			},speeds);
 		});
 	}else if(speakAndListenTabIndex==1){
 		$("#jz .active").each(function(){
@@ -316,7 +318,7 @@ function readword(isreset){
 						q_restart();
 					},gettimes(audiotime*times));
 				})
-			})
+			},speeds)
 		})
 	}else if(speakAndListenTabIndex==2){
 		$("#kw .active").each(function(){
@@ -341,7 +343,7 @@ function readword(isreset){
 						q_restart();
 					},gettimes(audiotime*times));
 				})
-			})
+			},speeds)
 		})
 	}else if(speakAndListenTabIndex==3){
 		//角色对话
@@ -375,7 +377,7 @@ function readword(isreset){
 			$("#znnowcs").html(jsonobj.count);
 			isleftorrigth("znnowcs","zncount");
 			readrecord(jsonobj.mid,function(audiotime){
-			})
+			},speeds)
 		})
 	}
 }
@@ -616,3 +618,29 @@ function removeClassSpan(){
 		})
 	})
 }
+
+ // 语速的处理
+ $(".speak-speed .list").click(function () {
+     speakSpeed();
+ })
+ // 放入 common.js 中
+ function speakSpeed() {
+     $(".speak-speed ul").show();
+     $(".speak-speed ul li").each(function () {
+         // console.log(111)
+         $(this).click(function () {
+             var ht = $(this).html();
+             var hs = $(this).attr("speed");
+             $(".speak-speed .list .current").html(ht);
+             $(".speak-speed .list .current").attr("speed", hs);
+             // 处理语速数据
+             $(".speak-speed ul").hide();
+             if ($("#player_audio").length != 0) {
+                 var audio = document.getElementById("player_audio");
+                 var speed = $(this).attr("speed");
+                 audio.playbackRate = parseFloat(speed);
+                 audio.volume = 1;
+             }
+         })
+     })
+ }

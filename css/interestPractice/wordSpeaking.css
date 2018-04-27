@@ -363,7 +363,7 @@ body {
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
     word-wrap: break-word;
     float: left;
-    padding: 0 5px;
+    padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
@@ -376,6 +376,56 @@ body {
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
     color: #ffb846;
+}
+
+/* 语速 样式 */
+.word-speaking .speak-speed {
+    /*float: right;*/
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.word-speaking .speak-speed-in {
+    position: relative;
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    text-align: center;
+}
+
+.word-speaking .speak-speed .list {
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.word-speaking .speak-speed .list .current {
+    display: inline-block;
+    width: 30px;
+}
+
+.word-speaking .speak-speed ul {
+    position: absolute;
+    top: 20px;
+    left: 44px;
+    width: 44px;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.word-speaking .speak-speed ul li:hover {
+    background: yellow;
+}
+
+.word-speaking .speak-speed .list .triangle {
+    border: 5px solid #ccc;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    margin: 0 8px 0 0;
+    transform: rotate(45deg);
 }
 
 /* 左右箭头的设置 */
