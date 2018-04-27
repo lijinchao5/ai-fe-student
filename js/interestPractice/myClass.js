@@ -116,7 +116,7 @@ function initData() {
                     _job = $("<li>" +
                         "<p>" + d.name + "</p>" +
                         "<p><a class='color-blue'>" + d.complateStudent + "</a>&nbsp;/&nbsp;<a class='color-normal'>" + d.totalStudent + "人</a></p>" +
-                        "<a href='wordSpeaking.html?id=" + d.id + "' class='do-homework''>写作业</a>" +
+                        "<a href='../speakAndListen/wordSpeaking.html?id=" + d.id + "' class='do-homework''>写作业</a>" +
                         "<p class='start-time'>From：" + formateDate(d.createDate) + "</span></p>" +
                         "<p class='final-time'>To：" + formateDate(d.endTime) + "</span></p>" +
                         "</li>");

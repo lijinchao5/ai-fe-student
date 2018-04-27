@@ -362,6 +362,8 @@ body {
 }
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
     word-wrap: break-word;
+    float: left;
+    padding: 0 5px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {

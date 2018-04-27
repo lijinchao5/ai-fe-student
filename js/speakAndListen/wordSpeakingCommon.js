@@ -145,7 +145,7 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 		var wordEntitie=homeworkStudentScoreWordEntities[i];
 		if(wordEntitie.type=="7"){
 			if(wordEntitie.text==" "){
-				html+="&nbsp;";
+				// html+="&nbsp;";
 			}else{
 				html+=wordEntitie.text;
 			}
