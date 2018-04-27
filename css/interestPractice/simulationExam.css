@@ -77,9 +77,11 @@ body {
     color: #00a0e9;
 }
 
-.student-notice .content {
+.student-notice .notice-text {
     width: 750px;
     height: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
     margin: 65px auto 0;
     padding: 0 20px 20px;
     line-height: 26px;
@@ -87,21 +89,33 @@ body {
     color: #666;
     overflow-y: auto;
     overflow-x: hidden;
+    text-align: center;
 }
 
-.student-notice .content::-webkit-scrollbar {
+.student-notice .notice-text .content {
+    width: 700px;
+    height: 270px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.student-notice .notice-text::-webkit-scrollbar {
     width: 6px;
     height: 10px;
     background-color: #F5F5F5;
     border-radius: 5px;
 }
 
-.student-notice .content::-webkit-scrollbar-track {
+.student-notice .notice-text::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
 }
 
-.student-notice .content::-webkit-scrollbar-thumb {
+.student-notice .notice-text::-webkit-scrollbar-thumb {
     background-color: #11d8fc;
 }
 

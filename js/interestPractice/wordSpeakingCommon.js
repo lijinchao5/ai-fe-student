@@ -470,6 +470,6 @@ function gettimes(stime){
 }
 
 function gotoWorkHome(){
-	window.location.href="../speakAndListen/homeworkList.html";
+	window.location.href="javascript:history.back(-1)";
 }
 

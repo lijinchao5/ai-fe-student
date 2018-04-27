@@ -11,8 +11,8 @@ function changeClass() {
     $(".class-list").toggle()
 }
 
-function  jumpMate(){
-    var id=getParam("id");
+function jumpMate() {
+    var id = getParam("id");
     window.location.href = './myClassmate.html?id=' + id;
 }
 //作业模考切换
@@ -258,6 +258,9 @@ function isflashE() {
     return flagE;
 }
 
+function goTo(url, id) {
+    window.location.href = url + "?id=" + id;
+}
 function addListE() {
     // 获取学生考试列表
     var param = {};

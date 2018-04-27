@@ -518,7 +518,7 @@ function subtj() {
         $("#subtj").html(n);
         if (n == 0) {
             clearInterval(timer);
-            window.location.href = "../simulationExam/examReport.html";
+            window.location.href = "javascript:history.back(-1)";
         }
     }, 1000);
 }
