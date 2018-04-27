@@ -11,7 +11,8 @@ function changeClass() {
     $(".class-list").toggle()
 }
 function initInfo() {
-    var classId = 67;
+    var getId=getParam("id");
+    var classId = getId;
     var url = "studentClass/getClassmate.do?classId="+classId;
     console.log(url);
     console.log(111)

@@ -33,7 +33,6 @@ function addClass() {
 //进入班级
 function entryClass(id) {
     window.location.href = './myClass.html?id=' + id;
-    window.localStorage.setItem("currentId", id)
 }
 //添加班级
 function addNewclass() {

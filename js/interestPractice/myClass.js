@@ -11,6 +11,10 @@ function changeClass() {
     $(".class-list").toggle()
 }
 
+function  jumpMate(){
+    var id=getParam("id");
+    window.location.href = './myClassmate.html?id=' + id;
+}
 //作业模考切换
 $(".task-title li").click(function () {
     $(this).addClass("current").siblings().removeClass("current");

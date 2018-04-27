@@ -11,7 +11,7 @@ $(function () {
 
 });
 function examlist() {
-    window.location.href = "../../html/simulationExam/examReport.html";
+    window.location.href = "../../html/interestPractice/examReport.html";
     $(".record-fail").modal("show")
 }
 var map = new Map();
