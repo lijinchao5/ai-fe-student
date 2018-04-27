@@ -13,7 +13,7 @@ $(function () {
     }
 });
 
-//        导航添加current类名
+//  导航添加current类名
 var currents = $("#details-nav a").length;
 var currentEl = $("#details-nav a");
 if (sessionStorage.element) {

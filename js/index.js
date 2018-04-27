@@ -124,7 +124,7 @@ function initWebSocket(userId) {
     }
 }
 //nav 添加类名
-$(".add-top li").click(function () {
+$(".nav div").click(function () {
     sessionStorage.element = $(this).index() + 1;
 });
 

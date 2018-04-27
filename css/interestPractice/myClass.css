@@ -87,7 +87,12 @@ body {
     float: right;
     cursor: pointer;
 }
-
+.present-class .my-classmate img{
+    width: 21px;
+    height: 28px;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
 .present-class #present-class {
     font-size: 18px;
     color: #00a0e9;

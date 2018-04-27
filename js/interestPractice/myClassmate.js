@@ -28,10 +28,15 @@ function initInfo() {
                 var html = '<li class="item" index="'+data[i].id+'">';
                 if (null == data[i].photo || "" == data[i].photo) {
                     html+='<img src="../../images/common/l-meb-icon.png" class="item-icon">';
-                } else {
+                }else {
                     html+='<img src="'+getRootPath() + "file/download.do?type=jpg&id=" +data[i].photo+'" class="item-icon">';
                 }
-                html+= '<p class="item-txt">'+data[i].NAME+'</p>';
+                if(null==data[i].NAME||"" == data[i].NAME){
+                    html+='<p class="item-txt">未设置昵称</p>';
+                }else{
+                    html+= '<p class="item-txt">'+data[i].NAME+'</p>';
+                }
+
                 html+="</li>";
                 parent.append(html);
             }
