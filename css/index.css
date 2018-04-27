@@ -664,6 +664,7 @@ html, body {
 .content .nav .left-nav-in,
 .content .nav .right-nav-in{
     /*float: left;*/
+    display: block;
     width: 70%;
     height: 70%;
     margin: 15%;

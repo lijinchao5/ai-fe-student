@@ -13,31 +13,7 @@ $(document).ready(function () {
     addListeners();
     classify();
     levelAdd();
-//等级部分 只能选择当前
 
-
-//分类部分
-//    var classifyAll = $(".classification:first-of-type li").eq(0);
-//    var classifyLi = $(".classification li").length;
-
-//    点击全部 去掉所有选项的类名 给  “全部”添加类名
-//    classifyAll.click(function () {
-//        $(".classification li").removeClass("current");
-//        $(this).addClass("current");
-//    });
-//  点击切换类名
-//    $(".classification li").click(function () {
-//        $(this).toggleClass("current");
-//        //  如果 点击不是 “全部”，去掉“全部” 的类名；
-//        if ($(this) !== classifyAll) {
-//            classifyAll.removeClass("current");
-//            //  如果 “非全部” 没有类名 给“全部” 添加类名
-//            if (!($(".classification li").hasClass("current")) || ($(".classification .current").length == (classifyLi - 1))) {
-//                $(".classification li").removeClass("current");
-//                classifyAll.addClass("current");
-//            }
-//        }
-//    });
 //分类 上下按钮切换
     var downindex = 0;
     $(".down-next").click(function () {
