@@ -330,7 +330,7 @@ function addListE() {
                         "<span class='complete-score'>" + num.toFixed(1) + "</span><span>分</span>" +
                         "<span class='complete-rank'>NO.</span>" +
                         "<span class='score-rank'>" + d.studentRank + "</span></p>" +
-                        "<a href='javascript:void(0)' class='enter-report' onclick=goTo('viewReport.html','" + d.examId + "')>查看报告</a>" +
+                        "<a href='javascript:void(0)' class='enter-report' onclick=goTo('../simulationExam/viewReport.html','" + d.examId + "')>查看报告</a>" +
                         "<p class='exam-date'>" + formateDate(d.endTime) + "</p>" +
                         "</li>");
                     _examList.append(endExam);

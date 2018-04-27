@@ -291,7 +291,7 @@ body {
     width: 68px;
     height: 68px;
     /*border-radius: 50%;*/
-    margin: 16px auto 0px;
+    margin: 16px auto 10px;
     /*background: url("../../images/speakAndListen/score.png") no-repeat center left;*/
     background: #d43f3a;
     line-height: 68px;
