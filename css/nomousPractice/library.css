@@ -84,7 +84,7 @@ body {
 .ready-go .modal-body > div {
     text-align: center;
     font-size: 12px;
-    color: #999;
+    color: #fff;
 }
 
 .ready-go .modal-body > div .mid {
@@ -100,19 +100,20 @@ body {
 }
 
 .ready-go .modal-footer .start-read {
-    background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: cover;
     outline: none;
     border: none;
     width: 148px;
     height: 39px;
+    border-radius: 40px;
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 2px;
 }
 
 .ready-go .modal-footer .start-read:hover {
-    background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: cover;
 }
 
