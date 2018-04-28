@@ -5,7 +5,7 @@ $(function () {
     inquireClass()
 });
 
-
+//“不了” 关闭弹窗
 $(".without-footer .withdraw-refuse ").click(function () {
     $(".without-class").toggle();
 });
@@ -22,6 +22,7 @@ function withdrawClass(id) {
     $(".without-class").toggle();
     $(".without-class .without-footer .withdraw-sure").attr("onclick", "exitClass(" + id + ")");
 }
+
 //退出班级
 function exitClass(id) {
     var url = "studentClass/deleteStudentClass.do";
@@ -37,12 +38,6 @@ function exitClass(id) {
     })
 }
 
-//添加班级按钮
-function addClass() {
-    $(".without-class .without-body").html("<span>班级编号：</span><input class='append-class' placeholder='请输入你想加入的班级'><p class='add-notice'></p>");
-    $(".without-class .without-footer .withdraw-sure").attr("onclick", "addNewclass()");
-    $(".without-class").show();
-}
 
 //添加班级
 function addNewclass() {
@@ -60,6 +55,13 @@ function addNewclass() {
             $(".empty-tips").text(message)
         }
     })
+}
+
+//添加班级按钮
+function addClass() {
+    $(".without-class .without-body").html("<span>班级编号：</span><input class='append-class' placeholder='请输入你想加入的班级'><p class='add-notice'></p>");
+    $(".without-class .without-footer .withdraw-sure").attr("onclick", "addNewclass()");
+    $(".without-class").show();
 }
 
 
@@ -98,7 +100,7 @@ function inquireClass() {
                             "</li>");
                         _classWrap.append(_classList);
                     } else {
-                        _classList = $("<li><p class='class-name' >" + d.grade + "年级" + d.name + "</p>" +
+                        _classList = $("<li><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</p>"  +
                             "<p class='class-number'>" + d.totalStudent + "人</p>" +
                             "<p class='completed-work'>待完成作业</p>" +
                             "<p class='completed-work-text'><span class='finished-work'>" + d.complateHomework + "</span>/<span class='total-work'>" + d.totalHomework + "</span></p>" +
@@ -117,4 +119,3 @@ function inquireClass() {
         } else {}
     })
 }
-

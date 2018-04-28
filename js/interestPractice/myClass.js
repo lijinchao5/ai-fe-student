@@ -15,6 +15,7 @@ function jumpMate() {
     var id = getParam("id");
     window.location.href = './myClassmate.html?id=' + id;
 }
+
 //作业模考切换
 $(".task-title li").click(function () {
     $(this).addClass("current").siblings().removeClass("current");
@@ -64,21 +65,29 @@ function getClass() {
             var noCurrent = [];
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id == _current) {
-                    $("#currentClass").text(data[i].grade + '年级' + data[i].name)
+                    $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')')
                 } else {
                     noCurrent.push(data[i]);
                 }
             }
             for (var i = 0; i < noCurrent.length; i++) {
-                var _getList = "";
-                var d = noCurrent[i];
-                _getList = $("<li>" + d.grade + "年级" + d.name + "</li>");
-                _getClass.prepend(_getList);
+                if (noCurrent[i].diss != null) {
+                    console.log(data[i].diss);
+                    var _getList = "";
+                    var d = noCurrent[i];
+                    _getList = $("<li onclick=\"choiceClass(" + d.id + ")\">" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</li>");
+                    _getClass.prepend(_getList);
+                }
+
             }
         }
     })
 }
+
 //切换班级选中状态
+function choiceClass(id) {
+    window.location.href = './myClass.html?id=' + id;
+}
 
 //获取作业信息
 function getWork() {

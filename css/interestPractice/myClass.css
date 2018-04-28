@@ -57,7 +57,6 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
-    position: relative;
 }
 
 #footer {
@@ -72,11 +71,11 @@ body {
     height: 48px;
     padding-top: 20px;
     margin: 0 auto;
-    /*background: #f0ad4e;*/
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 1px;
     color: #333;
+    position: relative;
 }
 
 .present-class p,
@@ -88,29 +87,34 @@ body {
     float: right;
     cursor: pointer;
 }
-.present-class .my-classmate img{
+
+.present-class .my-classmate img {
     width: 21px;
     height: 28px;
     vertical-align: bottom;
     margin-right: 5px;
 }
+
 .present-class #present-class {
     font-size: 18px;
     color: #00a0e9;
 }
 
 #currentClass {
-    width: 125px;
-    margin: 0 5px;
+    width: 135px;
+    margin: 0 9px 0 5px;
     font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .class-list {
     display: none;
     position: absolute;
     top: 45px;
-    left: 255px;
-    width: 130px;
+    left: 223px;
+    width: 140px;
     height: 100px;
     border-radius: 5px;
     box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
@@ -123,8 +127,12 @@ body {
 .class-list li {
     cursor: pointer;
     padding-left: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
-.class-list li.choice{
+
+.class-list li:hover {
     color: #00a0e9;
 }
 
