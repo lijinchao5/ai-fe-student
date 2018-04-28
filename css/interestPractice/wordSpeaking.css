@@ -346,36 +346,50 @@ body {
     color: #004098;
 }
 
-.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text-out {
     width: 100%;
     height: 250px;
-    word-wrap: break-word;
     /* 上下左右居中 */
     display: flex;
     align-items: center;
     /* flex-direction: column; */
     justify-content: center;
+    word-break: break-all;
 }
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
+    word-wrap: break-word;
+}
+.word-speaking .speak-listen-tab-bd .jsbyclass .carousel .carousel-inner .item .text {
     width: 100%;
-    word-break: break-all;
+    height: 250px;
+    /* 上下左右居中 */
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+    /*word-break: break-word;*/
+    word-wrap: break-word;
 }
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
     word-wrap: break-word;
-    float: left;
-    padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
     color: #36dbbb;
+    float: left;
+    padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
     color: #ff6d80;
+    float: left;
+    padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
     color: #ffb846;
+    float: left;
+    padding: 0 6px;
 }
 
 /* 语速 样式 */
