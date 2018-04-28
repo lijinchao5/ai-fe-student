@@ -606,8 +606,10 @@ html, body {
     bottom: 18.1%;
 }
 .content .nav{
-    width:41%;
-    height: 36.198%;
+    /*width:41%;
+    height: 36.198%;*/
+    width:560px;
+    height: 278px;
     position: absolute;
     top: 45%;
     left: 30.75%;
