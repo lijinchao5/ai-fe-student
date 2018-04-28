@@ -80,6 +80,7 @@ function getClass() {
         }
     })
 }
+//切换班级选中状态
 
 //获取作业信息
 function getWork() {
@@ -261,8 +262,9 @@ function isflashE() {
 function goTo(url, id) {
     window.location.href = url + "?id=" + id;
 }
+
+// 获取学生考试列表
 function addListE() {
-    // 获取学生考试列表
     var param = {};
     param.rows = 4;
     var isflashflagE = isflashE();

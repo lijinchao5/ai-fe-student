@@ -57,6 +57,7 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
 #footer {
@@ -96,7 +97,6 @@ body {
 .present-class #present-class {
     font-size: 18px;
     color: #00a0e9;
-    position: relative;
 }
 
 #currentClass {
@@ -108,8 +108,8 @@ body {
 .class-list {
     display: none;
     position: absolute;
-    top: 129px;
-    left: 634px;
+    top: 45px;
+    left: 255px;
     width: 130px;
     height: 100px;
     border-radius: 5px;
@@ -122,6 +122,10 @@ body {
 
 .class-list li {
     cursor: pointer;
+    padding-left: 5px;
+}
+.class-list li.choice{
+    color: #00a0e9;
 }
 
 .present-class ul::-webkit-scrollbar {

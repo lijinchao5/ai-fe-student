@@ -70,6 +70,7 @@
     opacity: 0.9;
     padding: 0 2px;
     margin-right: 26px;
+    line-height: 80px;
     color: #00a0e9;
 }
 
@@ -90,10 +91,10 @@
 }
 
 /*退出模态框*/
-.top .exit-button {
-    cursor: pointer;
-    padding-left: 7px;
-}
+/*.top .exit-button {*/
+    /*cursor: pointer;*/
+    /*padding-left: 7px;*/
+/*}*/
 
 .top .exit-button:hover {
     text-decoration: none;
