@@ -65,7 +65,9 @@ function getClass() {
             var noCurrent = [];
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id == _current) {
-                    $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')')
+                    $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')');
+                    var className = data[i].grade + '年级' + data[i].name;
+                    store.set("className", className);
                 } else {
                     noCurrent.push(data[i]);
                 }
