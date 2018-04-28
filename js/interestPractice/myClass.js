@@ -20,7 +20,6 @@ $(".task-title li").click(function () {
     $(this).addClass("current").siblings().removeClass("current");
     var Liindex = $(this).index();
     $(".task-content .reports").eq(Liindex).show().siblings().hide();
-    console.log($(".task-content li").eq(Liindex));
 });
 
 function formateDate(da) {
@@ -58,7 +57,6 @@ function getClass() {
     var url = "studentClass/getStudentClass.do";
     var param = {};
     doAjax("get", url, param, function (data, code) {
-        console.log(data);
         if (code == 0 || code == "0") {
             var _getClass = $(".class-list");
             _getClass.html("");

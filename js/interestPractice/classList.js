@@ -15,35 +15,27 @@ function entryClass(id) {
     window.location.href = './myClass.html?id=' + id;
 }
 
-//退班
-$(".class-wrap").on("click", "li", function () {
-    console.log($(this));
 
-});
 //退班按钮
 function withdrawClass(id) {
-    $(".without-class .without-body").text("确定要退出该班级吗，退出后将不能接受到该班级老师布置的作业或者考试，之前的作业和考试数据将会一起消失哦!");
+    $(".without-class .without-body").html("确定要退出该班级吗，退出后将不能接受到该班级老师布置的作业或者考试，之前的作业和考试数据将会一起消失哦!<p class='add-notice'></p>");
     $(".without-class").toggle();
     $(".without-class .without-footer .withdraw-sure").attr("onclick", "exitClass(" + id + ")");
-    //exitClass(" + id + ")
 }
 //退出班级
 function exitClass(id) {
     var url = "studentClass/deleteStudentClass.do";
     var classId =id;
-    console.log(id);
     var param = {};
     param.classId = classId;
     doAjax("post", url, param, function (data, code, message) {
         if (code == "0" || code == 0) {
-           alert(1);
             window.location.reload()
         } else {
-            alert(message);
+            $(".add-notice").show().text(message);
         }
     })
 }
-
 
 //添加班级按钮
 function addClass() {
@@ -51,6 +43,7 @@ function addClass() {
     $(".without-class .without-footer .withdraw-sure").attr("onclick", "addNewclass()");
     $(".without-class").show();
 }
+
 //添加班级
 function addNewclass() {
     var url = "studentClass/addStudentClass.do";
@@ -60,7 +53,6 @@ function addNewclass() {
     doAjax("post", url, param, function (data, code, message) {
         if (code == "0" || code == 0) {
             $(".add-notice").hide();
-            //inquireClass()
             $(".without-class").toggle();
             window.location.reload()
         } else {
@@ -76,12 +68,9 @@ function inquireClass() {
     var url = "studentClass/getStudentClass.do";
     var param = {};
     doAjax("get", url, param, function (data, code, message) {
-        console.log(data);
         var _classWrap = $(".class-wrap");
-        //_classWrap.html("");
         if (code == 0 || code == "0") {
             if (data.length == 0) {
-                //alert(1)
                 _classWrap.html("");
                 var _emptyClass = "";
                 _emptyClass = $("<div class='empty-class'>" +
@@ -94,13 +83,10 @@ function inquireClass() {
                     "</div>");
                 _classWrap.append(_emptyClass)
             } else {
-
                 for (var i = 0; i < data.length; i++) {
                     var _classList = "";
-                    console.log(data[i]);
                     var d = data[i];
                     if (d.diss != null) {
-                        console.log(d.diss);
                         _classList = $("<li id=" + d.id + "><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</p>" +
                             "<p class='class-number'>" + d.totalStudent + "人</p>" +
                             "<p class='completed-work'>待完成作业</p>" +
@@ -128,9 +114,7 @@ function inquireClass() {
                     "</li>");
                 _classWrap.append(_addClass);
             }
-        } else {
-
-        }
+        } else {}
     })
 }
 
