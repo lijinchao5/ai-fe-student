@@ -26,7 +26,6 @@ function setIntervalmmssTime() {
         if (timeSurplus > 0) {
             timeSurplus--;
             setmmssTime("remaining-time", timeSurplus);
-            console.log(timeSurplus);
             if (timeSurplus <= 0) {
                 //提交模态框
                 console.log(timeSurplus);

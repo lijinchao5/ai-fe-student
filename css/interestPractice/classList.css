@@ -99,7 +99,7 @@ body {
 .class-wrap li {
     width: 422px;
     height: 233px;
-    margin: 3px 14px 14px 0;
+    margin: 3px 14px 14px 3px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
     padding-top: 30px;
