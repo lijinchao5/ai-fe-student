@@ -140,7 +140,8 @@ function getAudioCheck(checkList){
 }
 //获取评分
 function CalculationScore(homeworkStudentScoreWordEntities){
-    var html='<div class="text-in">';
+    // <div class="text-in">
+    var html='';
 	for(var i=0;i<homeworkStudentScoreWordEntities.length;i++){
 		var wordEntitie=homeworkStudentScoreWordEntities[i];
 		if(wordEntitie.type=="7"){
@@ -159,7 +160,8 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 			}
 		}
 	}
-    html+='</div>';
+	// </div>
+    html+='';
 	return html;
 }
 
