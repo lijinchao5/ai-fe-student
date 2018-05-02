@@ -223,6 +223,7 @@ function updatePassword() {
 function reloadUserInfo() {
 	var url = "user/getUserInfo.do";
 	doAjax("get", url, null, function(user) {
+
 		if (null == user.name || "" == user.name) {
 			if (null == user.mobile || "" == user.mobile) {
 				user.name = user.userName;
@@ -301,21 +302,6 @@ function subSchoolInfo() {
 
 // 更换头像 图片
 function uploadImg1() {
-	// 获取 input file 元素
-	// var file = document.getElementById('picImgFile');
-	// run(file, function (imgData) {
-	// var imgBlob = dataURItoBlob(imgData);
-	// var param = {};
-	// param.picfile = imgData;
-	// var url = "user/updatePersionalInfo.do";
-	// doAjax("post", url, param, function (data, code) {
-	// if (code == '0' || code == 0) {
-	// reloadUserInfo();
-	// alert("操作成功!");
-	// window.location.reload();
-	// }
-	// });
-	// });
 	var param = {};
 	param.img = src;
 	param.jid = $('#jid').val();
@@ -455,15 +441,6 @@ function selectSchoolData(id, data, selectId) {
 		select1.selectpicker('render');
 	}
 }
-// 年级 待更改。。。。
-/*
- * function selectGradeData(id, data, selectId) { if (null == data ||
- * data.length <= 0) { } else { var select1 = $("#" + id); for (var i = 0; i <
- * data.length; i++) { select1.append("<option value='" + data[i].nameVal +
- * "'>" + data[i].name + "</option>"); } select1.selectpicker('refresh'); if
- * (selectId && selectId != null) { select1.selectpicker("val", selectId) }
- * select1.selectpicker('render'); } }
- */
 // 教材版本
 function selectTeachData(id, data, selectId) {
 	if (null == data || data.length <= 0) {
