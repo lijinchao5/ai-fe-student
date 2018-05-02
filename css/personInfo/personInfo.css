@@ -998,6 +998,7 @@ body {
 }
 
 .name-tips {
+    height: 20px;
     text-align: center;
     color: #e20000;
     font-size: 14px;

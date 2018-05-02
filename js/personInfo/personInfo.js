@@ -1,7 +1,7 @@
 $(function() {
 	$('#header').load('../../html/common/header.html');
 	$('#footer').load('../../html/common/footer.html');
-	$("#birthDate").attr('placeholder', '年-月-日（例：2000-01-05）');
+	$("#birthDate").attr('placeholder', '年月日（例：20120105）');
 	$("#user_name").attr('placeholder', '请输入2到6个字符');
 	$("#sexSelect .boys img").attr("src", "../../images/personInfo/sex0-in.png");
 	$("#sexSelect .girls img").attr("src", "../../images/personInfo/sex1.png");
@@ -85,16 +85,18 @@ $(function() {
 	}
 	if (data.birthDate) {
 		if (null == data.birthDate || data.birthDate == '') {
-			return "1990-10-01";
+			return "19901001";
 		}
 		var date = new Date(data.birthDate);
+		console.log("时间是："+data)
 		var y = date.getFullYear();
 		var m = date.getMonth() + 1;
 		var d = date.getDate();
 		var h = date.getHours();
 		var mm = date.getMinutes();
 		var s = date.getSeconds();
-		var birth = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
+		// var birth = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
+		var birth = y + (m < 10 ? ('0' + m) : m)  + (d < 10 ? ('0' + d) : d);
 		$("#birthDate").val(birth)
 	}
 	$("#second-disable").selectpicker({
@@ -239,7 +241,7 @@ $("#user_name").blur(function() {
 		$(".name-tips").css("display", "block");
 		$(".sure").attr("disabled", true);
 	} else {
-		$(".name-tips").css("display", "none");
+		// $(".name-tips").css("display", "none");
 		$(".sure").attr("disabled", false);
 	}
 });
@@ -250,10 +252,26 @@ function subUserInfo() {
 	var param = {};
 	param.name = $("#user_name").val();
 	param.sex = $("#sex").val();
-	param.birthDate = $("#birthDate").val();
+	var birth = $("#birthDate").val();
+    var reg = /^[1-9]\d{3}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
+    var regExp = new RegExp(reg);
+    if (!regExp.test(birth)) {
+        console.log(birth)
+        $(".name-tips").text("日期格式不正确，正确格式为：20140101");
+        return false;
+    } else {
+        console.log("ok");
+        $(".name-tips").text("");
+        $('#suremsg').modal('show')
+    }
+	var y = birth.substring(0,4);
+	var m = birth.substring(4,6);
+	var d = birth.substring(6,8);
+	// alert(y+"-"+m+"-"+d);
+	param.birthDate = y+'-'+m+'-'+d;
 	doAjax("post", url, param, function(data, code, message) {
 		if (code == '0' || code == 0) {
-			reloadUserInfo();
+			// reloadUserInfo();
 			$("#sexSelect").find("span img").attr("src", "");
 			$("#birthDate").attr('placeholder', '');
 			$("#user_name").attr('placeholder', '');
@@ -262,7 +280,7 @@ function subUserInfo() {
 		}
 	});
 }
-// 更改学校信息 btn == 未完待续。。。
+// 更改学校信息
 function subSchoolInfo() {
 	var url = "user/updatePersionalInfo.do";
 	var param = {};
