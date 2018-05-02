@@ -113,15 +113,31 @@ body {
     display: none;
     position: absolute;
     top: 45px;
-    left: 223px;
-    width: 140px;
-    height: 100px;
+    left: 195px;
+    width: 145px;
+    height: 90px;
     border-radius: 5px;
-    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 16px;
     background-color: #fff;
+    box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
+}
+
+.present-class .class-list::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.present-class .class-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.present-class .class-list::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
 }
 
 .class-list li {
@@ -130,31 +146,19 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    height: 30px;
+    line-height: 30px;
 }
 
 .class-list li:hover {
     color: #00a0e9;
 }
 
-.present-class ul::-webkit-scrollbar {
-    width: 6px;
-    height: 10px;
-    background-color: #F5F5F5;
-    border-radius: 5px;
-}
-
-.present-class ul::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
-}
-
-.present-class ul::-webkit-scrollbar-thumb {
-    background-color: #11d8fc;
-}
-
-.present-class ul li {
-    height: 25px;
-    line-height: 25px;
+.no-class {
+    width: 100%;
+    text-align: center;
+    color: #999;
+    line-height: 90px;
 }
 
 .present-class button {

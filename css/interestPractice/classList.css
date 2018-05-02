@@ -31,7 +31,8 @@ body {
     float: left;
 }
 
-.class-wrap li::after {
+.class-wrap li::after,
+.class-wrap li .center-info::after {
     content: "";
     display: block;
     clear: both;
@@ -102,12 +103,8 @@ body {
     margin: 3px 14px 14px 3px;
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    padding-top: 30px;
+    padding-top: 35px;
     position: relative
-}
-
-.class-wrap li p {
-    text-align: center;
 }
 
 .class-wrap li:hover {
@@ -118,48 +115,60 @@ body {
     margin-left: 3px;
 }
 
-.class-wrap li .class-name {
-    width: 310px;
-    height: 20px;
-    line-height: 20px;
-    color: #00a0e9;
-    font-weight: bold;
-    /*padding-left: 144px;*/
+.class-wrap li .center-info {
+    width: 300px;
+    margin: 0 auto;
 }
 
-.class-wrap li .class-number {
-    width: 110px;
-    height: 20px;
-    line-height: 20px;
-    letter-spacing: 1.1px;
-    color: #f08118;
-    text-align: left;
-}
-
-.class-wrap li .completed-work,
-.class-wrap li .completed-exam {
+.class-wrap li .center-info p {
     width: 50%;
-    margin-top: 40px;
-    padding-left: 60px;
+    height: 20px;
+    line-height: 20px;
 }
 
-.class-wrap li .completed-work-text,
-.class-wrap li .completed-exam-text {
-    width: 35%;
-    margin-top: 40px;
+.class-wrap li .center-info .completed-work,
+.class-wrap li .center-info .completed-exam {
+    text-align: center;
+    width: 33.33%;
 }
 
-.class-wrap li .completed-exam,
-.class-wrap li .completed-exam-text {
-    margin-top: 20px;
+.class-wrap li .center-info .completed-work {
+    margin-top: 30px;
 }
 
-.class-wrap li .finished-work,
-.class-wrap li .finished-exam {
+.class-wrap li .center-info .completed-exam {
+    margin-top: 15px;
+}
+
+.class-wrap li .center-info .class-name {
+    font-weight: bold;
+    color: #00a0e9;
+    width: 100%;
+    text-align: center;
+}
+
+.class-wrap li .center-info .class-name .class-number {
+    letter-spacing: 1.1px;
+    font-weight: 300;
+}
+
+.class-wrap li .center-info .class-name .no-sign {
+    color: #999;
+}
+
+.class-wrap li .center-info p:nth-of-type(2),
+.class-wrap li .center-info p:nth-of-type(5) {
+    font-weight: bold;
+}
+
+.class-wrap li .center-info .finished-work,
+.class-wrap li .center-info .finished-exam,
+.class-wrap li .center-info .class-name .class-number,
+.add-notice {
     color: #f08118;
 }
 
-.class-wrap li .enter-class {
+.class-wrap li .center-info .enter-class {
     width: 105px;
     height: 30px;
     font-size: 14px;
@@ -169,28 +178,24 @@ body {
     text-align: center;
     line-height: 30px;
     cursor: pointer;
-    margin: 30px 0 0 135px;
+    margin: 30px 0 0 105px;
 }
 
-.class-wrap li .enter-class:hover {
+.class-wrap li .center-info .enter-class:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: 100% 100%;
 }
 
-.class-wrap li .withdraw-class {
+.class-wrap li .center-info .withdraw-class {
+    float: right;
     cursor: pointer;
-    width: 64px;
-    height: 27px;
-    border-radius: 13.5px;
-    border: solid 1px #47bafb;
-    color: #00a0e9;
-    font-size: 14px;
-    text-align: center;
-    line-height: 27px;
-    margin: 30px 0 0 62px;
+    width: 20px;
+    height: 22px;
+    margin: 63px -55px 0 0;
+    background-image: url("../../images/myclass/delete.png");
 }
 
-.class-wrap li .class-disbanded {
+.class-wrap li .center-info .class-disbanded {
     width: 90px;
     height: 89px;
     border-radius: 50%;
@@ -199,30 +204,28 @@ body {
     left: 0;
 }
 
-.class-wrap li .class-add {
+.class-wrap li .center-info .class-add {
     width: 66px;
     height: 66px;
     border-radius: 50%;
-    margin: 55px 0 30px 175px;
+    margin: 25px 0 30px 120px;
     cursor: pointer;
     user-select: none;
 }
 
-.class-wrap li .add-text {
+.class-wrap li .center-info .add-text {
     width: 100%;
-    height: 16px;
-    line-height: 16px;
     float: none;
     font-size: 16px;
     font-weight: normal;
     color: #36b0ed;
     cursor: pointer;
+    text-align: center;
 }
 
 .add-notice {
     text-align: center;
     font-size: 16px;
-    color: #f08118;
     margin-top: 10px;
 }
 

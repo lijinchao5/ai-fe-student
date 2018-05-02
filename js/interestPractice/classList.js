@@ -26,7 +26,7 @@ function withdrawClass(id) {
 //退出班级
 function exitClass(id) {
     var url = "studentClass/deleteStudentClass.do";
-    var classId =id;
+    var classId = id;
     var param = {};
     param.classId = classId;
     doAjax("post", url, param, function (data, code, message) {
@@ -89,33 +89,37 @@ function inquireClass() {
                     var _classList = "";
                     var d = data[i];
                     if (d.diss != null) {
-                        _classList = $("<li id=" + d.id + "><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</p>" +
-                            "<p class='class-number'>" + d.totalStudent + "人</p>" +
-                            "<p class='completed-work'>待完成作业</p>" +
-                            "<p class='completed-work-text'><span class='finished-work'>" + d.complateHomework + "</span>/<span class='total-work'>" + d.totalHomework + "</span></p>" +
-                            "<p class='completed-exam'>待完成考试</p>" +
-                            "<p class='completed-exam-text'><span class='finished-exam'>" + d.complateExam + "</span>/<span class='total-exam'>" + d.totalExam + "</span></p>" +
+                        _classList = $("<li id=" + d.id + "><div class='center-info'><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")<span class='no-sign'>/</span><span class='class-number'>" + d.totalStudent + "人</span></p>" +
+                            "<p class='completed-work'>作业</p>" +
+                            "<p class='completed-work'>已完成" + d.complateHomework + "</p>" +
+                            "<p class='completed-work'>未完成" + parseInt(d.totalHomework - d.complateHomework) + "</p>" +
+                            "<p class='completed-exam'>考试</p>" +
+                            "<p class='completed-exam'>已完成" + d.complateExam + "</p>" +
+                            "<p class='completed-exam'>未完成" + parseInt(d.totalExam - d.complateExam) + "</p>" +
+
                             "<p class='enter-class' onclick=\"entryClass(" + d.id + ")\">进入班级</p>" +
-                            "<p class='withdraw-class' onclick=\"withdrawClass(" + d.id + ")\">退班</p>" +
-                            "</li>");
+                            "<p class='withdraw-class' onclick=\"withdrawClass(" + d.id + ")\"></p>" +
+                            "</div></li>");
                         _classWrap.append(_classList);
                     } else {
-                        _classList = $("<li><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</p>"  +
-                            "<p class='class-number'>" + d.totalStudent + "人</p>" +
-                            "<p class='completed-work'>待完成作业</p>" +
-                            "<p class='completed-work-text'><span class='finished-work'>" + d.complateHomework + "</span>/<span class='total-work'>" + d.totalHomework + "</span></p>" +
-                            "<p class='completed-exam'>待完成考试</p>" +
-                            "<p class='completed-exam-text'><span class='finished-exam'>" + d.complateExam + "</span>/<span class='total-exam'>" + d.totalExam + "</span></p>" +
+                        _classList = $("<li id=" + d.id + "><div class='center-info'><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")<span class='no-sign'>/</span><span class='class-number'>" + d.totalStudent + "人</span></p>" +
+                            "<p class='completed-work'>作业</p>" +
+                            "<p class='completed-work'>已完成" + d.complateHomework + "</p>" +
+                            "<p class='completed-work'>未完成" + parseInt(d.totalHomework - d.complateHomework) + "</p>" +
+                            "<p class='completed-exam'>考试</p>" +
+                            "<p class='completed-exam'>已完成" + d.complateExam + "</p>" +
+                            "<p class='completed-exam'>未完成" + parseInt(d.totalExam - d.complateExam) + "</p>" +
                             "<img src='../../images/myclass/class-disbanded.png' alt='解散班级' class='class-disbanded'></li>");
                         _classWrap.append(_classList);
                     }
                 }
                 var _addClass = "";
-                _addClass = $("<li><img onclick=\"addClass()\" class='class-add' src='../../images/myclass/class-add.png' alt='添加班级'>" +
-                    "<p class='add-text' onclick=\"addClass()\">添加更多</p>" +
-                    "</li>");
+                _addClass = $("<li><div class='center-info'><img onclick=\"addClass()\" class='class-add' src='../../images/myclass/class-add.png' alt='添加班级'>" +
+                    "<p class='add-text' onclick=\"addClass()\">添加班级</p>" +
+                    "</div></li>");
                 _classWrap.append(_addClass);
             }
-        } else {}
+        } else {
+        }
     })
 }

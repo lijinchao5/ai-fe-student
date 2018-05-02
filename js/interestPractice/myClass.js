@@ -66,8 +66,6 @@ function getClass() {
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id == _current) {
                     $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')');
-                    var className = data[i].grade + '年级' + data[i].name;
-                    store.set("className", className);
                 } else {
                     noCurrent.push(data[i]);
                 }
@@ -80,6 +78,11 @@ function getClass() {
                     _getList = $("<li onclick=\"choiceClass(" + d.id + ")\">" + d.grade + "年级" + d.name + "(" + d.classId + ")" + "</li>");
                     _getClass.prepend(_getList);
                 }
+            }
+            if ($(".class-list li").length <= 0) {
+                //var _noClass="";
+                var _noClass=$("<p class='no-class'>还没有其他班级</p>");
+                $(".class-list").prepend(_noClass);
 
             }
         }
