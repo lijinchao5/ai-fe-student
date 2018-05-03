@@ -107,6 +107,7 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: bold;
 }
 
 .class-list {
@@ -187,7 +188,7 @@ body {
     width: 183px;
     height: 30px;
     border-radius: 4px;
-    background-color: #eee;
+    background-color: #cbefff;
     text-align: center;
     line-height: 30px;
     color: #999;
@@ -197,7 +198,7 @@ body {
 .task-list .task-title li.current {
     width: 173px;
     color: #fff;
-    background-color: #00a0e9;
+    background-color: #00aeff;
 }
 
 .task-list .task-content .reports {

@@ -221,11 +221,11 @@ body {
 }
 
 .word-speaking .speak-listen-tab-hd li {
-    width: 165px;
-    height: 67px;
+    width: 170px;
+    height: 50px;
     margin: 16px 0 24px;
-    padding-top: 15px;
-    border: 1px solid #e5e5e5;
+    line-height: 50px;
+    background-color: #cbefff;
     border-radius: 5px;
     text-align: center;
     color: #999;
@@ -236,13 +236,8 @@ body {
 }
 
 .word-speaking .speak-listen-tab-hd li.active {
-    width: 166px;
-    height: 67px;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    background: #4fc6fc;
-    background-size: cover;
+    background: #00aeff;
 }
 
 .word-speaking .speak-listen-tab-hd li span {
@@ -430,6 +425,7 @@ body {
     display: inline-block;
     margin: 0 20px 0 0;
     text-align: center;
+    color: #00aeff;
 }
 
 .word-speaking .speak-speed .list {
@@ -840,10 +836,9 @@ body {
 
 /* 智能听写旋转木马 */
 .intelligent-dictation .carousel .carousel-inner .item .dictation {
-    width: 624px;
+    width: 420px;
     height: 64px;
-    margin: 68px auto;
-    padding: 0 104px;
+    margin: 68px 0 0 160px;
     box-sizing: border-box;
     border: 1px solid #eee;
     border-right: none;
@@ -853,13 +848,12 @@ body {
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .finish {
-    width: 104px;
+    width: 100px;
     height: 64px;
     background-color: #11d8fc;
     color: #fff;
     border: none;
     position: absolute;
-    right: 120px;
     margin-top: 68px;
 }
 

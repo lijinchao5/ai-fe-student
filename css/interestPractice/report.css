@@ -146,11 +146,10 @@
 
 .report-content .report-tabs > li {
     width: 165px;
-    height: 52px;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
+    height: 46px;
+    background-color: #cbefff;
     border-radius: 5px;
-    line-height: 52px;
+    line-height: 46px;
     font-size: 18px;
     color: #999;
     text-align: center;
@@ -159,8 +158,8 @@
 }
 
 .report-content .report-tabs .tabs-col {
-    color: #666;
-    background-color: #ccefff;
+    color: #fff;
+    background-color: #4fc6fc;
     background-size: cover;
 }
 
