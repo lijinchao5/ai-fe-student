@@ -180,7 +180,7 @@ body {
     height: 28px;
     background-color: #ffb846;
     border-radius: 50%;
-    animation: twinkle 4s infinite;
+    animation: twinkle 2s infinite;
     /*margin: -1px;*/
 }
 @keyframes twinkle

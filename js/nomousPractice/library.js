@@ -379,7 +379,7 @@ function submitlibrary(library){
                 setTimeout(function () {
                     $("#pscore span").eq(i).attr("data",score);
                     $("#pscore span").eq(i).html(score);
-                    $("#pscore span").eq(i).attr("class","part-score");
+                    // $("#pscore span").eq(i).attr("class","part-score");
                 },2000);
 			}
 		})
