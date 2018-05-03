@@ -89,6 +89,7 @@ function initDataAll(id){
             radarMap(library.pronunciation,library.fluency,library.integrity,30,library.dataid);
 			//处理分数
 			var score=library.score+"";
+			console.log(score)
 			if(score!="null"){
 				if(score.indexOf(".")>0){
 					library.score=score.substring(0,score.indexOf("."));
@@ -158,6 +159,7 @@ function readlibrary(isreadflag){
 						submitlibrary(library);
 						isswitchfunction(true);
 					});
+					showp()
 				},audiotime);
 			});
 		},speeds);
@@ -350,7 +352,7 @@ function progressBar(second){
 function submitlibrary(library){
 	var param = {};
 	param.file=library.lid;
-	param.sentenceId=library.id;
+	param.sentenceId=library.id
 	param.articleId=library.article_id;
 	var url = "exercise/doExercise.do";
 	ajaxAsync("post", url, param, function (data) {
@@ -359,6 +361,7 @@ function submitlibrary(library){
 		if(score.indexOf(".")>0){
 			score=score.substring(0,score.indexOf("."));
 		}
+        $("#nowScore").html(score);
 		var exerciseDetailWords=data.exerciseDetailWords;
 		var html=calculationScore(exerciseDetailWords);
 		library.sentence_cont=html;
