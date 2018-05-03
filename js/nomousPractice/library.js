@@ -244,7 +244,8 @@ function showp(){
 		if(classname=="item active"){
 			var objspan=$("#pscore span").eq(i);
 			objspan.addClass("current");
-            objspan.html("");
+            // objspan.html("");
+            objspan.html(objspan.attr("data"));
             var radardiv=$("#rscore > div").eq(i);
             radardiv.css("display","block");
 			$("#numnow").html(i+1);
