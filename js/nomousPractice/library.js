@@ -246,6 +246,8 @@ function showp(){
 			objspan.addClass("current");
             // objspan.html("");
             objspan.html(objspan.attr("data"));
+            // 添加当前成绩
+            $("#nowScore").html(objspan.attr("data"));
             var radardiv=$("#rscore > div").eq(i);
             radardiv.css("display","block");
 			$("#numnow").html(i+1);
