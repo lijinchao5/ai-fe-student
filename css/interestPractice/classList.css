@@ -126,22 +126,44 @@ body {
     line-height: 20px;
 }
 
+.class-wrap li .center-info p:nth-of-type(3),
+.class-wrap li .center-info p:nth-of-type(6) {
+    text-align: right;
+    margin-right: 3%;
+}
+
+.class-wrap li .center-info p:nth-of-type(3),
+.class-wrap li .center-info p:nth-of-type(6),
+.class-wrap li .center-info p:nth-of-type(4),
+.class-wrap li .center-info p:nth-of-type(7) {
+    color: #666;
+}
+
 .class-wrap li .center-info .completed-work,
 .class-wrap li .center-info .completed-exam {
     text-align: center;
-    width: 33.33%;
+    width: 30%;
 }
 
 .class-wrap li .center-info .completed-work {
     margin-top: 30px;
 }
 
+.class-wrap li .center-info .completed-work span,
+.class-wrap li .center-info .completed-exam span {
+    margin-left: 5px;
+}
+
+.disfinal {
+    color: #f08118;
+    font-weight: bold;
+}
+
 .class-wrap li .center-info .completed-exam {
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .class-wrap li .center-info .class-name {
-    font-weight: bold;
     color: #00a0e9;
     width: 100%;
     text-align: center;
@@ -149,16 +171,11 @@ body {
 
 .class-wrap li .center-info .class-name .class-number {
     letter-spacing: 1.1px;
-    font-weight: 300;
 }
 
 .class-wrap li .center-info .class-name .no-sign {
     color: #999;
-}
-
-.class-wrap li .center-info p:nth-of-type(2),
-.class-wrap li .center-info p:nth-of-type(5) {
-    font-weight: bold;
+    margin: 0 5px;
 }
 
 .class-wrap li .center-info .finished-work,
@@ -169,7 +186,7 @@ body {
 }
 
 .class-wrap li .center-info .enter-class {
-    width: 105px;
+    width: 130px;
     height: 30px;
     font-size: 14px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
@@ -178,7 +195,7 @@ body {
     text-align: center;
     line-height: 30px;
     cursor: pointer;
-    margin: 30px 0 0 105px;
+    margin: 30px 0 0 90px;
 }
 
 .class-wrap li .center-info .enter-class:hover {
@@ -187,11 +204,13 @@ body {
 }
 
 .class-wrap li .center-info .withdraw-class {
-    float: right;
+    /*float: right;*/
     cursor: pointer;
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
     width: 20px;
     height: 22px;
-    margin: 63px -55px 0 0;
     background-image: url("../../images/myclass/delete.png");
 }
 
@@ -266,7 +285,7 @@ body {
     height: 40px;
     font-size: 14px;
     background-color: transparent;
-    border: 1px solid #999;
+    border: 1px solid #fff;
     outline: none;
     padding-left: 10px;
 }

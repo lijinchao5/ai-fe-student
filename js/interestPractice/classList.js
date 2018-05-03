@@ -91,25 +91,27 @@ function inquireClass() {
                     if (d.diss != null) {
                         _classList = $("<li id=" + d.id + "><div class='center-info'><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")<span class='no-sign'>/</span><span class='class-number'>" + d.totalStudent + "人</span></p>" +
                             "<p class='completed-work'>作业</p>" +
-                            "<p class='completed-work'>已完成" + d.complateHomework + "</p>" +
-                            "<p class='completed-work'>未完成" + parseInt(d.totalHomework - d.complateHomework) + "</p>" +
+                            "<p class='completed-work'>已完成" + "<span class='disfinal'>" + d.complateHomework + " </span> </p>" +
+                            "<p class='completed-work'>未完成" + "<span class='disfinal'>" + parseInt(d.totalHomework - d.complateHomework) + " </span> </p>" +
                             "<p class='completed-exam'>考试</p>" +
-                            "<p class='completed-exam'>已完成" + d.complateExam + "</p>" +
-                            "<p class='completed-exam'>未完成" + parseInt(d.totalExam - d.complateExam) + "</p>" +
+                            "<p class='completed-exam'>已完成" + "<span class='disfinal'>" + d.complateExam + " </span> </p>" +
+                            "<p class='completed-exam'>未完成" + "<span class='disfinal'>" + parseInt(d.totalExam - d.complateExam) + " </span></p>" +
 
-                            "<p class='enter-class' onclick=\"entryClass(" + d.id + ")\">进入班级</p>" +
+                            "<p class='enter-class' onclick=\"entryClass(" + d.id + ")\">进入本班</p>" +
                             "<p class='withdraw-class' onclick=\"withdrawClass(" + d.id + ")\"></p>" +
                             "</div></li>");
                         _classWrap.append(_classList);
                     } else {
                         _classList = $("<li id=" + d.id + "><div class='center-info'><p class='class-name' >" + d.grade + "年级" + d.name + "(" + d.classId + ")<span class='no-sign'>/</span><span class='class-number'>" + d.totalStudent + "人</span></p>" +
                             "<p class='completed-work'>作业</p>" +
-                            "<p class='completed-work'>已完成" + d.complateHomework + "</p>" +
-                            "<p class='completed-work'>未完成" + parseInt(d.totalHomework - d.complateHomework) + "</p>" +
+                            "<p class='completed-work'>已完成" + "<span class='disfinal'>" + d.complateHomework + " </span> </p>" +
+                            "<p class='completed-work'>未完成" + "<span class='disfinal'>" + parseInt(d.totalHomework - d.complateHomework) + " </span> </p>" +
                             "<p class='completed-exam'>考试</p>" +
-                            "<p class='completed-exam'>已完成" + d.complateExam + "</p>" +
-                            "<p class='completed-exam'>未完成" + parseInt(d.totalExam - d.complateExam) + "</p>" +
-                            "<img src='../../images/myclass/class-disbanded.png' alt='解散班级' class='class-disbanded'></li>");
+                            "<p class='completed-exam'>已完成" + "<span class='disfinal'>" + d.complateExam + " </span> </p>" +
+                            "<p class='completed-exam'>未完成" + "<span class='disfinal'>" + parseInt(d.totalExam - d.complateExam) + " </span></p>" +
+                            "<img src='../../images/myclass/class-disbanded.png' alt='解散班级' class='class-disbanded'></li>"
+                        )
+                        ;
                         _classWrap.append(_classList);
                     }
                 }

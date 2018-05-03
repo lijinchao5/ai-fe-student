@@ -290,15 +290,30 @@ body {
 .word-speaking .speak-listen-tab-bd .score {
     width: 68px;
     height: 68px;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     margin: 16px auto 10px;
-    /*background: url("../../images/speakAndListen/score.png") no-repeat center left;*/
     background: #d43f3a;
     line-height: 68px;
     text-align: center;
     font-size: 30px;
     color: #fff;
     font-weight: 700;
+    animation: score 1s infinite linear;
+    -moz-animation: score 1s infinite linear; /* Firefox */
+    -webkit-animation: score 1s infinite linear; /* Safari and Chrome */
+    -o-animation: score 1s infinite linear; /* Opera */
+}
+
+@keyframes score {
+    0% {
+        transform: scale(0.9)
+    }
+    50% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(0.9)
+    }
 }
 
 .word-speaking .speak-listen-tab-bd .gd {
@@ -310,31 +325,36 @@ body {
     color: #00a0e9;
     font-weight: 600;
 }
-.word-speaking .speak-listen-tab-bd .gd span{
+
+.word-speaking .speak-listen-tab-bd .gd span {
     font-weight: 200;
 }
+
 /* 分数等级指示 */
 .word-speaking .speak-listen-tab-bd .word-degree {
     width: 330px;
     height: 20px;
     margin: 20px auto 10px;
     text-align: center;
-    font-size:14px;
-    font-weight:400;
-    color:#999;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
 }
+
 .word-speaking .speak-listen-tab-bd .jsbyclass .word-degree {
     margin: 60px auto 20px;
 }
+
 .word-speaking .speak-listen-tab-bd .word-degree .degree-fail,
-.word-speaking .speak-listen-tab-bd .word-degree .degree-well{
+.word-speaking .speak-listen-tab-bd .word-degree .degree-well {
     width: 100px;
 }
 
-.word-speaking .speak-listen-tab-bd .word-degree .degree-good{
-    width:110px;
+.word-speaking .speak-listen-tab-bd .word-degree .degree-good {
+    width: 110px;
     margin: 0 10px;
 }
+
 /* 旋转木马盒子公共样式 */
 /*.word-speaking .speak-listen-tab-bd .carousel {
     height: 290px;
@@ -356,9 +376,11 @@ body {
     justify-content: center;
     word-break: break-all;
 }
+
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
     word-wrap: break-word;
 }
+
 .word-speaking .speak-listen-tab-bd .jsbyclass .carousel .carousel-inner .item .text {
     width: 100%;
     height: 250px;
@@ -370,6 +392,7 @@ body {
     /*word-break: break-word;*/
     word-wrap: break-word;
 }
+
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text b {
     word-wrap: break-word;
 }
@@ -553,7 +576,8 @@ body {
     margin: 60px auto 0;
     /*background: #e4b9b9;*/
 }
-.status{
+
+.status {
     height: 50px;
     line-height: 50px;
     font-size: 14px;
@@ -561,13 +585,16 @@ body {
     text-align: center;
     color: #00a0e9;
 }
-.status .normal{
+
+.status .normal {
     display: none;
 }
-.status .abnormal{
+
+.status .abnormal {
     display: none;
     color: #ff8003;
 }
+
 .word-speaking .speak-listen-tab-bd .play {
     width: 110px;
     height: 36px;
@@ -580,7 +607,7 @@ body {
 }
 
 /*.word-speaking .speak-listen-tab-bd .headset {*/
-    /*margin-left: -30px;*/
+/*margin-left: -30px;*/
 /*}*/
 
 .word-speaking .speak-listen-tab-bd .play p {
