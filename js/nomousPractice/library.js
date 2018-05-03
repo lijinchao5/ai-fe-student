@@ -361,7 +361,13 @@ function submitlibrary(library){
 		if(score.indexOf(".")>0){
 			score=score.substring(0,score.indexOf("."));
 		}
+        $("#nowScore").css("display","block");
         $("#nowScore").html(score);
+        $("#nowScore").css("animation","uper 2s linear");
+        setTimeout(function () {
+            $("#nowScore").css("display","none");
+            $("#nowScore").css("animation","");
+        },2000);
 		var exerciseDetailWords=data.exerciseDetailWords;
 		var html=calculationScore(exerciseDetailWords);
 		library.sentence_cont=html;
@@ -370,9 +376,11 @@ function submitlibrary(library){
 		$("#carousel-inner .item").each(function(i,v){
 			var classname=$(this).attr("class");
 			if(classname=="item active"){
-				$("#pscore span").eq(i).attr("data",score);
-				$("#pscore span").eq(i).html(score);
-				$("#pscore span").eq(i).attr("class","part-score");
+                setTimeout(function () {
+                    $("#pscore span").eq(i).attr("data",score);
+                    $("#pscore span").eq(i).html(score);
+                    $("#pscore span").eq(i).attr("class","part-score");
+                },2000);
 			}
 		})
         classNam = map.get(library.dataid).dataid;

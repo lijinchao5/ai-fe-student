@@ -3,16 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/common.css" type="text/css"/>
-    <link rel="stylesheet" href="../../css/nomousPractice/library.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../lib/bootstrap-3.3.7/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/nomousPractice/library.css" type="text/css" />
     <link rel="stylesheet" href="../../lib/layui/css/layui.css" media="all">
 
     <title>自主练习</title>
     <style>
-        .speak-speed {
+        .speak-speed{
             width: 100px;
             height: 20px;
             display: inline-block;
@@ -20,19 +20,16 @@
             position: relative;
             text-align: center;
         }
-
-        .speak-speed .list {
+        .speak-speed .list{
             width: 50px;
             height: 20px;
             cursor: pointer;
         }
-
-        .speak-speed .list .current {
+        .speak-speed .list .current{
             display: inline-block;
             width: 30px;
         }
-
-        .speak-speed ul {
+        .speak-speed ul{
             width: 44px;
             /*height: 20px;*/
             position: absolute;
@@ -43,16 +40,14 @@
             /*border: 1px solid #ccc;*/
             cursor: pointer;
         }
-
-        .speak-speed ul li:hover {
+        .speak-speed ul li:hover{
             background: yellow;
         }
-
-        .speak-speed .list .triangle {
+        .speak-speed .list .triangle{
             border: 5px solid #ccc;
             border-top: 5px solid transparent;
             border-left: 5px solid transparent;
-            margin: 0px 8px 0 0;
+            margin: 0px 8px 0 0 ;
             transform: rotate(45deg);
         }
     </style>
@@ -60,158 +55,150 @@
 </head>
 
 <body>
-<div id="header"></div>
-<div class="outs">
-    <div class="mains">
-        <div id="nav"></div>
-        <div id="library" class="library">
-            <!-- 返回按钮 -->
-            <a href="./practiceList.html"><img src="../../images/common/go-back.png" class="back"></a>
-            <div href="./practiceList.html" class="fr speak-speed" style="display: inline-block">
-                <span>语速：</span>
-                <div class="list fr">
-                    <div class="current" speed=1.0>1.0</div>
-                    <div class="triangle fr"></div>
-                </div>
-                <ul>
-                    <li speed=0.7>0.5</li>
-                    <li speed=1.0>1.0</li>
-                    <li speed=1.3>1.5</li>
-                </ul>
-            </div>
-            <div class="library-content">
-                <div class="part-num">
-                    <span class="current" id="numnow">1</span>/<span class="part-all" id="numcount">1</span>
-                </div>
-                <div class="part-scores">
-                    <p id="pscore">
-                        <span class="part-score current"></span>
-                    </p>
-                </div>
-                <div class="current-part-score" id="nowScore"></div>
-                <div class="content">
-                    <!-- 旋转木马 -->
-                    <div id="practice-carousel" class="carousel slide" data-ride="carousel" data-interval="false"
-                         data-wrap="false">
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox" id="carousel-inner">
-                        </div>
-                        <!-- Controls -->
-                        <a class="left carousel-control leftsyz" href="#practice-carousel" role="button"
-                           data-slide="prev">
-                            <img src="../../images/common/prev.png" alt="上一张">
-                        </a>
-                        <a class="right carousel-control rightxyz" href="#practice-carousel" role="button"
-                           data-slide="next">
-                            <img src="../../images/common/next.png" alt="下一张">
-                        </a>
+    <div id="header"></div>
+    <div class="outs">
+        <div class="mains">
+            <div id="nav"></div>
+            <div id="library" class="library">
+                <!-- 返回按钮 -->
+                <a href="./practiceList.html"><img src="../../images/common/go-back.png" class="back"></a>
+                <div href="./practiceList.html" class="fr speak-speed" style="display: inline-block">
+                    <span>语速：</span>
+                    <div class="list fr">
+                        <div class="current" speed=1.0>1.0</div>
+                        <div class="triangle fr"></div>
                     </div>
+                    <ul>
+                        <li speed=0.7>0.5</li>
+                        <li speed=1.0>1.0</li>
+                        <li speed=1.3>1.5</li>
+                    </ul>
+                </div>
+                <div class="library-content">
+                    <div class="part-num">
+                        <span class="current" id="numnow">1</span>/<span class="part-all" id="numcount">1</span>
+                    </div>
+                    <div class="part-scores">
+                        <p id="pscore">
+                            <span class="part-score current"></span>
+                        </p>
+                    </div>
+                    <div class="content">
+                        <!-- 旋转木马 -->
+                        <div id="practice-carousel" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox" id="carousel-inner">
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control leftsyz" href="#practice-carousel" role="button" data-slide="prev">
+                                <img src="../../images/common/prev.png" alt="上一张">
+                            </a>
+                            <a class="right carousel-control rightxyz" href="#practice-carousel" role="button" data-slide="next">
+                                <img src="../../images/common/next.png" alt="下一张">
+                            </a>
+                        </div>
 
-                </div>
-                <!-- 雷达图 -->
-                <div class="part-radars">
-                    <p id="rscore"></p>
-                </div>
-                <!-- 旋转木马 结束 -->
-                <div class="nomous-practice-btn">
-                    <!-- 播放图标 -->
-                    <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标"
-                         style="display: none;"/>
-                    <!-- 录音进度条 -->
-                    <div class="speed q_sounding" style="display: none;">
-                        <div class="speed-icon" id="divjdt">
-                            <div class="layui-progress layui-progress-big" lay-filter="ly">
-                                <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
-                                    <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> -->
+                    </div>
+                    <!-- 雷达图 -->
+                    <div class="part-radars">
+                        <p id="rscore"></p>
+                    </div>
+                    <!-- 旋转木马 结束 -->
+                    <div class="nomous-practice-btn">
+                        <!-- 播放图标 -->
+                        <img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" style="display: none;" />
+                        <!-- 录音进度条 -->
+                        <div class="speed q_sounding" style="display: none;">
+                            <div class="speed-icon" id="divjdt">
+                                <div class="layui-progress layui-progress-big" lay-filter="ly">
+                                    <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
+                                        <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> -->
+                                    </div>
                                 </div>
                             </div>
+                            <div class="speed-text">录音中</div>
                         </div>
-                        <div class="speed-text">录音中</div>
-                    </div>
 
-                    <div class="q_restart" style="display: none;">
-                        <div class="headset play" onclick="readlibrary(true);">
-                            <!--<img src="../../images/common/headset.png" />-->
-                            <p>重做</p>
-                        </div>
-                        <div class="play" onclick="readlid();">
-                            <!--<img src="../../images/speakAndListen/play.png" />-->
-                            <p>播放</p>
-                        </div>
-                        <div class="play end" onclick="submitend();">
-                            <!--<img src="../../images/nomousPractice/boom.png" />-->
-                            <p class="end-p">The <span class="span1">end!</span> <span
-                                    class="span2">&nbsp;&nbsp;点我</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--开始练习 模态框 -->
-            <div style="visibility: hidden;">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ready-go"
-                        id="startworkhome">开启作业
-                </button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report" id="submitend">
-                    查看成绩
-                </button>
-            </div>
-
-            <!-- 进入时候的模态框 -->
-            <div class="modal fade bs-example-modal-lg ready-go" tabindex="-1" role="dialog"
-                 aria-labelledby="myLargeModalLabel" data-backdrop="static">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <!-- model content 开始 -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">提&nbsp;&nbsp;示</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p class="title" id="titleName1"></p>
-                            <div class="indicate">字数：<span id="wordNum1"></span><span class="mid">类别：<span
-                                    id="typeName1"></span></span>级别：<span id="levelName1"></span></div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary start-read" data-dismiss="modal"
-                                    onclick="readlibrary();">开始练习
-                            </button>
-                        </div>
-                        <!-- model content 结束 -->
-                    </div>
-                </div>
-            </div>
-            <!--提交超时 模态框-->
-            <div class="modal fade  report" tabindex="-1" data-backdrop="static">
-                <div class="modal-dialog ">
-                    <div class="modal-content">
-                        <!-- model content 开始 -->
-                        <div class="modal-header">
-                            <button class="close" data-dismiss="modal">×</button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="../../images/personInfo/xs-meb-icon.png" class="user-photo">
-                            <p class="user-name"></p>
-                            <p class="time" id="endtime">2018/02/19&nbsp;&nbsp;13:03</p>
-                            <div class="radar-score"></div>
-                            <div class="result">
-                                <p class="free-practice-result"><span class="num"></span>分</p>
-                                <p class="title" id="titleName2">At The Library</p>
-                                <div class="indicate">字数：<span id="wordNum2"></span><span class="mid">类别：<span
-                                        id="typeName2"></span></span>级别：<span id="levelName2"></span></div>
+                        <div class="current-part-score" id="nowScore"></div>
+                        <div class="q_restart" style="display: none;">
+                            <div class="headset play" onclick="readlibrary(true);">
+                                <!--<img src="../../images/common/headset.png" />-->
+                                <p>重做</p>
+                            </div>
+                            <div class="play" onclick="readlid();">
+                                <!--<img src="../../images/speakAndListen/play.png" />-->
+                                <p>播放</p>
+                            </div>
+                            <div class="play end" onclick="submitend();">
+                                <!--<img src="../../images/nomousPractice/boom.png" />-->
+                                <p class="end-p">The <span class="span1">end!</span> <span class="span2">&nbsp;&nbsp;点我</span></p>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <p class="fr clearfix score100" style="display: none;">真的很棒哦，继续加油！</p>
-                            <p class="fl clearfix score80" style="display: none;">发挥不错哦，继续加油！</p>
-                            <p class="up score70" style="display: none;">世上无难事，只要肯攀登，继续加油！！</p>
+                    </div>
+                </div>
+                <!--开始练习 模态框 -->
+                <div style="visibility: hidden;">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".ready-go" id="startworkhome">开启作业
+                </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".report" id="submitend">
+                    查看成绩
+                </button>
+                </div>
+
+                <!-- 进入时候的模态框 -->
+                <div class="modal fade bs-example-modal-lg ready-go" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-backdrop="static">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <!-- model content 开始 -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">提&nbsp;&nbsp;示</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p class="title" id="titleName1"></p>
+                                <div class="indicate">字数：<span id="wordNum1"></span><span class="mid">类别：<span
+                                    id="typeName1"></span></span>级别：<span id="levelName1"></span></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary start-read" data-dismiss="modal" onclick="readlibrary();">开始练习
+                            </button>
+                            </div>
+                            <!-- model content 结束 -->
                         </div>
-                        <!-- model content 结束 -->
+                    </div>
+                </div>
+                <!--提交超时 模态框-->
+                <div class="modal fade  report" tabindex="-1" data-backdrop="static">
+                    <div class="modal-dialog ">
+                        <div class="modal-content">
+                            <!-- model content 开始 -->
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../../images/personInfo/xs-meb-icon.png" class="user-photo">
+                                <p class="user-name"></p>
+                                <p class="time" id="endtime">2018/02/19&nbsp;&nbsp;13:03</p>
+                                <div class="radar-score"></div>
+                                <div class="result">
+                                    <p class="free-practice-result"><span class="num"></span>分</p>
+                                    <p class="title" id="titleName2">At The Library</p>
+                                    <div class="indicate">字数：<span id="wordNum2"></span><span class="mid">类别：<span
+                                            id="typeName2"></span></span>级别：<span id="levelName2"></span></div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <p class="fr clearfix score100" style="display: none;">真的很棒哦，继续加油！</p>
+                                <p class="fl clearfix score80" style="display: none;">发挥不错哦，继续加油！</p>
+                                <p class="up score70" style="display: none;">世上无难事，只要肯攀登，继续加油！！</p>
+                            </div>
+                            <!-- model content 结束 -->
+                        </div>
                     </div>
                 </div>
             </div>
+            <div id="footer"></div>
         </div>
-        <div id="footer"></div>
     </div>
-</div>
 </body>
 <script type="text/javascript" src="../../lib/jquery-3.3.1.js"></script>
 <script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.min.js"></script>
@@ -241,33 +228,33 @@
 <script>
 
 
-    //    radarMap(0,0,0,30,"radar-map");
+//    radarMap(0,0,0,30,"radar-map");
 
-    function radarMap(pronunciation, fluency, integrity, size, className) {
+    function radarMap(pronunciation,fluency,integrity,size,className){
         var dom = document.getElementsByClassName(className)[0];
         var myChart = echarts.init(dom);
         var app = {};
         option = null;
         option = {
             /*title: {
-             text: '自定义雷达图'
-             },*/
+                text: '自定义雷达图'
+            },*/
             /*legend: {
-             data: ['图一','图二', '张三', '李四']
-             },*/
-            grid: {
-                x: 25,
-                y: 45,
-                x2: 5,
-                y2: 20,
-                borderWidth: 5
+                data: ['图一','图二', '张三', '李四']
+            },*/
+            grid:{
+                x:25,
+                y:45,
+                x2:5,
+                y2:20,
+                borderWidth:5
             },
             radar: [
                 {
                     indicator: [
-                        {text: '流利度', max: 100, min: 0},
-                        {text: '准确度', max: 100, min: 0},
-                        {text: '完整度', max: 100, min: 0}
+                        { text: '流利度',max:100,min:0},
+                        { text: '准确度',max:100,min:0},
+                        { text: '完整度',max:100,min:0}
                     ],
                     // center: ['25%', '50%'],  // 位置判断
                     radius: size,  // 调整整个图的大小
@@ -275,16 +262,16 @@
                     splitNumber: 4,  // 圆环个数
                     shape: 'circle',
                     name: {
-                        formatter: '{value}',
+                        formatter:'{value}',
                         textStyle: {
 //                            color:'#72ACD1'
-                            color: '#999'
+                            color:'#999'
                         }
                     },
                     splitArea: {
                         areaStyle: {
                             color: ['#f9d6b6',
-                                '#fac28d', '#fac28d', '#ffaa59',
+                                '#fac28d', '#fac28d','#ffaa59',
                                 '#f08118', 'yellow'],
                             shadowColor: 'rgba(0, 0, 0, 0.3)'
                             //shadowBlur: 10
