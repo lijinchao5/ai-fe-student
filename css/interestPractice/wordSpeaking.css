@@ -298,21 +298,21 @@ body {
     font-size: 30px;
     color: #fff;
     font-weight: 700;
-    animation: score 1s infinite linear;
-    -moz-animation: score 1s infinite linear; /* Firefox */
-    -webkit-animation: score 1s infinite linear; /* Safari and Chrome */
-    -o-animation: score 1s infinite linear; /* Opera */
+    animation: score 1s infinite;
+    -moz-animation: score 1s infinite; /* Firefox */
+    -webkit-animation: score 1s infinite; /* Safari and Chrome */
+    -o-animation: score 1s infinite; /* Opera */
 }
 
 @keyframes score {
     0% {
-        transform: scale(0.9)
+        transform: scale(0.95)
     }
     50% {
         transform: scale(1)
     }
     100% {
-        transform: scale(0.9)
+        transform: scale(0.95)
     }
 }
 
@@ -860,6 +860,7 @@ body {
     border: none;
     position: absolute;
     right: 120px;
+    margin-top: 68px;
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .dictation::-webkit-input-placeholder { /* WebKit browsers*/
