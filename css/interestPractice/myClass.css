@@ -86,11 +86,12 @@ body {
 .present-class .my-classmate {
     float: right;
     cursor: pointer;
+    color: #f08118;
 }
 
 .present-class .my-classmate img {
-    width: 21px;
-    height: 28px;
+    width: 30px;
+    height: 26px;
     vertical-align: bottom;
     margin-right: 5px;
 }
