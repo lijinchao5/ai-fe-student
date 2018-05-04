@@ -90,8 +90,9 @@ body {
 .student-notice .notice-text {
     width: 750px;
     height: 300px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background: url("../../images/simulationExam/info-bg.png") no-repeat center center;
+    background-size:100% 100%;
+    /*border: 1px solid #ccc;*/
     margin: 65px auto 0;
     padding: 0 20px 20px;
     line-height: 26px;

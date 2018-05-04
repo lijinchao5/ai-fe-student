@@ -371,6 +371,8 @@ body {
     /* flex-direction: column; */
     justify-content: center;
     word-break: break-all;
+    background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
