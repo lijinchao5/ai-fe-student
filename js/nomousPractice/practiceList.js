@@ -196,7 +196,7 @@ function initData() {
                     "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
                     "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
                     "</p>" +
-                    "<p onclick=goTo('" + d.id + "') class='start-read'> 开始练习</p>" +
+                    "<p onclick=goTo('" + d.id + "') class='start-read'>我要练</p>" +
                     "</li>");
                 _artList.append(_li);
             }

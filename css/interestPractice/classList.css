@@ -186,14 +186,14 @@ body {
 }
 
 .class-wrap li .center-info .enter-class {
-    width: 130px;
-    height: 30px;
+    width: 140px;
+    height: 40px;
     font-size: 14px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: 100% 100%;
     color: #fff;
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
     cursor: pointer;
     margin: 30px 0 0 90px;
 }

@@ -455,7 +455,7 @@ function submit_tip(msg){
          "position": "fixed",
          "top": y,
          "left": x,
-         "opacity":0.8
+         "opacity":0.6
      });
      $("#tooltip").css({
          "display": "block",

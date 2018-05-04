@@ -54,6 +54,7 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
 #footer {
@@ -66,7 +67,7 @@ body {
 /* 添加返回按钮 */
 #word-speaking .back {
     position: absolute;
-    top: -5px;
+    top: 16px;
     left: 20px;
     width: 26px;
     height: 21px;
@@ -196,15 +197,15 @@ body {
     height: 21px;
 }
 
-.word-speaking {
-    position: relative;
-}
+/*.word-speaking {*/
+    /*position: relative;*/
+/*}*/
 
 /* 模态框样式结束 */
 .word-speaking .speak-listen-tabs {
     width: 850px;
     height: 83px;
-    margin: 25px auto 0;
+    margin: 0 auto 0;
     text-align: center;
 }
 
@@ -329,7 +330,7 @@ body {
 .word-speaking .speak-listen-tab-bd .word-degree {
     width: 330px;
     height: 20px;
-    margin: 20px auto 10px;
+    margin: 0 auto 50px;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -618,7 +619,7 @@ body {
 }
 
 .word-speaking .speak-listen-btn .znbutton {
-    margin-top: 60px;
+    margin-top: 200px;
     margin-left: 0;
 }
 
@@ -982,6 +983,9 @@ button {
 }
 
 .speak-listen-submit {
+    position: absolute;
+    bottom: 17px;
+    right: 17px;
     width: 69px;
     height: 69px;
     background-color: #00a0e9;
@@ -991,9 +995,6 @@ button {
     text-align: center;
     line-height: 69px;
     border-radius: 50%;
-    position: relative;
-    bottom: 80px;
-    right: -827px;
 }
 
 .speak-listen-submit.out {
@@ -1112,3 +1113,12 @@ h3, ul, li {
 }
 
 /*角色扮演*/
+.modal-backdrop {
+    background-color: transparent;
+}
+
+.bs-example-modal-lg.ready-go,
+.bs-example-modal-lg.submit-success,
+.back-modal {
+    background-color: rgba(0, 0, 0, .6);
+}
