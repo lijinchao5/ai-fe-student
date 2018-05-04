@@ -126,11 +126,8 @@ function addList() {
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
                                 "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
-
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
-
-
                                 "</li>");
                         }
                     }
@@ -139,7 +136,6 @@ function addList() {
                 } else if (d.complate == 'S') {
                     var startExam = null
                     if (d.state == 1) {
-                        // 可以做题
                         startExam = $("<li>" +
                             "<p class='topic'>" + d.examName + "</p>" +
                             "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
@@ -164,10 +160,8 @@ function addList() {
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
                                 "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
-
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
-
                                 "</li>");
                         }
                     }
@@ -239,10 +233,7 @@ function addList() {
                 }
                 _toggleLi.find("li").eq(currentPages).addClass('col').siblings().removeClass('col');
             }
-
-
         }
-
     });
 
 }

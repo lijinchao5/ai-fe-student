@@ -1,18 +1,17 @@
 .nav-wrap {
     width: 264px;
     height: 662px;
-    background-color: #4fc6fc;
+    background-color: #01A4F9;
     padding-top: 42px;
     border-radius: 5px;
 }
 
 .nav-wrap .user-icon-left {
-    width: 166px;
-    height: 166px;
+    width: 156px;
+    height: 156px;
     margin: 0 auto;
     border-radius: 50%;
     text-align: center;
-    border: solid 5px #00a0e9;
     cursor: pointer;
     background: #4fc6fc;
 }
@@ -31,6 +30,7 @@
     line-height: 20px;
     text-align: center;
     margin-top: 30px;
+    color: #fff;
 }
 
 .nav-wrap .student-id {

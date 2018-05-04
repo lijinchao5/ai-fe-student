@@ -7,9 +7,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -101,7 +99,7 @@ body {
 
 .ready-go .modal-footer .start-read {
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     outline: none;
     border: none;
     width: 148px;
@@ -114,7 +112,7 @@ body {
 
 .ready-go .modal-footer .start-read:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 /* 闃呰鍐呭 閮ㄥ垎 */
@@ -394,13 +392,14 @@ body {
     height: 56px;
     cursor: pointer;
     background: url("../../images/common/play.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     display: inline-block;
     margin: 0 50px 0 30px;
     border-radius: 56px;
 }
 .library-content .nomous-practice-btn .play.headset  {
     background: url("../../images/common/recording.png") no-repeat center center;
+    background-size: 100% 100%;
     margin: 0 30px 0 50px;
 }
 /*.library-content .nomous-practice-btn .play:hover{

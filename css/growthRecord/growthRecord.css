@@ -30,9 +30,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -159,7 +157,7 @@ body {
     width: 84px;
     height: 58px;
     background: url("../../images/growthRecord/growth-boom.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 24px;
     color: #ffe400;
     /* 旋转 */
@@ -253,6 +251,7 @@ body {
     height: 12px;
     padding: 4px;
     background: url("../../images/growthRecord/reading.png") no-repeat center top;
+    background-size:100% 100%;
 }
 
 .record-content .record-info .record-data .top-num > div p.word:before {
@@ -263,6 +262,7 @@ body {
     height: 12px;
     padding: 4px;
     background: url("../../images/growthRecord/words.png") no-repeat center top;
+    background-size:100% 100%;
 }
 
 .record-content .record-info .record-data .top-num > div p.average:before {
@@ -273,6 +273,7 @@ body {
     height: 12px;
     padding: 4px;
     background: url("../../images/growthRecord/average.png") no-repeat center top;
+    background-size:100% 100%;
 }
 
 .record-content .record-info .record-data .top-num > div p.pass:before {
@@ -283,6 +284,7 @@ body {
     height: 12px;
     padding: 4px;
     background: url("../../images/growthRecord/passing.png") no-repeat center top;
+    background-size:100% 100%;
 }
 
 /* right top end  */

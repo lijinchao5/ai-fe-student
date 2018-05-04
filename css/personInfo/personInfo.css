@@ -24,9 +24,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -68,7 +66,7 @@ body {
     margin: 0 auto;
     border-radius: 50%;
     text-align: center;
-    border: solid 5px #00a0e9;
+    /*border: solid 5px #00a0e9;*/
     background: #4fc6fc;
 }
 
@@ -164,7 +162,7 @@ body {
 #personInfo #tabbd .info-title {
     width: 212px;
     height: 106px;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
     /*border-bottom: 5px solid #00a0e9;*/
 }
 
@@ -172,14 +170,17 @@ body {
     width: 212px;
     height: 110px;
     margin: 0 auto;
-    border-radius: 5px;
-    background: url("../../images/personInfo/tit-bg1.png") no-repeat center center;
-    background-size: 100% 100%;
     text-align: center;
     line-height: 106px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    color: #fff;
+    color: #00a0e9;
+}
+#personInfo #tabbd .info-title .each-title img{
+    width: 36px;
+    height: 26px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 #personInfo #tabbd .owner-message .modify-info {
@@ -190,9 +191,9 @@ body {
 }
 
 #personInfo #tabbd .owner-message .modify-info .user-icon-right {
-    width: 144px;
-    height: 144px;
-    border: 5px solid #00a0e9;
+    width: 136px;
+    height: 136px;
+    border: 1px solid #00a0e9;
     border-radius: 50%;
     background: #4fc6fc;
 }
@@ -208,7 +209,7 @@ body {
     height: 36px;
     margin: 12px 0 0 17px;
     background: url('../../images/common/normal-button.png') no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     text-align: center;
     font-size: 16px;
     line-height: 38px;
@@ -219,6 +220,7 @@ body {
 
 #personInfo #tabbd .owner-message .modify-info .edit-head-icon:hover {
     background: url('../../images/common/hover-button.png') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-dialog {
@@ -354,7 +356,7 @@ body {
     color: #fff;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-body .confirm:hover {
@@ -394,11 +396,12 @@ body {
     color: #fff;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 /*  .owner-message .set-info  */
 #personInfo #tabbd  .sure:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex {
@@ -427,7 +430,7 @@ body {
 
 #personInfo .school-message .school-info {
     width: 790px;
-    margin: 120px auto 177px;
+    margin: 95px auto 0;
 }
 
 #mark-label1,
@@ -496,7 +499,7 @@ body {
 }
 /* 学校信息 底部按钮 */
 #personInfo .school-message .sure {
-    margin-top: 116px;
+    margin-top: 141px;
 }
 #change-classnum,
 #change-classnum:focus {
@@ -599,7 +602,7 @@ body {
     border: none;
     outline: none;
     background: url('../../images/common/normal-button.png') no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
@@ -608,6 +611,7 @@ body {
 
 #sure-change:hover {
     background: url('../../images/common/hover-button.png') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /*编辑头像 模态窗*/
@@ -742,7 +746,7 @@ body {
     height: 36px;
     margin-top: -10px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     line-height: 38px;
     text-align: center;
     color: #fff;
@@ -750,6 +754,7 @@ body {
 
 #personInfo #tabbd .user-message .blocks .fr:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 手机绑定表单样式 */
@@ -827,7 +832,7 @@ body {
     margin: 20px auto;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 16px;
     line-height: 26px;
     color: #fff;
@@ -835,6 +840,7 @@ body {
 
 #personInfo #tabbd .user-message .login-form .confirm:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 模态框 */

@@ -60,7 +60,7 @@
     height: 48px;
     margin: 14px 12px;
     border-radius: 50%;
-    border: 2px solid #00a0e9;
+    border: 1px solid #00a0e9;
 }
 
 .top .fr p {
@@ -121,7 +121,7 @@
     width: 494px;
     height: 136px;
     background: url("../../images/common/startbg.png");
-    background-size: cover;
+    background-size: 100% 100%;
     border-bottom: none;
     padding: 0;
 }

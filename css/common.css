@@ -8,9 +8,12 @@
 html {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top, #00a0e9, #4fbdfc);
+    background-color: #f6f6f6;
     color: black;
     font-family: Microsoft YaHei, Arial;
+}
+body{
+    background-color: #f6f6f6;
 }
 
 /*去掉按钮自带的阴影*/

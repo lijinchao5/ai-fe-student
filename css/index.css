@@ -666,7 +666,7 @@ html, body {
 .content .nav .left-nav-in,
 .content .nav .right-nav-in{
     /*float: left;*/
-    display: block;
+    /*display: block;*/
     width: 70%;
     height: 70%;
     margin: 15%;
@@ -698,7 +698,7 @@ html, body {
     right: 190px;
     width: 148px;
     height: 107px;
-    background: url("../images/index/index.png") no-repeat 0px -280px;
+    background: url("../images/index/index.png") no-repeat 0 -280px;
     background-size: cover;
     cursor: default;
     /* css3 动画 */
@@ -741,7 +741,7 @@ html, body {
     left: 36.6%;
     width: 33px;
     height: 34px;
-    background: url("../images/index/index.png") no-repeat 0px -180px;
+    background: url("../images/index/index.png") no-repeat 0 -180px;
     /* css3 动画 */
     animation: starb 3s infinite linear;
     -moz-animation: starb 3s infinite linear; /* Firefox */

@@ -14,9 +14,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -79,6 +77,7 @@ body {
     height: 321px;
     margin-top: 40%;
     background: url("../../images/common/ready-go-clound.png") no-repeat center center;
+    background-size:100% 100%;
     border: none;
     box-shadow: none;
 }
@@ -599,14 +598,14 @@ body {
     height: 56px;
     cursor: pointer;
     background: url("../../images/common/recording.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     display: inline-block;
     margin: 0 30px 0 50px;
     border-radius: 56px;
 }
 .word-speaking .speak-listen-tab-bd .play.palybutton {
     background: url("../../images/common/play.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     margin: 0 50px 0 30px;
 }
 
@@ -641,7 +640,7 @@ body {
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background: url("../../images/common/record.png") no-repeat center center;
+    background: url("../../images/common/recording.png") no-repeat center center;
     background-size: 68px 68px;
 }
 
@@ -835,7 +834,7 @@ body {
     font: 600 16px/38px MicrosoftYaHei;
     color: #fff;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     border: none;
     outline: none;
     border-radius: 5px;
