@@ -75,9 +75,7 @@ $(function() {
 	if (data.name == "" || data.name == null) {
 		$("#username1").text("尚未设置昵称").css("font-size", "16px")
 	}
-
 	$("#mobiles").text(data.mobile);
-
 	if (data.sex && data.sex == 'M') {
 		chSex(0);
 	} else {
@@ -88,15 +86,10 @@ $(function() {
 			return "19901001";
 		}
 		var date = new Date(data.birthDate);
-		console.log("时间是："+data)
 		var y = date.getFullYear();
 		var m = date.getMonth() + 1;
 		var d = date.getDate();
-		var h = date.getHours();
-		var mm = date.getMinutes();
-		var s = date.getSeconds();
-		// var birth = y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
-		var birth = y + (m < 10 ? ('0' + m) : m)  + (d < 10 ? ('0' + d) : d);
+		var birth = y + (m < 10 ? ('0' + m) : '' + m) + (d < 10 ? ('0' + d) : '' + d);
 		$("#birthDate").val(birth)
 	}
 	$("#second-disable").selectpicker({
@@ -254,22 +247,22 @@ function subUserInfo() {
 	param.name = $("#user_name").val();
 	param.sex = $("#sex").val();
 	var birth = $("#birthDate").val();
-    var reg = /^[1-9]\d{3}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
-    var regExp = new RegExp(reg);
-    if (!regExp.test(birth)) {
-        console.log(birth)
-        $(".name-tips").text("日期格式不正确，正确格式为：20140101");
-        return false;
-    } else {
-        console.log("ok");
-        $(".name-tips").text("");
-        $('#suremsg').modal('show')
-    }
-	var y = birth.substring(0,4);
-	var m = birth.substring(4,6);
-	var d = birth.substring(6,8);
+	var reg = /^[1-9]\d{3}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
+	var regExp = new RegExp(reg);
+	if (!regExp.test(birth)) {
+		console.log(birth)
+		$(".name-tips").text("日期格式不正确，正确格式为：20140101");
+		return false;
+	} else {
+		console.log("ok");
+		$(".name-tips").text("");
+		$('#suremsg').modal('show')
+	}
+	var y = birth.substring(0, 4);
+	var m = birth.substring(4, 6);
+	var d = birth.substring(6, 8);
 	// alert(y+"-"+m+"-"+d);
-	param.birthDate = y+'-'+m+'-'+d;
+	param.birthDate = y + '-' + m + '-' + d;
 	doAjax("post", url, param, function(data, code, message) {
 		if (code == '0' || code == 0) {
 			// reloadUserInfo();
