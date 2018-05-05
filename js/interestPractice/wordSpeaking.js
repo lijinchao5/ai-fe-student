@@ -284,17 +284,19 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
-				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
-                    roundProgressTimer("roll-progress-dc",audiotime*times-800);
-					dataobj=jsonobj;
-					funStartMp3();
-					setTimeout(function(){
-						stopMp3All();
-						isswitchfunction(true);
-						q_restart();
-					},gettimes(audiotime*times));
-				});
+                q_sounding(gettimes(audiotime*times));
+				$(".round-progress").click(function () {
+                    readrecord(ConfigLY.startrecordid,function(){
+                        roundProgressTimer("roll-progress-dc",audiotime*times-800);
+                        dataobj=jsonobj;
+                        funStartMp3();
+                        setTimeout(function(){
+                            stopMp3All();
+                            isswitchfunction(true);
+                            q_restart();
+                        },gettimes(audiotime*times));
+                    });
+                });
 			},speeds);
 		});
 	}else if(speakAndListenTabIndex==1){
@@ -311,17 +313,19 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
-				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
-                    roundProgressTimer("roll-progress-jz",audiotime*times);
-					dataobj=jsonobj;
-					funStartMp3();
-					setTimeout(function(){
-						stopMp3All();
-						isswitchfunction(true);
-						q_restart();
-					},gettimes(audiotime*times));
-				})
+                q_sounding(gettimes(audiotime*times));
+                $(".round-progress").click(function () {
+                    readrecord(ConfigLY.startrecordid,function(){
+                        roundProgressTimer("roll-progress-jz",audiotime*times);
+                        dataobj=jsonobj;
+                        funStartMp3();
+                        setTimeout(function(){
+                            stopMp3All();
+                            isswitchfunction(true);
+                            q_restart();
+                        },gettimes(audiotime*times));
+                    })
+                })
 			},speeds)
 		})
 	}else if(speakAndListenTabIndex==2){
@@ -338,17 +342,19 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
-				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
-                    roundProgressTimer("roll-progress-kw",audiotime*times);
-					dataobj=jsonobj;
-					funStartMp3();
-					setTimeout(function(){
-						stopMp3All();
-						isswitchfunction(true);
-						q_restart();
-					},gettimes(audiotime*times));
-				})
+                q_sounding(gettimes(audiotime*times));
+                $(".round-progress").click(function () {
+                    readrecord(ConfigLY.startrecordid,function(){
+                        roundProgressTimer("roll-progress-kw",audiotime*times);
+                        dataobj=jsonobj;
+                        funStartMp3();
+                        setTimeout(function(){
+                            stopMp3All();
+                            isswitchfunction(true);
+                            q_restart();
+                        },gettimes(audiotime*times));
+                    })
+                })
 			},speeds)
 		})
 	}else if(speakAndListenTabIndex==3){
