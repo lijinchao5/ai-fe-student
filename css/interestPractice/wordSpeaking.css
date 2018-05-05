@@ -524,10 +524,8 @@ body {
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .speed {
     display: none;
     width: 330px;
-    height: 13px;
-    margin-left: 38px;
     /*11*/
-    margin-top: 80px;
+    margin: 50px auto;
     position: relative;
 }
 
