@@ -357,7 +357,7 @@ body {
     user-select: none;
 }
 .library-content .nomous-practice-btn .speed {
-    padding-top: 26px;
+    /*padding-top: 26px;*/
 }
 .library-content .nomous-practice-btn .play-icon {
     border-radius: 0%;

@@ -381,9 +381,6 @@ function readword(isreset){
 		animateulnow();
 		readrecord(ConfigLY.PleaseListenid,function(audiotime){
 			jsbyfun();
-            /*setTimeout(function(){
-                roundProgressTimer("roll-progress-js",audiotime*times-800,true);
-            },gettimes(audiotime*times));*/
 		});
 	}else if(speakAndListenTabIndex==4){
 		isswitchfunction(true);
@@ -480,6 +477,7 @@ var isreadIflag="1";
 function jsbyreadorlu(dataid){
 	var _length=$("#jsby .active .item-in").length;
 	var jsonobj=map.get(dataid);
+    roundProgress("roll-progress-js",0);
 	if(jsonobj.dialogName=="F"){
 		q_play();
 		readrecord(jsonobj.mid,function(audiotime){
@@ -499,6 +497,8 @@ function jsbyreadorlu(dataid){
 			dataobj=jsonobj;
 			funStartMp3();
 			q_sounding(gettimes(replacehtml(jsonobj.standerText).length*150*times));
+
+            roundProgressTimer("roll-progress-js",gettimes(replacehtml(jsonobj.standerText).length*150*times));
 			setTimeout(function(){
 				stopMp3All();
 				if(nows<_length){
