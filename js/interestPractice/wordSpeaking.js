@@ -753,10 +753,10 @@ function removeClassSpan(){
                          },
                          itemStyle: {
                              normal: {
-                                 color: '#aaa'
+                                 color: 'transparent'
                              },
                              emphasis: {
-                                 color: '#aaa'
+                                 color: 'transparent'
                              }
                          },
                          hoverAnimation: false

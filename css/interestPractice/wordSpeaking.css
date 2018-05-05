@@ -523,10 +523,10 @@ body {
     margin: 54px auto 0;
     margin-left: 40px;*/
     display: none;
-    width: 50px;
-    height: 50px;
-    background: url("../../images/common/recording.png") no-repeat center center;
-    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    border-radius: 60px;
     margin: 40px auto;
     animation: recording 2s infinite;
 }
@@ -1145,12 +1145,13 @@ h3, ul, li {
 }
 .record-bg{
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url("../../images/common/recording.png") no-repeat center center;
-    border-radius: 50px;
-    top: 5px;
-    left: 5px;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    background-size:98% 98%;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
 }
 .round-progress-bar{
     width: 60px;

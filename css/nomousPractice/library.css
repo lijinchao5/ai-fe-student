@@ -210,7 +210,7 @@ body {
     0%{top: -20px;opacity: 1;}
     /*1%{top: 0;opacity: 1;display: block;}*/
     /*99%{top: -200px;opacity: 0;}*/
-    100%{top: -200px;opacity: 0;}
+    100%{top: -250px;opacity: 0;}
 }
 /* 鍑嗙‘搴︿竴琛� */
 .library-content .library-point {
@@ -363,10 +363,10 @@ body {
    /* border-radius: 0%;
     margin-left: 108px;
     padding-top: 10px;*/
-    width: 50px;
-    height: 50px;
-    background: url("../../images/common/recording.png") no-repeat center center;
-    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    border-radius: 60px;
     margin: 10px auto;
     animation: recording 2s infinite;
     display: none;
@@ -681,12 +681,13 @@ body {
 }
 .record-bg{
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url("../../images/common/recording.png") no-repeat center center;
-    border-radius: 50px;
-    top: 5px;
-    left: 5px;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    background-size:98% 98%;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
 }
 .round-progress-bar{
     width: 60px;

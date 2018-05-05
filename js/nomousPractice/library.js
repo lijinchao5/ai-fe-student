@@ -377,7 +377,7 @@ function submitlibrary(library){
 		}
         $("#nowScore").css("display","block");
         $("#nowScore").html(score);
-        $("#nowScore").css("animation","uper 2s linear");
+        $("#nowScore").css("animation","uper 1.5s linear");
         setTimeout(function () {
             $("#nowScore").css("display","none");
             $("#nowScore").css("animation","");
@@ -522,10 +522,10 @@ function roundProgress(id,value) {
                         },
                         itemStyle: {
                             normal: {
-                                color: '#aaa'
+                                color: 'transparent'
                             },
                             emphasis: {
-                                color: '#aaa'
+                                color: 'transparent'
                             }
                         },
                         hoverAnimation: false
