@@ -279,9 +279,9 @@ function progressBar(second){
 }
 //显示 可以重新开始播放和听自己声音的图标
 function q_restart(){
-	//$(".q_play").each(function(){
-	//	$(this).hide();
-	//});
+	$(".q_play").each(function(){
+		$(this).hide();
+	});
 	$(".q_sounding").each(function(){
 		$(this).hide();
 	});

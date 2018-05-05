@@ -464,7 +464,7 @@ function roundProgress(id,value) {
     var myCharts = echarts.init(document.getElementById(id));
     //颜色
 //    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
-    var colorData = ['#ff6d80'];
+    var colorData = ['#fff'];
     //    数据
     var data = [
         {
