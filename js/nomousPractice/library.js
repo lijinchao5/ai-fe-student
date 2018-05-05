@@ -147,23 +147,33 @@ function readlibrary(isreadflag){
             $(".play-icon").hide();
             $(".q_sounding").show();
             ishideorshow("q_sounding");
-        	$(".round-progress").click(function () {
-                readrecord(ConfigLY.startrecordid,function(){
-                    funStartMp3();
-                    // progressBar(audiotime);
-                    roundProgressTimer("roll-progress",audiotime);
-                    setTimeout(function(){
-                        funStopMp3(function(json){
-                            ishideorshow("q_restart");
-                            console.log("mp3保存成功:"+json.result);
-                            library.lid=json.result;
-                            library.student_audio_path=json.result;
-                            map.put(library.dataid,library);
-                            submitlibrary(library);
-                            isswitchfunction(true);
-                        });
-                        showp()
-                    },audiotime);
+            readrecord(ConfigLY.startrecordid,function(){
+                funStartMp3();
+                // progressBar(audiotime);
+                roundProgressTimer("roll-progress",audiotime-800);
+                setTimeout(function(){
+                    funStopMp3(function(json){
+                        ishideorshow("q_restart");
+                        console.log("mp3保存成功:"+json.result);
+                        library.lid=json.result;
+                        library.student_audio_path=json.result;
+                        map.put(library.dataid,library);
+                        submitlibrary(library);
+                        isswitchfunction(true);
+                    });
+                    showp()
+                },audiotime);
+                $(".round-progress").click(function () {
+                    funStopMp3(function(json){
+                        ishideorshow("q_restart");
+                        console.log("mp3保存成功:"+json.result);
+                        library.lid=json.result;
+                        library.student_audio_path=json.result;
+                        map.put(library.dataid,library);
+                        submitlibrary(library);
+                        isswitchfunction(true);
+                    });
+                    showp()
                 });
             });
 		},speeds);

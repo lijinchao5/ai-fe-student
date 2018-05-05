@@ -117,7 +117,7 @@ body {
 
 /* 闃呰鍐呭 閮ㄥ垎 */
 .library-content {
-    padding-top: 35px;
+    padding-top: 10px;
     position: relative;
     overflow: hidden;
     /*display: none;*/
@@ -176,7 +176,7 @@ body {
 .library-content .part-scores .part-score.current {
     width: 28px;
     height: 28px;
-    background-color: #ffb846;
+    background-color: #d43f3a;
     border-radius: 50%;
     animation: twinkle 2s infinite;
     /*margin: -1px;*/
@@ -360,9 +360,20 @@ body {
     /*padding-top: 26px;*/
 }
 .library-content .nomous-practice-btn .play-icon {
-    border-radius: 0%;
+   /* border-radius: 0%;
     margin-left: 108px;
-    padding-top: 10px;
+    padding-top: 10px;*/
+    width: 50px;
+    height: 50px;
+    background: url("../../images/common/recording.png") no-repeat center center;
+    border-radius: 50px;
+    margin: 10px auto;
+    animation: recording 2s infinite;
+}
+@keyframes recording {
+    0%{transform:scale(1.1,1.1);}
+    50%{transform:scale(0.9,0.9);}
+    100%{transform:scale(1.1,1.1);}
 }
 
 /* 录音中 */
