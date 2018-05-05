@@ -17,11 +17,7 @@ function isEmpty(value) {
     }
 }
 function isNull(obj) {
-    if (obj) {
-    } else {
-        obj = ''
-    }
-    return obj
+    return obj || ''
 }
 function doAjax(type, url, param, successfn) {
     if (type == '' || type == 'get' || type == 'GET') {
@@ -151,3 +147,4 @@ function showLoading(show) {
         $('#over').css('display', 'none');
     }
 }
+
