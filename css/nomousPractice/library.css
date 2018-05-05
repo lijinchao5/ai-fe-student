@@ -369,6 +369,7 @@ body {
     border-radius: 50px;
     margin: 10px auto;
     animation: recording 2s infinite;
+    display: none;
 }
 @keyframes recording {
     0%{transform:scale(1.1,1.1);}
@@ -634,6 +635,66 @@ body {
     text-align: center;
 }
 
+.speak-speed{
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    position: relative;
+    text-align: center;
+    color: #00aeff;
+}
+.speak-speed .list{
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}
+.speak-speed .list .current{
+    display: inline-block;
+    width: 30px;
+}
+.speak-speed ul{
+    width: 44px;
+    /*height: 20px;*/
+    position: absolute;
+    top: 20px;
+    left: 44px;
+    display: none;
+    z-index: 2;
+    /*border: 1px solid #ccc;*/
+    cursor: pointer;
+}
+.speak-speed ul li:hover{
+    background: yellow;
+}
+.speak-speed .list .triangle{
+    border: 5px solid #ccc;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    margin: 0px 8px 0 0 ;
+    transform: rotate(45deg);
+}
+.round-progress{
+    position: relative;
+    width:60px;
+    margin: 0 auto;
+}
+.record-bg{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url("../../images/common/recording.png") no-repeat center center;
+    border-radius: 50px;
+    top: 5px;
+    left: 5px;
+}
+.round-progress-bar{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    /*background-color: #a9a9a9;*/
+}
 .green {
     color: #36dbbb;
 }

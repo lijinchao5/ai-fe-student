@@ -518,18 +518,23 @@ body {
 
 /* 添加display none*/
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .play-icon {
-    width: 142px;
+    /*width: 142px;
     height: 42px;
     margin: 54px auto 0;
-    /*margin-left: 40px;*/
+    margin-left: 40px;*/
     display: none;
+    width: 50px;
+    height: 50px;
+    background: url("../../images/common/recording.png") no-repeat center center;
+    border-radius: 50px;
+    margin: 40px auto;
+    animation: recording 2s infinite;
 }
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .speed {
     display: none;
     width: 330px;
-    /*11*/
-    margin: 50px auto;
+    margin: 40px auto;
     position: relative;
 }
 
@@ -1131,4 +1136,28 @@ h3, ul, li {
 .bs-example-modal-lg.submit-success,
 .back-modal {
     background-color: rgba(0, 0, 0, .6);
+}
+
+.round-progress{
+    position: relative;
+    width:60px;
+    margin: 0 auto;
+}
+.record-bg{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url("../../images/common/recording.png") no-repeat center center;
+    border-radius: 50px;
+    top: 5px;
+    left: 5px;
+}
+.round-progress-bar{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    /*background-color: #a9a9a9;*/
+}
+.round-progress-bar div canvas{
+    cursor: pointer;
 }

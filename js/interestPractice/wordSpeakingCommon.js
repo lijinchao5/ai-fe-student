@@ -242,9 +242,9 @@ function jsbypalybutton(){
 
 //显示正在播放音频的图标
 function q_play(){
-	//$(".q_play").each(function(){
-	//	$(this).show();
-	//});
+	$(".q_play").each(function(){
+		$(this).show();
+	});
 	$(".q_sounding").each(function(){
 		$(this).hide();
 	});
@@ -254,9 +254,9 @@ function q_play(){
 }
 //显示正在录音的图标
 function q_sounding(soundingtime){
-	//$(".q_play").each(function(){
-	//	$(this).hide();
-	//});
+	$(".q_play").each(function(){
+		$(this).hide();
+	});
 	$(".q_sounding").each(function(){
 		$(this).show();
 		progressBar(soundingtime);
