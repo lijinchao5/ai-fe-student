@@ -215,13 +215,14 @@
 }
 
 .report-top .word-degree {
-    width: 255px;
+    width: 275px;
     float: right;
 }
 
 .report-top .word-degree p {
-    width: 85px;
-    font-size: 12px;
+    width: 90px;
+    font-size: 14px;
+    color: #999;
 }
 
 .report-top progress {
@@ -238,27 +239,27 @@
 
 .report-top progress::-webkit-progress-value {
     border-radius: 10px;
-    background: #ff6d80;
+    /*background: #ff6d80;*/
+    background: #d43f3a;
 }
 
 .report-top .sentences-degree p progress.fluency::-webkit-progress-value {
-    background: #ffb846;
+    /*background: #ffb846;*/
+    background: #004098;
 }
 
 .report-top .sentences-degree p progress.integrity::-webkit-progress-value {
-    background: #36dbbb;
+    /*background: #36dbbb;*/
+    background: #2aa145;
 }
 
-.report-top .word-degree .degree-fail {
-    color: #ff6d80;
+.report-top .word-degree .degree-fail,
+.report-top .word-degree .degree-well {
+    width: 80px;
 }
 
 .report-top .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.report-top .word-degree .degree-well {
-    color: #36dbbb;
+    width: 93px;
 }
 
 .report-content b {
@@ -295,18 +296,24 @@
 }
 
 .border-color-red {
-    color: #ff6d80;
-    border: 1px solid #ff6d80;
+    /*color: #ff6d80;*/
+    color: #d43f3a;
+    /*border: 1px solid #ff6d80;*/
+    border: 1px solid #d43f3a;
 }
 
 .border-color-yellow {
-    color: #ffb846;
-    border: 1px solid #ffb846;
+    /*color: #ffb846;*/
+    color: #004098;
+    /*border: 1px solid #ffb846;*/
+    border: 1px solid #004098;
 }
 
 .border-color-green {
-    color: #36dbbb;
-    border: 1px solid #36dbbb;
+    /*color: #36dbbb;*/
+    color: #2aa145;
+    /*border: 1px solid #36dbbb;*/
+    border: 1px solid #2aa145;
 }
 
 .report-content .report-wrap .word-list .content .word-score {
@@ -387,17 +394,20 @@
 }
 
 .report-content .green {
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    color: #2aa145;
     font-weight: 600;
 }
 
 .report-content .orange {
-    color: #ffb846;
+    color: #004098;
+    /*color: #ffb846;*/
     font-weight: 600;
 }
 
 .report-content .red {
-    color: #ff6d80;
+    /*color: #ff6d80;*/
+    color: #d43f3a;
     font-weight: 600;
 }
 
@@ -407,12 +417,14 @@
 }
 
 .report-content .report-wrap .spell-list .prompt .error {
-    color: #ff6d80;
+    /*color: #ff6d80;*/
+    color: #d43f3a;
     margin-right: 20px;
 }
 
 .report-content .report-wrap .spell-list .prompt .correct {
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    color: #2aa145;
 }
 
 .report-content .report-wrap .spell-list #homework_type_5_1 {
@@ -426,6 +438,7 @@
     padding: 1% 2%;
     font-size: 18px;
     border: 1px solid #d2d2d2;
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    color: #2aa145;
     font-weight: 600;
 }
