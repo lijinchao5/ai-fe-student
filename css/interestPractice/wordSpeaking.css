@@ -358,7 +358,8 @@ body {
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item {
     padding: 0 10%;
     font-weight: 700;
-    color: #004098;
+    /*color: #004098;*/
+    color: #333;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text-out {
@@ -395,19 +396,22 @@ body {
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    color: #2aa145;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
-    color: #ff6d80;
+    /*color: #ff6d80;*/
+    color: #d43f3a;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
-    color: #ffb846;
+    /*color: #ffb846;*/
+    color: #004098;
     float: left;
     padding: 0 6px;
 }
