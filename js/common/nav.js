@@ -18,10 +18,8 @@ var currents = $("#details-nav a").length;
 var currentEl = $("#details-nav a");
 if (sessionStorage.element) {
     currentEl.eq(sessionStorage.element).addClass("current");
-    currentEl.eq(sessionStorage.element).find("img").attr("src", "../../images/common/nav" + sessionStorage.element +".png");
 } else {
     currentEl.eq(0).addClass("current");
-    currentEl.eq(0).find("img").attr("src", "../../images/common/nav0.png");
 }
 
 currentEl.click(function () {
