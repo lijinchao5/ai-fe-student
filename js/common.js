@@ -47,10 +47,10 @@ function doAjax(type, url, param, successfn) {
         },
         success: function (data, textStatus, jqXHR) {
             if (data && data != null) {
-            	console.log(data);
+                console.log(data);
                 if (data.code == 0 || data.code == '0') {
                     showLoading(false)
-                    successfn(data.result, data.code,data.message);
+                    successfn(data.result, data.code, data.message);
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
@@ -59,7 +59,7 @@ function doAjax(type, url, param, successfn) {
                         window.location.href = getLoginPath()
                     } else {
                         showLoading(false)
-                        successfn(data.result, data.code,data.message);
+                        successfn(data.result, data.code, data.message);
                         //alert(data.message)
                     }
                 }
@@ -99,7 +99,7 @@ function ajaxAsync(type, url, param, successfn) {
             console.log(data.result);
             if (data && data != null) {
                 if (data.code == 0 || data.code == '0') {
-                    successfn(data.result, data.code,data.message)
+                    successfn(data.result, data.code, data.message)
                 } else {
                     if (data.code == '99998') {
                         alert(data.message);
@@ -107,7 +107,7 @@ function ajaxAsync(type, url, param, successfn) {
                         localStorage.clear();
                         window.location.href = getLoginPath()
                     } else {
-                        successfn(data.result, data.code,data.message);
+                        successfn(data.result, data.code, data.message);
                     }
                 }
             } else {
@@ -134,21 +134,15 @@ function getParam(key) {
     }
     return ''
 }
-function getLoginPath() {
-//    return window.location.protocol + '//' + window.location.host + '/login';
-//    return "https://39.104.76.67:8092/ai-be/";
-//	return "http://192.168.0.126:8092/";
-}
-function getRootPath() {
-//    return window.location.protocol + '//' + window.location.host + '/oep-be/';
-//	return "https://39.104.76.67:8092/ai-be/";
-//    return "https://www.aienglish.vip/oep-be/";
-	return "http://192.168.0.126:8092/"
-}
-function getWebSocketRootPath() {
-    return "192.168.0.126:8092/";
-//    return window.location.host + '/oep-be/';
-}
+//function getLoginPath() {
+//    return "https://www.aienglish.vip";
+//}
+//function getRootPath() {
+//    return "https://www.aienglish.vip/ai-be/";
+//}
+//function getWebSocketRootPath() {
+//    return "www.aienglish.vip/ai-be/";
+//}
 function showLoading(show) {
     if (show) {
         $('#over').css('display', 'block');
