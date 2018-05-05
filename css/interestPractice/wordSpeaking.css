@@ -466,7 +466,7 @@ body {
 /* 左右箭头的设置 */
 .word-speaking .speak-listen-tab-bd .carousel-control {
     position: absolute;
-    top: 82%;
+    top: 64%;
     /* 去掉阴影 */
     height: 0;
     width: 10%;
