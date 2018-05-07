@@ -673,6 +673,22 @@ function removeClassSpan(){
          })
      })
  }
+ $(function(){
+	 $(document).bind("click", function (e) {
+		 openList();
+		 if ($(e.target).closest("#speedList").length == 0 && $(e.target).closest("#speedBtn").length == 0) {
+			 //点击空白处，触发
+			 closeList();
+		 }
+	 })
+ })
+ function closeList() {
+	 $("#speedList").hide()
+ }
+
+ function openList() {
+	 $("#speedList").show()
+ }
  // roundProgressTimer("roll-progress",20000);
  function roundProgressTimer(id,timer,aa){
      timer = timer/20;

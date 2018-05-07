@@ -134,7 +134,7 @@ body {
     outline: none;
     line-height: 36px;
     text-align: center;
-    width: 110px;
+    width: 136px;
     height: 36px;
     border-radius: 36px;
     color: #fff;
@@ -430,7 +430,7 @@ body {
 
 .prepare-exam .start-answer {
     display: block;
-    width: 110px;
+    width: 136px;
     height: 36px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
     background-size: 100% 100%;

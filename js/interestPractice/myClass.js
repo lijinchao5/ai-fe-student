@@ -5,10 +5,21 @@ $(function () {
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
     $('#footer').load('../common/footer.html');
+    $(document).bind("click", function (e) {
+        openList();
+        if ($(e.target).closest(".class-list").length == 0 && $(e.target).closest("#changeClass").length == 0) {
+            //点击空白处，触发
+            closeList();
+        }
+    })
 });
 
-function changeClass() {
-    $(".class-list").toggle()
+function closeList() {
+    $(".class-list").hide()
+}
+
+function openList() {
+    $(".class-list").show()
 }
 
 function jumpMate() {
@@ -81,7 +92,7 @@ function getClass() {
             }
             if ($(".class-list li").length <= 0) {
                 //var _noClass="";
-                var _noClass=$("<p class='no-class'>还没有其他班级</p>");
+                var _noClass = $("<p class='no-class'>还没有其他班级</p>");
                 $(".class-list").prepend(_noClass);
 
             }
