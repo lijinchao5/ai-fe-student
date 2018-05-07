@@ -844,8 +844,15 @@ body {
     color: #00a0e9;
 }
 
-.layui-progress-bar {
-    position: relative;
+#ytdt .layui-progress .layui-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    text-align: right;
+    background-color: #4fc6fc;
+    transition: all 0.3s;
+    line-height: 18px;
 }
 
 .speed-balloon {

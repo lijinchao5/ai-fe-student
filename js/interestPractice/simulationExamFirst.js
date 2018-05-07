@@ -64,7 +64,7 @@ function statrRecord() {
         });
     });
 }
-function statrRecords() {
+/*function statrRecords() {
     console.log(111);
     $(".btns").hide();
     $(".clear-btn").hide();
@@ -92,7 +92,7 @@ function statrRecords() {
             }, 300);
         }
     }, 5000 / 50);
-}
+}*/
 
 function resetplay() {
     $(".btns").show();
