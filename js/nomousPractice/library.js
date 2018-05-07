@@ -260,6 +260,8 @@ function showp() {
         if (classname == "item active") {
             var objspan = $("#pscore span").eq(i);
             objspan.addClass("current");
+            $("#pscore").css("left",28-i*28+"px");
+            console.log($("#pscore").css("left")+i);
             // objspan.html("");
             objspan.html(objspan.attr("data"));
             // 添加当前成绩
@@ -456,7 +458,7 @@ function roundProgressTimer(id, timer, aa) {
             clearInterval(timer)
         }
         roundProgress(id, width);
-        console.log(width)
+        // console.log(width)
     }, timer);
 }
 //    timer(width);
