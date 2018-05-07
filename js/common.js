@@ -64,7 +64,7 @@ function doAjax(type, url, param, successfn) {
             }
         },
         error: function (xhr, textStatus) {
-            //alert("出现错误!" + textStatus)
+            alert("出现错误!" + textStatus)
         },
         complete: function () {
         }
@@ -111,7 +111,7 @@ function ajaxAsync(type, url, param, successfn) {
             }
         },
         error: function (xhr, textStatus) {
-            //alert("出现错误!" + textStatus)
+            alert("出现错误!" + textStatus)
         },
         complete: function () {
         }
