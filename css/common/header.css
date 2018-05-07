@@ -35,14 +35,14 @@
 .top .logo::after {
     float: left;
     content: "";
-    width: 113px;
-    height: 16px;
+    width: 185px;
+    height: 28px;
     display: block;
-    margin-top: 27px;
+    margin-top: 20px;
     line-height: 63px;
     margin-left: 20px;
     user-select: none;
-    background: url("../../images/index/index.png") no-repeat 0 -50px;
+    background: url("../../images/common/slogan.png") no-repeat center center;
 }
 
 .top .fl p {
@@ -60,7 +60,7 @@
     height: 48px;
     margin: 14px 12px;
     border-radius: 50%;
-    border: 2px solid #00a0e9;
+    border: 1px solid #00a0e9;
 }
 
 .top .fr p {
@@ -92,8 +92,8 @@
 
 /*退出模态框*/
 /*.top .exit-button {*/
-    /*cursor: pointer;*/
-    /*padding-left: 7px;*/
+/*cursor: pointer;*/
+/*padding-left: 7px;*/
 /*}*/
 
 .top .exit-button:hover {
@@ -121,7 +121,7 @@
     width: 494px;
     height: 136px;
     background: url("../../images/common/startbg.png");
-    background-size: cover;
+    background-size: 100% 100%;
     border-bottom: none;
     padding: 0;
 }
@@ -141,10 +141,10 @@
 }
 
 .top .exits .modal-dialog .modal-body .exit-text,
-.top .exits1 .modal-dialog .modal-body #dialog_content{
+.top .exits1 .modal-dialog .modal-body #dialog_content {
     font-size: 30px;
     width: 494px;
-    color: #ffffff;
+    color: #fff;
     display: block;
     margin-top: -35px;
     padding: 0 0 0 27px;
@@ -195,14 +195,16 @@
     width: 430px;
     max-height: 300px;
 }
-.top .exits1 .modal-dialog .modal-body #dialog_content{
+
+.top .exits1 .modal-dialog .modal-body #dialog_content {
     width: 400px;
-    word-wrap:break-word;
-    word-break:break-all;
+    word-wrap: break-word;
+    word-break: break-all;
     max-height: 300px;
     margin-top: 0;
 
 }
+
 .top .exits1 .modal-dialog .modal-content .modal-body::-webkit-scrollbar {
     width: 3px;
     height: 10px;
@@ -270,4 +272,3 @@
     letter-spacing: 2px;
     text-align: center;
 }
-

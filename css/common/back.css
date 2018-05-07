@@ -13,6 +13,7 @@
     height: 320px;
     margin-top: 40%;
     background: url("../../images/common/cloud.png") no-repeat center center;
+    background-size:100% 100%;
     border: none;
     box-shadow: none;
 }
@@ -54,9 +55,11 @@
 
 .modal-content .modal-footer .btn-default {
     background: url("../../images/common/hover-set-meb-icon.png") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .modal-content .modal-footer .btn-primary {
     background: url("../../images/common/set-meb-icon.png") no-repeat center center;
+    background-size:100% 100%;
     margin-left: 10px;
 }

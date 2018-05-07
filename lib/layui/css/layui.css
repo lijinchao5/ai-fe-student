@@ -1544,7 +1544,7 @@ a cite {
     border-radius: 10px;
     /*border: 1px solid #ccc;*/
     background: url("../../../images/common/ruler-bg.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     /*background-color: #e2e2e2;*/
 }
 

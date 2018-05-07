@@ -148,7 +148,7 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 			if(wordEntitie.text==" "){
 				// html+="&nbsp;";
 			}else{
-				html+=wordEntitie.text;
+				html+="<b>"+wordEntitie.text+"</b>";
 			}
 		}else{
 			if(wordEntitie.score<60){
@@ -167,7 +167,7 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 
 function CalculationScoreword(word,score){
 	var html='<div class="text-in">';
-	if(score<60){
+	if(score<60||!score||score==null){
 		html="<b class='red'>"+word+"</b>";
 	}else if(score>=60&&score<=85){
 		html="<b class='orange'>"+word+"</b>";

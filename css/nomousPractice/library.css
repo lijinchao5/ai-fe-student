@@ -7,9 +7,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -101,7 +99,7 @@ body {
 
 .ready-go .modal-footer .start-read {
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     outline: none;
     border: none;
     width: 148px;
@@ -114,12 +112,12 @@ body {
 
 .ready-go .modal-footer .start-read:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 /* 闃呰鍐呭 閮ㄥ垎 */
 .library-content {
-    padding-top: 35px;
+    padding-top: 10px;
     position: relative;
     overflow: hidden;
     /*display: none;*/
@@ -141,18 +139,28 @@ body {
     text-align: center;
     user-select: none;
 }
-
+.library-content .part-scores #pscoreOut{
+    width: 92px;
+    height: 34px;
+    /*background-color: #bfa;*/
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
 .library-content .part-scores p {
-    display: inline-block;
+    display: block;
     height: 34px;
     border-radius: 17px;
     /*background-color: #93eefe;*/
-    padding: 0 3px;
+    /*padding: 0 3px;*/
+    position: absolute;
+    left: 34px;
 }
 
 .library-content .part-scores .part-score {
     display: inline-block;
-    margin: 3px 2px;
+    margin: 3px 0px;
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -178,25 +186,33 @@ body {
 .library-content .part-scores .part-score.current {
     width: 28px;
     height: 28px;
-    background-color: #ffb846;
+    margin: 3px 4px;
+    background-color: #d43f3a;
     border-radius: 50%;
     animation: twinkle 2s infinite;
     /*margin: -1px;*/
 }
-@keyframes twinkle
-{
-    0% {transform: scale(1.0,1.0);}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1.0, 1.0);
+    }
     /*33% {transform: scale(0.9,0.9);}*/
-    50% {transform: scale(0.9,0.9);}
+    50% {
+        transform: scale(0.9, 0.9);
+    }
     /*66% {transform: scale(1.07,1.07);}*/
-    100% {transform: scale(1.0,1.0);}
+    100% {
+        transform: scale(1.0, 1.0);
+    }
 }
-.library-content .current-part-score{
+
+.library-content .current-part-score {
     width: 36px;
     height: 36px;
     margin: 0 auto;
-    background-color: red;
-    border-radius: 50%;
+    padding: 3px 0 0 6px;
+    background: url("../../images/common/add-score-bg.png") no-repeat center center;
     line-height: 36px;
     text-align: center;
     font-size: 16px;
@@ -209,11 +225,18 @@ body {
 }
 
 @keyframes uper {
-    0%{top: -20px;opacity: 1;}
+    0% {
+        top: -20px;
+        opacity: 1;
+    }
     /*1%{top: 0;opacity: 1;display: block;}*/
     /*99%{top: -200px;opacity: 0;}*/
-    100%{top: -200px;opacity: 0;}
+    100% {
+        top: -250px;
+        opacity: 0;
+    }
 }
+
 /* 鍑嗙‘搴︿竴琛� */
 .library-content .library-point {
     margin-top: 10px;
@@ -281,9 +304,11 @@ body {
     height: 270px;
     background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
     background-size: 100% 100%;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    /*overflow: auto;*/
+    overflow-y: auto;
     overflow-x: hidden;
-    overflow: auto;
     font-size: 16px;
     line-height: 28px;
     padding: 0 30px;
@@ -337,34 +362,62 @@ body {
     top: 50%;
     margin-top: 15px;
 }
+
 /* 雷达图 */
 .library-content .part-radars {
-    float: right;
+    /*float: right;*/
     width: 150px;
     height: 120px;
     margin: 30px 100px 0 0;
+    overflow: hidden;
+    position: absolute;
+    right: 80px;
+    top:-20px;
 }
-.library-content .part-radars div{
+
+.library-content .part-radars div {
     width: 100px;
     height: 100px;
     /*background: #abf;*/
     /*display: none;*/
 }
+
 .library-content .nomous-practice-btn {
     width: 330px;
-    height: 50px;
+    /*height: 50px;*/
     margin: 60px auto 0;
     /*border: 1px solid #ccc;*/
     position: relative;
     user-select: none;
 }
+
 .library-content .nomous-practice-btn .speed {
-    padding-top: 26px;
+    /*padding-top: 26px;*/
 }
+
 .library-content .nomous-practice-btn .play-icon {
-    border-radius: 0%;
-    margin-left: 108px;
-    padding-top: 10px;
+    /* border-radius: 0%;
+     margin-left: 108px;
+     padding-top: 10px;*/
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    border-radius: 60px;
+    margin: 10px auto;
+    animation: recording 2s infinite;
+    display: none;
+}
+
+@keyframes recording {
+    0% {
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        transform: scale(0.9, 0.9);
+    }
+    100% {
+        transform: scale(1.1, 1.1);
+    }
 }
 
 /* 录音中 */
@@ -388,17 +441,27 @@ body {
 
 .library-content .nomous-practice-btn .play {
     display: inline-block;
-    width: 100px;
-    height: 38px;
-    border-radius: 40px;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    margin: 14px 26px 0;
-    color: #fff;
-    line-height: 38px;
+    /*color: #fff;*/
+    /*line-height: 38px;*/
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background: url("../../images/common/play.png") no-repeat center center;
+    background-size: 100% 100%;
+    display: inline-block;
+    margin: 0 53px;
+    border-radius: 56px;
 }
-.library-content .nomous-practice-btn .play:hover{
+
+.library-content .nomous-practice-btn .play.headset {
+    background: url("../../images/common/recording.png") no-repeat center center;
+    background-size: 100% 100%;
+    margin: 0 53px;
+}
+
+/*.library-content .nomous-practice-btn .play:hover{
     background: url("../../images/common/hover-button.png") no-repeat center center;
-}
+}*/
 
 .library-content .nomous-practice-btn img {
     border-radius: 50%;
@@ -416,7 +479,7 @@ body {
 .library-content .nomous-practice-btn .end {
     margin: 0;
     width: 300px;
-    height:100px;
+    height: 100px;
     position: absolute;
     top: -160px;
     /*right: -480px;*/
@@ -426,6 +489,7 @@ body {
     border-radius: 50px 0 0 50px;
     box-shadow: 0 0 15px #ccc;
 }
+
 .library-content .nomous-practice-btn .end-p {
     line-height: 114px;
     font-size: 46px;
@@ -433,10 +497,12 @@ body {
     /*padding-left: 40px;*/
     color: #00a0e9;
 }
-.library-content .nomous-practice-btn .end-p .span1{
+
+.library-content .nomous-practice-btn .end-p .span1 {
     font-size: 30px;
 }
-.library-content .nomous-practice-btn .end-p .span2{
+
+.library-content .nomous-practice-btn .end-p .span2 {
     color: #e5e5e5;
     font-size: 14px;
 }
@@ -446,9 +512,9 @@ body {
 }
 
 /*.library-content .nomous-practice-btn .end img {*/
-    /*width: 130px;*/
-    /*height: 98px;*/
-    /*border-radius: 0%;*/
+/*width: 130px;*/
+/*height: 98px;*/
+/*border-radius: 0%;*/
 /*}*/
 
 /* 鍚� wordspeaking .css line 135 */
@@ -511,10 +577,8 @@ body {
 .report .modal-content .modal-body img {
     width: 128px;
     height: 128px;
-    /*padding: 10px;*/
-    background: url("../../images/personInfo/small-meb-icon.png") center center;
     border-radius: 50%;
-    border: 4px solid #00a0e9;
+    border: 1px solid #00a0e9;
     margin-left: 245px;
 }
 
@@ -537,22 +601,26 @@ body {
     margin-left: 100px;
     margin-right: 180px;
 }
-.report .modal-content .modal-body .radar-score{
+
+.report .modal-content .modal-body .radar-score {
     width: 150px;
     height: 150px;
     float: right;
     margin-right: 20px;
     margin-top: 36px;
 }
+
 .report .modal-content .modal-body .free-practice-result {
     font-size: 16px;
     font-weight: 700;
     color: #00a0e9;
 }
-.report .modal-content .modal-body .free-practice-result .num{
+
+.report .modal-content .modal-body .free-practice-result .num {
     font-size: 36px;
     margin-right: 5px;
 }
+
 .report .modal-content .modal-body .title {
     /*height: 30px;*/
     line-height: 30px;
@@ -615,6 +683,79 @@ body {
 .report .modal-content .modal-footer .up {
     margin-top: 34px;
     text-align: center;
+}
+
+.speak-speed {
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    position: relative;
+    text-align: center;
+    color: #00aeff;
+}
+.speak-speed .txt{
+    color: #999;
+}
+
+.speak-speed .list {
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.speak-speed .list .current {
+    display: inline-block;
+    width: 30px;
+}
+
+.speak-speed ul {
+    width: 44px;
+    /*height: 20px;*/
+    position: absolute;
+    top: 20px;
+    left: 44px;
+    display: none;
+    z-index: 2;
+    /*border: 1px solid #ccc;*/
+    cursor: pointer;
+}
+
+.speak-speed ul li:hover {
+    background: yellow;
+}
+
+.speak-speed .list .triangle {
+    border: 5px solid #ccc;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    margin: 0px 8px 0 0;
+    transform: rotate(45deg);
+}
+
+.round-progress {
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.record-bg {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    background-size: 98% 98%;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
+}
+
+.round-progress-bar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    /*background-color: #a9a9a9;*/
 }
 
 .green {

@@ -269,8 +269,9 @@ function initdata(){
 //读单词，录音 核心方法
 function readword(isreset){
     var speeds = $(".speak-speed .list .current").attr("speed");
-    console.log(speeds)
+    // console.log(speeds)
 	if(speakAndListenTabIndex==0){
+        roundProgress("roll-progress-dc",0);
 		$("#dc .active").each(function(){
 			var jsonobj=map.get($(this).attr("data"));
 			$("#dcnowcs").html(jsonobj.count);
@@ -283,8 +284,9 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
+                q_sounding(gettimes(audiotime*times));
 				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
+					roundProgressTimer("roll-progress-dc",audiotime*times-800);
 					dataobj=jsonobj;
 					funStartMp3();
 					setTimeout(function(){
@@ -292,10 +294,16 @@ function readword(isreset){
 						isswitchfunction(true);
 						q_restart();
 					},gettimes(audiotime*times));
+					$(".round-progress").click(function () {
+						stopMp3All();
+						isswitchfunction(true);
+						q_restart();
+					});
 				});
 			},speeds);
 		});
 	}else if(speakAndListenTabIndex==1){
+        roundProgress("roll-progress-jz",0);
 		$("#jz .active").each(function(){
 			var jsonobj=map.get($(this).attr("data"));
 			$("#jznowcs").html(jsonobj.count);
@@ -308,19 +316,26 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
-				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
-					dataobj=jsonobj;
-					funStartMp3();
-					setTimeout(function(){
-						stopMp3All();
-						isswitchfunction(true);
-						q_restart();
-					},gettimes(audiotime*times));
-				})
+                q_sounding(gettimes(audiotime*times));
+                readrecord(ConfigLY.startrecordid,function(){
+                    roundProgressTimer("roll-progress-jz",audiotime*times);
+                    dataobj=jsonobj;
+                    funStartMp3();
+                    setTimeout(function(){
+                        stopMp3All();
+                        isswitchfunction(true);
+                        q_restart();
+                    },gettimes(audiotime*times));
+                    $(".round-progress").click(function () {
+                        stopMp3All();
+                        isswitchfunction(true);
+                        q_restart();
+                    })
+                })
 			},speeds)
 		})
 	}else if(speakAndListenTabIndex==2){
+        roundProgress("roll-progress-kw",0);
 		$("#kw .active").each(function(){
 			var jsonobj=map.get($(this).attr("data"));
 			$("#kwnowcs").html(jsonobj.count);
@@ -333,16 +348,22 @@ function readword(isreset){
 			isswitchfunction(false);
 			q_play();
 			readrecord(jsonobj.mid,function(audiotime){
-				readrecord(ConfigLY.startrecordid,function(){
-					q_sounding(gettimes(audiotime*times));
-					dataobj=jsonobj;
-					funStartMp3();
-					setTimeout(function(){
-						stopMp3All();
-						isswitchfunction(true);
-						q_restart();
-					},gettimes(audiotime*times));
-				})
+                q_sounding(gettimes(audiotime*times));
+                    readrecord(ConfigLY.startrecordid,function(){
+                        roundProgressTimer("roll-progress-kw",audiotime*times);
+                        dataobj=jsonobj;
+                        funStartMp3();
+                        setTimeout(function(){
+                            stopMp3All();
+                            isswitchfunction(true);
+                            q_restart();
+                        },gettimes(audiotime*times));
+                        $(".round-progress").click(function () {
+                            stopMp3All();
+                            isswitchfunction(true);
+                            q_restart();
+                        })
+                    })
 			},speeds)
 		})
 	}else if(speakAndListenTabIndex==3){
@@ -465,6 +486,7 @@ var isreadIflag="1";
 function jsbyreadorlu(dataid){
 	var _length=$("#jsby .active .item-in").length;
 	var jsonobj=map.get(dataid);
+    roundProgress("roll-progress-js",0);
 	if(jsonobj.dialogName=="F"){
 		q_play();
 		readrecord(jsonobj.mid,function(audiotime){
@@ -484,6 +506,8 @@ function jsbyreadorlu(dataid){
 			dataobj=jsonobj;
 			funStartMp3();
 			q_sounding(gettimes(replacehtml(jsonobj.standerText).length*150*times));
+
+            roundProgressTimer("roll-progress-js",gettimes(replacehtml(jsonobj.standerText).length*150*times));
 			setTimeout(function(){
 				stopMp3All();
 				if(nows<_length){
@@ -496,6 +520,11 @@ function jsbyreadorlu(dataid){
 					jsbypalybutton();
 				}
 			},gettimes(replacehtml(jsonobj.standerText).length*150*times));
+            $(".round-progress").click(function () {
+                stopMp3All();
+                isswitchfunction(true);
+                q_restart();
+            })
 		})
 	}
 }
@@ -643,4 +672,132 @@ function removeClassSpan(){
              }
          })
      })
+ }
+ $(function(){
+	 $(document).bind("click", function (e) {
+		 openList();
+		 if ($(e.target).closest("#speedList").length == 0 && $(e.target).closest("#speedBtn").length == 0) {
+			 //点击空白处，触发
+			 closeList();
+		 }
+	 })
+ })
+ function closeList() {
+	 $("#speedList").hide()
+ }
+
+ function openList() {
+	 $("#speedList").show()
+ }
+ // roundProgressTimer("roll-progress",20000);
+ function roundProgressTimer(id,timer,aa){
+     timer = timer/20;
+     console.log(timer);
+     var width=-5;
+     var timer = setInterval(function () {
+         width += 5;
+         if(aa){
+             clearInterval(timer);
+         }
+         if(width>100||width==100){
+             clearInterval(timer)
+         }
+         roundProgress(id,width);
+         console.log(width)
+     },timer);
+ }
+ //    timer(width);
+ function roundProgress(id,value) {
+     var myCharts = echarts.init(document.getElementById(id));
+     //颜色
+//    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
+     var colorData = ['#fff'];
+     //    数据
+     var data = [
+         {
+             "name": '准确度',
+             "value": value
+         }
+     ];
+     //将数据放入圆环中
+     var create = function (data) {
+         var result = [];
+         for (var i = 0; i < data.length; i++) {
+             result.push({
+                 name: '',
+                 // center: [(i * 26 + 22.5 + '%'), '50%'], // 去掉本行，圆环居中
+                 radius: ['80%', '100%'],
+                 type: 'pie',
+                 labelLine: {
+                     normal: {
+                         show: false
+                     }
+                 },
+                 markPoint: {
+                     data: [{}]
+                 },
+                 data: [
+                     {
+                         value: data[i].value,
+                         name: data[i].name,
+                         itemStyle: {
+                             normal: {
+                                 color: colorData[i]
+                             },
+                             emphasis: {
+                                 color: colorData[i]
+                             }
+                         },
+                         label: {
+                             normal: {
+                                 formatter: '{d} %',
+                                 position: 'center', // 显示文字的位置
+                                 show: false,  // 是否显示中间文字
+                                 textStyle: {  // 显示文字 样式
+                                     fontSize: '16',
+                                     fontWeight: 'bold',
+                                     color: colorData[i]
+                                 }
+                             }
+                         }
+                     },
+                     {
+                         value: (100 - data[i].value),
+                         name: '',
+                         tooltip: {
+                             show: false
+                         },
+                         itemStyle: {
+                             normal: {
+                                 color: 'transparent'
+                             },
+                             emphasis: {
+                                 color: 'transparent'
+                             }
+                         },
+                         hoverAnimation: false
+                     }
+                 ]
+             });
+         }
+         return result;
+     };
+     // 指定图表的配置项和数据 饼图
+     var options = {
+         /*tooltip: {
+             trigger: 'item',
+             formatter: function (params, ticket, callback) {
+                 var res = params.name + ' : ' + params.percent + '%';
+                 return res;
+             }
+         },  // 鼠标移入，显示区块百分比
+         grid: {
+             bottom: 100,
+             top: 150
+         },*/
+         /*xAxis: [{show: false}],
+         yAxis: [{show: false}],*/
+         series: create(data)
+     };
+     myCharts.setOption(options);
  }

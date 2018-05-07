@@ -1,7 +1,7 @@
 @charset "utf-8";
 html {
     height: 100%;
-    background: #05A2EA;
+    background: #f6f6f6;
 }
 
 body {
@@ -24,9 +24,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -56,19 +54,19 @@ body {
     width: 264px;
     height: 662px;
     padding-top: 42px;
-    background-color: #4fc6fc;
+    background-color: #01A4F9;
     color: #333;
     border-radius: 5px;
     float: left;
 }
 
 #personInfo .nav-wrap .user-icon-left {
-    width: 166px;
-    height: 166px;
+    width: 156px;
+    height: 156px;
     margin: 0 auto;
     border-radius: 50%;
     text-align: center;
-    border: solid 5px #00a0e9;
+    /*border: solid 5px #00a0e9;*/
     background: #4fc6fc;
 }
 
@@ -87,11 +85,12 @@ body {
     line-height: 20px;
     text-align: center;
     margin-top: 30px;
+    color: #fff;
 }
 
 #personInfo .nav-wrap .student-id {
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 #personInfo .nav-wrap .hd {
@@ -106,16 +105,11 @@ body {
     line-height: 64px;
     text-align: center;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
-}
-
-#personInfo .nav-wrap .hd span:last-of-type {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
 }
 
 #personInfo .nav-wrap .hd span:hover {
@@ -123,7 +117,8 @@ body {
 }
 
 #personInfo .nav-wrap .hd .current {
-    background: #00a0e9;
+    background: #fff;
+    color: #00a0e9;
 }
 
 #personInfo .nav-wrap .hd span img {
@@ -157,14 +152,14 @@ body {
 /*}*/
 
 #personInfo #tabbd .tab-bd {
-/*#personInfo #tabbd li {*/
+    /*#personInfo #tabbd li {*/
     display: none;
 }
 
 #personInfo #tabbd .info-title {
     width: 212px;
     height: 106px;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
     /*border-bottom: 5px solid #00a0e9;*/
 }
 
@@ -172,27 +167,31 @@ body {
     width: 212px;
     height: 110px;
     margin: 0 auto;
-    border-radius: 5px;
-    background: url("../../images/personInfo/tit-bg1.png") no-repeat center center;
-    background-size: 100% 100%;
     text-align: center;
     line-height: 106px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    color: #fff;
+    color: #00a0e9;
+}
+
+#personInfo #tabbd .info-title .each-title img {
+    width: 36px;
+    height: 26px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 #personInfo #tabbd .owner-message .modify-info {
-    width: 144px;
+    width: 212px;
     height: 193px;
-    /*margin: 0 auto;*/
-    margin: 55px auto 0;
+    margin: 25px auto 0;
 }
 
 #personInfo #tabbd .owner-message .modify-info .user-icon-right {
-    width: 144px;
-    height: 144px;
-    border: 5px solid #00a0e9;
+    width: 136px;
+    height: 136px;
+    margin: 0 auto;
+    border: 1px solid #00a0e9;
     border-radius: 50%;
     background: #4fc6fc;
 }
@@ -204,21 +203,21 @@ body {
 }
 
 #personInfo #tabbd .owner-message .modify-info .edit-head-icon {
-    width: 110px;
-    height: 36px;
-    margin: 12px 0 0 17px;
-    background: url('../../images/common/normal-button.png') no-repeat center center;
-    background-size: cover;
+    width: 184px;
+    height: 50px;
+    margin: 12px 0 0 15px;
+    background: url(../../images/common/normal-button.png) no-repeat center center;
+    background-size: 100% 100%;
     text-align: center;
     font-size: 16px;
-    line-height: 38px;
+    line-height: 50px;
     color: #fff;
     border: none;
     outline: none;
 }
 
 #personInfo #tabbd .owner-message .modify-info .edit-head-icon:hover {
-    background: url('../../images/common/hover-button.png') no-repeat center center;
+    transform: scale(1.1, 1.1);
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-dialog {
@@ -231,8 +230,9 @@ body {
     width: 878px;
     height: 516px;
 }
+
 /* .owner-message */
-#personInfo #tabbd  .modify-info .modal-header {
+#personInfo #tabbd .modify-info .modal-header {
     width: 96%;
     padding: 0;
     height: 50px;
@@ -251,6 +251,7 @@ body {
 #personInfo #tabbd .owner-message .modify-info .modal-header button {
     font-size: 32px;
 }
+
 /*  .owner-message */
 #personInfo #tabbd .modify-info .modal-body {
     padding: 0 40px;
@@ -354,7 +355,7 @@ body {
     color: #fff;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-body .confirm:hover {
@@ -370,8 +371,8 @@ body {
     height: 50px;
     text-align: left;
     line-height: 50px;
-    color: #00a0e9;
-    font-size: 16px;
+    color: #666;
+    font-size: 18px;
     margin: 5px auto;
 }
 
@@ -379,33 +380,37 @@ body {
     width: 482px;
     height: 50px;
     margin-left: 18px;
+    font-size: 18px;
     padding: 0 25px;
-    border: 1px solid #eee;
+    border: 1px solid #adadad;
     color: #333;
+    border-radius: 5px;
 }
 
 .sure {
     display: block;
-    width: 110px;
-    height: 36px;
+    width: 184px;
+    height: 50px;
     font-size: 16px;
     margin: 42px auto 0;
-    line-height: 37px;
+    line-height: 50px;
     color: #fff;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
+
 /*  .owner-message .set-info  */
-#personInfo #tabbd  .sure:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+#personInfo #tabbd .sure:hover {
+    transform: scale(1.1, 1.1);
 }
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex {
     display: inline-block;
     margin-left: 20px;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
     color: #333;
     cursor: pointer;
 }
@@ -413,7 +418,8 @@ body {
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex img {
     width: 16px;
     height: 15px;
-    margin-right: 15px;
+    vertical-align: top;
+    margin: 18px 15px 0 0;
 }
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex:last-child {
@@ -427,7 +433,7 @@ body {
 
 #personInfo .school-message .school-info {
     width: 790px;
-    margin: 120px auto 177px;
+    margin: 75px auto 0;
 }
 
 #mark-label1,
@@ -442,10 +448,11 @@ body {
     width: 150px;
     height: 51px;
     text-align: right;
+    padding-right: 5px;
     line-height: 51px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
-    color: #00a0e9;
+    color: #666;
     float: left;
 }
 
@@ -484,20 +491,24 @@ body {
 
 #personInfo .school-message .form-group {
     width: 790px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
+
 #personInfo .school-message .in-3 {
-    width: 157px;
+    width: 158px;
     display: inline-block;
 }
+
 #personInfo .school-message .in-1 {
     width: 482px;
     display: inline-block;
 }
+
 /* 学校信息 底部按钮 */
 #personInfo .school-message .sure {
     margin-top: 116px;
 }
+
 #change-classnum,
 #change-classnum:focus {
     width: 65px;
@@ -510,6 +521,7 @@ body {
     color: #00a0e9;
     outline: none;
 }
+
 #myModal {
     width: 526px;
     height: 400px;
@@ -599,7 +611,7 @@ body {
     border: none;
     outline: none;
     background: url('../../images/common/normal-button.png') no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
@@ -608,6 +620,7 @@ body {
 
 #sure-change:hover {
     background: url('../../images/common/hover-button.png') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /*编辑头像 模态窗*/
@@ -665,7 +678,7 @@ body {
 /* 账户信息部分 */
 .change-user-info {
     width: 900px;
-    height: 450px;
+    height: 445px;
     margin: 60px auto 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -688,9 +701,9 @@ body {
 }
 
 #personInfo #tabbd .user-message .blocks {
-    width: 630px;
+    width: 700px;
     height: 64px;
-    margin: 80px auto 0;
+    margin: 90px auto 0;
 }
 
 #personInfo #tabbd .user-message .blocks:first-of-type {
@@ -723,7 +736,6 @@ body {
 #personInfo #tabbd .user-message .blocks .link-phone,
 #personInfo #tabbd .user-message .blocks .login-psd {
     width: 428px;
-    height: 16px;
     margin-left: 14px;
     font-size: 18px;
 }
@@ -733,30 +745,33 @@ body {
     width: 428px;
     margin-left: 34px;
     line-height: 36px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #personInfo #tabbd .user-message .blocks .fr {
     float: right;
-    width: 110px;
-    height: 36px;
-    margin-top: -10px;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
-    line-height: 38px;
-    text-align: center;
+    width: 184px;
+    height: 50px;
+    font-size: 16px;
+    margin: -17px auto 0;
+    line-height: 50px;
     color: #fff;
+    text-align: center;
+    border: none;
+    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size: 100% 100%;
 }
 
+/*  .owner-message .set-info  */
 #personInfo #tabbd .user-message .blocks .fr:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    transform: scale(1.1, 1.1);
 }
 
 /* 手机绑定表单样式 */
 
 #personInfo #tabbd .user-message .login-form {
     width: 614px;
-    height: 335px;
+    height: 325px;
     margin: 20px auto 0;
 }
 
@@ -777,7 +792,7 @@ body {
     line-height: 50px;
     text-align: right;
     color: #333;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
 }
 
@@ -786,7 +801,8 @@ body {
     height: 50px;
     padding-left: 24px;
     margin: 6px;
-    border: 1px solid #eee;
+    border: 1px solid #adadad;
+    border-radius: 5px;
 }
 
 #personInfo #tabbd .user-message .login-form .login-form-info > input::-webkit-input-placeholder {
@@ -801,9 +817,8 @@ body {
 
 #personInfo #tabbd .user-message .login-form .login-form-info .get-verification-code {
     width: 150px;
-    line-height: 50px;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -822,19 +837,20 @@ body {
 
 #personInfo #tabbd .user-message .login-form .confirm {
     display: block;
-    width: 110px;
-    height: 36px;
-    margin: 20px auto;
+    width: 184px;
+    height: 50px;
+    font-size: 16px;
+    margin: 10px auto 0;
+    line-height: 36px;
+    color: #fff;
+    text-align: center;
     border: none;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
-    font-size: 16px;
-    line-height: 26px;
-    color: #fff;
+    background-size: 100% 100%;
 }
 
 #personInfo #tabbd .user-message .login-form .confirm:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    transform: scale(1.1, 1.1);
 }
 
 /* 模态框 */
@@ -875,6 +891,7 @@ body {
     text-align: center;
     color: #333;
 }
+
 /* .owner-message .set-info */
 #personInfo #tabbd #suremsg {
     width: 494px;
@@ -882,23 +899,23 @@ body {
     margin: 200px auto;
 }
 
-#personInfo #tabbd  #suremsg .modal-dialog {
+#personInfo #tabbd #suremsg .modal-dialog {
     width: 494px;
 }
 
-#personInfo #tabbd  #suremsg .modal-dialog,
-#personInfo #tabbd  #suremsg .modal-content {
+#personInfo #tabbd #suremsg .modal-dialog,
+#personInfo #tabbd #suremsg .modal-content {
     background: transparent;
     box-shadow: none;
     border: none;
 }
 
-#personInfo #tabbd  #suremsg .modal-header {
+#personInfo #tabbd #suremsg .modal-header {
     width: 494px;
     height: 140px;
 }
 
-#personInfo #tabbd  #suremsg .modal-content .modal-title {
+#personInfo #tabbd #suremsg .modal-content .modal-title {
     width: 494px;
     color: #fff;
     text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
@@ -1003,4 +1020,8 @@ body {
     color: #e20000;
     font-size: 14px;
     margin-bottom: -25px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    font-size: 18px;
 }

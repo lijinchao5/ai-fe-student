@@ -14,9 +14,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -65,6 +63,7 @@ body {
 }
 
 /* 添加返回按钮 */
+
 #word-speaking .back {
     position: absolute;
     top: 16px;
@@ -74,11 +73,13 @@ body {
 }
 
 /* 返回按钮的模态框/ */
+
 .word-speaking .modal-content {
     width: 490px;
     height: 321px;
     margin-top: 40%;
     background: url("../../images/common/ready-go-clound.png") no-repeat center center;
+    background-size: 100% 100%;
     border: none;
     box-shadow: none;
 }
@@ -143,6 +144,7 @@ body {
 }
 
 /* 提交作业的提示 */
+
 .word-speaking .dictation-modal .modal-content .modal-body {
     line-height: 40px;
 }
@@ -157,6 +159,7 @@ body {
 }
 
 /* 提交作业成功的模态框 */
+
 .submit-success .modal-dialog {
     width: 450px;
 }
@@ -171,6 +174,7 @@ body {
 }
 
 /* 开始做作业 模态框 */
+
 .ready-go .modal-dialog {
     width: 450px;
 }
@@ -192,16 +196,20 @@ body {
 }
 
 /* 作业提交超时模态框 */
+
 .time-out {
     width: 40px;
     height: 21px;
 }
 
 /*.word-speaking {*/
-    /*position: relative;*/
+
+/*position: relative;*/
+
 /*}*/
 
 /* 模态框样式结束 */
+
 .word-speaking .speak-listen-tabs {
     width: 850px;
     height: 83px;
@@ -222,7 +230,7 @@ body {
 }
 
 .word-speaking .speak-listen-tab-hd li {
-    width: 170px;
+    width: 160px;
     height: 50px;
     margin: 16px 0 24px;
     line-height: 50px;
@@ -246,6 +254,13 @@ body {
 }
 
 /* 添加每个听说作业的等级显示 */
+
+.word-speaking .word-degree {
+    float: left;
+    width: 325px;
+    margin-left: 74px;
+}
+
 .word-speaking .speak-listen-tab-hd li .word-degree {
     position: absolute;
     top: 0;
@@ -253,22 +268,10 @@ body {
     width: 0;
 }
 
-.word-speaking .speak-listen-tab-hd .word-degree p {
+.word-speaking .word-degree p {
     width: 100px;
     text-align: right;
     margin-left: 1%;
-}
-
-.word-speaking .speak-listen-tab-hd li .word-degree .degree-fail {
-    color: #ff6d80;
-}
-
-.word-speaking .speak-listen-tab-hd li .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.word-speaking .speak-listen-tab-hd li .word-degree .degree-well {
-    color: #36dbbb;
 }
 
 /* 听说作业 单词跟读 tab body */
@@ -283,21 +286,25 @@ body {
 }
 
 /* 分数样式 */
+
 .word-speaking .speak-listen-tab-bd .score {
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    margin: 16px auto 10px;
-    background: #d43f3a;
+    margin: 18px auto 40px;
+    background: #fd1021;
     line-height: 68px;
     text-align: center;
     font-size: 30px;
     color: #fff;
     font-weight: 700;
     animation: score 1s infinite;
-    -moz-animation: score 1s infinite; /* Firefox */
-    -webkit-animation: score 1s infinite; /* Safari and Chrome */
-    -o-animation: score 1s infinite; /* Opera */
+    -moz-animation: score 1s infinite;
+    /* Firefox */
+    -webkit-animation: score 1s infinite;
+    /* Safari and Chrome */
+    -o-animation: score 1s infinite;
+    /* Opera */
 }
 
 @keyframes score {
@@ -314,8 +321,7 @@ body {
 
 .word-speaking .speak-listen-tab-bd .gd {
     height: 30px;
-    /*border-radius: 50%;*/
-    margin: 0 auto;
+    margin: 85px auto 11px;
     line-height: 30px;
     font-size: 16px;
     color: #00a0e9;
@@ -327,6 +333,7 @@ body {
 }
 
 /* 分数等级指示 */
+
 .word-speaking .speak-listen-tab-bd .word-degree {
     width: 330px;
     height: 20px;
@@ -352,6 +359,7 @@ body {
 }
 
 /* 旋转木马盒子公共样式 */
+
 /*.word-speaking .speak-listen-tab-bd .carousel {
     height: 290px;
 }*/
@@ -359,7 +367,8 @@ body {
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item {
     padding: 0 10%;
     font-weight: 700;
-    color: #004098;
+    /*color: #004098;*/
+    color: #333;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text-out {
@@ -372,7 +381,7 @@ body {
     justify-content: center;
     word-break: break-all;
     background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
-    background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
@@ -380,6 +389,8 @@ body {
 }
 
 .word-speaking .speak-listen-tab-bd .jsbyclass .carousel .carousel-inner .item .text {
+    background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
+    background-size: 100% 100%;
     width: 100%;
     height: 250px;
     /* 上下左右居中 */
@@ -396,24 +407,29 @@ body {
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    /*color: #2aa145;*/
+    color: #00d35b;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
-    color: #ff6d80;
+    /*color: #ff6d80;*/
+    color: #fd1021;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
-    color: #ffb846;
+    /*color: #004098;*/
+    color: #2aaff3;
     float: left;
     padding: 0 6px;
 }
 
 /* 语速 样式 */
+
 .word-speaking .speak-speed {
     /*float: right;*/
     width: 100%;
@@ -428,13 +444,14 @@ body {
     display: inline-block;
     margin: 0 20px 0 0;
     text-align: center;
-    color: #00aeff;
+    color: #999;
 }
 
 .word-speaking .speak-speed .list {
     width: 50px;
     height: 20px;
     cursor: pointer;
+    color: #00aeff;
 }
 
 .word-speaking .speak-speed .list .current {
@@ -444,6 +461,7 @@ body {
 
 .word-speaking .speak-speed ul {
     position: absolute;
+    color: #00aeff;
     top: 20px;
     left: 44px;
     width: 44px;
@@ -465,9 +483,10 @@ body {
 }
 
 /* 左右箭头的设置 */
+
 .word-speaking .speak-listen-tab-bd .carousel-control {
     position: absolute;
-    top: 82%;
+    top: 64%;
     /* 去掉阴影 */
     height: 0;
     width: 10%;
@@ -479,12 +498,14 @@ body {
 }
 
 /* 上一页/下一页 禁用状态 */
+
 .word-speaking .speak-listen-tab-bd .carousel-control.out:hover {
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
 
 /* 单词跟读的旋转木马 */
+
 .word-speaking-carousel {
     border: 1px solid transparent;
 }
@@ -492,18 +513,23 @@ body {
 .word-speaking-carousel .carousel .carousel-inner .item .text {
     font-size: 44px;
 }
-
 /* 句子跟读的旋转木马 */
+
 .sentence-reading-carousel .carousel .carousel-inner .item .text {
     font-size: 36px;
 }
 
 /* 课文跟读的旋转木马 */
+
 .article-reading-carousel .carousel .carousel-inner .item .text {
-    font-size: 36px;
+    font-size: 26px;
 }
 
+.carousel .carousel-inner .item .text b{
+    float: left;
+}
 /* 听说作业 分数 公共样式*/
+
 .word-speaking .speak-listen-tab-bd .speak-listen-btn {
     width: 400px;
     /*height: 125px;*/
@@ -514,21 +540,25 @@ body {
 }
 
 /* 添加display none*/
+
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .play-icon {
-    width: 142px;
+    /*width: 142px;
     height: 42px;
     margin: 54px auto 0;
-    /*margin-left: 40px;*/
+    margin-left: 40px;*/
     display: none;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    border-radius: 60px;
+    margin: 40px auto;
+    animation: recording 2s infinite;
 }
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .speed {
     display: none;
     width: 330px;
-    height: 13px;
-    margin-left: 38px;
-    /*11*/
-    margin-top: 80px;
+    margin: 40px auto;
     position: relative;
 }
 
@@ -547,6 +577,7 @@ body {
 }
 
 /* 录音中 */
+
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .speed .speed-text {
     /*display: block;*/
     /*width: 260px;*/
@@ -569,6 +600,7 @@ body {
 /*结束*/
 
 /*重做和我的录音按钮*/
+
 .q_restart {
     width: 400px;
     height: 40px;
@@ -599,19 +631,22 @@ body {
     height: 56px;
     cursor: pointer;
     background: url("../../images/common/recording.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     display: inline-block;
     margin: 0 30px 0 50px;
     border-radius: 56px;
 }
+
 .word-speaking .speak-listen-tab-bd .play.palybutton {
     background: url("../../images/common/play.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     margin: 0 50px 0 30px;
 }
 
 /*.word-speaking .speak-listen-tab-bd .headset {*/
+
 /*margin-left: -30px;*/
+
 /*}*/
 
 .word-speaking .speak-listen-tab-bd .play p {
@@ -619,15 +654,16 @@ body {
     line-height: 36px;
     font-size: 14px;
 }
+
 /* 播放按钮  鼠标移入的状态 */
+
 /*.word-speaking .speak-listen-tab-bd .play:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: cover;
 }*/
 
 .word-speaking .speak-listen-btn .znbutton {
-    margin-top: 150px;
-    margin-left: 0;
+    margin: 148px 0 0 -2px;
 }
 
 .word-speaking .speak-listen-tab-bd .recording {
@@ -641,7 +677,7 @@ body {
     width: 68px;
     height: 68px;
     border-radius: 50%;
-    background: url("../../images/common/record.png") no-repeat center center;
+    background: url("../../images/common/recording.png") no-repeat center center;
     background-size: 68px 68px;
 }
 
@@ -652,12 +688,16 @@ body {
     position: relative;
     background: url("../../images/common/recording.png") no-repeat center center;
     animation: recording 2s infinite;
-    -webkit-animation: recording 2s infinite; /*Safari and Chrome*/
-    -moz-animation: recording 5s infinite; /* Firefox */
-    -o-animation: recording 5s infinite; /* Opera */
+    -webkit-animation: recording 2s infinite;
+    /*Safari and Chrome*/
+    -moz-animation: recording 5s infinite;
+    /* Firefox */
+    -o-animation: recording 5s infinite;
+    /* Opera */
 }
 
 /* 录音动画 */
+
 @keyframes recording {
     0% {
         transform: scale(0.9);
@@ -670,7 +710,9 @@ body {
     }
 }
 
-@-webkit-keyframes recording /*Safari and Chrome*/
+@-webkit-keyframes recording
+    /*Safari and Chrome*/
+
 {
     0% {
         transform: scale(0.9);
@@ -683,7 +725,9 @@ body {
     }
 }
 
-@-moz-keyframes recording /* Firefox */
+@-moz-keyframes recording
+    /* Firefox */
+
 {
     0% {
         transform: scale(0.9);
@@ -696,7 +740,9 @@ body {
     }
 }
 
-@-o-keyframes recording /* Opera */
+@-o-keyframes recording
+    /* Opera */
+
 {
     from {
         -o-transform: scale(1.5) rotate(10deg);
@@ -707,6 +753,7 @@ body {
 }
 
 /* 角色扮演 */
+
 .word-speaking .speak-listen-tab-bd .role {
     display: inline-block;
     height: 40px;
@@ -733,9 +780,10 @@ body {
 }
 
 /* 角色内容样式 */
+
 .carousel .carousel-inner .item .text p {
     width: 100%;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 50px;
     display: block;
 }
@@ -765,12 +813,14 @@ body {
 }
 
 /* 当前角色在阅读左侧 */
+
 .carousel .carousel-inner .item .text .role-in .weight {
     background-color: #ff8003;
     border: 1px solid #ff8003;
 }
 
 /* 当前角色在阅读 右侧*/
+
 .carousel .carousel-inner .item .text .weight {
     background-color: #ff8003;
     border: 1px solid #ff8003;
@@ -798,6 +848,7 @@ body {
 }
 
 /* 角色分数 只有句子读过后才显示 */
+
 .carousel .carousel-inner .item .text .role-in .role-score {
     content: "79";
     display: inline-block;
@@ -835,7 +886,7 @@ body {
     font: 600 16px/38px MicrosoftYaHei;
     color: #fff;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -843,6 +894,7 @@ body {
 }
 
 /* 智能听写旋转木马 */
+
 .intelligent-dictation .carousel .carousel-inner .item .dictation {
     width: 420px;
     height: 64px;
@@ -851,7 +903,7 @@ body {
     border: 1px solid #eee;
     border-right: none;
     text-align: center;
-    color: #004098;
+    color: #333;
     font-size: 24px;
 }
 
@@ -865,31 +917,36 @@ body {
     margin-top: 68px;
 }
 
-.intelligent-dictation .carousel .carousel-inner .item .dictation::-webkit-input-placeholder { /* WebKit browsers*/
+.intelligent-dictation .carousel .carousel-inner .item .dictation::-webkit-input-placeholder {
+    /* WebKit browsers*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
-.intelligent-dictation .carousel .carousel-inner .item .dictation:-moz-placeholder { /* Mozilla Firefox 4 to 18*/
+.intelligent-dictation .carousel .carousel-inner .item .dictation:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
-.intelligent-dictation .carousel .carousel-inner .item .dictation::-moz-placeholder { /* Mozilla Firefox 19+*/
+.intelligent-dictation .carousel .carousel-inner .item .dictation::-moz-placeholder {
+    /* Mozilla Firefox 19+*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
-.intelligent-dictation .carousel .carousel-inner .item .dictation:-ms-input-placeholder { /* Internet Explorer 10+*/
+.intelligent-dictation .carousel .carousel-inner .item .dictation:-ms-input-placeholder {
+    /* Internet Explorer 10+*/
     color: #999;
     font-size: 14px;
     line-height: 64px;
 }
 
 /* 提示信息模态框 */
+
 #overlay {
     position: absolute;
     width: 100%;
@@ -963,6 +1020,7 @@ button {
 }
 
 /* 角色扮演的人名 */
+
 .speak-listen-tab-hd .role {
     display: none;
     height: 40px;
@@ -1011,7 +1069,9 @@ button {
 
 /* html页面拷贝过来 */
 
-h3, ul, li {
+h3,
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1030,6 +1090,7 @@ h3, ul, li {
 }
 
 /*这里的高度和超出隐藏是必须的*/
+
 #scrollDiv li {
     height: 55px;
     line-height: 55px;
@@ -1038,6 +1099,7 @@ h3, ul, li {
 }
 
 /* 测试 */
+
 .word-speaking .lunbo-portrait {
     position: relative;
     width: 100%;
@@ -1096,12 +1158,15 @@ h3, ul, li {
 }
 
 /* html页面拷贝过来 */
+
 /*角色扮演*/
+
 .jsbyanimateul {
-    width: 100%;
+    width: 96%;
     height: 210px;
     overflow: hidden;
     position: relative;
+    margin: 19px auto;
 }
 
 .jsbyanimateul .li {
@@ -1120,6 +1185,7 @@ h3, ul, li {
 }
 
 /*角色扮演*/
+
 .modal-backdrop {
     background-color: transparent;
 }
@@ -1128,4 +1194,36 @@ h3, ul, li {
 .bs-example-modal-lg.submit-success,
 .back-modal {
     background-color: rgba(0, 0, 0, .6);
+}
+
+.round-progress {
+    position: relative;
+    width: 60px;
+    margin: 0 auto;
+}
+
+.record-bg {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    background-size: 98% 98%;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
+}
+
+.round-progress-bar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    /*background-color: #a9a9a9;*/
+}
+
+.round-progress-bar div canvas {
+    cursor: pointer;
+}
+
+.word-speaking .intelligent-dictation-carousel .carousel-control {
+    top: 82%
 }

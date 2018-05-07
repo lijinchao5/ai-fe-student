@@ -521,7 +521,117 @@ function subtj() {
         }
     }, 1000);
 }
-
+function roundProgressTimer(id,timer,aa){
+    timer = timer/20;
+    console.log(timer);
+    var width=-5;
+    var timer = setInterval(function () {
+        width += 5;
+        if(aa){
+            clearInterval(timer);
+        }
+        if(width>100||width==100){
+            clearInterval(timer)
+        }
+        roundProgress(id,width);
+        console.log(width)
+    },timer);
+}
+//    timer(width);
+function roundProgress(id,value) {
+    var myCharts = echarts.init(document.getElementById(id));
+    //颜色
+//    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
+    var colorData = ['#fff'];
+    //    数据
+    var data = [
+        {
+            "name": '准确度',
+            "value": value
+        }
+    ];
+    //将数据放入圆环中
+    var create = function (data) {
+        var result = [];
+        for (var i = 0; i < data.length; i++) {
+            result.push({
+                name: '',
+                // center: [(i * 26 + 22.5 + '%'), '50%'], // 去掉本行，圆环居中
+                radius: ['80%', '100%'],
+                type: 'pie',
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                markPoint: {
+                    data: [{}]
+                },
+                data: [
+                    {
+                        value: data[i].value,
+                        name: data[i].name,
+                        itemStyle: {
+                            normal: {
+                                color: colorData[i]
+                            },
+                            emphasis: {
+                                color: colorData[i]
+                            }
+                        },
+                        label: {
+                            normal: {
+                                formatter: '{d} %',
+                                position: 'center', // 显示文字的位置
+                                show: false,  // 是否显示中间文字
+                                textStyle: {  // 显示文字 样式
+                                    fontSize: '16',
+                                    fontWeight: 'bold',
+                                    color: colorData[i]
+                                }
+                            }
+                        }
+                    },
+                    {
+                        value: (100 - data[i].value),
+                        name: '',
+                        tooltip: {
+                            show: false
+                        },
+                        itemStyle: {
+                            normal: {
+                                color: 'transparent'
+                            },
+                            emphasis: {
+                                color: 'transparent'
+                            }
+                        },
+                        hoverAnimation: false
+                    }
+                ]
+            });
+        }
+        return result;
+    };
+    // 指定图表的配置项和数据 饼图
+    var options = {
+        /*tooltip: {
+            trigger: 'item',
+            formatter: function (params, ticket, callback) {
+                var res = params.name + ' : ' + params.percent + '%';
+                return res;
+            }
+        },  // 鼠标移入，显示区块百分比
+        grid: {
+            bottom: 100,
+            top: 150
+        },*/
+        /*xAxis: [{show: false}],
+        yAxis: [{show: false}],*/
+        series: create(data)
+    };
+    myCharts.setOption(options);
+}
 //听后简述
 /*
  function kaishi()

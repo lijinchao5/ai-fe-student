@@ -17,8 +17,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -84,15 +83,23 @@ body {
 }
 
 .present-class .my-classmate {
+    background-color: #f08118;
+    width: 110px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
     float: right;
     cursor: pointer;
+    color: #fff;
+    text-align: center;
 }
 
 .present-class .my-classmate img {
-    width: 21px;
-    height: 28px;
-    vertical-align: bottom;
-    margin-right: 5px;
+    width: 25px;
+    height: 18px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 3px;
 }
 
 .present-class #present-class {
@@ -364,7 +371,7 @@ body {
     height: 30px;
     border-radius: 5px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     line-height: 30px;
     color: #fff;
     margin: 28px auto 0;
@@ -377,7 +384,7 @@ body {
 .task-content #work-report .report-banner .main li .do-homework:hover,
 .task-content #work-report .report-banner .main li .check-report:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .task-content #work-report .report-banner .main li a {
@@ -464,7 +471,7 @@ body {
     width: 50%;
     text-align: left;
     font-size: 12px;
-    padding-left: 40px;
+    padding-left: 5%;
     margin-top: 30px;
 }
 
@@ -472,7 +479,7 @@ body {
     font-size: 12px;
     text-align: right;
     width: 50%;
-    padding-right: 40px;
+    padding-right: 5%;
     margin-top: 30px;
 
 }
@@ -484,7 +491,7 @@ body {
     height: 30px;
     margin: 15px auto 0;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     font-size: 14px;
     line-height: 30px;
     color: #fff;
@@ -495,7 +502,7 @@ body {
 #exam-report .report-banner .main .enter-exam:hover,
 #exam-report .report-banner .main .enter-report:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     color: #fff;
     text-decoration: none;
 }
@@ -539,5 +546,27 @@ body {
     text-align: center;
     font-size: 14px;
     color: #999;
+}
+
+.tips-report{
+    width: 300px;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #b94a48;
+    position: absolute;
+    top:100px;
+    display: none;
+}
+
+.tips-report p{
+    text-align: center;
+    color: #b94a48;
+    line-height: 50px;
+}
+
+.tips-report span{
+    float: right;
+    padding-right: 50px;
+    cursor: pointer;
 }
 

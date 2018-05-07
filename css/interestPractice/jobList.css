@@ -131,7 +131,7 @@ body {
     height: 30px;
     border-radius: 5px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     line-height: 30px;
     color: #fff;
     margin: 28px auto 0;
@@ -144,7 +144,7 @@ body {
 .report-banner .main li .do-homework:hover,
 .report-banner .main li .check-report:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .report-banner .main li a {

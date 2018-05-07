@@ -3,6 +3,7 @@
     min-width: 1200px;
     height: 101px;
     background: url('../../images/personInfo/header.png') repeat-x center center;
+    background-size:100% 100%;
     position: absolute;
     z-index: 10;
 }
@@ -50,6 +51,7 @@
     border-top: 80px solid transparent;
     border-bottom: 40px solid #11d8fc;
     background: url("../../images/simulationExam/headset-bg.png") center center;
+    background-size:100% 100%;
     position: absolute;
     top: 0;
 }

@@ -5,10 +5,21 @@ $(function () {
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
     $('#footer').load('../common/footer.html');
+    $(document).bind("click", function (e) {
+        openList();
+        if ($(e.target).closest(".class-list").length == 0 && $(e.target).closest("#changeClass").length == 0) {
+            //点击空白处，触发
+            closeList();
+        }
+    })
 });
 
-function changeClass() {
-    $(".class-list").toggle()
+function closeList() {
+    $(".class-list").hide()
+}
+
+function openList() {
+    $(".class-list").show()
 }
 
 function jumpMate() {
@@ -66,6 +77,7 @@ function getClass() {
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id == _current) {
                     $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')');
+
                 } else {
                     noCurrent.push(data[i]);
                 }
@@ -81,7 +93,7 @@ function getClass() {
             }
             if ($(".class-list li").length <= 0) {
                 //var _noClass="";
-                var _noClass=$("<p class='no-class'>还没有其他班级</p>");
+                var _noClass = $("<p class='no-class'>还没有其他班级</p>");
                 $(".class-list").prepend(_noClass);
 
             }
@@ -128,11 +140,15 @@ function addListeners() {
 }
 function goHomeworkReport(id, com) {
     if (com == 'F') {
-        alert("作业未完成,作业报告为空!")
+        //alert("作业未完成,作业报告为空!");
+        $(".tips-report").show()
     } else {
         window.location.href = "homeworkReport.html?id=" + id;
     }
 }
+$(".tips-report span").click(function () {
+    $(".tips-report").hide()
+});
 function isflash() {
     var flag = 0;
     $(".btn-md").each(function (i, v) {

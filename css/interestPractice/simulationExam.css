@@ -35,9 +35,7 @@ body {
 .outs {
     width: 100%;
     height: 100%;
-    /*min-height: 687px;*/
-    background: url("../../images/common/background.jpg") no-repeat center center;
-    background-size: cover;
+    background-color: #f6f6f6;
     padding-top: 10px;
 }
 
@@ -136,12 +134,13 @@ body {
     outline: none;
     line-height: 36px;
     text-align: center;
-    width: 110px;
+    width: 136px;
     height: 36px;
     border-radius: 36px;
     color: #fff;
     font-size: 16px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size:100% 100%;
     cursor: pointer;
     position: absolute;
     bottom: 50px;
@@ -151,6 +150,7 @@ body {
 
 .student-notice .next:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .student-notice .next:hover {
@@ -258,6 +258,7 @@ body {
     width: 110px;
     height: 36px;
     background: url("../../images/common/normal-button.png") center center;
+    background-size:100% 100%;
     border: none;
     border-radius: 36px;
     line-height: 36px;
@@ -268,6 +269,7 @@ body {
 
 .content-bg .content-in .main .clear-btn .buttons:hover {
     background: url("../../images/common/hover-button.png") center center;
+    background-size:100% 100%;
     border: none;
 }
 
@@ -376,6 +378,7 @@ body {
     font-size: 16px;
     color: #fff;
     background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size:100% 100%;
     margin-top: 80px;
     cursor: pointer;
 }
@@ -427,10 +430,10 @@ body {
 
 .prepare-exam .start-answer {
     display: block;
-    width: 110px;
+    width: 136px;
     height: 36px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     border-radius: 38px;
     outline: none;
     border: none;
@@ -446,7 +449,7 @@ body {
     color: #fff;
     text-decoration: none;
     background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     border-radius: 38px;
 }
 
@@ -454,8 +457,9 @@ body {
     position: relative;
     padding-bottom: 70px;
     height: 100%;
-    min-height: 620px;
+    min-height: 605px;
     background: url("../../images/simulationExam/conten-bg.jpg") no-repeat center center;
+    background-size:100% 100%;
     border-radius: 4px;
 }
 
@@ -563,6 +567,7 @@ body {
 
 .start-exam .start-answer .fill-in-img {
     width: 100%;
+    height: 335px;
 }
 
 .start-exam .start-answer .exam-problems,
@@ -708,7 +713,7 @@ body {
     height: 36px;
     margin: 26px auto 0;
     background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: cover;
+    background-size: 100% 100%;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -839,8 +844,15 @@ body {
     color: #00a0e9;
 }
 
-.layui-progress-bar {
-    position: relative;
+#ytdt .layui-progress .layui-progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    text-align: right;
+    background-color: #4fc6fc;
+    transition: all 0.3s;
+    line-height: 18px;
 }
 
 .speed-balloon {
@@ -876,6 +888,7 @@ body {
     width: 490px;
     margin: 15% auto;
     background: url("../../images/common/ready-go-clound.png") no-repeat center top;
+    background-size:100% 100%;
     border: none;
     box-shadow: none;
 }
@@ -939,6 +952,7 @@ body {
     width: 110px;
     height: 36px;
     background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .modal-content .modal-footer .btn-primary {
@@ -948,6 +962,7 @@ body {
 .modal-content .modal-footer .btn-default:hover,
 .modal-content .modal-footer .btn-primary:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size:100% 100%;
 }
 
 .record-fail .modal-content {
@@ -984,4 +999,27 @@ body {
     margin-top: 15px;
     color: #eefd00;
     font-size: 14px;
+}
+
+.round-progress{
+    position: relative;
+    width:60px;
+    margin: 4px 135px;
+}
+.record-bg{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url("../../images/common/recording-in.png") no-repeat center center;
+    background-size:98% 98%;
+    border-radius: 60px;
+    top: 0;
+    left: 0;
+}
+.round-progress-bar{
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+    /*background-color: #a9a9a9;*/
 }
