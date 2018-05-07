@@ -274,18 +274,6 @@ body {
     margin-left: 1%;
 }
 
-/* .word-speaking .speak-listen-tab-hd li .word-degree .degree-fail {
-    color: #ff6d80;
-}
-
-.word-speaking .speak-listen-tab-hd li .word-degree .degree-good {
-    color: #ffb846;
-}
-
-.word-speaking .speak-listen-tab-hd li .word-degree .degree-well {
-    color: #36dbbb;
-} */
-
 /* 听说作业 单词跟读 tab body */
 
 .word-speaking .speak-listen-tab-bd li {
@@ -304,7 +292,7 @@ body {
     height: 68px;
     border-radius: 50%;
     margin: 18px auto 40px;
-    background: #d43f3a;
+    background: #fd1021;
     line-height: 68px;
     text-align: center;
     font-size: 30px;
@@ -420,21 +408,22 @@ body {
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
     /*color: #36dbbb;*/
-    color: #2aa145;
+    /*color: #2aa145;*/
+    color: #00d35b;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
     /*color: #ff6d80;*/
-    color: #d43f3a;
+    color: #fd1021;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
-    /*color: #ffb846;*/
-    color: #004098;
+    /*color: #004098;*/
+    color: #2aaff3;
     float: left;
     padding: 0 6px;
 }
@@ -455,13 +444,14 @@ body {
     display: inline-block;
     margin: 0 20px 0 0;
     text-align: center;
-    color: #00aeff;
+    color: #999;
 }
 
 .word-speaking .speak-speed .list {
     width: 50px;
     height: 20px;
     cursor: pointer;
+    color: #00aeff;
 }
 
 .word-speaking .speak-speed .list .current {
@@ -471,6 +461,7 @@ body {
 
 .word-speaking .speak-speed ul {
     position: absolute;
+    color: #00aeff;
     top: 20px;
     left: 44px;
     width: 44px;

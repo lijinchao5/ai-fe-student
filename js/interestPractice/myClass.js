@@ -77,6 +77,7 @@ function getClass() {
             for (var i = 0; i < data.length; i++) {
                 if (data[i].id == _current) {
                     $("#currentClass").text(data[i].grade + '年级' + data[i].name + '(' + data[i].classId + ')');
+
                 } else {
                     noCurrent.push(data[i]);
                 }
@@ -139,11 +140,15 @@ function addListeners() {
 }
 function goHomeworkReport(id, com) {
     if (com == 'F') {
-        alert("作业未完成,作业报告为空!")
+        //alert("作业未完成,作业报告为空!");
+        $(".tips-report").show()
     } else {
         window.location.href = "homeworkReport.html?id=" + id;
     }
 }
+$(".tips-report span").click(function () {
+    $(".tips-report").hide()
+});
 function isflash() {
     var flag = 0;
     $(".btn-md").each(function (i, v) {
