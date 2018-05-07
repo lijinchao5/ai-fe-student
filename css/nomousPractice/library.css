@@ -47,8 +47,8 @@ body {
 }
 
 .back {
-    width: 26px;
-    height: 21px;
+    width: 24px;
+    height: 24px;
     margin: 20px 0 0 14px;
 }
 
@@ -273,18 +273,18 @@ body {
     background: #eee;
 }
 
-.library progress::-webkit-progress-value {
-    border-radius: 10px;
-    background: #ff6d80;
-}
+/*.library progress::-webkit-progress-value {*/
+    /*border-radius: 10px;*/
+    /*background: #ff6d80;*/
+/*}*/
 
-.library .sentences-degree p progress.fluency::-webkit-progress-value {
-    background: #ffb846;
-}
+/*.library .sentences-degree p progress.fluency::-webkit-progress-value {*/
+    /*background: #ffb846;*/
+/*}*/
 
-.library .sentences-degree p progress.integrity::-webkit-progress-value {
-    background: #36dbbb;
-}
+/*.library .sentences-degree p progress.integrity::-webkit-progress-value {*/
+    /*background: #36dbbb;*/
+/*}*/
 
 /* 鏃嬭浆鏈ㄩ┈ */
 .library-content .carousel .carousel-inner {
@@ -341,20 +341,23 @@ body {
 }
 
 /* 澶囩敤棰滆壊 */
-.library-content .carousel .carousel-inner .item .blue {
-    color: #11d8fc;
-}
+/*.library-content .carousel .carousel-inner .item .blue {*/
+    /*color: #11d8fc;*/
+/*}*/
 
 .library-content .carousel .carousel-inner .item .green {
-    color: #36dbbb;
+    /*color: #36dbbb;*/
+    color: #00d35b;
 }
 
 .library-content .carousel .carousel-inner .item .orange {
-    color: #ffb846;
+    /*color: #ffb846;*/
+    color: #2aaff3;
 }
 
 .library-content .carousel .carousel-inner .item .red {
-    color: #ff6d80;
+    /*color: #ff6d80;*/
+    color: #fd1021;
 }
 
 .library-content .carousel .carousel-control {
