@@ -181,15 +181,22 @@ body {
     animation: twinkle 2s infinite;
     /*margin: -1px;*/
 }
-@keyframes twinkle
-{
-    0% {transform: scale(1.0,1.0);}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1.0, 1.0);
+    }
     /*33% {transform: scale(0.9,0.9);}*/
-    50% {transform: scale(0.9,0.9);}
+    50% {
+        transform: scale(0.9, 0.9);
+    }
     /*66% {transform: scale(1.07,1.07);}*/
-    100% {transform: scale(1.0,1.0);}
+    100% {
+        transform: scale(1.0, 1.0);
+    }
 }
-.library-content .current-part-score{
+
+.library-content .current-part-score {
     width: 36px;
     height: 36px;
     margin: 0 auto;
@@ -207,11 +214,18 @@ body {
 }
 
 @keyframes uper {
-    0%{top: -20px;opacity: 1;}
+    0% {
+        top: -20px;
+        opacity: 1;
+    }
     /*1%{top: 0;opacity: 1;display: block;}*/
     /*99%{top: -200px;opacity: 0;}*/
-    100%{top: -250px;opacity: 0;}
+    100% {
+        top: -250px;
+        opacity: 0;
+    }
 }
+
 /* 鍑嗙‘搴︿竴琛� */
 .library-content .library-point {
     margin-top: 10px;
@@ -279,9 +293,11 @@ body {
     height: 270px;
     background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
     background-size: 100% 100%;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+    /*overflow: auto;*/
+    overflow-y: auto;
     overflow-x: hidden;
-    overflow: auto;
     font-size: 16px;
     line-height: 28px;
     padding: 0 30px;
@@ -335,6 +351,7 @@ body {
     top: 50%;
     margin-top: 15px;
 }
+
 /* 雷达图 */
 .library-content .part-radars {
     float: right;
@@ -342,12 +359,14 @@ body {
     height: 120px;
     margin: 30px 100px 0 0;
 }
-.library-content .part-radars div{
+
+.library-content .part-radars div {
     width: 100px;
     height: 100px;
     /*background: #abf;*/
     /*display: none;*/
 }
+
 .library-content .nomous-practice-btn {
     width: 330px;
     height: 50px;
@@ -356,13 +375,15 @@ body {
     position: relative;
     user-select: none;
 }
+
 .library-content .nomous-practice-btn .speed {
     /*padding-top: 26px;*/
 }
+
 .library-content .nomous-practice-btn .play-icon {
-   /* border-radius: 0%;
-    margin-left: 108px;
-    padding-top: 10px;*/
+    /* border-radius: 0%;
+     margin-left: 108px;
+     padding-top: 10px;*/
     width: 60px;
     height: 60px;
     background: url("../../images/common/recording-in.png") no-repeat center center;
@@ -371,10 +392,17 @@ body {
     animation: recording 2s infinite;
     display: none;
 }
+
 @keyframes recording {
-    0%{transform:scale(1.1,1.1);}
-    50%{transform:scale(0.9,0.9);}
-    100%{transform:scale(1.1,1.1);}
+    0% {
+        transform: scale(1.1, 1.1);
+    }
+    50% {
+        transform: scale(0.9, 0.9);
+    }
+    100% {
+        transform: scale(1.1, 1.1);
+    }
 }
 
 /* 录音中 */
@@ -409,11 +437,13 @@ body {
     margin: 0 50px 0 30px;
     border-radius: 56px;
 }
-.library-content .nomous-practice-btn .play.headset  {
+
+.library-content .nomous-practice-btn .play.headset {
     background: url("../../images/common/recording.png") no-repeat center center;
     background-size: 100% 100%;
     margin: 0 30px 0 50px;
 }
+
 /*.library-content .nomous-practice-btn .play:hover{
     background: url("../../images/common/hover-button.png") no-repeat center center;
 }*/
@@ -434,7 +464,7 @@ body {
 .library-content .nomous-practice-btn .end {
     margin: 0;
     width: 300px;
-    height:100px;
+    height: 100px;
     position: absolute;
     top: -160px;
     /*right: -480px;*/
@@ -444,6 +474,7 @@ body {
     border-radius: 50px 0 0 50px;
     box-shadow: 0 0 15px #ccc;
 }
+
 .library-content .nomous-practice-btn .end-p {
     line-height: 114px;
     font-size: 46px;
@@ -451,10 +482,12 @@ body {
     /*padding-left: 40px;*/
     color: #00a0e9;
 }
-.library-content .nomous-practice-btn .end-p .span1{
+
+.library-content .nomous-practice-btn .end-p .span1 {
     font-size: 30px;
 }
-.library-content .nomous-practice-btn .end-p .span2{
+
+.library-content .nomous-practice-btn .end-p .span2 {
     color: #e5e5e5;
     font-size: 14px;
 }
@@ -464,9 +497,9 @@ body {
 }
 
 /*.library-content .nomous-practice-btn .end img {*/
-    /*width: 130px;*/
-    /*height: 98px;*/
-    /*border-radius: 0%;*/
+/*width: 130px;*/
+/*height: 98px;*/
+/*border-radius: 0%;*/
 /*}*/
 
 /* 鍚� wordspeaking .css line 135 */
@@ -529,10 +562,8 @@ body {
 .report .modal-content .modal-body img {
     width: 128px;
     height: 128px;
-    /*padding: 10px;*/
-    background: url("../../images/personInfo/small-meb-icon.png") center center;
     border-radius: 50%;
-    border: 4px solid #00a0e9;
+    border: 1px solid #00a0e9;
     margin-left: 245px;
 }
 
@@ -555,22 +586,26 @@ body {
     margin-left: 100px;
     margin-right: 180px;
 }
-.report .modal-content .modal-body .radar-score{
+
+.report .modal-content .modal-body .radar-score {
     width: 150px;
     height: 150px;
     float: right;
     margin-right: 20px;
     margin-top: 36px;
 }
+
 .report .modal-content .modal-body .free-practice-result {
     font-size: 16px;
     font-weight: 700;
     color: #00a0e9;
 }
-.report .modal-content .modal-body .free-practice-result .num{
+
+.report .modal-content .modal-body .free-practice-result .num {
     font-size: 36px;
     margin-right: 5px;
 }
+
 .report .modal-content .modal-body .title {
     /*height: 30px;*/
     line-height: 30px;
@@ -635,7 +670,7 @@ body {
     text-align: center;
 }
 
-.speak-speed{
+.speak-speed {
     width: 100px;
     height: 20px;
     display: inline-block;
@@ -644,16 +679,19 @@ body {
     text-align: center;
     color: #00aeff;
 }
-.speak-speed .list{
+
+.speak-speed .list {
     width: 50px;
     height: 20px;
     cursor: pointer;
 }
-.speak-speed .list .current{
+
+.speak-speed .list .current {
     display: inline-block;
     width: 30px;
 }
-.speak-speed ul{
+
+.speak-speed ul {
     width: 44px;
     /*height: 20px;*/
     position: absolute;
@@ -664,38 +702,44 @@ body {
     /*border: 1px solid #ccc;*/
     cursor: pointer;
 }
-.speak-speed ul li:hover{
+
+.speak-speed ul li:hover {
     background: yellow;
 }
-.speak-speed .list .triangle{
+
+.speak-speed .list .triangle {
     border: 5px solid #ccc;
     border-top: 5px solid transparent;
     border-left: 5px solid transparent;
-    margin: 0px 8px 0 0 ;
+    margin: 0px 8px 0 0;
     transform: rotate(45deg);
 }
-.round-progress{
+
+.round-progress {
     position: relative;
-    width:60px;
+    width: 60px;
     margin: 0 auto;
 }
-.record-bg{
+
+.record-bg {
     position: absolute;
     width: 60px;
     height: 60px;
     background: url("../../images/common/recording-in.png") no-repeat center center;
-    background-size:98% 98%;
+    background-size: 98% 98%;
     border-radius: 60px;
     top: 0;
     left: 0;
 }
-.round-progress-bar{
+
+.round-progress-bar {
     width: 60px;
     height: 60px;
     border-radius: 60px;
     overflow: hidden;
     /*background-color: #a9a9a9;*/
 }
+
 .green {
     color: #36dbbb;
 }
