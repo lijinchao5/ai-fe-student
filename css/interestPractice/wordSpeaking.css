@@ -68,8 +68,8 @@ body {
     position: absolute;
     top: 16px;
     left: 20px;
-    width: 26px;
-    height: 21px;
+    width: 24px;
+    height: 24px;
 }
 
 /* 返回按钮的模态框/ */
@@ -272,6 +272,11 @@ body {
     width: 100px;
     text-align: right;
     margin-left: 1%;
+}
+
+.word-speaking .word-degree p img {
+    vertical-align: top;
+    margin-top: 6px;
 }
 
 /* 听说作业 单词跟读 tab body */
@@ -513,6 +518,7 @@ body {
 .word-speaking-carousel .carousel .carousel-inner .item .text {
     font-size: 44px;
 }
+
 /* 句子跟读的旋转木马 */
 
 .sentence-reading-carousel .carousel .carousel-inner .item .text {
@@ -525,9 +531,10 @@ body {
     font-size: 26px;
 }
 
-.carousel .carousel-inner .item .text b{
+.carousel .carousel-inner .item .text b {
     float: left;
 }
+
 /* 听说作业 分数 公共样式*/
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn {

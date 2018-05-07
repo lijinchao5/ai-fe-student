@@ -74,18 +74,21 @@ html, body {
     font-size: 14px;
     padding: 0 2px;
     margin-right: 26px;
+    color: #999;
 }
 
 /* 个人中心 */
 .top .fr a {
     font-size: 14px;
-    color: #00a0e9;
+    /*color: #00a0e9;*/
+    color: #999;
     text-decoration: none;
     cursor: pointer;
 }
 
 .top .fr a:link {
-    color: #00a0e9;
+    /*color: #00a0e9;*/
+    color: #999;
     text-decoration: none;
 }
 
@@ -95,7 +98,8 @@ html, body {
 }
 
 .top .fr a:visited {
-    color: #00a0e9;
+    /*color: #00a0e9;*/
+    color: #999;
     text-decoration: none;
 }
 

@@ -71,22 +71,22 @@
     padding: 0 2px;
     margin-right: 26px;
     line-height: 80px;
-    color: #00a0e9;
+    color: #999;
 }
 
 .top .fr a {
     font-size: 14px;
-    color: #00a0e9;
+    color: #999;
     cursor: pointer;
 }
 
 .top .fr a:link {
-    color: #00a0e9;
+    color: #999;
     text-decoration: none;
 }
 
 .top .fr a:active {
-    color: #00a0e9;
+    color: #999;
     text-decoration: none;
 }
 

@@ -247,7 +247,7 @@
 }
 
 .report-top .sentences-degree p progress.integrity::-webkit-progress-value {
-    background: #0ffe74;
+    background: #00d35b;
 }
 
 .report-top .word-degree .degree-fail,
@@ -419,7 +419,7 @@
 
 .report-content .report-wrap .spell-list .spell-word {
     display: inline-block;
-    margin: 7px 0 0 40px;
+    margin: 15px 0 0 8px;
     text-align: center;
     padding: 1% 2%;
     font-size: 18px;
