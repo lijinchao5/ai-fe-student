@@ -46,13 +46,16 @@
                                 </div>
                             </div>
                             <div class="djs" id="testly">
-                                <div class="layui-progress layui-progress-big" lay-filter="testly">
+                                <!--<div class="layui-progress layui-progress-big" lay-filter="testly">
                                     <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
-                                        <!-- <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> -->
+                                        &lt;!&ndash; <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> &ndash;&gt;
                                     </div>
                                 </div>
-                                <div class="countdown" id="countdowns">录音中</div>
-
+                                <div class="countdown" id="countdowns">录音中</div>-->
+                                <div class="round-progress">
+                                    <div class="record-bg"></div>
+                                    <div class="round-progress-bar" id="roll-progress-test" style="width: 60px;height:60px;"></div>
+                                </div>
                             </div>
                             <div class="clear-btn" style="display: none;">
                                 <button onclick="ok();" class="buttons">清晰</button>
@@ -302,12 +305,13 @@
 <script type="text/javascript" src="../../lib/bootstrap-3.3.7/bootstrap.js"></script>
 <script type="text/javascript" src="../../js/common.js"></script>
 <script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../lib/echarts/echarts.min.js"></script>
 <script type="text/javascript" src="../../lib/mp3/recordmp3.js"></script>
 <script type="text/javascript" src="../../js/audioCommon.js"></script>
 <script type="text/javascript" src="../../lib/map.js"></script>
+<script type="text/javascript" src="../../js/interestPractice/simulationExamCommon.js"></script>
 <script type="text/javascript" src="../../js/interestPractice/simulationExamFirst.js"></script>
 <script type="text/javascript" src="../../js/interestPractice/simulationExamNow.js"></script>
-<script type="text/javascript" src="../../js/interestPractice/simulationExamCommon.js"></script>
 <script type="text/javascript" src="../../lib/layui/layui.all.js"></script>
 <!-- volume range -->
 <script type="text/javascript" src="../../lib/range/rangeslider.min.js"></script>

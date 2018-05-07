@@ -32,10 +32,45 @@ function palyaudiolid() {
 }
 //开始录音
 function statrRecord() {
+    console.log(111);
+    $(".btns").hide();
+    $(".clear-btn").hide();
+    $("#testly").show();
+    roundProgressTimer("roll-progress-test",5000);
+    funStartMp3();
+    console.log(222);
+    var element = layui.element;
+
+    setTimeout(function() {
+        $(".btns").hide();
+        $(".clear-btn").show();
+        $("#testly").hide();
+        funStopMp3(function(json) {
+            lid = json.result;
+            palyaudiolid();
+            element.progress('testly', '0%');
+            roundProgress("roll-progress-test",0);
+        });
+    }, 5300);
+    $("#roll-progress-test").click(function () {
+        $(".btns").hide();
+        $(".clear-btn").show();
+        $("#testly").hide();
+        funStopMp3(function(json) {
+            lid = json.result;
+            palyaudiolid();
+            element.progress('testly', '0%');
+            roundProgress("roll-progress-test",0);
+        });
+    });
+}
+function statrRecords() {
+    console.log(111);
     $(".btns").hide();
     $(".clear-btn").hide();
     $("#testly").show();
     funStartMp3();
+    console.log(222);
     var element = layui.element,
         n = 0;
     var timer = setInterval(function() {
