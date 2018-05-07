@@ -211,12 +211,6 @@
         var app = {};
         option = null;
         option = {
-            /*title: {
-             text: '自定义雷达图'
-             },*/
-            /*legend: {
-             data: ['图一','图二', '张三', '李四']
-             },*/
             grid: {
                 x: 25,
                 y: 45,
@@ -244,22 +238,16 @@
                         }
                     },
                     splitArea: {
-                        areaStyle: {
-                            color: ['#f9d6b6',
-                                '#fac28d', '#fac28d', '#ffaa59',
-                                '#f08118', 'yellow'],
-                            shadowColor: 'rgba(0, 0, 0, 0.3)'
-                            //shadowBlur: 10
-                        }
+                        show: false
                     },
                     axisLine: {
                         lineStyle: {
-                            color: 'rgba(255, 255, 255, 0.5)'
+                            color: '#ddd'
                         }
                     },
                     splitLine: {
                         lineStyle: {
-                            color: 'rgba(255, 255, 255, 0.5)'
+                            color: '#ddd'
                         }
                     }
                 }
@@ -268,11 +256,11 @@
                 {
                     name: '雷达图',
                     type: 'radar',
+
+                    symbol: 'none',
                     itemStyle: {
-                        emphasis: {
-                            lineStyle: {
-                                width: 4
-                            }
+                        normal: {
+                            color: '#4fc6fc'
                         }
                     },
                     data: [
@@ -282,7 +270,7 @@
                             name: '图二',
                             areaStyle: {
                                 normal: {
-                                    color: 'rgba(255, 255, 255, 0.5)'
+                                    color: 'rgba(71, 198, 253, 0.6)'
                                 }
                             }
                         }
