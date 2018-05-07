@@ -142,7 +142,7 @@ function getStudentInfo() {
         } else {
             $("#school7").val(user.name_num)
         }
-        store.set("className", user.grade + user.className);
+        //store.set("className", user.grade + user.className);
         var localUser = JSON.parse(store.get("userInfo"));
         initSelect(user, localUser);
     });
