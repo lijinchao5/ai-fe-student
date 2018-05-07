@@ -208,10 +208,10 @@ body {
 }
 
 .library-content .current-part-score {
-    width: 36px;
+    width: 54px;
     height: 36px;
     margin: 0 auto;
-    padding: 3px 0 0 6px;
+    padding-left: 20px;
     background: url("../../images/common/add-score-bg.png") no-repeat center center;
     line-height: 36px;
     text-align: center;

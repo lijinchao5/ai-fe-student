@@ -107,11 +107,11 @@ function initDataAll(id) {
 }
 
 function initon() {
+    $("#startworkhome").click();
     //左右滚动
     $('.carousel').on('slid.bs.carousel', function (data) {
         readlibrary();
     });
-    $("#startworkhome").click();
     jd();
 }
 

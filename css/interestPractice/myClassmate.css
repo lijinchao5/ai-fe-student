@@ -125,11 +125,12 @@ body {
     width: 56px;
     height: 56px;
     margin-top: 15px;
-    padding: 1px;
-    background: -webkit-linear-gradient(#4bf2fd, #4dadf1); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(#4bf2fd, #4dadf1); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(#4bf2fd, #4dadf1); /* Firefox 3.6 - 15 */
-    background: linear-gradient(#4bf2fd, #4dadf1);
+    /*padding: 1px;*/
+    border: 2px solid #bfbfbf;
+    /*background: -webkit-linear-gradient(#4bf2fd, #4dadf1); !* Safari 5.1 - 6.0 *!*/
+    /*background: -o-linear-gradient(#4bf2fd, #4dadf1); !* Opera 11.1 - 12.0 *!*/
+    /*background: -moz-linear-gradient(#4bf2fd, #4dadf1); !* Firefox 3.6 - 15 *!*/
+    /*background: linear-gradient(#4bf2fd, #4dadf1);*/
     border-radius: 50%;
 }
 
