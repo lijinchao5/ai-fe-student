@@ -1,9 +1,9 @@
 function getLoginPath() {
-    return "https://www.aienglish.vip";
+    return "https://39.104.76.67:8092/";
 }
 function getRootPath() {
-    return "https://www.aienglish.vip/ai-be/";
+    return "https://39.104.76.67:8092/ai-be/";
 }
 function getWebSocketRootPath() {
-    return "www.aienglish.vip/ai-be/";
+    return "39.104.76.67:8092/ai-be/";
 }
