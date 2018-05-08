@@ -274,6 +274,8 @@ function subSchoolInfo() {
     param.grade = $("#fifth-disabled").selectpicker("val");
     // 教材版本
     param.bookVersion = $("#sixth-disabled").selectpicker("val");
+    // 册别
+    param.bookVolume = $("#seventh-disabled").selectpicker("val");
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
             reloadUserInfo();
@@ -424,13 +426,43 @@ function selectSchoolData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+// 年级
+function selectGradeData(id, data, selectId) {
+    if (null == data || data.length <= 0) {
+    } else {
+        var select1 = $("#" + id);
+        for (var i = 0; i < data.length; i++) {
+            select1.append("<option value='" + data[i].nameVal + "'>" + data[i].name + "</option>");
+        }
+        select1.selectpicker('refresh');
+        if (selectId && selectId != null) {
+            select1.selectpicker("val", selectId)
+        }
+        select1.selectpicker('render');
+    }
+}
 // 教材版本
 function selectTeachData(id, data, selectId) {
     if (null == data || data.length <= 0) {
     } else {
         var select1 = $("#" + id);
         for (var i = 0; i < data.length; i++) {
-            select1.append("<option value='" + data[i].nameVal + "'>" + data[i].name + "</option>");
+            select1.append("<option value='" + data[i].bookVersion + "'>" + data[i].versionName + "</option>");
+        }
+        select1.selectpicker('refresh');
+        if (selectId && selectId != null) {
+            select1.selectpicker("val", selectId)
+        }
+        select1.selectpicker('render');
+    }
+}
+// 册别
+function selectBookVolumeData(id, data, selectId) {
+    if (null == data || data.length <= 0) {
+    } else {
+        var select1 = $("#" + id);
+        for (var i = 0; i < data.length; i++) {
+            select1.append("<option value='" + data[i].bookVolume + "'>" + data[i].volumeName + "</option>");
         }
         select1.selectpicker('refresh');
         if (selectId && selectId != null) {
@@ -463,7 +495,7 @@ function initSelect(userInfo, localUser) {
         }
     });
     // 年级
-    doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
+    /*doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
         selectTeachData("fifth-disabled", data, localUser.gradeLevelId)
         doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
             selectTeachData("sixth-disabled", data, localUser.bookVersionId);
@@ -472,6 +504,27 @@ function initSelect(userInfo, localUser) {
                 selectTeachData("seventh-disabled", data, localUser.bookVersionId);
             });
         });
+    });*/
+    // console.log(111+userInfo);
+    doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
+        if (null == data || data.length <= 0) {
+        } else {
+            selectGradeData("fifth-disabled", data, localUser.gradeLevelId)
+            if (null == localUser.gradeLevelId || localUser.gradeLevelId == "") {
+                $("#fifth-disabled").selectpicker("val", "0")
+                $("#fifth-disabled").selectpicker('render');
+            }
+            console.log("年级："+localUser.gradeLevelId);
+            doAjax("get", "book/getBookVersion.do?grade="+localUser.gradeLevelId, null, function (data, code) {
+                console.log("册别data："+data);
+                selectTeachData("sixth-disabled", data, localUser.bookVersionId);
+                // 初始化数据时候的册别
+                doAjax("get", "book/getBookVolume.do?grade=" + localUser.gradeLevelId+"&bookVersion="+localUser.bookVersionId, null, function (data, code) {
+                    console.log("册别data："+data);
+                    selectBookVolumeData("seventh-disabled", data, localUser.bookVersionId);
+                });
+            });
+        }
     });
 }
 
@@ -510,19 +563,25 @@ function initSelectChange() {
     $('#fifth-disabled').on('change', function (data, index) {
         cleanSelectVal($("#sixth-disabled"));
         cleanSelectVal($("#seventh-disabled"));
-        doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
-            selectTeachData("sixth-disabled", data, null)
-            doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
-                selectTeachData("seventh-disabled", data, null)
+        doAjax("get", "book/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
+            selectTeachData("sixth-disabled", data, null);
+            doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val()+"&bookVersion="+$('#sixth-disabled').val(), null, function (data, code) {
+                selectBookVolumeData("seventh-disabled", data, null)
             });
         });
     });
     $('#sixth-disabled').on('change', function (data, index) {
         cleanSelectVal($("#seventh-disabled"));
+        doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val()+"&bookVersion="+$('#sixth-disabled').val(), null, function (data, code) {
+            selectBookVolumeData("seventh-disabled", data, null)
+        });
+    });
+    /*$('#sixth-disabled').on('change', function (data, index) {
+        cleanSelectVal($("#seventh-disabled"));
         doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
             selectTeachData("seventh-disabled", data, null)
         });
-    });
+    });*/
 }
 
 // 清除改变前的数据
