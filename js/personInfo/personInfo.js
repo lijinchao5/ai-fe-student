@@ -54,7 +54,6 @@ $(function () {
     store.set("uuid", uuid.id);
     randomPic();
     var data = JSON.parse(store.get("userInfo"));
-
     if (null == data.photo || "" == data.photo) {
         $("#photo1").attr("src", "../../images/common/l-meb-icon.png");
         $("#photo2").attr("src", "../../images/common/l-meb-icon.png");
@@ -516,12 +515,11 @@ function initSelect(userInfo, localUser) {
             }
             console.log("年级："+localUser.gradeLevelId);
             doAjax("get", "book/getBookVersion.do?grade="+localUser.gradeLevelId, null, function (data, code) {
-                console.log("册别data："+data);
                 selectTeachData("sixth-disabled", data, localUser.bookVersionId);
                 // 初始化数据时候的册别
                 doAjax("get", "book/getBookVolume.do?grade=" + localUser.gradeLevelId+"&bookVersion="+localUser.bookVersionId, null, function (data, code) {
-                    console.log("册别data："+data);
-                    selectBookVolumeData("seventh-disabled", data, localUser.bookVersionId);
+                    console.log(12125)
+                    selectBookVolumeData("seventh-disabled", data, localUser.bookVolume);
                 });
             });
         }
