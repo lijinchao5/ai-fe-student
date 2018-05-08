@@ -453,15 +453,15 @@ body {
 
 .report-top progress::-webkit-progress-value {
     border-radius: 10px;
-    background: #ff6d80;
+    background: #fd1021;
 }
 
 .report-top .sentences-degree p progress.fluency::-webkit-progress-value {
-    background: #ffb846;
+    background: #2aaff3;
 }
 
 .report-top .sentences-degree p progress.integrity::-webkit-progress-value {
-    background: #36dbbb;
+    background: #00d35b;
 
 }
 
