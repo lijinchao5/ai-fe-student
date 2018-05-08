@@ -439,6 +439,7 @@ function selectTeachData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+// 初始化
 function initSelect(userInfo, localUser) {
     doAjax("get", "area/getRegion.do?level=1", null, function (data, code) {
         if (null == data || data.length <= 0) {
@@ -453,7 +454,7 @@ function initSelect(userInfo, localUser) {
             doAjax("get", "area/getRegion.do?regionId=" + userInfo.address_province, null, function (data, code) {
                 selectLoadData("second-disabled", data, userInfo.address_city)
                 doAjax("get", "area/getRegion.do?regionId=" + userInfo.address_city, null, function (data, code) {
-                    selectLoadData("third-disabled", data, userInfo.address_area)
+                    selectLoadData("third-disabled", data, userInfo.address_area);
                     doAjax("get", "school/getSchoolByRegion.do?regionId=" + userInfo.address_area, null, function (data, code) {
                         selectSchoolData("forth-disabled", data, userInfo.schoolId)
                     });
@@ -465,7 +466,11 @@ function initSelect(userInfo, localUser) {
     doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
         selectTeachData("fifth-disabled", data, localUser.gradeLevelId)
         doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
-            selectTeachData("sixth-disabled", data, localUser.bookVersionId)
+            selectTeachData("sixth-disabled", data, localUser.bookVersionId);
+            // 初始化数据时候的册别
+            doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
+                selectTeachData("seventh-disabled", data, localUser.bookVersionId);
+            });
         });
     });
 }
@@ -504,8 +509,18 @@ function initSelectChange() {
     });
     $('#fifth-disabled').on('change', function (data, index) {
         cleanSelectVal($("#sixth-disabled"));
+        cleanSelectVal($("#seventh-disabled"));
         doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
             selectTeachData("sixth-disabled", data, null)
+            doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
+                selectTeachData("seventh-disabled", data, null)
+            });
+        });
+    });
+    $('#sixth-disabled').on('change', function (data, index) {
+        cleanSelectVal($("#seventh-disabled"));
+        doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
+            selectTeachData("seventh-disabled", data, null)
         });
     });
 }

@@ -443,7 +443,8 @@ body {
 #mark-label5,
 #mark-label6,
 #mark-label7,
-#mark-label8 {
+#mark-label8,
+#mark-label9 {
     display: block;
     width: 150px;
     height: 51px;
@@ -506,7 +507,7 @@ body {
 
 /* 学校信息 底部按钮 */
 #personInfo .school-message .sure {
-    margin-top: 116px;
+    margin-top: 50px;
 }
 
 #change-classnum,
