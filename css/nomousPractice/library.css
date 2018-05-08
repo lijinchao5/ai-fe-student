@@ -46,16 +46,34 @@ body {
     margin: 1% 0 0 33%;
 }
 
+.speak-speed, .back, .content-title {
+    float: left;
+}
+
+.library-top::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .back {
     width: 24px;
     height: 24px;
-    margin: 20px 0 0 14px;
+    margin: 20px 0 0 20px;
+
 }
-.content-title{
-    display: inline-block;
-    font-size: 16px;
+
+.content-title {
+    width: calc(100% - 220px);
+    height: 40px;
+    line-height: 65px;
+    /*display: inline-block;*/
+    font-size: 14px;
+    margin-left: 76px;
     color: #999;
+    text-align: center;
 }
+
 .ready-go .modal-body {
     padding-top: 44px;
 }
@@ -143,7 +161,8 @@ body {
     text-align: center;
     user-select: none;
 }
-.library-content .part-scores #pscoreOut{
+
+.library-content .part-scores #pscoreOut {
     width: 92px;
     height: 34px;
     /*background-color: #bfa;*/
@@ -152,6 +171,7 @@ body {
     white-space: nowrap;
     position: relative;
 }
+
 .library-content .part-scores p {
     display: block;
     height: 34px;
@@ -278,16 +298,16 @@ body {
 }
 
 /*.library progress::-webkit-progress-value {*/
-    /*border-radius: 10px;*/
-    /*background: #ff6d80;*/
+/*border-radius: 10px;*/
+/*background: #ff6d80;*/
 /*}*/
 
 /*.library .sentences-degree p progress.fluency::-webkit-progress-value {*/
-    /*background: #ffb846;*/
+/*background: #ffb846;*/
 /*}*/
 
 /*.library .sentences-degree p progress.integrity::-webkit-progress-value {*/
-    /*background: #36dbbb;*/
+/*background: #36dbbb;*/
 /*}*/
 
 /* 鏃嬭浆鏈ㄩ┈ */
@@ -346,7 +366,7 @@ body {
 
 /* 澶囩敤棰滆壊 */
 /*.library-content .carousel .carousel-inner .item .blue {*/
-    /*color: #11d8fc;*/
+/*color: #11d8fc;*/
 /*}*/
 
 .library-content .carousel .carousel-inner .item .green {
@@ -379,7 +399,7 @@ body {
     overflow: hidden;
     position: absolute;
     right: 80px;
-    top:-20px;
+    top: -20px;
 }
 
 .library-content .part-radars div {
@@ -673,7 +693,7 @@ body {
     /*background: url("../../images/nomousPractice/score-bg.png") no-repeat bottom center;*/
     font-size: 14px;
     line-height: 18px;
-    padding: 0px;
+    padding: 0;
     color: #fff;
     border-top: none;
     background-color: #00a0e9;
@@ -696,12 +716,13 @@ body {
     width: 100px;
     height: 20px;
     display: inline-block;
-    margin: 20px 20px 0 0;
+    margin: 20px 0 0 0;
     position: relative;
     text-align: center;
     color: #00aeff;
 }
-.speak-speed .txt{
+
+.speak-speed .txt {
     color: #999;
 }
 

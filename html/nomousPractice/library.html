@@ -21,19 +21,22 @@
         <div id="nav"></div>
         <div id="library" class="library">
             <!-- 返回按钮 -->
-            <a href="./practiceList.html"><img src="../../images/common/go-back.png" class="back"></a>
-            <p id="titleNameCon" class="content-title"></p>
-            <div href="./practiceList.html" class="fr speak-speed" style="display: inline-block">
-                <span class="txt">语速：</span>
-                <div class="list fr">
-                    <div class="current" speed=1.0>1.0</div>
-                    <div class="triangle fr"></div>
+            <div class="library-top">
+                <img src="../../images/common/go-back.png" class="back"
+                     onclick="window.location.href='./practiceList.html'">
+                <p id="titleNameCon" class="content-title"></p>
+                <div href="./practiceList.html" class="fr speak-speed" style="display: inline-block">
+                    <span class="txt">语速：</span>
+                    <div class="list fr">
+                        <div class="current" speed=1.0>1.0</div>
+                        <div class="triangle fr"></div>
+                    </div>
+                    <ul>
+                        <li speed=0.7>0.5</li>
+                        <li speed=1.0>1.0</li>
+                        <li speed=1.3>1.5</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li speed=0.7>0.5</li>
-                    <li speed=1.0>1.0</li>
-                    <li speed=1.3>1.5</li>
-                </ul>
             </div>
             <div class="library-content">
                 <div class="part-num">
@@ -260,9 +263,9 @@
                     name: '雷达图',
                     type: 'radar',
                     symbol: 'none',
-                    lineStyle:{
-                        normal:{
-                            width:1
+                    lineStyle: {
+                        normal: {
+                            width: 1
                         }
                     },
                     itemStyle: {
