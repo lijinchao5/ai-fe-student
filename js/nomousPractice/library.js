@@ -3,6 +3,7 @@ var map;
 // radarMap(0,0,0,30);
 
 $(function () {
+    // $("#startworkhome").click();
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
     $('#footer').load('../common/footer.html');
@@ -234,12 +235,13 @@ function calculationScore(homeworkStudentScoreWordEntities) {
     for (var i = 0; i < homeworkStudentScoreWordEntities.length; i++) {
         var wordEntitie = homeworkStudentScoreWordEntities[i];
         console.log(i+'-----'+wordEntitie.score)
-        if(wordEntitie.type=="7"){
-            if(wordEntitie.text==" "){
-            }else{
-                html+="<b>"+wordEntitie.text+"</b>";
-            }
-        }else{
+        // if(wordEntitie.type=="7"){
+        //     if(wordEntitie.text==" "){
+        //         html+="&nbsp;";
+        //     }else{
+        //         html+="<b>"+wordEntitie.text+"</b>";
+        //     }
+        // }else{
             if (wordEntitie.score < 60) {
                 html += "<b class='red'>" + wordEntitie.word + "</b>";
             } else if (wordEntitie.score >= 60 && wordEntitie.score <= 85) {
@@ -247,7 +249,7 @@ function calculationScore(homeworkStudentScoreWordEntities) {
             } else if (wordEntitie.score > 85) {
                 html += "<b class='green'>" + wordEntitie.word + "</b>";
             }
-        }
+        // }
     }
     return html;
 }
