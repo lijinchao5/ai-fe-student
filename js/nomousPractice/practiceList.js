@@ -198,7 +198,7 @@ function initData() {
                             "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
                             "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
                             "</p>" +
-                            "<p onclick=goTo('" + d.id + "') class='start-read'>已完成</p>" +
+                            "<p onclick=goTo('" + d.id + "') class='start-read'>已读完</p>" +
                             "</li>");
                         console.log(d.readySize);
                     } else {
