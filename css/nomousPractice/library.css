@@ -166,7 +166,7 @@ body {
     border-radius: 50%;
     line-height: 28px;
     text-align: center;
-    background-color: #00a0e9;
+    background-color: #2aaff3;
     color: #fff;
     font-size: 14px;
     font-weight: 700;
@@ -187,7 +187,7 @@ body {
     width: 28px;
     height: 28px;
     margin: 3px 4px;
-    background-color: #d43f3a;
+    background-color: #fd1021;
     border-radius: 50%;
     animation: twinkle 2s infinite;
     /*margin: -1px;*/
