@@ -51,7 +51,11 @@ body {
     height: 24px;
     margin: 20px 0 0 14px;
 }
-
+.content-title{
+    display: inline-block;
+    font-size: 16px;
+    color: #999;
+}
 .ready-go .modal-body {
     padding-top: 44px;
 }

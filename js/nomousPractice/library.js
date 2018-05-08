@@ -43,6 +43,7 @@ function initData(id) {
         $("#levelName").text(levelName);
 
         $("#titleName1").text(name);
+        $("#titleNameCon").text(name);
         $("#typeName1").text(typeName);
         $("#wordNum1").text(wordNum);
         $("#levelName1").text(levelName);
