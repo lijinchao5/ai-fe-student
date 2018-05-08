@@ -191,13 +191,38 @@ function initData() {
             _artList.html("");
             for (var i = 0; i < datas.length; i++) {
                 var d = datas[i];
-                var _li = $("<li>" +
-                    "<p class='practice-title'>" + d.name + "</p>" +
-                    "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
-                    "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
-                    "</p>" +
-                    "<p onclick=goTo('" + d.id + "') class='start-read'>我要练</p>" +
-                    "</li>");
+                if (d.readySize != 0 || d.readySize != "0") {
+                    if (d.readySize == d.allSize) {
+                        var _li = $("<li>" +
+                            "<p class='practice-title'>" + d.name + "</p>" +
+                            "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
+                            "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
+                            "</p>" +
+                            "<p onclick=goTo('" + d.id + "') class='start-read'>已完成</p>" +
+                            "</li>");
+                        console.log(d.readySize);
+                    } else {
+                        var _li = $("<li>" +
+                            "<p class='practice-title'>" + d.name + "</p>" +
+                            "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
+                            "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
+                            "</p>" +
+                            "<p onclick=goTo('" + d.id + "') class='start-read'>继续练</p>" +
+                            "</li>");
+                        console.log(d.readySize);
+                    }
+
+                } else {
+                    var _li = $("<li>" +
+                        "<p class='practice-title'>" + d.name + "</p>" +
+                        "<p class='practice-info'><span>字数：</span><span>" + d.wordNum + "</span>" +
+                        "<span class='pr-classify'>类别：</span><span>" + d.typeName + "</span>" +
+                        "</p>" +
+                        "<p onclick=goTo('" + d.id + "') class='start-read'>我要练</p>" +
+                        "</li>");
+                    console.log(d.readySize);
+                }
+
                 _artList.append(_li);
             }
             var _toggleLi = $("#toggleLi");
