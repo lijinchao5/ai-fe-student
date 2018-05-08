@@ -497,7 +497,7 @@ body {
     font-size: 14px;
     padding-left: 24px;
     min-width: 900px;
-    height: 602px;
+    height: 595px;
     float: left;
     position: relative;
     top: 0;
@@ -561,13 +561,31 @@ body {
 
 /* 填空题图片样式 */
 .start-exam .start-answer .fill-in {
-    width: 80%;
+    width: 90%;
+    max-height: 300px;
     margin: 10px 0;
+    overflow-y: scroll;
+}
+.start-exam .start-answer .fill-in::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.start-exam .start-answer .fill-in::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.start-exam .start-answer .fill-in::-webkit-scrollbar-thumb {
+    background-color: #11d8fc;
 }
 
 .start-exam .start-answer .fill-in-img {
-    width: 100%;
-    height: 335px;
+    width: 90%;
+    /*height: 100px;*/
+    /*max-height: 335px;*/
 }
 
 .start-exam .start-answer .exam-problems,
