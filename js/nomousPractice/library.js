@@ -15,13 +15,30 @@ $(function () {
     initData(id);
     initDataAll(id);
     map = new Map();
+    $(document).bind("click", function (e) {
+        openList();
+        if ($(e.target).closest(".speak-speed ul").length == 0 && $(e.target).closest(".speak-speed .list").length == 0) {
+            //点击空白处，触发
+            closeList();
+        }
+    })
 });
+function closeList() {
+    $(".speak-speed ul").hide()
+}
 
+function openList() {
+    $(".speak-speed ul").show()
+}
 function initnvl() {
     var data = JSON.parse(store.get("userInfo"));
-    $(".user-name").text(data.name);
-    if (null == data.photo || "" == data.photo) {
 
+    $(".user-name").text(data.name);
+    if (data.name == "" || data.name == null) {
+        $(".user-name").text("尚未设置昵称");
+    }
+    if (null == data.photo || "" == data.photo) {
+        $(".user-photo").attr("src", "../../images/common/l-meb-icon.png")
     } else {
         $(".user-photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
     }
