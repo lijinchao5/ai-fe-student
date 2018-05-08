@@ -233,12 +233,20 @@ function calculationScore(homeworkStudentScoreWordEntities) {
     var html = "";
     for (var i = 0; i < homeworkStudentScoreWordEntities.length; i++) {
         var wordEntitie = homeworkStudentScoreWordEntities[i];
-        if (wordEntitie.score < 60) {
-            html += "<b class='red'>" + wordEntitie.word + "</b>";
-        } else if (wordEntitie.score >= 60 && wordEntitie.score <= 85) {
-            html += "<b class='orange'>" + wordEntitie.word + "</b>";
-        } else if (wordEntitie.score > 85) {
-            html += "<b class='green'>" + wordEntitie.word + "</b>";
+        console.log(i+'-----'+wordEntitie.score)
+        if(wordEntitie.type=="7"){
+            if(wordEntitie.text==" "){
+            }else{
+                html+="<b>"+wordEntitie.text+"</b>";
+            }
+        }else{
+            if (wordEntitie.score < 60) {
+                html += "<b class='red'>" + wordEntitie.word + "</b>";
+            } else if (wordEntitie.score >= 60 && wordEntitie.score <= 85) {
+                html += "<b class='orange'>" + wordEntitie.word + "</b>";
+            } else if (wordEntitie.score > 85) {
+                html += "<b class='green'>" + wordEntitie.word + "</b>";
+            }
         }
     }
     return html;
