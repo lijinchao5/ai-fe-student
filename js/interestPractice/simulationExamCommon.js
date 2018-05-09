@@ -510,16 +510,11 @@ function replaceAll(text) {
 }
 
 function subtj() {
-    var n = 3;
-    var timer = setInterval(function () {
-        n--;
-        console.log(n);
-        $("#subtj").html(n);
-        if (n == 0) {
-            clearInterval(timer);
-            window.location.href = "javascript:history.back(-1)";
-        }
-    }, 1000);
+	var par = {};
+    par.examId = getParam("id");
+    doAjax("post", "exam/commitExam.do", par, function (data) {
+        $("#recordFail").click();
+    });
 }
 function roundProgressTimer(id,timer,aa){
     timer = timer/20;
