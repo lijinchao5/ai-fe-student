@@ -306,7 +306,7 @@ function submits() {
 function commitExam() {
     var par = {};
     par.examId = getParam("id");
-    ajaxAsync("post", "exam/commitExam.do", par, function (data) {
+    doAjax("post", "exam/commitExam.do", par, function (data) {
         $("#buttontsubtj").click();
     });
 }
