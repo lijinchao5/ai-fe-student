@@ -11,6 +11,10 @@ function index() {
     window.location.href = "../index.html";
 }
 
+$(".tips-btn").click(function () {
+    $(".text-message").hide()
+})
+
 // tab 切换
 function navs() {
     var navsTab = $('#details-nav span');
@@ -277,9 +281,11 @@ function subSchoolInfo() {
     param.bookVolume = $("#seventh-disabled").selectpicker("val");
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
-            reloadUserInfo();
+            $("#schoolInfo").modal('show');
+            //reloadUserInfo();
         } else {
-            alert(message);
+            //alert(message);
+            $(".text-message").show().children(".tips-message").text(message)
         }
     });
 }
@@ -292,7 +298,8 @@ function uploadImg1() {
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
             reloadUserInfo();
-            alert("操作成功!");
+            //alert("操作成功!");
+            $(".text-message").show().children(".tips-message").text("操作成功!")
             // window.location.reload();
         }
     });
@@ -321,12 +328,14 @@ function dataURItoBlob(dataURI) {
 
 function run(input_file, get_data) {
     if (typeof (FileReader) === 'undefined') {
-        alert("抱歉，你的浏览器不支持 FileReader，不能将图片转换为Base64，请使用现代浏览器操作！");
+        //alert("抱歉，你的浏览器不支持 FileReader，不能将图片转换为Base64，请使用现代浏览器操作！");
+        $(".text-message").show().children(".tips-message").text("抱歉，你的浏览器不支持 FileReader，不能将图片转换为Base64，请使用现代浏览器操作！")
     } else {
         try {
             var file = input_file.files[0];
             if (!/image\/\w+/.test(file.type)) {
-                alert("请确保文件为图像类型");
+                //alert("请确保文件为图像类型");
+                $(".text-message").show().children(".tips-message").text("请确保文件为图像类型");
                 return false;
             }
             var reader = new FileReader();
@@ -335,7 +344,8 @@ function run(input_file, get_data) {
             };
             reader.readAsDataURL(file);
         } catch (e) {
-            alert('图片转Base64出错啦！' + e.toString())
+            //alert('图片转Base64出错啦！' + e.toString())
+            $(".text-message").show().children(".tips-message").text('图片转Base64出错啦！' + e.toString());
         }
     }
 }
@@ -346,12 +356,16 @@ $('#avatarInput').on('change', function (e) {
     var target = $(e.target);
     var Size = target[0].files[0].size / 1024;
     if (Size > filemaxsize) {
-        alert('图片过大，请重新选择!');
+        //alert('图片过大，请重新选择!');
+        $(".text-message").show().children(".tips-message").text('图片过大，请重新选择!');
+
         $(".avatar-wrapper").children().remove;
         return false;
     }
     if (!this.files[0].type.match(/image.*/)) {
-        alert('请选择正确的图片!')
+        //alert('请选择正确的图片!')
+        $(".text-message").show().children(".tips-message").text('请选择正确的图片!');
+
     } else {
         var filename = document.querySelector("#avatar-name");
         var texts = document.querySelector("#avatarInput").value;
@@ -384,7 +398,9 @@ function imagesAjax(src) {
     var url = "user/updatePersionalInfo.do";
     doAjax("post", url, param, function (data, code) {
         if (code == '0' || code == 0) {
-            alert("操作成功!");
+            //alert("操作成功!");
+            $(".text-message").show().children(".tips-message").text("操作成功!");
+
             reloadUserInfo();
         }
     });
@@ -495,15 +511,15 @@ function initSelect(userInfo, localUser) {
     });
     // 年级
     /*doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
-        selectTeachData("fifth-disabled", data, localUser.gradeLevelId)
-        doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
-            selectTeachData("sixth-disabled", data, localUser.bookVersionId);
-            // 初始化数据时候的册别
-            doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
-                selectTeachData("seventh-disabled", data, localUser.bookVersionId);
-            });
-        });
-    });*/
+     selectTeachData("fifth-disabled", data, localUser.gradeLevelId)
+     doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
+     selectTeachData("sixth-disabled", data, localUser.bookVersionId);
+     // 初始化数据时候的册别
+     doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
+     selectTeachData("seventh-disabled", data, localUser.bookVersionId);
+     });
+     });
+     });*/
     // console.log(111+userInfo);
     doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
         if (null == data || data.length <= 0) {
@@ -513,11 +529,11 @@ function initSelect(userInfo, localUser) {
                 $("#fifth-disabled").selectpicker("val", "0")
                 $("#fifth-disabled").selectpicker('render');
             }
-            console.log("年级："+localUser.gradeLevelId);
-            doAjax("get", "book/getBookVersion.do?grade="+localUser.gradeLevelId, null, function (data, code) {
+            console.log("年级：" + localUser.gradeLevelId);
+            doAjax("get", "book/getBookVersion.do?grade=" + localUser.gradeLevelId, null, function (data, code) {
                 selectTeachData("sixth-disabled", data, localUser.bookVersionId);
                 // 初始化数据时候的册别
-                doAjax("get", "book/getBookVolume.do?grade=" + localUser.gradeLevelId+"&bookVersion="+localUser.bookVersionId, null, function (data, code) {
+                doAjax("get", "book/getBookVolume.do?grade=" + localUser.gradeLevelId + "&bookVersion=" + localUser.bookVersionId, null, function (data, code) {
                     console.log(12125)
                     selectBookVolumeData("seventh-disabled", data, localUser.bookVolume);
                 });
@@ -563,23 +579,23 @@ function initSelectChange() {
         cleanSelectVal($("#seventh-disabled"));
         doAjax("get", "book/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
             selectTeachData("sixth-disabled", data, null);
-            doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val()+"&bookVersion="+$('#sixth-disabled').val(), null, function (data, code) {
+            doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val() + "&bookVersion=" + $('#sixth-disabled').val(), null, function (data, code) {
                 selectBookVolumeData("seventh-disabled", data, null)
             });
         });
     });
     $('#sixth-disabled').on('change', function (data, index) {
         cleanSelectVal($("#seventh-disabled"));
-        doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val()+"&bookVersion="+$('#sixth-disabled').val(), null, function (data, code) {
+        doAjax("get", "book/getBookVolume.do?grade=" + $('#fifth-disabled').val() + "&bookVersion=" + $('#sixth-disabled').val(), null, function (data, code) {
             selectBookVolumeData("seventh-disabled", data, null)
         });
     });
     /*$('#sixth-disabled').on('change', function (data, index) {
-        cleanSelectVal($("#seventh-disabled"));
-        doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
-            selectTeachData("seventh-disabled", data, null)
-        });
-    });*/
+     cleanSelectVal($("#seventh-disabled"));
+     doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
+     selectTeachData("seventh-disabled", data, null)
+     });
+     });*/
 }
 
 // 清除改变前的数据

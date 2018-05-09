@@ -56,6 +56,7 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
 #footer {
@@ -553,11 +554,11 @@ body {
     height: 122px;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 3px 18.7px 2.3px rgba(1, 23, 78, 0.16);
+    box-shadow: 0 3px 19px 2px rgba(1, 23, 78, 0.16);
     position: absolute;
-    top: 100px;
+    top: 0;
     left: 50%;
-    margin-left: -61px;
+    margin-left: -197px;
     display: none;
 }
 

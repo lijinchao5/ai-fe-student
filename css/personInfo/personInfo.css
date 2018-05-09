@@ -41,6 +41,7 @@ body {
 #personInfo {
     width: 1200px;
     height: 662px;
+    /*position: relative;*/
 }
 
 #footer {
@@ -67,7 +68,7 @@ body {
     border-radius: 50%;
     text-align: center;
     /*border: solid 5px #00a0e9;*/
-    background: #4fc6fc;
+    background: #01A4F9;
 }
 
 #personInfo .nav-wrap .user-icon-left #photo1 {
@@ -75,7 +76,6 @@ body {
     height: 156px;
     border-radius: 50%;
     text-align: center;
-    background: #4fc6fc;
 }
 
 #personInfo .nav-wrap .user-name,
@@ -137,6 +137,7 @@ body {
     margin-left: 4px;
     background: #fff;
     border-radius: 5px;
+    position: relative;
 }
 
 #personInfo::after,
@@ -191,9 +192,9 @@ body {
     width: 136px;
     height: 136px;
     margin: 0 auto;
-    border: 1px solid #00a0e9;
+    border: 1px solid #bfbfbf;
     border-radius: 50%;
-    background: #4fc6fc;
+    background: #bfbfbf;
 }
 
 #personInfo #tabbd .owner-message .modify-info .big-meb-icon {
@@ -216,9 +217,9 @@ body {
     outline: none;
 }
 
-#personInfo #tabbd .owner-message .modify-info .edit-head-icon:hover {
-    transform: scale(1.1, 1.1);
-}
+/*#personInfo #tabbd .owner-message .modify-info .edit-head-icon:hover {*/
+/*transform: scale(1.1, 1.1);*/
+/*}*/
 
 #personInfo #tabbd .owner-message .modify-info .modal-dialog {
     width: 878px;
@@ -354,13 +355,13 @@ body {
     margin: 0 auto;
     color: #fff;
     border: none;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: 100% 100%;
 }
 
-#personInfo #tabbd .owner-message .modify-info .modal-body .confirm:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-}
+/*#personInfo #tabbd .owner-message .modify-info .modal-body .confirm:hover {*/
+/*background: url("../../images/common/hover-button.png") no-repeat center center;*/
+/*}*/
 
 #personInfo #tabbd .owner-message .set-info {
     margin-top: 20px;
@@ -401,9 +402,9 @@ body {
 }
 
 /*  .owner-message .set-info  */
-#personInfo #tabbd .sure:hover {
-    transform: scale(1.1, 1.1);
-}
+/*#personInfo #tabbd .sure:hover {*/
+/*transform: scale(1.1, 1.1);*/
+/*}*/
 
 #personInfo #tabbd .owner-message .set-info #sexSelect .sex {
     display: inline-block;
@@ -611,7 +612,7 @@ body {
     height: 36px;
     border: none;
     outline: none;
-    background: url('../../images/common/normal-button.png') no-repeat center center;
+    background: url('../../images/common/hover-button.png') no-repeat center center;
     background-size: 100% 100%;
     font-size: 16px;
     font-weight: 300;
@@ -619,10 +620,10 @@ body {
     padding: 6px 0;
 }
 
-#sure-change:hover {
-    background: url('../../images/common/hover-button.png') no-repeat center center;
-    background-size: 100% 100%;
-}
+/*#sure-change:hover {*/
+/*background: url('../../images/common/hover-button.png') no-repeat center center;*/
+/*background-size: 100% 100%;*/
+/*}*/
 
 /*编辑头像 模态窗*/
 .modal-dialog .modal-body .pre-view {
@@ -764,9 +765,9 @@ body {
 }
 
 /*  .owner-message .set-info  */
-#personInfo #tabbd .user-message .blocks .fr:hover {
-    transform: scale(1.1, 1.1);
-}
+/*#personInfo #tabbd .user-message .blocks .fr:hover {*/
+/*transform: scale(1.1, 1.1);*/
+/*}*/
 
 /* 手机绑定表单样式 */
 
@@ -850,9 +851,9 @@ body {
     background-size: 100% 100%;
 }
 
-#personInfo #tabbd .user-message .login-form .confirm:hover {
-    transform: scale(1.1, 1.1);
-}
+/*#personInfo #tabbd .user-message .login-form .confirm:hover {*/
+/*transform: scale(1.1, 1.1);*/
+/*}*/
 
 /* 模态框 */
 
@@ -894,29 +895,35 @@ body {
 }
 
 /* .owner-message .set-info */
-#personInfo #tabbd #suremsg {
+#personInfo #tabbd #suremsg,
+#personInfo #tabbd #schoolInfo {
     width: 494px;
     height: 400px;
     margin: 200px auto;
 }
 
-#personInfo #tabbd #suremsg .modal-dialog {
+#personInfo #tabbd #suremsg .modal-dialog,
+#personInfo #tabbd #schoolInfo .modal-dialog {
     width: 494px;
 }
 
 #personInfo #tabbd #suremsg .modal-dialog,
-#personInfo #tabbd #suremsg .modal-content {
+#personInfo #tabbd #suremsg .modal-content,
+#personInfo #tabbd #schoolInfo .modal-dialog,
+#personInfo #tabbd #schoolInfo .modal-content {
     background: transparent;
     box-shadow: none;
     border: none;
 }
 
-#personInfo #tabbd #suremsg .modal-header {
+#personInfo #tabbd #suremsg .modal-header,
+#personInfo #tabbd #schoolInfo .modal-header {
     width: 494px;
     height: 140px;
 }
 
-#personInfo #tabbd #suremsg .modal-content .modal-title {
+#personInfo #tabbd #suremsg .modal-content .modal-title,
+#personInfo #tabbd #schoolInfo .modal-content .modal-title {
     width: 494px;
     color: #fff;
     text-shadow: 0 0 6px rgba(79, 198, 252, 0.25);
@@ -926,12 +933,9 @@ body {
     padding: 0;
 }
 
-#personInfo #tabbd #suremsg .modal-content .modal-footer {
-
-}
-
-#personInfo #tabbd #suremsg .modal-content .modal-footer #sure-msg {
-    background: url(../../images/common/normal-button.png) no-repeat center center;
+#personInfo #tabbd #suremsg .modal-content .modal-footer #sure-msg,
+#personInfo #tabbd #schoolInfo .modal-content .modal-footer #schoolMsg{
+    background: url(../../images/common/hover-button.png) no-repeat center center;
     background-size: 100% 100%;
     outline: none;
     border: none;
@@ -944,9 +948,8 @@ body {
     letter-spacing: 2px;
     color: #fff;
 }
-#personInfo #tabbd #suremsg .modal-content .modal-footer #sure-msg:hover {
-    background: url(../../images/common/hover-button.png) no-repeat center center;
-    background-size: 100% 100%;
+#personInfo #tabbd #schoolInfo .modal-content .modal-footer #schoolMsg{
+    margin-left: -60px;
 }
 
 /*修改手机号弹窗*/
@@ -1015,15 +1018,15 @@ body {
     width: 110px;
     height: 36px;
     color: #fff;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
-}
-
-#personInfo .phone-change .modal-dialog .modal-content .modal-footer .btn:hover,
-#personInfo .bs-example-modal-sm .modal-dialog .modal-content .modal-footer .btn:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
     background-size: 100% 100%;
 }
+
+/*#personInfo .phone-change .modal-dialog .modal-content .modal-footer .btn:hover,*/
+/*#personInfo .bs-example-modal-sm .modal-dialog .modal-content .modal-footer .btn:hover {*/
+/*background: url("../../images/common/hover-button.png") no-repeat center center;*/
+/*background-size: 100% 100%;*/
+/*}*/
 
 .name-tips {
     height: 20px;
@@ -1035,4 +1038,36 @@ body {
 
 .bootstrap-select.btn-group .dropdown-toggle .filter-option {
     font-size: 18px;
+}
+
+.text-message {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -197px;
+    width: 393px;
+    height: 122px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 19px 2px rgba(1, 23, 78, 0.16);
+    font-size: 16px;
+    display: none;
+}
+
+.text-message .tips-message {
+    text-align: center;
+    color: #333;
+    line-height: 85px;
+}
+
+.text-message .tips-btn {
+    width: 104px;
+    height: 30px;
+    margin-left: 146px;
+    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
 }

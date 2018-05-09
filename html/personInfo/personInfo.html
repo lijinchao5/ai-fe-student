@@ -128,7 +128,8 @@
                         </div>
                         <!--style="display: none"-->
                         <p class="name-tips"></p>
-                        <input class="sure" id="personalInfo" type="button"  value="确 &nbsp;&nbsp;认" onclick="subUserInfo()" data-toggle="modal"/>
+                        <input class="sure" id="personalInfo" type="button" value="确 &nbsp;&nbsp;认"
+                               onclick="subUserInfo()" data-toggle="modal"/>
                         <div class="modal fade" id="suremsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                              aria-hidden="true" data-backdrop="static">
                             <div class="modal-dialog">
@@ -138,7 +139,8 @@
                                         <h4 class="modal-title">设置成功</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal" onclick="reloadUserInfo()">我知道了
+                                        <button type="button" id="sure-msg" class="btn" data-dismiss="modal"
+                                                onclick="reloadUserInfo()">我知道了
                                         </button>
                                     </div>
                                 </div>
@@ -156,45 +158,52 @@
                             <span id="mark-label1">地区：</span>
                             <div>
                                 <div class="in-3">
-                                    <select id="first-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                    <select id="first-disabled" class="selectpicker" data-hide-disabled="true"
+                                            data-live-search="true"></select>
                                 </div>
 
                                 <div class="in-3">
-                                    <select id="second-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                    <select id="second-disabled" class="selectpicker" data-hide-disabled="true"
+                                            data-live-search="true"></select>
                                 </div>
 
                                 <div class="in-3">
-                                    <select id="third-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                    <select id="third-disabled" class="selectpicker" data-hide-disabled="true"
+                                            data-live-search="true"></select>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <span id="mark-label2">学校：</span>
                             <div class="in-1">
-                                <select id="forth-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                <select id="forth-disabled" class="selectpicker" data-hide-disabled="true"
+                                        data-live-search="true"></select>
                             </div>
                         </div>
                         <div class="form-group">
                             <span id="mark-label8" for="disabledTextInput">年级：</span>
                             <div class="in-1">
-                                <select id="fifth-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                <select id="fifth-disabled" class="selectpicker" data-hide-disabled="true"
+                                        data-live-search="true"></select>
                             </div>
                         </div>
                         <div class="form-group">
                             <span id="mark-label7" for="disabledTextInput">教材：</span>
                             <div class="in-1">
-                                <select id="sixth-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                <select id="sixth-disabled" class="selectpicker" data-hide-disabled="true"
+                                        data-live-search="true"></select>
                             </div>
                         </div>
                         <div class="form-group">
                             <span id="mark-label9" for="disabledTextInput">册别：</span>
                             <div class="in-1">
-                                <select id="seventh-disabled" class="selectpicker" data-hide-disabled="true" data-live-search="true"></select>
+                                <select id="seventh-disabled" class="selectpicker" data-hide-disabled="true"
+                                        data-live-search="true"></select>
                             </div>
                         </div>
-                        <input class="sure" type="button"  onclick="subSchoolInfo()"  value="确 &nbsp;&nbsp;认" data-toggle="modal" data-target="#schoolInfo"/>
-                        <div class="modal fade" id="schoolInfo" tabindex="-1"M role="dialog" aria-labelledby="myModalLabel"
-                             aria-hidden="true" data-backdrop="static">
+                        <input class="sure" type="button" onclick="subSchoolInfo()" value="确 &nbsp;&nbsp;认"/>
+                        <div class="modal fade" id="schoolInfo" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header"></div>
@@ -202,13 +211,15 @@
                                         <h4 class="modal-title">设置成功</h4>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" id="schoolMsg" class="btn" data-dismiss="modal">我知道了
+                                        <button type="button" id="schoolMsg" class="btn" data-dismiss="modal"
+                                                onclick="reloadUserInfo()">我知道了
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </li>
                 <li class="user-message tab-bd">
                     <!-- 账户信息 -->
@@ -305,7 +316,12 @@
                         </div>
                     </div>
                 </li>
+                <div class="text-message">
+                    <p class="tips-message">错误信息</p>
+                    <p class="tips-btn">知道了</p>
+                </div>
             </ul>
+
         </div>
         <div id="footer"></div>
     </div>
