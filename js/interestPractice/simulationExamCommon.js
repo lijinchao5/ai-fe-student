@@ -22,21 +22,17 @@ function setmmssTime(objId, times) {
 //左侧倒计时
 function setIntervalmmssTime() {
     var timer = setInterval(function () {
-        //var timeSurplus=50;
         if (timeSurplus > 0) {
             timeSurplus--;
             setmmssTime("remaining-time", timeSurplus);
             if (timeSurplus <= 0) {
-                //提交模态框
-                console.log(timeSurplus);
-               $("#recordFail").click()
+               $("#recordFail").click();
+               clearInterval(timer);
             }
         } else {
             clearInterval(timer);
         }
     }, 1000);
-    console.log(timeSurplus);
-
 }
 
 //跳到下一屏
