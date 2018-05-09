@@ -561,7 +561,7 @@ body {
 
 /* 填空题图片样式 */
 .start-exam .start-answer .fill-in {
-    width: 90%;
+    width: 97%;
     max-height: 300px;
     margin: 10px 0;
     overflow-y: scroll;

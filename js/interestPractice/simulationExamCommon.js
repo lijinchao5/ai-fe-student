@@ -477,7 +477,7 @@ function initload() {
         $("#question-answer .start-answer").each(function (i, obj) {
             $(".wrap").css("display", "none");
             $(".start-exam").css("display", "block");
-            $("#question-answer .start-answer").stop().animate({top: -595 * i}, 0);
+            $("#question-answer .start-answer").stop().animate({top: -602 * i}, 0);
             $(obj).addClass("flagActive");
             //最后一个提交答卷
             commitExam();
@@ -489,7 +489,7 @@ function initload() {
             if (map.get($(obj).attr("bigdata")).essId == null) {
                 $(".wrap").css("display", "none");
                 $(".start-exam").css("display", "block");
-                $("#question-answer .start-answer").stop().animate({top: -595 * i}, 0);
+                $("#question-answer .start-answer").stop().animate({top: -602 * i}, 0);
                 index = i;
                 $(obj).addClass("flagActive");
                 nextwrap("start-exam");
