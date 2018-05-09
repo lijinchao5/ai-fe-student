@@ -22,11 +22,11 @@ function readrecord(id,fun,speed){
 		}
 		$("#player_audio").attr("src",function(){
 			var client = new OSS.Wrapper({
-				region : 'oss-cn-beijing',
-				accessKeyId : 'LTAIJuAAYm5fDqwm',
-				accessKeySecret : '4TbWkvkDyx7F4ivsSNtuVHGmnvoj8G',
-				bucket : 'xl-oss-pro1'
-			});
+                region : 'oss-cn-beijing',
+                accessKeyId : 'LTAINbwOMw6UaaK3',
+                accessKeySecret : 'CxOkyQD24n8d0kOzg3MYcQlopBUeDY',
+                bucket : 'xl-oss-pro1'
+            });
 			return client.signatureUrl(id);
 		});
 		try {
