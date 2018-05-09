@@ -3,8 +3,8 @@ $(function () {
 });
 
 function initUserInfo() {
-    console.log(data);
     var data = JSON.parse(store.get("userInfo"));
+    console.log(data);
     if (null == data.photo || "" == data.photo) {
         $(".exam_photo").attr("src", "../../images/common/l-meb-icon.png")
     } else {
