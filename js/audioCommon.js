@@ -1,10 +1,3 @@
-$(function(){
-	var new_element = document.createElement("script");
-	new_element.setAttribute("type", "text/javascript");
-	new_element.setAttribute("src", "https://gosspublic.alicdn.com/aliyun-oss-sdk-4.3.0.min.js");
-	document.body.appendChild(new_element);
-})
-
 //读取单词
 function readrecord(id,fun,speed){
 	console.log(id);
