@@ -513,8 +513,17 @@ function subtj() {
 	var par = {};
     par.examId = getParam("id");
     doAjax("post", "exam/commitExam.do", par, function (data) {
-        $("#recordFail").click();
+    	var n = 3;
+        var timer = setInterval(function () {
+            n--;
+            $("#subtj").html(n);
+            if (n == 0) {
+                clearInterval(timer);
+                window.location.href = "javascript:history.back(-1)";
+            }
+        }, 1000);
     });
+    
 }
 function roundProgressTimer(id,timer,aa){
     timer = timer/20;
