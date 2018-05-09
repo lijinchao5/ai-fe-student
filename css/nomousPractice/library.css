@@ -624,38 +624,46 @@ body {
 }
 
 .report .modal-content .modal-body .result {
-    margin-top: 48px;
-    margin-left: 100px;
-    margin-right: 180px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 200px;
 }
 
 .report .modal-content .modal-body .radar-score {
     width: 150px;
     height: 150px;
     float: right;
-    margin-right: 20px;
+    margin-right: 50px;
     margin-top: 36px;
 }
 
 .report .modal-content .modal-body .free-practice-result {
     font-size: 16px;
-    font-weight: 700;
-    color: #00a0e9;
+    color: #333;
 }
 
 .report .modal-content .modal-body .free-practice-result .num {
     font-size: 36px;
+    font-weight: 700;
     margin-right: 5px;
+    color: #fd1021;
 }
 
 .report .modal-content .modal-body .title {
-    /*height: 30px;*/
-    line-height: 30px;
+    width: 100%;
+    height: 43px;
+    line-height: 20px;
     text-align: left;
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
-    color: #11d8fc;
+    color: #333;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .report .modal-body > div {
@@ -693,6 +701,8 @@ body {
     /*background: url("../../images/nomousPractice/score-bg.png") no-repeat bottom center;*/
     font-size: 14px;
     line-height: 18px;
+    text-align: center;
+    line-height: 80px;
     padding: 0;
     color: #fff;
     border-top: none;

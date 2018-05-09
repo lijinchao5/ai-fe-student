@@ -234,7 +234,6 @@ function calculationScore(homeworkStudentScoreWordEntities) {
     var html = "";
     for (var i = 0; i < homeworkStudentScoreWordEntities.length; i++) {
         var wordEntitie = homeworkStudentScoreWordEntities[i];
-        console.log(i+'-----'+wordEntitie.score)
         if(wordEntitie.type=="7"){
             if(wordEntitie.text==" "){
                 html+="&nbsp;";
@@ -328,7 +327,7 @@ function submitend() {
         var pronunciation = data.pronunciation;
         var fluency = data.fluency;
         var integrity = data.integrity;
-        radarMap(pronunciation, fluency, integrity, 30, "radar-score");
+        radarMap(pronunciation, fluency, integrity, 49, "radar-score");
         $(".free-practice-result .num").html(Math.round(data.score));
         // $("#endaccuracy").val(data.pronunciation);
         // $("#endfluency").val(data.fluency);
