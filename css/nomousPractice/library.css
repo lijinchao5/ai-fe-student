@@ -626,14 +626,14 @@ body {
 .report .modal-content .modal-body .result {
     margin-top: 30px;
     margin-left: 50px;
-    margin-right: 200px;
+    margin-right: 220px;
 }
 
 .report .modal-content .modal-body .radar-score {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
     float: right;
-    margin-right: 50px;
+    margin-right: 30px;
     margin-top: 36px;
 }
 
@@ -700,8 +700,8 @@ body {
     margin-top: 37px;
     /*background: url("../../images/nomousPractice/score-bg.png") no-repeat bottom center;*/
     font-size: 14px;
-    line-height: 18px;
-    text-align: center;
+    /*line-height: 18px;*/
+    /*text-align: center;*/
     line-height: 80px;
     padding: 0;
     color: #fff;
