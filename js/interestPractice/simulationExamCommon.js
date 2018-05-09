@@ -523,7 +523,6 @@ function subtj() {
 }
 function roundProgressTimer(id,timer,aa){
     timer = timer/20;
-    console.log(timer);
     var width=-5;
     var timer = setInterval(function () {
         width += 5;
@@ -534,7 +533,6 @@ function roundProgressTimer(id,timer,aa){
             clearInterval(timer)
         }
         roundProgress(id,width);
-        console.log(width)
     },timer);
 }
 //    timer(width);

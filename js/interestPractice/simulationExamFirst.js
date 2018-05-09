@@ -32,15 +32,12 @@ function palyaudiolid() {
 }
 //开始录音
 function statrRecord() {
-    console.log(111);
     $(".btns").hide();
     $(".clear-btn").hide();
     $("#testly").show();
     roundProgressTimer("roll-progress-test",5000);
     funStartMp3();
-    console.log(222);
     var element = layui.element;
-
     setTimeout(function() {
         $(".btns").hide();
         $(".clear-btn").show();
