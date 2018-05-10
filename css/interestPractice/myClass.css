@@ -67,9 +67,9 @@ body {
 }
 
 .present-class {
-    width: 90%;
+    width: 856px;
     height: 48px;
-    padding-top: 20px;
+    padding-top: 15px;
     margin: 0 auto;
     font-size: 16px;
     font-weight: 300;
@@ -81,13 +81,14 @@ body {
 .present-class p,
 .present-class #present-class {
     float: left;
+
 }
 
 .present-class .my-classmate {
     background-color: #f08118;
-    width: 110px;
-    height: 32px;
-    line-height: 32px;
+    width: 125px;
+    height: 27px;
+    line-height: 27px;
     border-radius: 5px;
     float: right;
     cursor: pointer;
@@ -105,7 +106,7 @@ body {
 
 .present-class #present-class {
     font-size: 18px;
-    color: #00a0e9;
+    color: #333;
 }
 
 #currentClass {
@@ -115,16 +116,16 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .class-list {
     display: none;
     position: absolute;
-    top: 45px;
-    left: 195px;
+    top: 17px;
+    left: 280px;
     width: 145px;
-    height: 90px;
+    height: 55px;
     border-radius: 5px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -172,16 +173,16 @@ body {
 
 .present-class button {
     float: left;
-    width: 76px;
+    width: 55px;
     height: 22px;
     border-radius: 4px;
-    background-color: #00a0e9;
-    border: 1px solid #00a0e9;
-    color: #fff;
+    background-color: transparent;
+    border: 1px solid #bfbfbf;
+    color: #333;
 }
 
 .task-list .task-title {
-    width: 356px;
+    width: 856px;
     margin: 30px auto 0;
 }
 
@@ -193,18 +194,18 @@ body {
 
 .task-list .task-title li {
     float: left;
-    width: 183px;
-    height: 30px;
+    width: 49%;
+    height: 32px;
     border-radius: 4px;
     background-color: #cbefff;
     text-align: center;
-    line-height: 30px;
+    line-height: 32px;
     color: #999;
     cursor: pointer;
 }
 
 .task-list .task-title li.current {
-    width: 173px;
+    width: 51%;
     color: #fff;
     background-color: #00aeff;
 }
@@ -368,12 +369,14 @@ body {
 .task-content #work-report .report-banner .main li .do-homework,
 .task-content #work-report .report-banner .main li .check-report {
     display: block;
-    width: 106px;
-    height: 30px;
-    border-radius: 5px;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
-    line-height: 30px;
+    width: 115px;
+    height: 26px;
+    /*border-radius: 5px;*/
+    /*background: url("../../images/common/normal-button.png") no-repeat center center;*/
+    /*background-size: 100% 100%;*/
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 19px;
+    line-height: 26px;
     color: #fff;
     margin: 28px auto 0;
 }
@@ -382,11 +385,11 @@ body {
     margin: 18px auto 0;
 }
 
-.task-content #work-report .report-banner .main li .do-homework:hover,
-.task-content #work-report .report-banner .main li .check-report:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: 100% 100%;
-}
+/*.task-content #work-report .report-banner .main li .do-homework:hover,*/
+/*.task-content #work-report .report-banner .main li .check-report:hover {*/
+    /*background: url("../../images/common/hover-button.png") no-repeat center center;*/
+    /*background-size: 100% 100%;*/
+/*}*/
 
 .task-content #work-report .report-banner .main li a {
     margin-bottom: 10px;
@@ -488,25 +491,27 @@ body {
 #exam-report .report-banner .main .enter-exam,
 #exam-report .report-banner .main .enter-report {
     display: block;
-    width: 106px;
-    height: 30px;
+    width: 115px;
+    height: 26px;
     margin: 15px auto 0;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
+    /*background: url("../../images/common/normal-button.png") no-repeat center center;*/
+    /*background-size: 100% 100%;*/
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 19px;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 26px;
     color: #fff;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     text-decoration: none;
 }
 
-#exam-report .report-banner .main .enter-exam:hover,
-#exam-report .report-banner .main .enter-report:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: 100% 100%;
-    color: #fff;
-    text-decoration: none;
-}
+/*#exam-report .report-banner .main .enter-exam:hover,*/
+/*#exam-report .report-banner .main .enter-report:hover {*/
+    /*background: url("../../images/common/hover-button.png") no-repeat center center;*/
+    /*background-size: 100% 100%;*/
+    /*color: #fff;*/
+    /*text-decoration: none;*/
+/*}*/
 
 #exam-report .report-banner .main .enter-report {
     margin-top: 15px;

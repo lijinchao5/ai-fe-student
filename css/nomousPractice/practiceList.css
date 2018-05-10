@@ -191,7 +191,7 @@ body {
 .text-practice {
     width: 800px;
     height: 430px;
-    margin: 30px auto 0;
+    margin: 15px auto 0;
     overflow: hidden;
 }
 
@@ -245,26 +245,21 @@ body {
 
 .text-practice li .start-read {
     width: 104px;
-    height: 30px;
+    height: 24px;
     margin: 10px 0 0 72px;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 22px;
     color: #fff;
-    line-height: 30px;
+    line-height: 24px;
     text-align: center;
 
-}
-
-.text-practice .start-read:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: 100% 100%;
 }
 
 .page-wrap {
     font-size: 12px;
     position: relative;
     width: 848px;
-    margin: 25px auto 0;
+    margin: 10px auto 0;
     height: 30px;
     text-align: center;
 }

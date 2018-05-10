@@ -78,8 +78,8 @@ function inquireClass() {
                 _emptyClass = $("<div class='empty-class'>" +
                     "<p class='empty-title'>您还没有加入任何班级哦！</p>" +
                     "<p>输入班级编号，加入班级后，就可以看到老师布置的<span>作业</span>或者<span>考试</span>哦</p>" +
-                    "<p><input type='text' placeholder='班级编号' class='append-class'><span class='empty-tips'></span></p>" +
-                    "<p><button class='add-button' onclick=\"addNewclass()\">加入班级</button></p>" +
+                    "<p><input type='text' placeholder='请输入班级编号' class='append-class'><span class='empty-tips'></span></p>" +
+                    "<p class='classBtn'><button class='add-button' onclick=\"addNewclass()\">加入班级</button></p>" +
                     "<p>班级编号可以询问本班老师获取，如果本班老师还没有创建班级，</p>" +
                     "<p>那么你可以点击 <span class='blue'>趣听说</span> 去学习</p>" +
                     "</div>");
