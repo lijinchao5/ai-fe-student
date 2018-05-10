@@ -81,8 +81,9 @@ function inquireClass() {
                     "<p><input type='text' placeholder='请输入班级编号' class='append-class'><span class='empty-tips'></span></p>" +
                     "<p class='classBtn'><button class='add-button' onclick=\"addNewclass()\">加入班级</button></p>" +
                     "<p>班级编号可以询问本班老师获取，如果本班老师还没有创建班级，</p>" +
-                    "<p>那么你可以点击 <span class='blue'>趣听说</span> 去学习</p>" +
+                    "<p>那么你可以点击 <span class='blue' onclick='window.location.href=\"../nomousPractice/practiceList.html\"'>趣听说</span> 去学习</p>" +
                     "</div>");
+                sessionStorage.element = 2;
                 _classWrap.append(_emptyClass)
             } else {
                 for (var i = 0; i < data.length; i++) {
