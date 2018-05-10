@@ -216,7 +216,7 @@ $(function () {
                         "<img src='../../images/common/red.png'>60分以下" +
                         "</p>" +
                         "<p class='degree-good'>" +
-                        "<img src='../../images/common/yellow.png'>60分~85分" +
+                        "<img src='../../images/common/yellow.png'>60-85分" +
                         "</p>" +
                         "<p class='degree-well'>" +
                         "<img src='../../images/common/blue.png'>85分以上" +

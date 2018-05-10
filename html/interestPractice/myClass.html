@@ -31,12 +31,12 @@
             </div>
             <div class="task-list">
                 <ul class="task-title">
-                    <li class="current" onclick="getWork()">听说作业</li>
-                    <li onclick="getExam()">模拟考场</li>
-                    <!--onclick="getExam()"-->
+                    <!--onclick="getWork()"-->
+                    <li class="current"  id="workList" >听说作业</li>
+                    <li onclick="getExam()" id="Exam">模拟考场</li>
                 </ul>
                 <div class="task-content">
-                    <div id="work-report" class="reports">
+                    <div id="work-report" class="reports" style="display: block">
                         <div class="screen">
                             <span>筛选：</span>
                             <button type="button" class="btn btn-md btn-primary">全部</button>
@@ -49,10 +49,10 @@
                         </div>
                         <div class="page-wrap">
                             <div class="paging">
-                                <span class="up">上一页</span>
+                                <span class="up" id="workPrev">上一页</span>
                                 <ol class="toggles" id="toggleLi">
                                 </ol>
-                                <span class="down">下一页</span>
+                                <span class="down" id="workNext">下一页</span>
                             </div>
                         </div>
                     </div>
@@ -73,10 +73,10 @@
                         </div>
                         <div class="page-wrap exam-page">
                             <div class="paging exam-paging">
-                                <span class="up">上一页</span>
-                                <ol class="toggles" id="toggleL">
+                                <span class="up" id="examPrev">上一页</span>
+                                <ol class="toggles" id="examToggle">
                                 </ol>
-                                <span class="down">下一页</span>
+                                <span class="down" id="examNext">下一页</span>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 $(function () {
-    //getWork();
+    getWork()
     getClass();
-    $(".task-title li").eq(0).click();
+    //$(".task-title li").eq(0).click();
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
     $('#footer').load('../common/footer.html');
@@ -14,19 +14,21 @@ $(function () {
     })
 });
 
-function closeList() {
-    $(".class-list").hide()
-}
-
-function openList() {
-    $(".class-list").show()
-}
-
 //进入我的同学
 function jumpMate() {
     var id = getParam("id");
     window.location.href = './myClassmate.html?id=' + id;
 }
+
+//换班列表 关闭
+function closeList() {
+    $(".class-list").hide()
+}
+//换班列表 显示
+function openList() {
+    $(".class-list").show()
+}
+
 
 //班级列表
 function getClass() {
@@ -58,16 +60,14 @@ function getClass() {
                 }
             }
             if ($(".class-list li").length <= 0) {
-                //var _noClass="";
                 var _noClass = $("<p class='no-class'>还没有其他班级</p>");
                 $(".class-list").prepend(_noClass);
-
             }
         }
     })
 }
 
-//切换班级选中状态
+//切换选中班级
 function choiceClass(id) {
     window.location.href = './myClass.html?id=' + id;
 }
@@ -79,6 +79,10 @@ $(".task-title li").click(function () {
     $(".task-content .reports").eq(Liindex).show().siblings().hide();
 });
 
+$("#workList").click(function(){
+    window.location.reload();
+    getWork()
+});
 //获取时间
 function formateDate(da) {
     if (null == da || da == '') {
@@ -134,13 +138,14 @@ function getWork() {
     initData();
     addListeners();
 }
+
 var currentPage = 0;
 var totalPage = 0;
 var cliIndex = 0;
 function addListeners() {
-    var _pageup = $("#work-report .paging .up");
-    var _pagedown = $("#work-report .paging .down");
-    _pagedown.click(function () {
+    var _workPrev = $("#work-report #workPrev");
+    var _workNext = $("#work-report #workNext");
+    _workNext.click(function () {
         $(this).css('visibility', 'visible');
         currentPage++;
         if (currentPage >= totalPage - 1) {
@@ -150,7 +155,7 @@ function addListeners() {
         cliIndex = currentPage;
         initData();
     });
-    _pageup.click(function () {
+    _workPrev.click(function () {
         $(this).css('visibility', 'visible');
         currentPage--;
         if (currentPage <= 0) {
@@ -174,6 +179,8 @@ function isflash() {
     });
     return flag;
 }
+
+//获取作业列表
 function initData() {
     console.log("isflash:" + isflash());
     var getId = getParam("id");
@@ -254,6 +261,7 @@ function initData() {
 
         }
     });
+
 }
 
 
@@ -270,38 +278,34 @@ function initData() {
 function getExam() {
     addListE();
     addListenersE();
-    currentPages = 0
 
 }
-var currentPages = 0;
-var totalPages = 0;
-var cliindexs = 0;
+var examPage = 0;
+var examTotal = 0;
+var examIndex = 0;
 function addListenersE() {
-    var _pageupE = $("#exam-report .exam-paging .up");
-    var _pagedownE = $("#exam-report .exam-paging .down");
-    _pagedownE.click(function () {
+    var _examPrev = $("#exam-report #examPrev");
+    var _examNext = $("#exam-report #examNext");
+    _examNext.click(function () {
         $(this).css('visibility', 'visible');
-        currentPages++;
-        if (currentPages >= totalPages - 1) {
-            currentPages = totalPages - 1;
+        examPage++;
+        if (examPage >= examTotal - 1) {
+            examPage = examTotal - 1;
             $(this).css("visibility", "hidden");
         }
-        cliindexs = currentPages;
+        examIndex = examPage;
         addListE();
-        console.log(currentPages);
-        console.log(cliindexs);
+
     });
-    _pageupE.click(function () {
+    _examPrev.click(function () {
         $(this).css('visibility', 'visible');
-        currentPages--;
-        if (currentPages <= 0) {
-            currentPages = 0;
+        examPage--;
+        if (examPage <= 0) {
+            examPage = 0;
             $(this).css('visibility', 'hidden');
         }
-        cliindexs = currentPages;
+        examIndex = examPage;
         addListE();
-        console.log(currentPages);
-        console.log(cliindexs);
     });
 }
 
@@ -324,7 +328,6 @@ function addListE() {
     paramS.rows = 4;
     var isflashflagE = isflashE();
     var getId = getParam("id");
-    //var getId = $("#currentClass").text();
     if (isflashflagE == 1) {
         paramS.state = '0';
     } else if (isflashflagE == 2) {
@@ -332,24 +335,24 @@ function addListE() {
     } else if (isflashflagE == 3) {
         paramS.state = '2';
     }
-    paramS.page = cliindexs + 1;
+    paramS.page = examIndex + 1;
     paramS.classId = getId;
     var url = "exam/findStudentExamByPage.do";
     var _examReport = $("#exam-report .report-banner");
     doAjax("get", url, paramS, function (data) {
-        currentPages = parseInt(data.page) - 1;
-        totalPages = data.countPage;
+        examPage = parseInt(data.page) - 1;
+        examTotal = data.countPage;
         var datasS = data.rows;
         var _examList = $("#examList");
         _examList.html("");
         if (null == datasS || datasS.length <= 0) {
             $("#exam-report .empty-all").show();
 
-            $("#exam-report .exam-paging .up").css('visibility', 'hidden');
-            $("#exam-report .exam-paging .down").css('visibility', 'hidden');
-            $("#exam-report #toggleL").css('visibility', 'hidden');
+            $("#exam-report #examPrev").css('visibility', 'hidden');
+            $("#exam-report #examNext").css('visibility', 'hidden');
+            $("#exam-report #examToggle").css('visibility', 'hidden');
         } else {
-            $("#exam-report #toggleL").css('visibility', 'visible');
+            $("#exam-report #examToggle").css('visibility', 'visible');
             $("#exam-report .empty-all").hide();
             for (var i = 0; i < datasS.length; i++) {
                 var d = datasS[i];
@@ -458,34 +461,34 @@ function addListE() {
                     continue;
                 }
             }
-            var _toggleLiE = $("#exam-report #toggleL");
+            var _toggleLiE = $("#exam-report #examToggle");
             var _togglesE = "";
             _toggleLiE.html("");
-            if (totalPages == 1) {
+            if (examTotal == 1) {
                 _togglesE = $("<li class='col'>" + "1" + "</li>");
                 _toggleLiE.append(_togglesE);
-                $("#exam-report .exam-paging .up").css('visibility', 'hidden');
-                $("#exam-report .exam-paging .down").css('visibility', 'hidden')
+                $("#exam-report #examPrev").css('visibility', 'hidden');
+                $("#exam-report #examNext").css('visibility', 'hidden')
             } else {
-                for (var numE = 1; numE <= totalPages; numE++) {
+                for (var numE = 1; numE <= examTotal; numE++) {
                     _togglesE = $("<li>" + numE + "</li>");
                     _toggleLiE.append(_togglesE);
                     _togglesE.click(function () {
-                        cliindexs = $(this).index();
+                        examIndex = $(this).index();
                         addListE();
                     });
                 }
-                if ((cliindexs + 1) == totalPages) {
-                    $("#exam-report .exam-paging .down").css('visibility', 'hidden');
-                    $("#exam-report .exam-paging .up").css('visibility', 'visible');
-                } else if ((cliindexs + 1) == 1) {
-                    $("#exam-report .exam-paging .down").css('visibility', 'visible');
-                    $("#exam-report .exam-paging .up").css('visibility', 'hidden')
+                if ((examIndex + 1) == examTotal) {
+                    $("#exam-report #examNext").css('visibility', 'hidden');
+                    $("#exam-report #examPrev").css('visibility', 'visible');
+                } else if ((examIndex + 1) == 1) {
+                    $("#exam-report #examNext").css('visibility', 'visible');
+                    $("#exam-report #examPrev").css('visibility', 'hidden')
                 } else {
-                    $("#exam-report .exam-paging .down").css('visibility', 'visible');
-                    $("#exam-report .exam-paging .up").css('visibility', 'visible')
+                    $("#exam-report #examNext").css('visibility', 'visible');
+                    $("#exam-report #examPrev").css('visibility', 'visible')
                 }
-                _toggleLiE.find("li").eq(currentPages).addClass('col').siblings().removeClass('col');
+                _toggleLiE.find("li").eq(examPage).addClass('col').siblings().removeClass('col');
             }
         }
     });

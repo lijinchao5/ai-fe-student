@@ -250,13 +250,12 @@
     background: #00d35b;
 }
 
-.report-top .word-degree .degree-fail,
-.report-top .word-degree .degree-well {
+.report-top .word-degree p {
     width: 80px;
 }
-
-.report-top .word-degree .degree-good {
-    width: 93px;
+.report-top .word-degree p img{
+    vertical-align: middle;
+    margin-top: -2px;
 }
 
 .report-content b {
