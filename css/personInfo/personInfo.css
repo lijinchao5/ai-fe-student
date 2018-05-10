@@ -385,7 +385,7 @@ body {
     padding: 0 25px;
     border: 1px solid #adadad;
     color: #333;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .sure {
@@ -495,7 +495,10 @@ body {
     width: 790px;
     margin-bottom: 15px;
 }
-
+#personInfo .school-message .form-group button{
+    border-radius: 50px;
+    padding-left: 25px;
+}
 #personInfo .school-message .in-3 {
     width: 158px;
     display: inline-block;
@@ -804,7 +807,7 @@ body {
     padding-left: 24px;
     margin: 6px;
     border: 1px solid #adadad;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 #personInfo #tabbd .user-message .login-form .login-form-info > input::-webkit-input-placeholder {
