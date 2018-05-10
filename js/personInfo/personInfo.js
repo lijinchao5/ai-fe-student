@@ -5,6 +5,11 @@ $(function () {
     $("#user_name").attr('placeholder', '请输入2到6个字符');
     $("#sexSelect .boys img").attr("src", "../../images/personInfo/sex0-in.png");
     $("#sexSelect .girls img").attr("src", "../../images/personInfo/sex1.png");
+    navs();
+    // 自动触发 编辑头像的 移动事件
+    $(".avatar-wrapper").hover(function () {
+        $(".fa-arrows").click();
+    })
 });
 
 function index() {
@@ -13,7 +18,7 @@ function index() {
 
 $(".tips-btn").click(function () {
     $(".text-message").hide()
-})
+});
 
 // tab 切换
 function navs() {
@@ -25,7 +30,7 @@ function navs() {
         $('#tabbd >li').hide().eq(tabsindex).show();
     });
 }
-navs();
+
 // 切换男女
 function chSex(index) {
     if (index == 0) {
@@ -104,22 +109,7 @@ $(function () {
     initSelectChange();
 });
 
-$("#sure-change").click(function () {
-    var url = "class/updateClass.do";
-    var clasId = $("#classId").val();
-    var param = {};
-    param.clasId = clasId;
-    doAjax("post", url, param, function (data, code) {
-        if (code == "0" || code == 0) {
-            $(".change-tips").css("display", "none");
-            $("#myModal").modal('hide');
-            $("#school4").val(param.clasId);
-        } else {
-            $(".change-tips").css("display", "block");
-        }
-    })
-});
-
+//获取学生信息
 function getStudentInfo() {
     var url = "user/getStudentInfo.do";
     doAjax("get", url, null, function (user) {
@@ -150,12 +140,15 @@ function getStudentInfo() {
         initSelect(user, localUser);
     });
 }
+
 // 图片验证码
 function randomPic() {
     var uuid = store.get("uuid");
     // localhost:8092/picture.do?type=2&randomKey=123
     $("#randomPic").attr("src", getRootPath() + "picture.do?type=2&randomKey=" + uuid + "&t=" + new Date().getTime());
 }
+
+//发送短信验证码
 function sendMessage() {
     var uuid = store.get("uuid");
     var url = "mobileMessage/registMsg.do";
@@ -169,6 +162,7 @@ function sendMessage() {
         }
     });
 }
+
 // 更换手机号
 function updateMobile() {
     var uuid = store.get("uuid");
@@ -183,6 +177,7 @@ function updateMobile() {
             $(".change-phone").modal("show");
             // window.location.reload();
             $(".phone-warms").css("display", "none")
+            //window.location.reload();
         } else {
             $(".phone-warms").css("display", "block").text(message);
         }
@@ -199,13 +194,14 @@ function updatePassword() {
         if (code == '0' || code == 0) {
             $(".bs-example-modal-sm").modal("show");
             $(".pwd-warms").css("display", "none")
+
         } else {
             $(".pwd-warms").css("display", "block").text(message);
         }
     });
 }
 
-// 获取用户信息
+// 重新加载用户信息
 function reloadUserInfo() {
     var url = "user/getUserInfo.do";
     doAjax("get", url, null, function (user) {
@@ -222,6 +218,7 @@ function reloadUserInfo() {
     });
 }
 
+//修改姓名验证
 $("#user_name").blur(function () {
     var userName = $.trim($("#user_name").val());
     if (userName == '') {
@@ -267,6 +264,7 @@ function subUserInfo() {
         }
     });
 }
+
 // 更改学校信息
 function subSchoolInfo() {
     var url = "user/updatePersionalInfo.do";
@@ -405,12 +403,7 @@ function imagesAjax(src) {
         }
     });
 }
-$(function () {
-    // 自动触发 编辑头像的 移动事件
-    $(".avatar-wrapper").hover(function () {
-        $(".fa-arrows").click();
-    })
-});
+
 // 联动
 function selectLoadData(id, data, selectId) {
     if (null == data || data.length <= 0) {
@@ -427,6 +420,7 @@ function selectLoadData(id, data, selectId) {
     }
 }
 
+//学校信息
 function selectSchoolData(id, data, selectId) {
     if (null == data || data.length <= 0) {
     } else {
@@ -441,6 +435,7 @@ function selectSchoolData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+
 // 年级
 function selectGradeData(id, data, selectId) {
     if (null == data || data.length <= 0) {
@@ -456,6 +451,7 @@ function selectGradeData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+
 // 教材版本
 function selectTeachData(id, data, selectId) {
     if (null == data || data.length <= 0) {
@@ -471,6 +467,7 @@ function selectTeachData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+
 // 册别
 function selectBookVolumeData(id, data, selectId) {
     if (null == data || data.length <= 0) {
@@ -486,6 +483,7 @@ function selectBookVolumeData(id, data, selectId) {
         select1.selectpicker('render');
     }
 }
+
 // 初始化
 function initSelect(userInfo, localUser) {
     doAjax("get", "area/getRegion.do?level=1", null, function (data, code) {
