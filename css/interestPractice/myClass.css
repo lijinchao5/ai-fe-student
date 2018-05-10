@@ -116,7 +116,6 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    /*font-weight: bold;*/
 }
 
 .class-list {
@@ -371,9 +370,6 @@ body {
     display: block;
     width: 115px;
     height: 26px;
-    /*border-radius: 5px;*/
-    /*background: url("../../images/common/normal-button.png") no-repeat center center;*/
-    /*background-size: 100% 100%;*/
     background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
     border-radius: 19px;
     line-height: 26px;
@@ -384,12 +380,6 @@ body {
 .task-content #work-report .report-banner .main li .check-report {
     margin: 18px auto 0;
 }
-
-/*.task-content #work-report .report-banner .main li .do-homework:hover,*/
-/*.task-content #work-report .report-banner .main li .check-report:hover {*/
-    /*background: url("../../images/common/hover-button.png") no-repeat center center;*/
-    /*background-size: 100% 100%;*/
-/*}*/
 
 .task-content #work-report .report-banner .main li a {
     margin-bottom: 10px;
@@ -418,7 +408,6 @@ body {
 }
 
 #exam-report .report-banner {
-    /*position: relative;*/
     width: 870px;
     height: 435px;
     overflow: hidden;
@@ -435,7 +424,6 @@ body {
 }
 
 #exam-report .report-banner .main li:hover {
-    /*box-shadow: 0 0 8px 2px rgba(17, 216, 252, 0.26);*/
     box-shadow: 0 0 7px 1px rgba(0, 160, 233, 0.28);
 }
 
@@ -494,24 +482,13 @@ body {
     width: 115px;
     height: 26px;
     margin: 15px auto 0;
-    /*background: url("../../images/common/normal-button.png") no-repeat center center;*/
-    /*background-size: 100% 100%;*/
     background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
     border-radius: 19px;
     font-size: 14px;
     line-height: 26px;
     color: #fff;
-    /*border-radius: 5px;*/
     text-decoration: none;
 }
-
-/*#exam-report .report-banner .main .enter-exam:hover,*/
-/*#exam-report .report-banner .main .enter-report:hover {*/
-    /*background: url("../../images/common/hover-button.png") no-repeat center center;*/
-    /*background-size: 100% 100%;*/
-    /*color: #fff;*/
-    /*text-decoration: none;*/
-/*}*/
 
 #exam-report .report-banner .main .enter-report {
     margin-top: 15px;
@@ -575,20 +552,13 @@ body {
 
 .tips-report span {
     display: block;
-    margin: -10px auto;
-    /*float: right;*/
-    width: 104px;
-    height: 30px;
+    margin: -10px auto 0;
+    width: 127px;
+    height: 27px;
     color: #fff;
-    border-radius: 14.5px;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 15px;
     cursor: pointer;
     text-align: center;
-    line-height: 30px;
+    line-height: 27px;
 }
-.tips-report span:hover{
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: 100% 100%;
-}
-

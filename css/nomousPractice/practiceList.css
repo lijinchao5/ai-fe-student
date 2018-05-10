@@ -181,11 +181,10 @@ body {
 .practice-wrap {
     width: 856px;
     height: 465px;
-    margin: 0 auto ;
+    margin: 0 auto;
     background: #fff;
     overflow: hidden;
     position: relative;
-    /*border-top: 5px solid  #f08118;*/
 }
 
 .text-practice {
@@ -221,10 +220,7 @@ body {
     width: 80%;
     margin: 28px auto 0;
     font-size: 18px;
-    /*color: #00a0e9;*/
-    /*color: #FFA902;*/
     color: #f08118;
-    /*color: #ffde00;*/
     text-align: center;
     font-weight: 600;
     overflow: hidden;
