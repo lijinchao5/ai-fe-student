@@ -16,13 +16,6 @@ $(function () {
     initData(id);
     initDataAll(id);
     map = new Map();
-    $(document).bind("click", function (e) {
-        openList();
-        if ($(e.target).closest(".speak-speed ul").length == 0 && $(e.target).closest(".speak-speed .list").length == 0) {
-            //点击空白处，触发
-            closeList();
-        }
-    })
 });
 function closeList() {
     $(".speak-speed ul").hide()
@@ -450,11 +443,10 @@ function submitlibrary(library) {
 // 语速
 $(".speak-speed .list").click(function () {
     speakSpeed();
-})
+});
 function speakSpeed() {
     $(".speak-speed ul").show();
     $(".speak-speed ul li").each(function () {
-        // console.log(111)
         $(this).click(function () {
             var ht = $(this).html();
             var hs = $(this).attr("speed");
