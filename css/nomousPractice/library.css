@@ -135,13 +135,11 @@ body {
     background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
     outline: none;
     border: none;
-
     border-radius: 40px;
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 2px;
 }
-
 
 /* 闃呰鍐呭 閮ㄥ垎 */
 .library-content {
@@ -171,7 +169,6 @@ body {
 .library-content .part-scores #pscoreOut {
     width: 92px;
     height: 34px;
-    /*background-color: #bfa;*/
     margin: 0 auto;
     overflow: hidden;
     white-space: nowrap;
@@ -182,8 +179,6 @@ body {
     display: block;
     height: 34px;
     border-radius: 17px;
-    /*background-color: #93eefe;*/
-    /*padding: 0 3px;*/
     position: absolute;
     left: 34px;
 }
@@ -203,16 +198,6 @@ body {
     float: left;
 }
 
-/* 褰撳墠 鍦ㄨ 娈佃惤鏍峰紡 */
-/*.library-content .part-scores .part-score.current::before {
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: -1px;
-}*/
 .library-content .part-scores .part-score.current {
     width: 28px;
     height: 28px;
@@ -334,9 +319,6 @@ body {
     height: 270px;
     background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
     background-size: 100% 100%;
-    /*overflow-y: scroll;*/
-    /*overflow-x: hidden;*/
-    /*overflow: auto;*/
     overflow-y: auto;
     overflow-x: hidden;
     font-size: 16px;
@@ -411,8 +393,6 @@ body {
 .library-content .part-radars div {
     width: 100px;
     height: 100px;
-    /*background: #abf;*/
-    /*display: none;*/
 }
 
 .library-content .nomous-practice-btn {
@@ -429,9 +409,6 @@ body {
 }
 
 .library-content .nomous-practice-btn .play-icon {
-    /* border-radius: 0%;
-     margin-left: 108px;
-     padding-top: 10px;*/
     width: 60px;
     height: 60px;
     background: url("../../images/common/recording-in.png") no-repeat center center;
@@ -481,7 +458,6 @@ body {
     cursor: pointer;
     background: url("../../images/common/play.png") no-repeat center center;
     background-size: 100% 100%;
-    display: inline-block;
     margin: 0 53px;
     border-radius: 56px;
 }
@@ -491,10 +467,6 @@ body {
     background-size: 100% 100%;
     margin: 0 53px;
 }
-
-/*.library-content .nomous-practice-btn .play:hover{
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-}*/
 
 .library-content .nomous-practice-btn img {
     border-radius: 50%;
@@ -551,7 +523,6 @@ body {
 /*}*/
 
 /* 鍚� wordspeaking .css line 135 */
-/* 寮�濮嬪仛浣滀笟 妯℃�佹 */
 .ready-go .modal-dialog {
     width: 450px;
 }
@@ -704,10 +675,7 @@ body {
     height: 80px;
     width: 100%;
     margin-top: 37px;
-    /*background: url("../../images/nomousPractice/score-bg.png") no-repeat bottom center;*/
     font-size: 14px;
-    /*line-height: 18px;*/
-    /*text-align: center;*/
     line-height: 80px;
     padding: 0;
     color: #fff;
@@ -762,9 +730,11 @@ body {
     z-index: 2;
     cursor: pointer;
 }
+
 .speak-speed:hover ul {
     display: block;
 }
+
 .speak-speed ul li:hover {
     background: #eee;
 }
@@ -773,7 +743,7 @@ body {
     border: 5px solid #ccc;
     border-top: 5px solid transparent;
     border-left: 5px solid transparent;
-    margin: 0px 8px 0 0;
+    margin: 0 8px 0 0;
     transform: rotate(45deg);
 }
 
@@ -799,17 +769,16 @@ body {
     height: 60px;
     border-radius: 60px;
     overflow: hidden;
-    /*background-color: #a9a9a9;*/
 }
 
 .green {
-    color: #36dbbb;
+    color: #00d35b;
 }
 
 .red {
-    color: #ff6d80;
+    color: #fd1021;
 }
 
 .orange {
-    color: #ffb846;
+    color: #2aaff3;
 }
