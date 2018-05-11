@@ -611,7 +611,7 @@ body {
     height: 190px;
     float: right;
     margin-right: 30px;
-    margin-top: 36px;
+    padding-top: 18px;
 }
 
 .report .modal-content .modal-body .free-practice-result {
@@ -673,7 +673,7 @@ body {
 
 .report .modal-content .modal-footer {
     height: 80px;
-    width: 100%;
+    width: 623px;
     margin-top: 37px;
     font-size: 14px;
     line-height: 80px;
@@ -681,6 +681,7 @@ body {
     color: #fff;
     border-top: none;
     background-color: #00a0e9;
+    text-align: center;
 }
 
 .report .modal-content .modal-footer .fr {
