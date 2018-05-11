@@ -656,7 +656,6 @@ function removeClassSpan(){
  function speakSpeed() {
      $(".speak-speed ul").show();
      $(".speak-speed ul li").each(function () {
-         // console.log(111)
          $(this).click(function () {
              var ht = $(this).html();
              var hs = $(this).attr("speed");
@@ -673,15 +672,7 @@ function removeClassSpan(){
          })
      })
  }
- $(function(){
-	 $(document).bind("click", function (e) {
-		 openList();
-		 if ($(e.target).closest("#speedList").length == 0 && $(e.target).closest("#speedBtn").length == 0) {
-			 //点击空白处，触发
-			 closeList();
-		 }
-	 })
- })
+
  function closeList() {
 	 $("#speedList").hide()
  }

@@ -758,18 +758,18 @@ body {
 
 .speak-speed ul {
     width: 44px;
-    /*height: 20px;*/
     position: absolute;
     top: 20px;
     left: 44px;
     display: none;
     z-index: 2;
-    /*border: 1px solid #ccc;*/
     cursor: pointer;
 }
-
+.speak-speed:hover ul {
+    display: block;
+}
 .speak-speed ul li:hover {
-    background: yellow;
+    background: #eee;
 }
 
 .speak-speed .list .triangle {

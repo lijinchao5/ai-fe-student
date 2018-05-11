@@ -474,9 +474,12 @@ body {
     z-index: 2;
     cursor: pointer;
 }
+.word-speaking .speak-speed:hover ul {
+    display: block;
+}
 
 .word-speaking .speak-speed ul li:hover {
-    background: yellow;
+    background: #eee;
 }
 
 .word-speaking .speak-speed .list .triangle {
