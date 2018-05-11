@@ -61,35 +61,6 @@ function statrRecord() {
         });
     });
 }
-/*function statrRecords() {
-    console.log(111);
-    $(".btns").hide();
-    $(".clear-btn").hide();
-    $("#testly").show();
-    funStartMp3();
-    console.log(222);
-    var element = layui.element,
-        n = 0;
-    var timer = setInterval(function() {
-        n = n + 2;
-        element.progress('testly', n + '%');
-        if (n >= 100) {
-            n = 100;
-            clearInterval(timer);
-            $("#lyhf").attr("class", "readonly");
-            $(".btns").hide();
-            $(".clear-btn").show();
-            $("#testly").hide();
-            setTimeout(function() {
-                funStopMp3(function(json) {
-                    lid = json.result;
-                    palyaudiolid();
-                    element.progress('testly', '0%');
-                });
-            }, 300);
-        }
-    }, 5000 / 50);
-}*/
 
 function resetplay() {
     $(".btns").show();

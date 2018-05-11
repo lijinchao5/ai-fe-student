@@ -1,9 +1,3 @@
-//$(function () {
-//    initData();
-//    addListeners();
-//    classify();
-//    levelAdd()
-//});
 var map;
 $(document).ready(function () {
     map = new Map();

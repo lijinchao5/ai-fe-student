@@ -90,12 +90,6 @@
     text-decoration: none;
 }
 
-/*退出模态框*/
-/*.top .exit-button {*/
-/*cursor: pointer;*/
-/*padding-left: 7px;*/
-/*}*/
-
 .top .exit-button:hover {
     text-decoration: none;
 }

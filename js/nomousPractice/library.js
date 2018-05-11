@@ -1,6 +1,4 @@
 var map;
-// var radar = document.getElementById("radarMap");
-// radarMap(0,0,0,30);
 
 $(function () {
     // $("#startworkhome").click();
@@ -145,14 +143,12 @@ function readlibrary(isreadflag) {
     $("#carousel-inner .active").each(function () {
         var dataid = $(this).attr("data");
         var library = map.get(dataid);
-        //console.log(library.readSentenceScore)
         if (library.readSentenceScore.length > 0 && isreadflag != true) {
             ishideorshow("q_restart");
             return;
         }
         isswitchfunction(false);
         ishideorshow("play-icon");
-        // var speeds = $(".speak-speed .list .current").attr("speed");
         var speeds = $(".speak-speed .list .current").attr("speed");
         readrecord(library.audio_path, function (audiotime) {
             $(".q_restart").hide();
@@ -161,7 +157,6 @@ function readlibrary(isreadflag) {
             ishideorshow("q_sounding");
             readrecord(ConfigLY.startrecordid, function () {
                 funStartMp3();
-                // progressBar(audiotime);
                 roundProgressTimer("roll-progress", audiotime - 800);
                 setTimeout(function () {
                     funStopMp3(function (json) {
@@ -282,7 +277,6 @@ function showp() {
             objspan.addClass("current");
             $("#pscore").css("left",28-i*28+"px");
             console.log($("#pscore").css("left")+i);
-            // objspan.html("");
             objspan.html(objspan.attr("data"));
             // 添加当前成绩
             $("#nowScore").html(objspan.attr("data"));
@@ -322,9 +316,6 @@ function submitend() {
         var integrity = data.integrity;
         radarMap(pronunciation, fluency, integrity, 49, "radar-score");
         $(".free-practice-result .num").html(Math.round(data.score));
-        // $("#endaccuracy").val(data.pronunciation);
-        // $("#endfluency").val(data.fluency);
-        // $("#endintegrity").val(data.integrity);
         if (data.score < 80) {
             $(".score70").show();
         } else if (data.score > 79 && data.score < 90) {
@@ -384,7 +375,6 @@ function progressBar(second) {
     }, second / 21);
 }
 // 雷达图变量
-// var radarMapy;
 function submitlibrary(library) {
     var param = {};
     param.file = library.lid;
@@ -415,7 +405,6 @@ function submitlibrary(library) {
                 setTimeout(function () {
                     $("#pscore span").eq(i).attr("data", score);
                     $("#pscore span").eq(i).html(score);
-                    // $("#pscore span").eq(i).attr("class","part-score");
                 }, 2000);
             }
         })
@@ -477,14 +466,11 @@ function roundProgressTimer(id, timer, aa) {
             clearInterval(timer)
         }
         roundProgress(id, width);
-        // console.log(width)
     }, timer);
 }
-//    timer(width);
 function roundProgress(id, value) {
     var myCharts = echarts.init(document.getElementById(id));
     //颜色
-//    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
     var colorData = ['#fff'];
     //    数据
     var data = [
@@ -499,7 +485,6 @@ function roundProgress(id, value) {
         for (var i = 0; i < data.length; i++) {
             result.push({
                 name: '',
-                // center: [(i * 26 + 22.5 + '%'), '50%'], // 去掉本行，圆环居中
                 radius: ['80%', '100%'],
                 type: 'pie',
                 labelLine: {
@@ -525,9 +510,9 @@ function roundProgress(id, value) {
                         label: {
                             normal: {
                                 formatter: '{d} %',
-                                position: 'center', // 显示文字的位置
-                                show: false,  // 是否显示中间文字
-                                textStyle: {  // 显示文字 样式
+                                position: 'center',
+                                show: false,
+                                textStyle: {
                                     fontSize: '16',
                                     fontWeight: 'bold',
                                     color: colorData[i]
@@ -558,19 +543,6 @@ function roundProgress(id, value) {
     };
     // 指定图表的配置项和数据 饼图
     var options = {
-        /*tooltip: {
-         trigger: 'item',
-         formatter: function (params, ticket, callback) {
-         var res = params.name + ' : ' + params.percent + '%';
-         return res;
-         }
-         },  // 鼠标移入，显示区块百分比
-         grid: {
-         bottom: 100,
-         top: 150
-         },*/
-        /*xAxis: [{show: false}],
-         yAxis: [{show: false}],*/
         series: create(data)
     };
     myCharts.setOption(options);

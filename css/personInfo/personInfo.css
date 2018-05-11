@@ -41,7 +41,6 @@ body {
 #personInfo {
     width: 1200px;
     height: 662px;
-    /*position: relative;*/
 }
 
 #footer {
@@ -220,7 +219,6 @@ body {
     height: 516px;
 }
 
-/* .owner-message */
 #personInfo #tabbd .modify-info .modal-header {
     width: 96%;
     padding: 0;
@@ -241,7 +239,6 @@ body {
     font-size: 32px;
 }
 
-/*  .owner-message */
 #personInfo #tabbd .modify-info .modal-body {
     padding: 0 40px;
 }
@@ -255,7 +252,6 @@ body {
     width: 526px;
     height: 354px;
     padding: 0;
-    /*margin: 0 309px 44px 42px;*/
 }
 
 #personInfo #tabbd .owner-message .modify-info .modal-body .col-md-9 .avatar-upload {
@@ -268,12 +264,6 @@ body {
     font-size: 14px;
     color: #666;
 }
-
-/*#personInfo #tabbd .owner-message .modify-info .modal-body .col-md-9 .local-img {
-    width: 529px;
-    height: 324px;
-    background-color: #ff8003;
-}*/
 
 #personInfo #tabbd .owner-message .modify-info .modal-body #tabbd {
     width: 262px;
@@ -570,41 +560,6 @@ body {
     color: #fff;
     padding: 15px 0 20px 20px;
 }
-
-/*.modal-dialog .modal-body .user-msg {*/
-/*width: 330px;*/
-/*height: 43px;*/
-/*background: transparent;*/
-/*padding: 15px 0 15px 13px;*/
-/*border: 1px solid #eee;*/
-/*color: #fff;*/
-/*font-size: 14px;*/
-/*}*/
-
-/*.modal-dialog .modal-body .user-msg::-webkit-input-placeholder {*/
-/*color: #fff;*/
-/*}*/
-
-/*.change-tips {*/
-/*display: none;*/
-/*margin-bottom: 12px;*/
-/*color: #eefd00;*/
-/*font-size: 14px;*/
-/*font-weight: 300;*/
-/*}*/
-
-/*#sure-change {*/
-/*width: 110px;*/
-/*height: 36px;*/
-/*border: none;*/
-/*outline: none;*/
-/*background: url('../../images/common/hover-button.png') no-repeat center center;*/
-/*background-size: 100% 100%;*/
-/*font-size: 16px;*/
-/*font-weight: 300;*/
-/*color: #fff;*/
-/*padding: 6px 0;*/
-/*}*/
 
 /*编辑头像 模态窗*/
 .modal-dialog .modal-body .pre-view {

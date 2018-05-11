@@ -211,10 +211,6 @@ function log(text) {
     console.log(text);
 }
 
-//function testDemo() {
-//    $("#readdiv").remove();
-//    nextdownpage();
-//}
 //下一屏
 function nextdownpage() {
     submits();
@@ -613,112 +609,7 @@ function roundProgress(id,value) {
     };
     // 指定图表的配置项和数据 饼图
     var options = {
-        /*tooltip: {
-            trigger: 'item',
-            formatter: function (params, ticket, callback) {
-                var res = params.name + ' : ' + params.percent + '%';
-                return res;
-            }
-        },  // 鼠标移入，显示区块百分比
-        grid: {
-            bottom: 100,
-            top: 150
-        },*/
-        /*xAxis: [{show: false}],
-        yAxis: [{show: false}],*/
         series: create(data)
     };
     myCharts.setOption(options);
 }
-//听后简述
-/*
- function kaishi()
- {
-
-
- var docElm = document.documentElement;
- //W3C
- if (docElm.requestFullscreen) {
- docElm.requestFullscreen();
- }
- //FireFox
- else if (docElm.mozRequestFullScreen) {
- docElm.mozRequestFullScreen();
- }
- //Chrome等
- else if (docElm.webkitRequestFullScreen) {
- docElm.webkitRequestFullScreen();
- }
- //IE11
- else if (elem.msRequestFullscreen) {
- elem.msRequestFullscreen();
- }
- }
-
-
-
- function guanbi() {
-
-
- if (document.exitFullscreen) {
- document.exitFullscreen();
- }
- else if (document.mozCancelFullScreen) {
- document.mozCancelFullScreen();
- }
- else if (document.webkitCancelFullScreen) {
- document.webkitCancelFullScreen();
- }
- else if (document.msExitFullscreen) {
- document.msExitFullscreen();
- }
- }
-
-
- document.oncontextmenu = function(){
- event.returnValue = false;
- }
- // 或者直接返回整个事件
- document.oncontextmenu = function(){
- return false;
- }
-
- document.onselectstart = function(){
- event.returnValue = false;
- }
- // 或者直接返回整个事件
- document.onselectstart = function(){
- return false;
- }
-
- document.oncopy = function(){
- event.returnValue = false;
- }
- // 或者直接返回整个事件
- document.oncopy = function(){
- return false;
- }
- document.onkeydown = function(event){
- var e = event || window.event || arguments.callee.caller.arguments[0];
- if( event.ctrlKey ){
- return false;
- }
- if ( event.altKey ){
- return false;
- }
- if ( event.shiftKey ){
- return false;
- }
- if (e && event.keyCode==122 ){
- return false;
- }
- if (e && event.keyCode==123 ){
- return false;
- }
- if (e && event.keyCode==27 ){
- return false;
- }
- }
-
- */
-

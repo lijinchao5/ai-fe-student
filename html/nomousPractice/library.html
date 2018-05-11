@@ -44,9 +44,7 @@
                 </div>
                 <div class="part-scores">
                     <div id="pscoreOut">
-                        <p id="pscore">
-                            <!--<span class="part-score current"></span>-->
-                        </p>
+                        <p id="pscore"></p>
                     </div>
                 </div>
                 <div class="content">
@@ -76,17 +74,8 @@
                 <div class="nomous-practice-btn">
                     <!-- 播放图标 -->
                     <div class="play-icon q_play"></div>
-                    <!--<img src="../../images/common/playing.gif" class="play-icon q_play" alt="播放图标" style="display: none;" />-->
                     <!-- 录音进度条 -->
                     <div class="speed q_sounding" style="display: none;">
-                        <!--<div class="speed-icon" id="divjdt">
-                            <div class="layui-progress layui-progress-big" lay-filter="ly">
-                                <div class="layui-progress-bar" lay-percent="0%" style="height:18px;">
-                                    &lt;!&ndash; <img class="" src="../../images/common/progress.png" alt="进度条" style="margin:-67px -25px 0 -25px;"> &ndash;&gt;
-                                </div>
-                            </div>
-                        </div>
-                        <div class="speed-text">录音中</div>-->
                         <div class="round-progress">
                             <div class="record-bg"></div>
                             <div class="round-progress-bar" id="roll-progress" style="width: 60px;height:60px;"></div>
@@ -96,15 +85,12 @@
                     <div class="current-part-score" id="nowScore"></div>
                     <div class="q_restart" style="display: none;">
                         <div class="headset play" onclick="readlibrary(true);">
-                            <!--<img src="../../images/common/headset.png" />-->
                             <!--<p>重做</p>-->
                         </div>
                         <div class="play" onclick="readlid();">
-                            <!--<img src="../../images/speakAndListen/play.png" />-->
                             <!--<p>播放</p>-->
                         </div>
                         <div class="play end" onclick="submitend();">
-                            <!--<img src="../../images/nomousPractice/boom.png" />-->
                             <p class="end-p">The <span class="span1">end!</span> <span
                                     class="span2">&nbsp;&nbsp;点我</span></p>
                         </div>
@@ -199,18 +185,12 @@
             <div class="part-con">{sentence_cont}</div>
         </div>
         <div class="library-point">
-            <div class="sentences-degree clearfix">
-                <!--<div class={dataid} style="height: 120px;width: 150px;"></div>-->
-            </div>
+            <div class="sentences-degree clearfix"></div>
         </div>
     </div>
 </script>
 
 <script>
-
-
-    //    radarMap(0,0,0,30,"radar-map");
-
     function radarMap(pronunciation, fluency, integrity, size, className) {
         var dom = document.getElementsByClassName(className)[0];
         var myChart = echarts.init(dom);
@@ -231,15 +211,13 @@
                         {text: '准确度', max: 100, min: 0},
                         {text: '完整度', max: 100, min: 0}
                     ],
-                    // center: ['25%', '50%'],  // 位置判断
-                    radius: size,  // 调整整个图的大小
+                    radius: size,
                     startAngle: 90,
-                    splitNumber: 4,  // 圆环个数
+                    splitNumber: 4,
                     shape: 'circle',
                     name: {
                         formatter: '{value}',
                         textStyle: {
-//                            color:'#72ACD1'
                             color: '#999'
                         }
                     },
@@ -276,7 +254,6 @@
                     data: [
                         {
                             value: [pronunciation, fluency, integrity],
-                            // value: [1000, 100, 0],
                             name: '图二',
                             areaStyle: {
                                 normal: {

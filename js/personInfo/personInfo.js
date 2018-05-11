@@ -135,7 +135,6 @@ function getStudentInfo() {
         } else {
             $("#school7").val(user.name_num)
         }
-        //store.set("className", user.grade + user.className);
         var localUser = JSON.parse(store.get("userInfo"));
         initSelect(user, localUser);
     });
@@ -144,7 +143,6 @@ function getStudentInfo() {
 // 图片验证码
 function randomPic() {
     var uuid = store.get("uuid");
-    // localhost:8092/picture.do?type=2&randomKey=123
     $("#randomPic").attr("src", getRootPath() + "picture.do?type=2&randomKey=" + uuid + "&t=" + new Date().getTime());
 }
 
@@ -175,9 +173,7 @@ function updateMobile() {
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
             $(".change-phone").modal("show");
-            // window.location.reload();
             $(".phone-warms").css("display", "none")
-            //window.location.reload();
         } else {
             $(".phone-warms").css("display", "block").text(message);
         }
@@ -225,7 +221,6 @@ $("#user_name").blur(function () {
         $(".name-tips").css("display", "block");
         $(".sure").attr("disabled", true);
     } else {
-        // $(".name-tips").css("display", "none");
         $(".sure").attr("disabled", false);
     }
 });
@@ -251,11 +246,9 @@ function subUserInfo() {
     var y = birth.substring(0, 4);
     var m = birth.substring(4, 6);
     var d = birth.substring(6, 8);
-    // alert(y+"-"+m+"-"+d);
     param.birthDate = y + '-' + m + '-' + d;
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
-            // reloadUserInfo();
             $("#sexSelect").find("span img").attr("src", "");
             $("#birthDate").attr('placeholder', '');
             $("#user_name").attr('placeholder', '');
@@ -280,9 +273,7 @@ function subSchoolInfo() {
     doAjax("post", url, param, function (data, code, message) {
         if (code == '0' || code == 0) {
             $("#schoolInfo").modal('show');
-            //reloadUserInfo();
         } else {
-            //alert(message);
             $(".text-message").show().children(".tips-message").text(message)
         }
     });
@@ -298,7 +289,6 @@ function uploadImg1() {
             reloadUserInfo();
             //alert("操作成功!");
             $(".text-message").show().children(".tips-message").text("操作成功!")
-            // window.location.reload();
         }
     });
 }
@@ -491,8 +481,6 @@ function initSelect(userInfo, localUser) {
         } else {
             selectLoadData("first-disabled", data, userInfo.address_province)
             if (null == userInfo.address_province || userInfo.address_province == "") {
-                // if(null == userInfo.bookVersion || userInfo.bookVersion ==
-                // ""||userInfo.bookVersion == "其他"){
                 $("#first-disabled").selectpicker("val", "0")
                 $("#first-disabled").selectpicker('render');
             }
@@ -507,18 +495,6 @@ function initSelect(userInfo, localUser) {
             });
         }
     });
-    // 年级
-    /*doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
-     selectTeachData("fifth-disabled", data, localUser.gradeLevelId)
-     doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
-     selectTeachData("sixth-disabled", data, localUser.bookVersionId);
-     // 初始化数据时候的册别
-     doAjax("get", "dic/findDicByType.do?type=3", null, function (data, code) {
-     selectTeachData("seventh-disabled", data, localUser.bookVersionId);
-     });
-     });
-     });*/
-    // console.log(111+userInfo);
     doAjax("get", "dic/findDicByType.do?type=4", null, function (data, code) {
         if (null == data || data.length <= 0) {
         } else {
@@ -588,12 +564,6 @@ function initSelectChange() {
             selectBookVolumeData("seventh-disabled", data, null)
         });
     });
-    /*$('#sixth-disabled').on('change', function (data, index) {
-     cleanSelectVal($("#seventh-disabled"));
-     doAjax("get", "dic/getBookVersion.do?grade=" + $(this).val(), null, function (data, code) {
-     selectTeachData("seventh-disabled", data, null)
-     });
-     });*/
 }
 
 // 清除改变前的数据

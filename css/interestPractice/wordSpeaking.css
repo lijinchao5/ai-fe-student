@@ -202,12 +202,6 @@ body {
     height: 21px;
 }
 
-/*.word-speaking {*/
-
-/*position: relative;*/
-
-/*}*/
-
 /* 模态框样式结束 */
 
 .word-speaking .speak-listen-tabs {
@@ -365,24 +359,17 @@ body {
 
 /* 旋转木马盒子公共样式 */
 
-/*.word-speaking .speak-listen-tab-bd .carousel {
-    height: 290px;
-}*/
-
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item {
     padding: 0 10%;
     font-weight: 700;
-    /*color: #004098;*/
     color: #333;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text-out {
     width: 100%;
     height: 250px;
-    /* 上下左右居中 */
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     justify-content: center;
     word-break: break-all;
     background: url("../../images/speakAndListen/speak-bg.png") no-repeat center center;
@@ -398,12 +385,9 @@ body {
     background-size: 100% 100%;
     width: 100%;
     height: 250px;
-    /* 上下左右居中 */
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     justify-content: center;
-    /*word-break: break-word;*/
     word-wrap: break-word;
 }
 
@@ -412,22 +396,18 @@ body {
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green {
-    /*color: #36dbbb;*/
-    /*color: #2aa145;*/
     color: #00d35b;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red {
-    /*color: #ff6d80;*/
     color: #fd1021;
     float: left;
     padding: 0 6px;
 }
 
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange {
-    /*color: #004098;*/
     color: #2aaff3;
     float: left;
     padding: 0 6px;
@@ -436,7 +416,6 @@ body {
 /* 语速 样式 */
 
 .word-speaking .speak-speed {
-    /*float: right;*/
     width: 100%;
     height: 20px;
     margin: 0 auto;
@@ -474,12 +453,9 @@ body {
     z-index: 2;
     cursor: pointer;
 }
-.word-speaking .speak-speed:hover ul {
-    display: block;
-}
 
 .word-speaking .speak-speed ul li:hover {
-    background: #eee;
+    background: yellow;
 }
 
 .word-speaking .speak-speed .list .triangle {
@@ -495,7 +471,6 @@ body {
 .word-speaking .speak-listen-tab-bd .carousel-control {
     position: absolute;
     top: 64%;
-    /* 去掉阴影 */
     height: 0;
     width: 10%;
     font-size: 20px;
@@ -542,7 +517,6 @@ body {
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn {
     width: 400px;
-    /*height: 125px;*/
     height: 100px;
     text-align: center;
     margin: 0 auto;
@@ -552,10 +526,6 @@ body {
 /* 添加display none*/
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .play-icon {
-    /*width: 142px;
-    height: 42px;
-    margin: 54px auto 0;
-    margin-left: 40px;*/
     display: none;
     width: 60px;
     height: 60px;
@@ -589,8 +559,6 @@ body {
 /* 录音中 */
 
 .word-speaking .speak-listen-tab-bd .speak-listen-btn .speed .speed-text {
-    /*display: block;*/
-    /*width: 260px;*/
     height: 13px;
     text-align: center;
     line-height: 30px;
@@ -615,14 +583,12 @@ body {
     width: 400px;
     height: 40px;
     margin: 40px auto 0;
-    /*background: #e4b9b9;*/
 }
 
 .status {
     height: 50px;
     line-height: 50px;
     font-size: 14px;
-    /*background-color: pink;*/
     text-align: center;
     color: #00a0e9;
 }
@@ -633,7 +599,6 @@ body {
 
 .status .abnormal {
     display: none;
-    /*color: #ff8003;*/
 }
 
 .word-speaking .speak-listen-tab-bd .play {
@@ -653,12 +618,6 @@ body {
     margin: 0 50px 0 30px;
 }
 
-/*.word-speaking .speak-listen-tab-bd .headset {*/
-
-/*margin-left: -30px;*/
-
-/*}*/
-
 .word-speaking .speak-listen-tab-bd .play p {
     color: #fff;
     line-height: 36px;
@@ -666,11 +625,6 @@ body {
 }
 
 /* 播放按钮  鼠标移入的状态 */
-
-/*.word-speaking .speak-listen-tab-bd .play:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: cover;
-}*/
 
 .word-speaking .speak-listen-btn .znbutton {
     margin: 148px 0 0 -2px;
@@ -721,8 +675,6 @@ body {
 }
 
 @-webkit-keyframes recording
-    /*Safari and Chrome*/
-
 {
     0% {
         transform: scale(0.9);
@@ -736,8 +688,6 @@ body {
 }
 
 @-moz-keyframes recording
-    /* Firefox */
-
 {
     0% {
         transform: scale(0.9);
@@ -751,8 +701,6 @@ body {
 }
 
 @-o-keyframes recording
-    /* Opera */
-
 {
     from {
         -o-transform: scale(1.5) rotate(10deg);
@@ -840,7 +788,6 @@ body {
     display: block;
     text-align: left;
     margin-left: 1px;
-    /* justify-content: flex-end; */
 }
 
 .carousel .carousel-inner .item .text .role2 {
@@ -883,7 +830,6 @@ body {
 }
 
 .word-speaking .speak-listen-tab-bd .writing .speak-listen-btn {
-    /* margin: 0 auto; */
     width: 110px;
     margin: 0 auto;
     text-align: center;
@@ -928,28 +874,24 @@ body {
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .dictation::-webkit-input-placeholder {
-    /* WebKit browsers*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .dictation:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .dictation::-moz-placeholder {
-    /* Mozilla Firefox 19+*/
     color: #ccc;
     font-size: 24px;
     line-height: 64px;
 }
 
 .intelligent-dictation .carousel .carousel-inner .item .dictation:-ms-input-placeholder {
-    /* Internet Explorer 10+*/
     color: #999;
     font-size: 14px;
     line-height: 64px;
@@ -1114,7 +1056,6 @@ li {
     position: relative;
     width: 100%;
     height: 50px;
-    /* border:1px solid red;  */
     overflow: hidden;
 }
 
@@ -1137,7 +1078,6 @@ li {
 }
 
 .text-btn {
-    /*margin-top: 300px;*/
     position: absolute;
     top: 70px;
     left: 40px;
@@ -1166,8 +1106,6 @@ li {
     -webkit-align-items: center;
     align-items: center;
 }
-
-/* html页面拷贝过来 */
 
 /*角色扮演*/
 
@@ -1227,7 +1165,6 @@ li {
     width: 60px;
     height: 60px;
     border-radius: 60px;
-    /*background-color: #a9a9a9;*/
 }
 
 .round-progress-bar div canvas {

@@ -91,7 +91,6 @@ function initdata(){
  				studentScore=studentScore.substring(0,studentScore.indexOf("."));
  			}
  			homeworkDetail.studentScore=studentScore;
- 			//console.log(homeworkDetail.homeworkStudentScoreWordEntities);
  			if(homeworkDetail.homeworkType=='1'){
  				//记录当前数
  				dccount++;
@@ -110,9 +109,6 @@ function initdata(){
  				if(homeworkDetail.studentScore!=""){
  					homeworkDetail.standerText=CalculationScoreword(homeworkDetail.standerText,homeworkDetail.studentScore);
  				}
- 				//设置颜色
- 				//homeworkDetail.color=getcolor(dccount);
- 				//存入json
  				homeworkDetail.jsonobj="data"+homeworkDetail.sectionDetailId;
  				map.put("data"+homeworkDetail.sectionDetailId,homeworkDetail);
  				//生成模板
@@ -136,7 +132,6 @@ function initdata(){
  				if(jzcount==1){
  					homeworkDetail.active='active';
  				}
- 				//homeworkDetail.color=getcolor(jzcount);
  				homeworkDetail.jsonobj="data"+homeworkDetail.sectionDetailId;
  				if(homeworkDetail.homeworkStudentScoreWordEntities.length!=0){
  					homeworkDetail.standerText=CalculationScore(homeworkDetail.homeworkStudentScoreWordEntities);
@@ -162,7 +157,6 @@ function initdata(){
  				if(kwcount==1){
  					homeworkDetail.active='active';
  				}
- 				//homeworkDetail.color=getcolor(kwcount);
  				homeworkDetail.jsonobj="data"+homeworkDetail.sectionDetailId;
  				if(homeworkDetail.homeworkStudentScoreWordEntities.length!=0){
  					homeworkDetail.standerText=CalculationScore(homeworkDetail.homeworkStudentScoreWordEntities);
@@ -181,7 +175,6 @@ function initdata(){
  					})
  				}
  			}else if(homeworkDetail.homeworkType=='4'){
- 				//console.log(homeworkDetail);
  				//如果没有添加最大的div
  				if($("div[dialogNum='"+homeworkDetail.dialogNum+"']").length==0){
  					jsbycount++;
@@ -236,7 +229,6 @@ function initdata(){
  				if(zncount==1){
  					homeworkDetail.active='active';
  				}
- 				//homeworkDetail.color=getcolor(zncount);
  				homeworkDetail.jsonobj="data"+homeworkDetail.sectionDetailId;
  				map.put("data"+homeworkDetail.sectionDetailId,homeworkDetail);
  				homeworkDetail.flagid="zninput"+zncount;
@@ -673,14 +665,6 @@ function removeClassSpan(){
      })
  }
 
- function closeList() {
-	 $("#speedList").hide()
- }
-
- function openList() {
-	 $("#speedList").show()
- }
- // roundProgressTimer("roll-progress",20000);
  function roundProgressTimer(id,timer,aa){
      timer = timer/20;
      console.log(timer);
@@ -697,26 +681,21 @@ function removeClassSpan(){
          console.log(width)
      },timer);
  }
- //    timer(width);
+
  function roundProgress(id,value) {
      var myCharts = echarts.init(document.getElementById(id));
-     //颜色
-//    var colorData = ['#ff6d80', '#ffb846', '#36dbbb'];
      var colorData = ['#fff'];
-     //    数据
      var data = [
          {
              "name": '准确度',
              "value": value
          }
      ];
-     //将数据放入圆环中
      var create = function (data) {
          var result = [];
          for (var i = 0; i < data.length; i++) {
              result.push({
                  name: '',
-                 // center: [(i * 26 + 22.5 + '%'), '50%'], // 去掉本行，圆环居中
                  radius: ['80%', '100%'],
                  type: 'pie',
                  labelLine: {
@@ -742,9 +721,9 @@ function removeClassSpan(){
                          label: {
                              normal: {
                                  formatter: '{d} %',
-                                 position: 'center', // 显示文字的位置
-                                 show: false,  // 是否显示中间文字
-                                 textStyle: {  // 显示文字 样式
+                                 position: 'center',
+                                 show: false,
+                                 textStyle: {
                                      fontSize: '16',
                                      fontWeight: 'bold',
                                      color: colorData[i]
@@ -775,19 +754,6 @@ function removeClassSpan(){
      };
      // 指定图表的配置项和数据 饼图
      var options = {
-         /*tooltip: {
-             trigger: 'item',
-             formatter: function (params, ticket, callback) {
-                 var res = params.name + ' : ' + params.percent + '%';
-                 return res;
-             }
-         },  // 鼠标移入，显示区块百分比
-         grid: {
-             bottom: 100,
-             top: 150
-         },*/
-         /*xAxis: [{show: false}],
-         yAxis: [{show: false}],*/
          series: create(data)
      };
      myCharts.setOption(options);

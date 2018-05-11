@@ -140,7 +140,6 @@ function getAudioCheck(checkList){
 }
 //获取评分
 function CalculationScore(homeworkStudentScoreWordEntities){
-    // <div class="text-in">
     var html='';
 	for(var i=0;i<homeworkStudentScoreWordEntities.length;i++){
 		var wordEntitie=homeworkStudentScoreWordEntities[i];
@@ -160,7 +159,6 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 			}
 		}
 	}
-	// </div>
     html+='';
 	return html;
 }
@@ -325,7 +323,6 @@ function initisshow(){
 				 $(this).hide(); 
 			 })
 			 var classname=$(this).attr("class");
-			 //console.log("classname:"+classname)
 			 $(this).addClass("active");
 			 $("."+classname).each(function(){
 				 $(this).show();
@@ -341,7 +338,6 @@ function initisshow(){
 			 var spanflag=true;
 			 var spanhtml0=$($(this).find("span")[0]).html();
 			 var spanhtml1=$($(this).find("span")[1]).html();
-			 //console.log("spanhtml0:"+$($(this).find("span")[1]).attr("id"))
 			 if(spanhtml0!=spanhtml1&&spanhtml1!="0"){
 				 $("#speak-listen-tab li").each(function(v,i){
 					 $(this).removeClass("active"); 
@@ -391,19 +387,16 @@ function submithomework(){
 	for(var i=0;i<map.arr.length;i++){
 		var homeworkDetail=map.arr[i].value;
 		if(homeworkDetail.homeworkType=='1'){
-			//console.log(homeworkDetail.lid);
 			if(homeworkDetail.lid==null){
 				submit_tip("单词跟读");
 				return;
 			}
 		}else if(homeworkDetail.homeworkType=='2'){
-			//console.log(homeworkDetail.lid);
 			if(homeworkDetail.lid==null){
 				submit_tip("句子跟读");
 				return;
 			}
 		}else if(homeworkDetail.homeworkType=='3'){
-			//console.log(homeworkDetail.lid);
 			if(homeworkDetail.lid==null){
 				submit_tip("课文跟读");
 				return;
@@ -416,7 +409,6 @@ function submithomework(){
 				}
 			}
 		}else if(homeworkDetail.homeworkType=='5'){
-			//console.log(homeworkDetail.studentText)
 			if(homeworkDetail.studentText==null){
 				submit_tip("智能听写");
 				return;

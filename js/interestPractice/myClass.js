@@ -121,7 +121,6 @@ $("#exam-report .screen button").click(function () {
 //获取作业报告
 function goHomeworkReport(id, com) {
     if (com == 'F') {
-        //alert("作业未完成,作业报告为空!");
         $(".tips-report").show()
     } else {
         window.location.href = "homeworkReport.html?id=" + id;
@@ -263,16 +262,6 @@ function initData() {
     });
 
 }
-
-
-
-
-
-
-
-
-
-
 
 //获取模考信息
 function getExam() {

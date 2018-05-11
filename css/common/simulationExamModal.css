@@ -31,14 +31,6 @@
     font-size: 30px;
 }
 
-/*.sinulation-exam-modal .modal-content .modal-header .modal-title {*/
-    /*line-height: 1;*/
-/*}*/
-
-/*.sinulation-exam-modal .modal-content .modal-header .close span {*/
-    /*color: #fff;*/
-/*}*/
-
 .sinulation-exam-modal .modal-content .modal-body {
     line-height: 36px;
     text-align: center;
@@ -48,7 +40,6 @@
     margin-top: 0;
 }
 
-/*鍐呭鏈夊琛�*/
 .sinulation-exam-modal .modal-content .modal-body .more-line {
     margin-top: 20px;
     line-height: 30px;
@@ -76,6 +67,3 @@
     box-shadow: none;
     outline:none;
 }
-
-
-/* 妯℃�佹缁撴潫 */

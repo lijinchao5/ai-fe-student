@@ -40,8 +40,6 @@ function initWebSocket(userId) {
 			url = 'wss://' + getWebSocketRootPath() + "studentWebSocket.do?id=" + userId;
 		}
 		socket = new WebSocket(url);
-		// socket = new
-		// SockJS("http://192.168.10.107:8080/mspjapi/webSocketServer/sockjs");
 
 		// 打开事件
 		socket.onopen = function() {
@@ -55,9 +53,7 @@ function initWebSocket(userId) {
 				$("#dialogButton").attr("data-toggle1", "0");
 				$("#dialogButton").click();
 			} else {
-				// var text = $("#dialog_content").text();
 				$("#dialog_content").append("<p>" + msg.data + ",老师催收了！</p>");
-				// $("#dialog_content").text(text + msg.data);
 			}
 		};
 		// 关闭事件
