@@ -152,14 +152,11 @@
 }
 
 .top .exits .modal-dialog .modal-footer .btn {
-    width: 110px;
-    height: 36px;
+    width: 124px;
+    height: 30px;
     color: #fff;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-}
-
-.top .exits .modal-dialog .modal-footer .btn:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
 }
 
 /*催作业模态框*/
@@ -222,14 +219,11 @@
 }
 
 .top .exits1 .modal-dialog .modal-footer .btn {
-    width: 110px;
-    height: 36px;
+    width: 124px;
+    height: 30px;
     color: #fff;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-}
-
-.top .exits1 .modal-dialog .modal-footer .btn:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
 }
 
 .overLoading {

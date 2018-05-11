@@ -119,8 +119,8 @@ body {
 }
 
 .modal-content .modal-footer button {
-    width: 110px;
-    height: 38px;
+    width: 140px;
+    height: 34px;
     margin-top: 5px;
     color: #fff;
     border: none;
@@ -131,16 +131,12 @@ body {
 .modal-content .modal-footer .btn-primary {
     outline: none;
     box-shadow: none;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
 }
 
 .modal-content .modal-footer .btn-primary {
     margin-left: 10px;
-}
-
-.modal-content .modal-footer .btn-default:hover,
-.modal-content .modal-footer .btn-primary:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
 }
 
 /* 提交作业的提示 */
@@ -951,19 +947,18 @@ body {
 .dictation-modal-footer button {
     display: block;
     cursor: pointer;
-    width: 110px;
-    height: 40px;
-    line-height: 40px;
+    width: 140px;
+    height: 34px;
     text-align: center;
     color: #fff;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    border-radius: 5px;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
     margin: 20px auto 0;
 }
 
-.dictation-modal-footer button:hover {
+/* .dictation-modal-footer button:hover {
     background: url("../../images/common/hover-button.png") no-repeat center center;
-}
+} */
 
 button {
     border: none;

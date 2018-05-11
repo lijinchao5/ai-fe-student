@@ -183,23 +183,15 @@ body {
 #exam-report .report-banner .main .enter-exam,
 #exam-report .report-banner .main .enter-report {
     display: block;
-    width: 106px;
-    height: 30px;
+    width: 156px;
+    height: 36px;
     margin: 15px auto 0;
-    background: url("../../images/common/normal-button.png") no-repeat center center;
-    background-size: 100% 100%;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
     font-size: 14px;
     line-height: 30px;
     color: #fff;
     border-radius: 5px;
-    text-decoration: none;
-}
-
-#exam-report .report-banner .main .enter-exam:hover,
-#exam-report .report-banner .main .enter-report:hover {
-    background: url("../../images/common/hover-button.png") no-repeat center center;
-    background-size: 100% 100%;
-    color: #fff;
     text-decoration: none;
 }
 

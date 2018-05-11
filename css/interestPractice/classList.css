@@ -369,6 +369,7 @@ body {
 }
 
 .empty-class p {
+    font-size: 14px;
     width: 100%;
     text-align: center;
     margin-top: 20px;
@@ -380,8 +381,8 @@ body {
 }
 
 .empty-class p span {
-    color: #ffcf1c;
-    padding-left: 10px;
+    color: #01A4F9;
+    padding:0 5px;
 }
 
 .empty-class p input {
@@ -394,11 +395,14 @@ body {
     margin-top: 50px;
 }
 
-.empty-tips {
+.empty-class .empty-tips {
     color: red;
+    margin-left: -50px;
+    margin-top: 5px;
 }
 
 .add-button {
+    font-size: 18px;
     width: 330px;
     height: 46px;
     background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
@@ -414,6 +418,9 @@ body {
 }
 
 .empty-class p .blue {
-    color: #00a0e9;
     cursor: pointer;
+}
+
+.empty-class p:last-of-type{
+    margin-top: 10px;
 }
