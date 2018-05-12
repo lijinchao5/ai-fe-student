@@ -183,14 +183,12 @@ body {
     width: 136px;
     height: 136px;
     margin: 0 auto;
-    border: 1px solid #bfbfbf;
     border-radius: 50%;
-    background: #bfbfbf;
 }
 
 #personInfo #tabbd .owner-message .modify-info .big-meb-icon {
-    width: 134px;
-    height: 134px;
+    width: 136px;
+    height: 136px;
     border-radius: 50%;
 }
 

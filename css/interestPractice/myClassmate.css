@@ -83,14 +83,15 @@ body {
 }
 
 .classmates {
-
+    width: 100%;
+    margin: 0 auto;
 }
 
 .classmates .items {
     height: 520px;
     padding-right: 10px;
-    overflow-y: scroll;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .classmates .items::-webkit-scrollbar-track {
@@ -122,7 +123,6 @@ body {
     width: 56px;
     height: 56px;
     margin-top: 15px;
-    border: 2px solid #bfbfbf;
     border-radius: 50%;
 }
 
