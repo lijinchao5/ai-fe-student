@@ -122,11 +122,11 @@ function sendform(par){
 }
 function getAudioCheck(checkList){
     if(null == checkList || checkList.length<=0){
-    	$(".normal").css("display","block");
+    	$(".normal").css("display","none");
     	$(".abnormal").css("display","none");
     }else{
     	$(".normal").css("display","none");
-    	$(".abnormal").css("display","block");
+    	$(".abnormal").css("display","none");
     	var text = "";
     	for(var h=0;h<checkList.length;h++){
     		if(h==0){
@@ -135,7 +135,7 @@ function getAudioCheck(checkList){
     			text = text+","+checkList[h];
     		}
     	}
-    	$(".abnormal").html("["+text+"]");
+    	$(".abnormal").html("["+text+"]").css("display","none");
     }
 }
 //获取评分

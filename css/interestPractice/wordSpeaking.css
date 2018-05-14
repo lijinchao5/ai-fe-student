@@ -745,7 +745,7 @@ body {
 .carousel .carousel-inner .item .text .role-in {
     font-size: 26px;
     font-weight: 700;
-    color: green;
+    color: #333;
 }
 
 .carousel .carousel-inner .item .text p span {
@@ -808,7 +808,7 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: #36dbbb;
+    background-color: #fd1021;
     font-size: 18px;
     font-weight: 400;
     line-height: 36px;
