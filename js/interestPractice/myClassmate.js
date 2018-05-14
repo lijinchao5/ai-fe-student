@@ -14,8 +14,6 @@ function initInfo() {
     var getId=getParam("id");
     var classId = getId;
     var url = "studentClass/getClassmate.do?classId="+classId;
-    console.log(url);
-    console.log(111)
     doAjax("get", url, null, function(data, code) {
         console.log(data)
         if (null == data || data.length <= 0) {

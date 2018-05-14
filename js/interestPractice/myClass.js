@@ -1,7 +1,7 @@
 $(function () {
-    getWork()
+    getWork();
     getClass();
-    //$(".task-title li").eq(0).click();
+    getMetaIcon();
     $('#header').load('../common/header.html');
     $('#nav').load('../common/nav.html');
     $('#footer').load('../common/footer.html');
@@ -18,6 +18,36 @@ $(function () {
 function jumpMate() {
     var id = getParam("id");
     window.location.href = './myClassmate.html?id=' + id;
+}
+
+//我的同学头像
+function getMetaIcon() {
+    console.log(1);
+    var getId = getParam("id");
+    var param = {};
+    param.classId = getId;
+    var url = "studentClass/getClassmate.do?classId=" + param.classId;
+    doAjax("get", url, param, function (data, code) {
+        console.log(data);
+        if (null == data || data.length <= 0) {
+            console.log("没有同学")
+        } else {
+            var _metaIcon = $(".meta-icon");
+            _metaIcon.html("");
+            var myIconSrc = store.get("userIcon");
+            var myIcon = $("<img src=" + myIconSrc + ">");
+            _metaIcon.append(myIcon);
+            for (var i = 0; i < 3; i++) {
+                var metaImg = '';
+                if (null == data[i].photo || "" == data[i].photo) {
+                    metaImg += '<img src="../../images/common/l-meb-icon.png">';
+                } else {
+                    metaImg += '<img src="' + getRootPath() + "file/download.do?type=jpg&id=" + data[i].photo + '">';
+                }
+                _metaIcon.append(metaImg);
+            }
+        }
+    })
 }
 
 //换班列表 关闭
@@ -79,10 +109,11 @@ $(".task-title li").click(function () {
     $(".task-content .reports").eq(Liindex).show().siblings().hide();
 });
 
-$("#workList").click(function(){
+$("#workList").click(function () {
     window.location.reload();
     getWork()
 });
+
 //获取时间
 function formateDate(da) {
     if (null == da || da == '') {

@@ -84,26 +84,6 @@ body {
 
 }
 
-.present-class .my-classmate {
-    background-color: #f08118;
-    width: 125px;
-    height: 27px;
-    line-height: 27px;
-    border-radius: 5px;
-    float: right;
-    cursor: pointer;
-    color: #fff;
-    text-align: center;
-}
-
-.present-class .my-classmate img {
-    width: 19px;
-    height: 15px;
-    vertical-align: middle;
-    margin-top: -3px;
-    margin-right: 5px;
-}
-
 .present-class #present-class {
     font-size: 18px;
     color: #333;
@@ -124,7 +104,7 @@ body {
     top: 17px;
     left: 280px;
     width: 145px;
-    height: 60px;
+    height: 48px;
     border-radius: 5px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -174,15 +154,21 @@ body {
     float: left;
     width: 55px;
     height: 22px;
+    line-height: 20px;
     border-radius: 4px;
     background-color: transparent;
     border: 1px solid #bfbfbf;
     color: #333;
 }
 
+.task-list {
+    height: 594px;
+    position: relative;
+}
+
 .task-list .task-title {
     width: 856px;
-    margin: 30px auto 0;
+    margin: 20px auto 0;
 }
 
 .task-list .task-title::after {
@@ -240,9 +226,11 @@ body {
 }
 
 .page-wrap {
+    position: absolute;
+    bottom: 20px;
     width: 848px;
     height: 30px;
-    margin: 3px auto 0;
+    margin: 0 auto 0;
     font-size: 12px;
     text-align: center;
 }
@@ -416,7 +404,7 @@ body {
 
 #exam-report .report-banner .main li {
     width: 422px;
-    height: 200px;
+    height: 207px;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
     margin: 8px 0 0 8px;
@@ -561,4 +549,27 @@ body {
     cursor: pointer;
     text-align: center;
     line-height: 34px;
+}
+
+.present-class .my-classmate {
+    width: 130px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+}
+
+.present-class .my-classmate .meta-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 15px 0 14px;
+}
+
+.present-class .my-classmate .meta-icon img {
+    width: 16px;
+    height: 16px;
+    float: left;
 }

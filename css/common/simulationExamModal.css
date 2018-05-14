@@ -55,12 +55,11 @@
 }
 
 .sinulation-exam-modal .modal-content .modal-footer button {
-    width: 110px;
+    width: 136px;
     height: 36px;
-    border-radius: 38px;
     margin-right: 7px;
-    background: url("../../images/common/normal-button.png")no-repeat center center;
-    background-size: 100% 100%;
+    background-image: linear-gradient(93deg, #4fc6fc, #01e2ea);
+    border-radius: 44px;
     font-size: 16px;
     color: #fff;
     border: none;
