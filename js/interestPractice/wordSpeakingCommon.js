@@ -9,7 +9,6 @@ function getcolor(num){
 	}
 }
 
-
 //停止所有录音
 function stopMp3All(){
 	if(dataobj!=null){
@@ -41,7 +40,6 @@ function stopznAll(){
 		sendform(par);
 	}
 }
-
 
 //发送请求
 function sendform(par){
@@ -103,7 +101,7 @@ function sendform(par){
 			map.put("data"+par.sectionId,jsonobjtmp);
 		}else if(jsonobjtmp.homeworkType=="4"){
 			getAudioCheck(data.audioCheck);
-			var newhtml=CalculationScore(data.homeworkStudentScoreWordEntities);
+			var newhtml=jsbyScore(data.homeworkStudentScoreWordEntities);
 			var classname=$("p[data='data"+par.sectionId+"']").attr("class");
 			if(classname=="role1 role-in item-in"){
 				$("p[data='data"+par.sectionId+"']").find(".abcdin").each(function(){
@@ -163,6 +161,30 @@ function CalculationScore(homeworkStudentScoreWordEntities){
 	return html;
 }
 
+function jsbyScore(homeworkStudentScoreWordEntities){
+	var html='';
+	for(var i=0;i<homeworkStudentScoreWordEntities.length;i++){
+		var wordEntitie=homeworkStudentScoreWordEntities[i];
+		if(wordEntitie.type=="7"){
+			if(wordEntitie.text==" "){
+				// html+="&nbsp;";
+			}else{
+				html+="<b>"+wordEntitie.text+"</b>";
+			}
+		}else{
+			if(wordEntitie.score<60){
+				html+="<b class='red-js'>"+wordEntitie.text+"</b>";
+			}else if(wordEntitie.score>=60&&wordEntitie.score<=85){
+				html+="<b class='orange-js'>"+wordEntitie.text+"</b>";
+			}else if(wordEntitie.score>85){
+				html+="<b class='green-js'>"+wordEntitie.text+"</b>";
+			}
+		}
+	}
+	html+='';
+	return html;
+}
+
 function CalculationScoreword(word,score){
 	var html='<div class="text-in">';
 	if(score<60||!score||score==null){
@@ -176,15 +198,16 @@ function CalculationScoreword(word,score){
 	return html;
 }
 
+
 //角色扮演 有的单词需要替换
 function replacehtml(html){
 	var re = new RegExp("</b>","g");
 	html=html.replace(re,'');
-	re = new RegExp("<b class='red'>","g");
+	re = new RegExp("<b class='red-js'>","g");
 	html=html.replace(re,'');
-	re = new RegExp("<b class='orange'>","g");
+	re = new RegExp("<b class='orange-js'>","g");
 	html=html.replace(re,'');
-	re = new RegExp("<b class='green'>","g");
+	re = new RegExp("<b class='green-js'>","g");
 	html=html.replace(re,'');
 	re = new RegExp("&nbsp;","g");
 	html=html.replace(re,' ');

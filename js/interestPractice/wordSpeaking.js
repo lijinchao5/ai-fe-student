@@ -678,10 +678,10 @@ function removeClassSpan(){
              clearInterval(timer)
          }
          roundProgress(id,width);
-         console.log(width)
      },timer);
  }
 
+ //雷达图
  function roundProgress(id,value) {
      var myCharts = echarts.init(document.getElementById(id));
      var colorData = ['#fff'];

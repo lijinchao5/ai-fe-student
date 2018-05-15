@@ -76,9 +76,10 @@ body {
     width: calc(100% - 220px);
     height: 40px;
     line-height: 65px;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 76px;
-    color: #999;
+    color: #333;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -327,14 +328,20 @@ body {
 
 .library-content .carousel .carousel-inner .item .green {
     color: #00d35b;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .library-content .carousel .carousel-inner .item .orange {
     color: #2aaff3;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .library-content .carousel .carousel-inner .item .red {
     color: #fd1021;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .library-content .carousel .carousel-control {
@@ -489,7 +496,7 @@ body {
 .report .modal-content {
     width: 625px;
     height: 515px;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 
 .report .modal-content .modal-header,

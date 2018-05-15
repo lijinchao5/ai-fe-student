@@ -409,6 +409,30 @@ body {
     padding: 0 6px;
 }
 
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .green-js {
+    color: #00d35b;
+    font-size: 18px;
+    font-weight: 300;
+    float: left;
+    padding: 0 6px;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .red-js {
+    color: #fd1021;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 6px;
+    float: left;
+}
+
+.word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .orange-js {
+    color: #2aaff3;
+    float: left;
+    padding: 0 6px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
 /* 语速 样式 */
 
 .word-speaking .speak-speed {
@@ -670,8 +694,7 @@ body {
     }
 }
 
-@-webkit-keyframes recording
-{
+@-webkit-keyframes recording {
     0% {
         transform: scale(0.9);
     }
@@ -683,8 +706,7 @@ body {
     }
 }
 
-@-moz-keyframes recording
-{
+@-moz-keyframes recording {
     0% {
         transform: scale(0.9);
     }
@@ -696,8 +718,7 @@ body {
     }
 }
 
-@-o-keyframes recording
-{
+@-o-keyframes recording {
     from {
         -o-transform: scale(1.5) rotate(10deg);
     }
@@ -756,6 +777,7 @@ body {
     text-align: center;
     line-height: 50px;
     border-radius: 25px;
+    font-weight: 300;
     border: 1px solid #11d8fc;
     background-color: #fff;
     color: #11d8fc;
@@ -1102,8 +1124,14 @@ li {
     align-items: center;
 }
 
-/*角色扮演*/
+/*课文跟读*/
+#kw .text-out .text b{
+    font-size: 18px;
+    font-weight: 300;
+}
+/*课文跟读*/
 
+/*角色扮演*/
 .jsbyanimateul {
     width: 96%;
     height: 210px;
@@ -1127,6 +1155,10 @@ li {
     padding-top: 70px;
 }
 
+.jsbyanimateul .abcdin b{
+    font-size: 18px;
+    font-weight: 300;
+}
 /*角色扮演*/
 
 .modal-backdrop {
