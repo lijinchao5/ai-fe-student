@@ -84,7 +84,7 @@ function sendform(par){
 		if(jsonobjtmp.homeworkType=="2"||jsonobjtmp.homeworkType=="3"){
 			getAudioCheck(data.audioCheck);
 			var newhtml=CalculationScore(data.homeworkStudentScoreWordEntities);
-			$("div[data='data"+par.sectionId+"'] .text").html(newhtml);
+			$("div[data='data"+par.sectionId+"'] .text-wrap").html(newhtml);
 			jsonobjtmp.studentText=newhtml;
 			map.put("data"+par.sectionId,jsonobjtmp);
 		}else if(jsonobjtmp.homeworkType=="1"){
@@ -379,8 +379,6 @@ function initisshow(){
 			 }
 		 });
 	 }
-	 
-	 
 }
 
 //左右切换是否显示

@@ -14,7 +14,7 @@
          $(this).addClass('current').siblings().removeClass('current');
          tabsindex = $(this).index();
          $('#tabbd .lists').hide().eq(tabsindex).show();
-     })
+     });
  // tab 切换 听说阅读
  var speakAndListenTabIndex = 0;
  $('#speak-listen-tab li').click(function() {
@@ -28,7 +28,7 @@
     	 $(".role").hide();
      }
      readword();
- })
+ });
 var onkeydownflag=true;
  // 听说作业 智能听写 提交模态框
  $(document).ready(function () {
@@ -59,10 +59,11 @@ var onkeydownflag=true;
     var data = JSON.parse(store.get("userInfo"));
 	$("#username").text(data.name);
 	$("#username1").text(data.name);
-	$("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
-	$("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
+	$("#photo").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
+	$("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
 	initdata();
-})
+});
+
 //初始化数据
 function initdata(){
 	 var url = "homework/getHomeworkDetail.do";
@@ -163,7 +164,7 @@ function initdata(){
  				}
  				map.put("data"+homeworkDetail.sectionDetailId,homeworkDetail);
  				var html = formatTemplate(homeworkDetail, $("#dcscript").html());
- 				$("#kw").append(html)
+ 				$("#kw").append(html);
  				if(homeworkDetail.lid!=null){
  					$("#kwnowcs").html(kwcount);
  					$("#kw .item").each(function(v,i){
@@ -233,7 +234,7 @@ function initdata(){
  				map.put("data"+homeworkDetail.sectionDetailId,homeworkDetail);
  				homeworkDetail.flagid="zninput"+zncount;
  				var html = formatTemplate(homeworkDetail, $("#znscript").html());
- 				$("#zn").append(html)
+ 				$("#zn").append(html);
  				if(homeworkDetail.studentText!=null){
  					$("#znnowcs").html(zncount);
  					$("#zn .item").each(function(v,i){
@@ -434,8 +435,6 @@ function readwordl(){
 	}
 }
 
-
-
 var dataobj=null;
 var zndataobj=null;
 
@@ -450,14 +449,14 @@ function initon(){
 				zndataobj.flagid=id;
 			})
 		});
-	})
+	});
 	
 	//智能听写点击完成事件
 	$('.buttonover').each(function(v,i){
 		$(this).click(function() {
 			stopznAll();
 		});
-	})
+	});
 	
 	 //左右滚动
 	 $('.carousel').on('slid.bs.carousel', function (data) {
@@ -643,7 +642,8 @@ function removeClassSpan(){
  // 语速的处理
  $(".speak-speed .list").click(function () {
      speakSpeed();
- })
+ });
+
  // 放入 common.js 中
  function speakSpeed() {
      $(".speak-speed ul").show();
@@ -665,6 +665,7 @@ function removeClassSpan(){
      })
  }
 
+ //进度条
  function roundProgressTimer(id,timer,aa){
      timer = timer/20;
      console.log(timer);

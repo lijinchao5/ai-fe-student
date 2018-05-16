@@ -372,6 +372,19 @@ body {
     background-size: 100% 100%;
 }
 
+.word-speaking #kw .text {
+    /*width: 96%;*/
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.word-speaking #kw .text .text-wrap {
+    width: 100%;
+    text-align: center;
+}
+
 .word-speaking .speak-listen-tab-bd .carousel .carousel-inner .item .text {
     word-wrap: break-word;
 }
@@ -758,7 +771,7 @@ body {
 
 .carousel .carousel-inner .item .text p {
     width: 100%;
-    font-size: 26px;
+    font-size: 18px;
     line-height: 50px;
     display: block;
 }
@@ -1125,10 +1138,11 @@ li {
 }
 
 /*课文跟读*/
-#kw .text-out .text b{
+#kw .text-out .text b {
     font-size: 18px;
     font-weight: 300;
 }
+
 /*课文跟读*/
 
 /*角色扮演*/
@@ -1138,6 +1152,7 @@ li {
     overflow: hidden;
     position: relative;
     margin: 19px auto;
+    font-weight: 300;
 }
 
 .jsbyanimateul .li {
@@ -1155,10 +1170,11 @@ li {
     padding-top: 70px;
 }
 
-.jsbyanimateul .abcdin b{
+.jsbyanimateul .abcdin b {
     font-size: 18px;
     font-weight: 300;
 }
+
 /*角色扮演*/
 
 .modal-backdrop {

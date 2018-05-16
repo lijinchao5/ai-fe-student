@@ -7,11 +7,12 @@ $(function () {
     }
     $("#studentNum").text(data.nameNum);
     if (null == data.photo || "" == data.photo) {
-        $("#photo1").attr("src","../../images/common/l-meb-icon.png")
+        $("#photo1").attr("src","../../images/common/l-meb-icon.png");
+        store.set("userIcon", "../../images/common/l-meb-icon.png");
     } else {
-        $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo)
+        $("#photo1").attr("src", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
+        store.set("userIcon", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
     }
-    store.set("userIcon", getRootPath() + "file/download.do?type=jpg&id=" + data.photo);
 });
 
 //  导航添加current类名

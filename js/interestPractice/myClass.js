@@ -376,6 +376,9 @@ function addListE() {
             $("#exam-report .empty-all").hide();
             for (var i = 0; i < datasS.length; i++) {
                 var d = datasS[i];
+                //console.log(d);
+                //console.log(d.complate);
+                //console.log(d.state);
                 if (d.complate == 'F') {
                     var startExam = null;
                     if (d.state == 1) {
@@ -401,7 +404,7 @@ function addListE() {
                             startExam = $("<li>" +
                                 "<p class='topic'>" + d.examName + "</p>" +
                                 "<p class='examiner'><span class='complete-number'>" + d.complateStudent + "</span>/" + d.totalStudent + "人</p>" +
-                                "<a href='javascript:void(0)' class='enter-exam'>分析中...</a>" +
+                                "<a href='javascript:void(0)' class='enter-exam'>考试未完成</a>" +
                                 "<p class='start-time'>From：" + formateDate(d.startTime) + "</p>" +
                                 "<p class='final-time'>To：" + formateDate(d.endTime) + "</p>" +
                                 "</li>");
